@@ -1923,6 +1923,7 @@ void xferMeshToParticleAndUpdateChem(Real grid_vol, Real npart,
     // ********************************************************************
     Real dV;
     if (cell_type == cellType::FUNGI) {
+#ifndef AMREX_USE_GPU
       if (BMXChemistry::use_fba_growth) {
         Real fba_mu = cell_par[realIdx::fba_mu];
         // Host-supplied specific growth rate from FBA/COMETS, in 1/hr.
@@ -1931,6 +1932,9 @@ void xferMeshToParticleAndUpdateChem(Real grid_vol, Real npart,
       } else {
         rV =  kv*cB*orig_cell_vol;
       }
+#else
+      rV =  kv*cB*orig_cell_vol;
+#endif
       rB = -kg*cB;
       dB3 = dtp*rB;
       cB += dB3;

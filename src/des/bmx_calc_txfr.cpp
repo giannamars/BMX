@@ -379,13 +379,6 @@ bmx::bmx_calc_txfr_particle (Real time, Real dt)
               one_to_one_interp(p.pos(), &interp_gzloc[0],
                   interp_gzarray, plo, dxi, 1);
 
-              if (BMXChemistry::use_fba_growth) {
-                p.rdata(realIdx::fba_mu) = BMXFBA::compute_fba_growth_rate_hr(
-                    &p.rdata(0), &p.rdata(realIdx::first_data), &interp_loc[0],
-                    interp_vloc[0], interp_nloc[0],
-                    p.idata(intIdx::cell_type));
-              }
-
 #ifndef AMREX_USE_GPU
               //std::cout<<"Number of particles in grid cell: "<<interp_nloc[0]<<std::endl;
 #endif
@@ -397,6 +390,15 @@ bmx::bmx_calc_txfr_particle (Real time, Real dt)
               cell_par[realIdx::gx] = interp_gxloc[0];
               cell_par[realIdx::gy] = interp_gyloc[0];
               cell_par[realIdx::gz] = interp_gzloc[0];
+
+#ifndef AMREX_USE_GPU
+              if (BMXChemistry::use_fba_growth) {
+                cell_par[realIdx::fba_mu] = BMXFBA::compute_fba_growth_rate_hr(
+                    cell_par, &p.rdata(realIdx::first_data), &interp_loc[0],
+                    interp_vloc[0], interp_nloc[0],
+                    p.idata(intIdx::cell_type));
+              }
+#endif
 
               Real *p_vals = &p.rdata(realIdx::first_data);
               int *cell_ipar = &p.idata(0);
