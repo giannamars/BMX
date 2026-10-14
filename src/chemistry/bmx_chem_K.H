@@ -1923,7 +1923,14 @@ void xferMeshToParticleAndUpdateChem(Real grid_vol, Real npart,
     // ********************************************************************
     Real dV;
     if (cell_type == cellType::FUNGI) {
-      rV =  kv*cB*orig_cell_vol;
+      Real fba_mu = cell_par[realIdx::fba_mu];
+      if (fba_mu >= 0.0) {
+        // Host-supplied specific growth rate from FBA/COMETS, in 1/hr.
+        // Convert to the BMX time base before using it as a volume source.
+        rV = (fba_mu / 3600.0) * orig_cell_vol;
+      } else {
+        rV =  kv*cB*orig_cell_vol;
+      }
       rB = -kg*cB;
       dB3 = dtp*rB;
       cB += dB3;

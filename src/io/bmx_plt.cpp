@@ -238,11 +238,17 @@ bmx::WritePlotFile (std::string& plot_file, int nstep, Real time )
         real_comp_names.push_back("random_vz");
         Vector<int> write_real_comp = Vector<int>(MAX_CHEM_REAL_VAR,1);
         int i;
+        int generic_real_idx = 0;
         for (i=realIdx::count-1; i<MAX_CHEM_REAL_VAR; i++) {
-          char c[2];
-          c[1] = '\0';
-          c[0] = static_cast<char>(static_cast<int>('A')+(i-realIdx::count+1)%26);
-          real_comp_names.push_back(c);
+          if (i == realIdx::fba_mu) {
+            real_comp_names.push_back("fba_mu");
+          } else {
+            char c[2];
+            c[1] = '\0';
+            c[0] = static_cast<char>(static_cast<int>('A')+generic_real_idx%26);
+            real_comp_names.push_back(c);
+            generic_real_idx++;
+          }
         }
         int_comp_names.push_back("num_reals");
         int_comp_names.push_back("num_ints");

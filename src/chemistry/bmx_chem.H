@@ -70,6 +70,11 @@ struct realIdx
     first_data,  // index of first value in uncharacterized block
     count        // total number of elements in this enumeration
   };
+
+  // Host-computed specific growth rate from FBA/COMETS, in 1/hr.
+  // Stored in the uncharacterized real block so the particle layout stays
+  // backward compatible.
+  static constexpr int fba_mu = first_data + NUM_CHEM_COMPONENTS;
 };
 
 /**
