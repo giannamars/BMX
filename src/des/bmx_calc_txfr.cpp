@@ -350,12 +350,6 @@ bmx::bmx_calc_txfr_particle (Real time, Real dt)
 
               BMXParticleContainer::ParticleType& p = pstruct[pid];
 
-              if (BMXChemistry::use_fba_growth) {
-                p.rdata(realIdx::fba_mu) = BMXFBA::compute_fba_growth_rate_hr(
-                    &p.rdata(0), &p.rdata(realIdx::first_data), &interp_loc[0],
-                    p.idata(intIdx::cell_type));
-              }
-
               if (l_cnc_deposition_scheme == 0)
               {
                   one_to_one_interp(p.pos(), &interp_loc[0],
@@ -384,6 +378,13 @@ bmx::bmx_calc_txfr_particle (Real time, Real dt)
                   interp_gyarray, plo, dxi, 1);
               one_to_one_interp(p.pos(), &interp_gzloc[0],
                   interp_gzarray, plo, dxi, 1);
+
+              if (BMXChemistry::use_fba_growth) {
+                p.rdata(realIdx::fba_mu) = BMXFBA::compute_fba_growth_rate_hr(
+                    &p.rdata(0), &p.rdata(realIdx::first_data), &interp_loc[0],
+                    interp_vloc[0], interp_nloc[0],
+                    p.idata(intIdx::cell_type));
+              }
 
 #ifndef AMREX_USE_GPU
               //std::cout<<"Number of particles in grid cell: "<<interp_nloc[0]<<std::endl;
