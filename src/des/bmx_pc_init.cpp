@@ -89,7 +89,7 @@ void BMXParticleContainer::InitParticlesAscii (const std::string& file)
        host_particles[i].rdata(realIdx::first_data+c) = init_conc[c];
         //host_particles[i].rdata(realIdx::first_data+c) = tmp[c];
       }
-      host_particles[i].rdata(realIdx::fba_mu) = -1.0;
+      host_particles[i].rdata(realIdx::fba_mu) = 0.0;
       bmxchem->setIntegers(&host_particles[i].idata(0));
       host_particles[i].rdata(realIdx::bond_scale) = 1.0;
       host_particles[i].idata(intIdx::fuse_tip) = 0;

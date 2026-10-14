@@ -258,6 +258,7 @@ class BMXChemistry
   static Real bacteria_radius_max;  // maximum value of radius for bacterium
   static Real radius_max;  // maximum value of cylinder radius for fungi segment
   static Real length_max;  // maximum value of cylinder length for fungi segment
+  static bool use_fba_growth;  // if true, fungi growth uses host-computed FBA rate
   static Real brnch_prob;  // probability of side branching
   static Real split_prob;  // probability of tip splitting
 
