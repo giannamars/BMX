@@ -1927,7 +1927,7 @@ void xferMeshToParticleAndUpdateChem(Real grid_vol, Real npart,
         Real fba_mu = cell_par[realIdx::fba_mu];
         // Host-supplied specific growth rate from FBA/COMETS, in 1/hr.
         // Convert to the BMX time base before using it as a volume source.
-        rV = (fba_mu / 3600.0) * orig_cell_vol;
+        rV = (std::max(fba_mu,0.0) / 3600.0) * orig_cell_vol;
       } else {
         rV =  kv*cB*orig_cell_vol;
       }
