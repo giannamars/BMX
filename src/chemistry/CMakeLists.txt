@@ -14,6 +14,6 @@ target_sources( bmxcore
    bmx_cell_interaction.H
    bmx_cell_interaction_K.H
    bmx_chem.cpp
+   bmx_fba.cpp
    bmx_cell_interaction.cpp
    )
-

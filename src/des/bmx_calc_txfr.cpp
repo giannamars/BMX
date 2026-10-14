@@ -7,6 +7,7 @@
 #include <bmx_deposition_K.H>
 #include <bmx_interp_K.H>
 #include <bmx_fluid_parms.H>
+#include <bmx_fba.H>
 #include <AMReX_AmrParticles.H>
 
 #ifdef NEW_CHEM
@@ -348,6 +349,12 @@ bmx::bmx_calc_txfr_particle (Real time, Real dt)
               GpuArray<Real, 1> interp_gzloc;
 
               BMXParticleContainer::ParticleType& p = pstruct[pid];
+
+              if (BMXChemistry::use_fba_growth) {
+                p.rdata(realIdx::fba_mu) = BMXFBA::compute_fba_growth_rate_hr(
+                    &p.rdata(0), &p.rdata(realIdx::first_data), &interp_loc[0],
+                    p.idata(intIdx::cell_type));
+              }
 
               if (l_cnc_deposition_scheme == 0)
               {
