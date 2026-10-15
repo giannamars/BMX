@@ -33,6 +33,7 @@ amrex::Real BMXChemistry::bacteria_radius_max = 0.0;
 amrex::Real BMXChemistry::radius_max = 0.0;
 amrex::Real BMXChemistry::length_max = 0.0;
 bool BMXChemistry::use_fba_growth = false;
+bool BMXChemistry::fba_debug = false;
 amrex::Real BMXChemistry::p_overlap = 0.0;
 amrex::Real BMXChemistry::fusion_prob= 0.0;
 amrex::Real BMXChemistry::scale_inc= 0.001;
@@ -120,6 +121,7 @@ void BMXChemistry::setParams(const char* /*file*/)
   pp.get("kb",kb);
   pp.get("kbv",kbv);
   pp.query("use_fba_growth",use_fba_growth);
+  pp.query("fba_debug",fba_debug);
   mtA = 0.0;
   pp.query("mass_transfer_A",mtA);
   mtB = 0.0;

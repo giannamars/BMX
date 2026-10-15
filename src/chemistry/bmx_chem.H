@@ -230,6 +230,9 @@ class BMXChemistry
   // if true, fungi growth uses host-computed FBA rate
   static bool use_fba_growth;
 
+  // if true, print host-computed FBA growth rate per particle
+  static bool fba_debug;
+
   static int p_num_reals;   // Total number of real values allocated in model
   static int p_num_ints;    // Total number of int values allocated in model
 

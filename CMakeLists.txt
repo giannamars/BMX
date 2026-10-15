@@ -10,7 +10,7 @@ project(BMX-Exa
    # VERSION <version>
    DESCRIPTION  "A multiphase modeling tool for the exascale"
    HOMEPAGE_URL "https://amrex-codes.github.io/BMX-Exa/"
-   LANGUAGES    C CXX
+   LANGUAGES    C CXX Fortran
    )
 
 # Set the search path for cmake modules

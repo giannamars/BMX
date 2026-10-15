@@ -304,6 +304,48 @@ bmx::bmx_calc_txfr_particle (Real time, Real dt)
         else 
            amrex::Abort("Dont know this deposition scheme in calc_txfr_particle");
 
+#ifdef NEW_CHEM
+        if (BMXChemistry::use_fba_growth) {
+          for (int pid = 0; pid < np; ++pid) {
+            BMXParticleContainer::ParticleType& p = pstruct[pid];
+            GpuArray<Real, interp_ncomp> interp_loc;
+            GpuArray<Real, 1> interp_vloc;
+            GpuArray<Real, 1> interp_nloc;
+
+            if (l_cnc_deposition_scheme == 0) {
+              one_to_one_interp(p.pos(), &interp_loc[0],
+                                interp_array, plo, dxi, interp_ncomp);
+            } else if (l_cnc_deposition_scheme == 1) {
+              trilinear_interp(p.pos(), &interp_loc[0],
+                               interp_array, plo, dxi, interp_ncomp);
+            }
+            if (l_vf_deposition_scheme == 0) {
+              one_to_one_interp(p.pos(), &interp_vloc[0],
+                                interp_varray, plo, dxi, 1);
+            } else if (l_vf_deposition_scheme == 1) {
+              trilinear_interp(p.pos(), &interp_vloc[0],
+                               interp_varray, plo, dxi, 1);
+            }
+            one_to_one_interp(p.pos(), &interp_nloc[0],
+                              interp_narray, plo, dxi, 1);
+
+            Real *cell_par = &p.rdata(0);
+            cell_par[realIdx::fba_mu] = BMXFBA::compute_fba_growth_rate_hr(
+                cell_par, &p.rdata(realIdx::first_data), &interp_loc[0],
+                interp_vloc[0], interp_nloc[0], p.idata(intIdx::cell_type));
+
+            if (BMXChemistry::fba_debug) {
+              amrex::Print() << "FBA mu particle " << (int)p.id()
+                             << " cell_type " << p.idata(intIdx::cell_type)
+                             << " mu_hr " << cell_par[realIdx::fba_mu]
+                             << " vf " << interp_vloc[0]
+                             << " npart " << interp_nloc[0]
+                             << std::endl;
+            }
+          }
+        }
+#endif
+
         int nloop = m_nloop;
         amrex::ParallelFor(np,
             [pstruct,interp_array,interp_varray,interp_narray,plo,dxi,grid_vol,dt,
@@ -390,15 +432,6 @@ bmx::bmx_calc_txfr_particle (Real time, Real dt)
               cell_par[realIdx::gx] = interp_gxloc[0];
               cell_par[realIdx::gy] = interp_gyloc[0];
               cell_par[realIdx::gz] = interp_gzloc[0];
-
-#ifndef AMREX_USE_GPU
-              if (BMXChemistry::use_fba_growth) {
-                cell_par[realIdx::fba_mu] = BMXFBA::compute_fba_growth_rate_hr(
-                    cell_par, &p.rdata(realIdx::first_data), &interp_loc[0],
-                    interp_vloc[0], interp_nloc[0],
-                    p.idata(intIdx::cell_type));
-              }
-#endif
 
               Real *p_vals = &p.rdata(realIdx::first_data);
               int *cell_ipar = &p.idata(0);
