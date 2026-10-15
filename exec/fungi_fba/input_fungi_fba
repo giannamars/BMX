@@ -67,7 +67,7 @@ amr.max_grid_size_z = 64
 fabarray.mfiter_tile_size = 1024 1024 1024
 
 # Particles: Maximum particle tile size
-particles.input_file = "fungi_init_cfg.dat"
+particles.input_file = "../fungi/fungi_init_cfg.dat"
 particles.tile_size = 1024 1024 1024
 
 #_______________________________________________________________________
@@ -155,3 +155,9 @@ cell_force.cell_wall_boundary_width = 1.0e-04
 
 cell_force.neighbor_width = 6.25e-3
 
+cell_force.bond_strength = 1.0
+cell_force.bond_cutoff = 5.0e-4
+cell_force.viscous_drag = 200.0
+cell_force.gravity = 0.01
+cell_force.fluctuation_scale = 4.0e-5
+cell_force.fluctuation_mixing = 0.1
