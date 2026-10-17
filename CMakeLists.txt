@@ -10,7 +10,7 @@ project(BMX-Exa
    # VERSION <version>
    DESCRIPTION  "A multiphase modeling tool for the exascale"
    HOMEPAGE_URL "https://amrex-codes.github.io/BMX-Exa/"
-   LANGUAGES    C CXX Fortran
+   LANGUAGES    C CXX
    )
 
 # Set the search path for cmake modules
@@ -105,7 +105,7 @@ elseif (BMX_GPU_BACKEND STREQUAL HIP)
    set(BMX_DPCPP OFF )
    set(BMX_CUDA  OFF )
    set(BMX_HIP   ON  )
-elseif ()
+else ()
    set(BMX_DPCPP OFF )
    set(BMX_CUDA  OFF )
 endif()
