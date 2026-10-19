@@ -7,6 +7,12 @@ target_include_directories( bmxcore
    PUBLIC
    $<BUILD_INTERFACE:${CMAKE_CURRENT_LIST_DIR}>)
 
+if (BMX_USE_LIBSBML)
+   find_package(LibSBML REQUIRED MODULE)
+   target_link_libraries(bmxcore PUBLIC LibSBML::LibSBML)
+   target_compile_definitions(bmxcore PUBLIC BMX_USE_LIBSBML)
+endif ()
+
 target_sources( bmxcore
    PRIVATE
    bmx_chem.H
