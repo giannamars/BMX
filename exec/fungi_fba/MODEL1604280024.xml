@@ -240290,7 +240290,7 @@
       </ns0:listOfLocalParameters>
     </ns0:kineticLaw>
   </ns0:reaction>
-  <ns0:reaction metaid="meta_r0243-YCM606-R07497" id="r0243YCM606R07497">
+  <ns0:reaction metaid="meta_r0243-YCM606-R07497" id="r0243YCM606R07497" reversible="false" fast="false">
     <ns0:listOfReactants>
       <ns0:speciesReference species="C04525" stoichiometry="1" constant="true" />
     </ns0:listOfReactants>
@@ -240308,7 +240308,7 @@
       </ns0:listOfLocalParameters>
     </ns0:kineticLaw>
   </ns0:reaction>
-  <ns0:reaction metaid="meta_R07505-KEGG-R07505" id="R07505KEGGR07505">
+  <ns0:reaction metaid="meta_R07505-KEGG-R07505" id="R07505KEGGR07505" reversible="false" fast="false">
     <ns0:listOfReactants>
       <ns0:speciesReference species="C00006" stoichiometry="1" constant="true" />
       <ns0:speciesReference species="C15777" stoichiometry="1" constant="true" />
@@ -240328,7 +240328,7 @@
       </ns0:listOfLocalParameters>
     </ns0:kineticLaw>
   </ns0:reaction>
-  <ns0:reaction metaid="meta_R07506-KEGG-R07506" id="R07506KEGGR07506">
+  <ns0:reaction metaid="meta_R07506-KEGG-R07506" id="R07506KEGGR07506" reversible="false" fast="false">
     <ns0:listOfReactants>
       <ns0:speciesReference species="C00006" stoichiometry="1" constant="true" />
       <ns0:speciesReference species="C15778" stoichiometry="1" constant="true" />
@@ -240348,7 +240348,7 @@
       </ns0:listOfLocalParameters>
     </ns0:kineticLaw>
   </ns0:reaction>
-  <ns0:reaction metaid="meta_r0231-YCM606-R05639" id="r0231YCM606R05639">
+  <ns0:reaction metaid="meta_r0231-YCM606-R05639" id="r0231YCM606R05639" reversible="false" fast="false">
     <ns0:listOfReactants>
       <ns0:speciesReference species="C00006" stoichiometry="1" constant="true" />
       <ns0:speciesReference species="C05108" stoichiometry="1" constant="true" />
@@ -240368,7 +240368,7 @@
       </ns0:listOfLocalParameters>
     </ns0:kineticLaw>
   </ns0:reaction>
-  <ns0:reaction metaid="meta_r0236-YCM606-R07495" id="r0236YCM606R07495">
+  <ns0:reaction metaid="meta_r0236-YCM606-R07495" id="r0236YCM606R07495" reversible="false" fast="false">
     <ns0:listOfReactants>
       <ns0:speciesReference species="C00005" stoichiometry="1" constant="true" />
       <ns0:speciesReference species="C15816" stoichiometry="1" constant="true" />
@@ -240388,7 +240388,7 @@
       </ns0:listOfLocalParameters>
     </ns0:kineticLaw>
   </ns0:reaction>
-  <ns0:reaction metaid="meta_r0238-YCM606-" id="r0238YCM606">
+  <ns0:reaction metaid="meta_r0238-YCM606-" id="r0238YCM606" reversible="false" fast="false">
     <ns0:listOfReactants>
       <ns0:speciesReference species="C00007" stoichiometry="1" constant="true" />
       <ns0:speciesReference species="C00005" stoichiometry="1" constant="true" />
@@ -240410,7 +240410,7 @@
       </ns0:listOfLocalParameters>
     </ns0:kineticLaw>
   </ns0:reaction>
-  <ns0:reaction metaid="meta_r0239-YCM606-" id="r0239YCM606">
+  <ns0:reaction metaid="meta_r0239-YCM606-" id="r0239YCM606" reversible="false" fast="false">
     <ns0:listOfReactants>
       <ns0:speciesReference species="C00007" stoichiometry="1" constant="true" />
       <ns0:speciesReference species="CHEBI52388" stoichiometry="1" constant="true" />
@@ -240432,7 +240432,7 @@
       </ns0:listOfLocalParameters>
     </ns0:kineticLaw>
   </ns0:reaction>
-  <ns0:reaction metaid="meta_r0240-YCM606-" id="r0240YCM606">
+  <ns0:reaction metaid="meta_r0240-YCM606-" id="r0240YCM606" reversible="false" fast="false">
     <ns0:listOfReactants>
       <ns0:speciesReference species="C00007" stoichiometry="1" constant="true" />
       <ns0:speciesReference species="C00005" stoichiometry="1" constant="true" />
@@ -240454,7 +240454,7 @@
       </ns0:listOfLocalParameters>
     </ns0:kineticLaw>
   </ns0:reaction>
-  <ns0:reaction metaid="meta_r0234-YCM606-" id="r0234YCM606">
+  <ns0:reaction metaid="meta_r0234-YCM606-" id="r0234YCM606" reversible="false" fast="false">
     <ns0:listOfReactants>
       <ns0:speciesReference species="CHEBI52389" stoichiometry="1" constant="true" />
       <ns0:speciesReference species="C00006" stoichiometry="5" constant="true" />
@@ -240476,7 +240476,7 @@
       </ns0:listOfLocalParameters>
     </ns0:kineticLaw>
   </ns0:reaction>
-  <ns0:reaction metaid="meta_r0237-YCM606-" id="r0237YCM606">
+  <ns0:reaction metaid="meta_r0237-YCM606-" id="r0237YCM606" reversible="false" fast="false">
     <ns0:listOfReactants>
       <ns0:speciesReference species="C00005" stoichiometry="1" constant="true" />
       <ns0:speciesReference species="CHEBI52386" stoichiometry="1" constant="true" />
@@ -240496,7 +240496,7 @@
       </ns0:listOfLocalParameters>
     </ns0:kineticLaw>
   </ns0:reaction>
-  <ns0:reaction metaid="meta_r0438-YCM606-R00081" id="r0438YCM606R00081">
+  <ns0:reaction metaid="meta_r0438-YCM606-R00081" id="r0438YCM606R00081" reversible="false" fast="false">
     <ns0:listOfReactants>
       <ns0:speciesReference species="C00007" stoichiometry="1" constant="true" />
       <ns0:speciesReference species="C00126" stoichiometry="4" constant="true" />
@@ -240517,7 +240517,7 @@
       </ns0:listOfLocalParameters>
     </ns0:kineticLaw>
   </ns0:reaction>
-  <ns0:reaction metaid="meta_r0226-YCM606-R00086" id="r0226YCM606R00086">
+  <ns0:reaction metaid="meta_r0226-YCM606-R00086" id="r0226YCM606R00086" reversible="false" fast="false">
     <ns0:listOfReactants>
       <ns0:speciesReference species="POC" stoichiometry="1" constant="true" />
       <ns0:speciesReference species="C00009" stoichiometry="1" constant="true" />
@@ -240538,7 +240538,7 @@
       </ns0:listOfLocalParameters>
     </ns0:kineticLaw>
   </ns0:reaction>
-  <ns0:reaction metaid="meta_r1041-YCM606-R01466" id="r1041YCM606R01466">
+  <ns0:reaction metaid="meta_r1041-YCM606-R01466" id="r1041YCM606R01466" reversible="false" fast="false">
     <ns0:listOfReactants>
       <ns0:speciesReference species="C01102" stoichiometry="1" constant="true" />
       <ns0:speciesReference species="C00001" stoichiometry="1" constant="true" />
@@ -240558,7 +240558,7 @@
       </ns0:listOfLocalParameters>
     </ns0:kineticLaw>
   </ns0:reaction>
-  <ns0:reaction metaid="meta_r0906-YCM606-R03269" id="r0906YCM606R03269">
+  <ns0:reaction metaid="meta_r0906-YCM606-R03269" id="r0906YCM606R03269" reversible="false" fast="false">
     <ns0:listOfReactants>
       <ns0:speciesReference species="C04352" stoichiometry="1" constant="true" />
     </ns0:listOfReactants>
@@ -240577,7 +240577,7 @@
       </ns0:listOfLocalParameters>
     </ns0:kineticLaw>
   </ns0:reaction>
-  <ns0:reaction metaid="meta_r0918-YCM606-R04173" id="r0918YCM606R04173">
+  <ns0:reaction metaid="meta_r0918-YCM606-R04173" id="r0918YCM606R04173" reversible="false" fast="false">
     <ns0:listOfReactants>
       <ns0:speciesReference species="C00025" stoichiometry="1" constant="true" />
       <ns0:speciesReference species="C03232" stoichiometry="1" constant="true" />
@@ -240597,7 +240597,7 @@
       </ns0:listOfLocalParameters>
     </ns0:kineticLaw>
   </ns0:reaction>
-  <ns0:reaction metaid="meta_r0917-YCM606-R00582" id="r0917YCM606R00582">
+  <ns0:reaction metaid="meta_r0917-YCM606-R00582" id="r0917YCM606R00582" reversible="false" fast="false">
     <ns0:listOfReactants>
       <ns0:speciesReference species="C01005" stoichiometry="1" constant="true" />
       <ns0:speciesReference species="C00001" stoichiometry="1" constant="true" />
@@ -240617,7 +240617,7 @@
       </ns0:listOfLocalParameters>
     </ns0:kineticLaw>
   </ns0:reaction>
-  <ns0:reaction metaid="meta_R07859-KEGG-R07859" id="R07859KEGGR07859">
+  <ns0:reaction metaid="meta_R07859-KEGG-R07859" id="R07859KEGGR07859" reversible="false" fast="false">
     <ns0:listOfReactants>
       <ns0:speciesReference species="CHEBI49183" stoichiometry="1" constant="true" />
       <ns0:speciesReference species="C00001" stoichiometry="1" constant="true" />
@@ -240637,7 +240637,7 @@
       </ns0:listOfLocalParameters>
     </ns0:kineticLaw>
   </ns0:reaction>
-  <ns0:reaction metaid="meta_R3686-YCM606-" id="r3686YCM606">
+  <ns0:reaction metaid="meta_R3686-YCM606-" id="r3686YCM606" reversible="false" fast="false">
     <ns0:listOfReactants>
       <ns0:speciesReference species="C00510" stoichiometry="1" constant="true" />
       <ns0:speciesReference species="C04438" stoichiometry="1" constant="true" />
@@ -243321,7 +243321,7 @@
       </ns0:listOfLocalParameters>
     </ns0:kineticLaw>
   </ns0:reaction>
-  <ns0:reaction metaid="meta_Scer_Biomass_Pseudoreaction" id="scerbiomasspseudoreaction">
+  <ns0:reaction metaid="meta_Scer_Biomass_Pseudoreaction" id="scerbiomasspseudoreaction" reversible="false" fast="false">
     <ns0:listOfReactants>
       <ns0:speciesReference species="C00025" stoichiometry="0.3018" constant="true" />
       <ns0:speciesReference species="C00364" stoichiometry="0.0036" constant="true" />
@@ -243384,7 +243384,7 @@
       </ns0:listOfLocalParameters>
     </ns0:kineticLaw>
   </ns0:reaction>
-  <ns0:reaction metaid="meta_Tree_Biomass_Pseudoreaction" id="treebiomasspseudoreaction">
+  <ns0:reaction metaid="meta_Tree_Biomass_Pseudoreaction" id="treebiomasspseudoreaction" reversible="false" fast="false">
     <ns0:listOfReactants>
       <ns0:speciesReference species="C00025" stoichiometry="0.2477943901" constant="true" />
       <ns0:speciesReference species="C00148" stoichiometry="0.2432608152" constant="true" />
