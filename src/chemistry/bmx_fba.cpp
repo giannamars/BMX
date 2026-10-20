@@ -5,6 +5,7 @@
 
 #ifdef BMX_USE_LIBSBML
 #include <sbml/SBMLReader.h>
+#include <sbml/SBMLDocument.h>
 #endif
 
 namespace BMXFBA
