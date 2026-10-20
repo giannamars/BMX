@@ -14,12 +14,21 @@ def local_name(tag: str) -> str:
     return tag
 
 
-def patch_reactions(root: ET.Element) -> tuple[int, int, int]:
+def patch_model(root: ET.Element) -> tuple[int, int, int, int, int]:
     patched = 0
     missing_reversible = 0
     missing_fast = 0
+    patched_compartments = 0
+    missing_constant = 0
     for reaction in root.iter():
         if local_name(reaction.tag) != "reaction":
+            if local_name(reaction.tag) != "compartment":
+                continue
+
+            if "constant" not in reaction.attrib:
+                reaction.set("constant", "true")
+                missing_constant += 1
+                patched_compartments += 1
             continue
 
         changed = False
@@ -34,7 +43,7 @@ def patch_reactions(root: ET.Element) -> tuple[int, int, int]:
         if changed:
             patched += 1
 
-    return patched, missing_reversible, missing_fast
+    return patched, missing_reversible, missing_fast, patched_compartments, missing_constant
 
 
 def main() -> int:
@@ -55,7 +64,7 @@ def main() -> int:
     tree = ET.parse(input_path)
     root = tree.getroot()
 
-    patched, missing_reversible, missing_fast = patch_reactions(root)
+    patched, missing_reversible, missing_fast, patched_compartments, missing_constant = patch_model(root)
 
     if output_path == input_path:
         backup_path = input_path + ".bak"
@@ -66,7 +75,8 @@ def main() -> int:
     tree.write(output_path, encoding="utf-8", xml_declaration=True)
     print(
         f"Patched {patched} reaction(s) in {output_path} "
-        f"(added reversible to {missing_reversible}, fast to {missing_fast})"
+        f"(added reversible to {missing_reversible}, fast to {missing_fast}; "
+        f"patched {patched_compartments} compartment(s), constant to {missing_constant})"
     )
     return 0
 

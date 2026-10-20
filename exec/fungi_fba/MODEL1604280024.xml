@@ -56,7 +56,7 @@
   </rdf:RDF>
 </ns0:annotation><ns0:listOfCompartments>
   <ns0:compartment sboTerm="SBO:0000290" id="cytosol" name="cytosol" size="1" constant="false" />
-  <ns0:compartment id="boundary" />
+  <ns0:compartment id="boundary" constant="true" />
 </ns0:listOfCompartments><ns0:listOfSpecies>
   <ns0:species metaid="meta_CHEBI52321" sboTerm="SBO:0000247" id="CHEBI52321" name="fecosterol ester [cytosol]" compartment="cytosol" initialAmount="0" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false">
     <ns0:annotation>
