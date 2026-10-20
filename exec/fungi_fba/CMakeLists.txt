@@ -10,6 +10,12 @@ configure_file(
 )
 
 configure_file(
+  ${PROJECT_SOURCE_DIR}/exec/fungi_fba/MODEL1604280024.xml
+  ${CMAKE_CURRENT_BINARY_DIR}/MODEL1604280024.xml
+  COPYONLY
+)
+
+configure_file(
   ${PROJECT_SOURCE_DIR}/exec/fungi/fungi_init_cfg.dat
   ${CMAKE_CURRENT_BINARY_DIR}/fungi_init_cfg.dat
 )
