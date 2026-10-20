@@ -1,12 +1,11 @@
 #include <bmx_fba.H>
 
 #include <AMReX.H>
+#include <AMReX_Print.H>
 
 #ifdef BMX_USE_LIBSBML
-#include <sbml/SBMLTypes.h>
+#include <sbml/SBMLReader.h>
 #endif
-
-#include <memory>
 
 namespace BMXFBA
 {
@@ -25,7 +24,8 @@ initialize_from_sbml(const std::string& sbml_file)
   }
 
 #ifdef BMX_USE_LIBSBML
-  std::unique_ptr<libsbml::SBMLDocument> document(libsbml::readSBML(model_path));
+  SBMLReader reader;
+  SBMLDocument* document = reader.readSBMLFromFile(model_path);
   if (!document) {
     amrex::Abort("Failed to create an SBML document from " + model_path);
   }
@@ -36,6 +36,7 @@ initialize_from_sbml(const std::string& sbml_file)
   }
 
   amrex::Print() << "Loaded FBA SBML model: " << model_path << std::endl;
+  delete document;
 #else
   amrex::Abort("BMX was built without libSBML support but an SBML file was requested");
 #endif
