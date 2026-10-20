@@ -4,9 +4,11 @@
 //     in the LICENSE file in the top level directory of this distribution.
 //
 #include <stdio.h>
+#include <string>
 #include <bmx.H>
 #include <bmx_fluid_parms.H>
 #include <bmx_chem.H>
+#include <bmx_fba.H>
 
 amrex::Real BMXChemistry::k1 = 0.0;
 amrex::Real BMXChemistry::k2 = 0.0;
@@ -122,6 +124,11 @@ void BMXChemistry::setParams(const char* /*file*/)
   pp.get("kbv",kbv);
   pp.query("use_fba_growth",use_fba_growth);
   pp.query("fba_debug",fba_debug);
+  std::string fba_sbml_file;
+  pp.query("fba_sbml_file", fba_sbml_file);
+  if (use_fba_growth) {
+    BMXFBA::initialize_from_sbml(fba_sbml_file);
+  }
   mtA = 0.0;
   pp.query("mass_transfer_A",mtA);
   mtB = 0.0;
