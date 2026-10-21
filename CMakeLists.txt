@@ -79,6 +79,8 @@ option( BMX_HYPRE  "Enable HYPRE"  NO )
 option( BMX_FPE    "Enable Floating Point Exceptions checks" NO )
 option( BMX_USE_LIBSBML "Enable optional libSBML support for FBA" OFF )
 set(BMX_LIBSBML_ROOT "" CACHE PATH "Optional libSBML prefix used by the FBA hooks")
+option( BMX_USE_ORTOOLS "Enable optional OR-Tools support for FBA" OFF )
+set(BMX_ORTOOLS_ROOT "" CACHE PATH "Optional OR-Tools prefix used by the FBA hooks")
 
 #
 # GPU backends    =============================================================

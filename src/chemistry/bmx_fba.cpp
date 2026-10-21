@@ -6,6 +6,7 @@
 #ifdef BMX_USE_LIBSBML
 #include <sbml/SBMLReader.h>
 #include <sbml/SBMLDocument.h>
+#include <sbml/Model.h>
 #endif
 
 namespace BMXFBA
@@ -34,6 +35,11 @@ initialize_from_sbml(const std::string& sbml_file)
   if (document->getNumErrors() > 0) {
     document->printErrors();
     amrex::Abort("SBML document contains errors: " + model_path);
+  }
+
+  if (document->getModel() == nullptr) {
+    delete document;
+    amrex::Abort("SBML document has no model: " + model_path);
   }
 
   amrex::Print() << "Loaded FBA SBML model: " << model_path << std::endl;

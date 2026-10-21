@@ -13,6 +13,15 @@ if (BMX_USE_LIBSBML)
    target_compile_definitions(bmxcore PUBLIC BMX_USE_LIBSBML)
 endif ()
 
+if (BMX_USE_ORTOOLS)
+   if (NOT BMX_ORTOOLS_ROOT STREQUAL "")
+      list(PREPEND CMAKE_PREFIX_PATH "${BMX_ORTOOLS_ROOT}")
+   endif ()
+   find_package(ortools CONFIG REQUIRED)
+   target_link_libraries(bmxcore PUBLIC ortools::ortools)
+   target_compile_definitions(bmxcore PUBLIC BMX_USE_ORTOOLS)
+endif ()
+
 target_sources( bmxcore
    PRIVATE
    bmx_chem.H
