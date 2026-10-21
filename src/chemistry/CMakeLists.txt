@@ -17,7 +17,11 @@ if (BMX_USE_ORTOOLS)
    if (NOT BMX_ORTOOLS_ROOT STREQUAL "")
       list(PREPEND CMAKE_PREFIX_PATH "${BMX_ORTOOLS_ROOT}")
    endif ()
-   find_package(ortools CONFIG REQUIRED)
+   find_package(ortools CONFIG REQUIRED
+      HINTS
+      "${BMX_ORTOOLS_ROOT}"
+      "${BMX_ORTOOLS_ROOT}/lib/cmake/ortools"
+      "${BMX_ORTOOLS_ROOT}/share/ortools/cmake")
    target_link_libraries(bmxcore PUBLIC ortools::ortools)
    target_compile_definitions(bmxcore PUBLIC BMX_USE_ORTOOLS)
 endif ()
