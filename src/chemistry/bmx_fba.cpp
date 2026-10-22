@@ -23,6 +23,10 @@ namespace
   Real
   run_ortools_smoke_test()
   {
+    amrex::Print() << "==================================================" << std::endl;
+    amrex::Print() << "BMX OR-Tools smoke test: starting tiny LP solve" << std::endl;
+    amrex::Print() << "==================================================" << std::endl;
+
     operations_research::MPSolver solver(
       "bmx_fba_smoke_test",
       operations_research::MPSolver::GLOP_LINEAR_PROGRAMMING);
@@ -53,9 +57,12 @@ namespace
       amrex::Abort("OR-Tools smoke LP failed to solve to optimality");
     }
 
+    amrex::Print() << "BMX OR-Tools smoke test: solver status OPTIMAL" << std::endl;
+
     const Real objective_value = objective->Value();
-    amrex::Print() << "OR-Tools LP smoke test objective = "
+    amrex::Print() << "BMX OR-Tools smoke test objective = "
                    << objective_value << std::endl;
+    amrex::Print() << "==================================================" << std::endl;
     return objective_value;
   }
 #endif

@@ -24,6 +24,7 @@ if (BMX_USE_ORTOOLS)
       "${BMX_ORTOOLS_ROOT}/share/ortools/cmake")
    target_link_libraries(bmxcore PUBLIC ortools::ortools)
    target_compile_definitions(bmxcore PUBLIC BMX_USE_ORTOOLS)
+   target_compile_features(bmxcore PUBLIC cxx_std_20)
 endif ()
 
 target_sources( bmxcore
