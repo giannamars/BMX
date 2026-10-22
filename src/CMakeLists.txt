@@ -64,6 +64,10 @@ target_link_libraries( bmxcore PUBLIC AMReX::amrex )
 set_target_properties(bmxcore PROPERTIES CXX_EXTENSIONS OFF)
 target_compile_features(bmxcore PUBLIC cxx_std_14)
 
+if (BMX_USE_ORTOOLS)
+   set_target_properties(bmxcore PROPERTIES CUDA_STANDARD 20 CUDA_STANDARD_REQUIRED ON)
+endif ()
+
 #
 # If BMX_CUDA, set CUDA-specific properties and
 # make C++ files be compiled as CUDA sources
