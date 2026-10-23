@@ -1,1 +1,1 @@
-/usr/bin/c++  -w -O3 -DNDEBUG -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/fvarnames.dir/fvarnames.cpp.o -o amrex_fvarnames  ../../Src/libamrex_3d.a /opt/homebrew/Cellar/open-mpi/5.0.8/lib/libmpi.dylib
+/usr/bin/c++  -w -O3 -DNDEBUG -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/fvarnames.dir/fvarnames.cpp.o -o fvarnames  ../../Src/libamrex.a /opt/homebrew/Cellar/open-mpi/5.0.8/lib/libmpi.dylib

@@ -227,17 +227,17 @@ test_install/fast:
 .PHONY : test_install/fast
 
 #=============================================================================
-# Target rules for targets named amrex_3d
+# Target rules for targets named amrex
 
 # Build rule for target.
-amrex_3d: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 amrex_3d
-.PHONY : amrex_3d
+amrex: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 amrex
+.PHONY : amrex
 
 # fast build rule for target.
-amrex_3d/fast:
-	$(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build
-.PHONY : amrex_3d/fast
+amrex/fast:
+	$(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/build
+.PHONY : amrex/fast
 
 #=============================================================================
 # Target rules for targets named fboxinfo
@@ -266,19 +266,6 @@ fcompare/fast:
 .PHONY : fcompare/fast
 
 #=============================================================================
-# Target rules for targets named fconvert
-
-# Build rule for target.
-fconvert: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 fconvert
-.PHONY : fconvert
-
-# fast build rule for target.
-fconvert/fast:
-	$(MAKE) $(MAKESILENT) -f subprojects/amrex/Tools/Plotfile/CMakeFiles/fconvert.dir/build.make subprojects/amrex/Tools/Plotfile/CMakeFiles/fconvert.dir/build
-.PHONY : fconvert/fast
-
-#=============================================================================
 # Target rules for targets named fextract
 
 # Build rule for target.
@@ -303,19 +290,6 @@ fextrema: cmake_check_build_system
 fextrema/fast:
 	$(MAKE) $(MAKESILENT) -f subprojects/amrex/Tools/Plotfile/CMakeFiles/fextrema.dir/build.make subprojects/amrex/Tools/Plotfile/CMakeFiles/fextrema.dir/build
 .PHONY : fextrema/fast
-
-#=============================================================================
-# Target rules for targets named fgradient
-
-# Build rule for target.
-fgradient: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 fgradient
-.PHONY : fgradient
-
-# fast build rule for target.
-fgradient/fast:
-	$(MAKE) $(MAKESILENT) -f subprojects/amrex/Tools/Plotfile/CMakeFiles/fgradient.dir/build.make subprojects/amrex/Tools/Plotfile/CMakeFiles/fgradient.dir/build
-.PHONY : fgradient/fast
 
 #=============================================================================
 # Target rules for targets named fnan
@@ -461,16 +435,14 @@ help:
 	@echo "... etags"
 	@echo "... tags"
 	@echo "... test_install"
-	@echo "... amrex_3d"
+	@echo "... amrex"
 	@echo "... bmx"
 	@echo "... bmxcore"
 	@echo "... buildInfobmxcore"
 	@echo "... fboxinfo"
 	@echo "... fcompare"
-	@echo "... fconvert"
 	@echo "... fextract"
 	@echo "... fextrema"
-	@echo "... fgradient"
 	@echo "... fjoin_par"
 	@echo "... fnan"
 	@echo "... fsnapshot"

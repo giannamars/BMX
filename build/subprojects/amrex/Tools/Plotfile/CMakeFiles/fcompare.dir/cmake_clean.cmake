@@ -1,8 +1,8 @@
 file(REMOVE_RECURSE
   "CMakeFiles/fcompare.dir/fcompare.cpp.o"
   "CMakeFiles/fcompare.dir/fcompare.cpp.o.d"
-  "amrex_fcompare"
-  "amrex_fcompare.pdb"
+  "fcompare"
+  "fcompare.pdb"
 )
 
 # Per-language clean rules from dependency scanning.

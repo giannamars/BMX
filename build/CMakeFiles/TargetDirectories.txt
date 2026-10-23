@@ -15,7 +15,7 @@
 /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build/subprojects/amrex/CMakeFiles/install.dir
 /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build/subprojects/amrex/CMakeFiles/install/local.dir
 /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build/subprojects/amrex/CMakeFiles/install/strip.dir
-/Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build/subprojects/amrex/Src/CMakeFiles/amrex_3d.dir
+/Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build/subprojects/amrex/Src/CMakeFiles/amrex.dir
 /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build/subprojects/amrex/Src/CMakeFiles/edit_cache.dir
 /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build/subprojects/amrex/Src/CMakeFiles/rebuild_cache.dir
 /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build/subprojects/amrex/Src/CMakeFiles/list_install_components.dir
@@ -66,10 +66,8 @@
 /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build/subprojects/amrex/Src/Particle/CMakeFiles/install/strip.dir
 /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build/subprojects/amrex/Tools/Plotfile/CMakeFiles/fboxinfo.dir
 /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build/subprojects/amrex/Tools/Plotfile/CMakeFiles/fcompare.dir
-/Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build/subprojects/amrex/Tools/Plotfile/CMakeFiles/fconvert.dir
 /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build/subprojects/amrex/Tools/Plotfile/CMakeFiles/fextract.dir
 /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build/subprojects/amrex/Tools/Plotfile/CMakeFiles/fextrema.dir
-/Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build/subprojects/amrex/Tools/Plotfile/CMakeFiles/fgradient.dir
 /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build/subprojects/amrex/Tools/Plotfile/CMakeFiles/fnan.dir
 /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build/subprojects/amrex/Tools/Plotfile/CMakeFiles/fsnapshot.dir
 /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build/subprojects/amrex/Tools/Plotfile/CMakeFiles/ftime.dir

@@ -1,8 +1,8 @@
 file(REMOVE_RECURSE
   "CMakeFiles/fnan.dir/fnan.cpp.o"
   "CMakeFiles/fnan.dir/fnan.cpp.o.d"
-  "amrex_fnan"
-  "amrex_fnan.pdb"
+  "fnan"
+  "fnan.pdb"
 )
 
 # Per-language clean rules from dependency scanning.

@@ -179,7 +179,7 @@ bmx: src/CMakeFiles/bmxcore.dir/chemistry/bmx_chem.cpp.o
 bmx: src/CMakeFiles/bmxcore.dir/chemistry/bmx_fba.cpp.o
 bmx: src/CMakeFiles/bmxcore.dir/chemistry/bmx_cell_interaction.cpp.o
 bmx: CMakeFiles/bmx.dir/build.make
-bmx: subprojects/amrex/Src/libamrex_3d.a
+bmx: subprojects/amrex/Src/libamrex.a
 bmx: /opt/homebrew/Cellar/open-mpi/5.0.8/lib/libmpi.dylib
 bmx: src/libbuildInfobmxcore.a
 bmx: CMakeFiles/bmx.dir/link.txt

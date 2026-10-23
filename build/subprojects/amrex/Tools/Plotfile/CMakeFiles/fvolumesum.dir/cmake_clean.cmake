@@ -1,8 +1,8 @@
 file(REMOVE_RECURSE
   "CMakeFiles/fvolumesum.dir/fvolumesum.cpp.o"
   "CMakeFiles/fvolumesum.dir/fvolumesum.cpp.o.d"
-  "amrex_fvolumesum"
-  "amrex_fvolumesum.pdb"
+  "fvolumesum"
+  "fvolumesum.pdb"
 )
 
 # Per-language clean rules from dependency scanning.

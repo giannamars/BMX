@@ -1,8 +1,8 @@
 file(REMOVE_RECURSE
   "CMakeFiles/ftime.dir/ftime.cpp.o"
   "CMakeFiles/ftime.dir/ftime.cpp.o.d"
-  "amrex_ftime"
-  "amrex_ftime.pdb"
+  "ftime"
+  "ftime.pdb"
 )
 
 # Per-language clean rules from dependency scanning.

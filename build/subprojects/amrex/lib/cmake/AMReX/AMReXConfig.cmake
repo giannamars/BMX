@@ -35,11 +35,9 @@ macro(check_required_components _NAME)
    endforeach()
 endmacro()
 
-# Set the minimum CMake version required -- this is the version AMReX itself
-# requires, not the (possibly much newer) one it happened to be built with:
-# pinning the latter would lock out consumers whose CMake is older than the
-# build machine's, and would raise the policy version of their project.
-cmake_minimum_required(VERSION 3.25)
+# Set the minimum CMake version required -- This must be the version
+# of CMake used to build the library
+cmake_minimum_required(VERSION 4.0.1)
 
 # Provides find_dependency
 include(CMakeFindDependencyMacro)
@@ -52,17 +50,17 @@ set(AMReX_BUILD_TYPE  Release)
 #
 # Versioning
 #
-set(AMReX_GIT_VERSION \"26.10\")
+set(AMReX_GIT_VERSION \"22.07\")
 
 #
 # Release number
 #
-set(AMReX_RELEASE_NUMBER 261000)
+set(AMReX_RELEASE_NUMBER 220700)
 
 #
 # AMReX CMake modules PATH
 #
-set_and_check(AMReX_MODULE_PATH ${PACKAGE_PREFIX_DIR}/lib/cmake/AMReX/AMReXCMakeModules)
+set_and_check(AMReX_MODULE_PATH ${PACKAGE_PREFIX_DIR}/Tools/CMake)
 
 #
 # Add AMReX modules to app code CMake
@@ -76,14 +74,9 @@ set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} ${AMReX_MODULE_PATH})
 #
 
 # General options
+set(AMReX_3D_FOUND   ON)
 set(AMReX_MPI_FOUND                 ON)
-if(AMReX_MPI_FOUND)  # ensure users can request a no-MPI variant
-  set(AMReX_NOMPI_FOUND             FALSE)
-else()
-  set(AMReX_NOMPI_FOUND             TRUE)
-endif()
 set(AMReX_MPI_THREAD_MULTIPLE_FOUND OFF)
-set(AMReX_SIMD_FOUND                OFF)
 set(AMReX_OMP_FOUND                 OFF)
 set(AMReX_CUDA_FOUND                OFF)
 set(AMReX_SYCL_FOUND                OFF)
@@ -96,15 +89,11 @@ set(AMReX_AMRLEVEL_FOUND            ON)
 set(AMReX_EB_FOUND                  ON)
 set(AMReX_FINTERFACES_FOUND         OFF)
 set(AMReX_LSOLVERS_FOUND            ON)
-set(AMReX_LSOLVERS_INCFLO_FOUND     ON)
-set(AMReX_LSOLVERS_EM_FOUND         ON)
-set(AMReX_FFT_FOUND                 OFF)
 set(AMReX_AMRDATA_FOUND             OFF)
 set(AMReX_PARTICLES_FOUND           ON)
 set(AMReX_PDOUBLE_FOUND ON)
 set(AMReX_SENSEI_FOUND              OFF)
 set(AMReX_CONDUIT_FOUND             OFF)
-set(AMReX_CATALYST_FOUND            OFF)
 set(AMReX_ASCENT_FOUND              OFF)
 set(AMReX_HYPRE_FOUND               OFF)
 set(AMReX_PETSC_FOUND               OFF)
@@ -116,9 +105,6 @@ set(AMReX_HDF5_ZFP_FOUND            OFF)
 set(AMReX_FPE_FOUND                 OFF)
 set(AMReX_PIC_FOUND                 OFF)
 set(AMReX_ASSERTIONS_FOUND          OFF)
-set(AMReX_FLATTEN_FOR_FOUND         OFF)
-set(AMReX_COMPILER_DEFAULT_INLINE_FOUND   ON)
-set(AMReX_INLINE_LIMIT_FOUND              )
 
 # Profiling options
 set(AMReX_BASEP_FOUND               OFF)
@@ -135,12 +121,8 @@ set(AMReX_PFTOOLS_FOUND             ON)
 # export the actual values as well.
 # General options
 set(AMReX_SPACEDIM                  3)
-foreach(D IN LISTS AMReX_SPACEDIM)
-    set(AMReX_${D}D_FOUND   ON)
-endforeach()
 set(AMReX_MPI                       ON)
 set(AMReX_MPI_THREAD_MULTIPLE       OFF)
-set(AMReX_SIMD                      OFF)
 set(AMReX_OMP                       OFF)
 set(AMReX_CUDA                      OFF)
 set(AMReX_SYCL                      OFF)
@@ -148,8 +130,6 @@ set(AMReX_HIP                       OFF)
 set(AMReX_GPU_BACKEND               NONE)
 set(AMReX_GPU_RDC                   OFF)
 set(AMReX_PRECISION                 DOUBLE)
-set(AMReX_FASTMATH                  OFF)
-set(AMReX_MATH_ERRNO                OFF)
 set(AMReX_FORTRAN                   OFF)
 
 # Actual components selection
@@ -157,20 +137,15 @@ set(AMReX_AMRLEVEL                  ON)
 set(AMReX_EB                        ON)
 set(AMReX_FINTERFACES               OFF)
 set(AMReX_LSOLVERS                  ON)
-set(AMReX_LSOLVERS_INCFLO           ON)
-set(AMReX_LSOLVERS_EM               ON)
-set(AMReX_FFT                       OFF)
 set(AMReX_AMRDATA                   OFF)
 set(AMReX_PARTICLES                 ON)
 set(AMReX_PARTICLES_PRECISION       DOUBLE)
 set(AMReX_SENSEI                    OFF)
 set(AMReX_NO_SENSEI_AMR_INST        FALSE)
 set(AMReX_CONDUIT                   OFF)
-set(AMReX_CATALYST                  OFF)
 set(AMReX_ASCENT                    OFF)
 set(AMReX_HYPRE                     OFF)
 set(AMReX_PETSC                     OFF)
-set(AMReX_SUNDIALS                  OFF)
 set(AMReX_HDF5                      OFF)
 set(AMReX_HDF5_ZFP                  OFF)
 
@@ -178,7 +153,6 @@ set(AMReX_HDF5_ZFP                  OFF)
 set(AMReX_FPE                       OFF)
 set(AMReX_PIC                       OFF)
 set(AMReX_ASSERTIONS                OFF)
-set(AMReX_FLATTEN_FOR               OFF)
 
 # Profiling options
 set(AMReX_BASE_PROFILE              OFF)
@@ -207,7 +181,7 @@ set( THREADS_PREFER_PTHREAD_FLAG on)
 find_dependency(Threads REQUIRED)
 
 if (ON)
-   set( _mpi_components CXX )
+   set( _mpi_components C CXX )
    if (OFF)
       list(APPEND _mpi_components Fortran)
    endif ()
@@ -227,10 +201,6 @@ endif ()
 # Third party libraries
 #
 if (OFF)
-   find_dependency(vir-simd REQUIRED)
-endif ()
-
-if (OFF)
     set(SENSEI_DIR )
     find_dependency(SENSEI REQUIRED)
 endif ()
@@ -240,18 +210,8 @@ if (OFF)
 endif ()
 
 if (OFF)
-    find_dependency(Catalyst REQUIRED)
-endif ()
-
-if (OFF)
    find_dependency(Conduit REQUIRED)
 endif ()
-
-if (OFF)
-    if (NONE STREQUAL NONE)
-        find_dependency(AMReXFFTW REQUIRED)
-    endif()
-endif()
 
 if (OFF)
     find_dependency(HDF5 REQUIRED)
@@ -276,50 +236,23 @@ endif ()
 #
 # CUDA
 #
+# AMReX 21.06+ supports CUDA_ARCHITECTURES
 if (OFF)
-    find_dependency(CUDAToolkit REQUIRED)
-endif ()
-
-#
-# HIP
-#
-if (OFF)
-    find_dependency(hip REQUIRED CONFIG)
-    find_dependency(hiprand REQUIRED CONFIG)
-    find_dependency(rocrand REQUIRED CONFIG)
-    find_dependency(rocprim REQUIRED CONFIG)
-    if (ON)
-        find_dependency(rocsparse REQUIRED CONFIG)
-    endif ()
-    if (OFF)
-        find_dependency(rocfft REQUIRED CONFIG)
-    endif ()
-    if (OFF)
-        find_dependency(rocprofiler-sdk-roctx REQUIRED CONFIG)
+    if (CMAKE_VERSION VERSION_LESS 3.20)
+        include(AMReX_SetupCUDA)
+    else ()
+        find_dependency(CUDAToolkit REQUIRED)
     endif ()
 endif ()
 
-# CMake targets
 include( "${CMAKE_CURRENT_LIST_DIR}/AMReXTargets.cmake" )
 
-# CMake targets aliases: last dimension built will be our legacy target
-if (NOT TARGET AMReX::amrex)  # protection in case of multiple inclusions
-    list(LENGTH AMReX_SPACEDIM list_len)
-    math(EXPR list_last "${list_len} - 1")
-    list(GET AMReX_SPACEDIM ${list_last} AMReX_SPACEDIM_LAST)
-    add_library(AMReX::amrex ALIAS AMReX::amrex_${AMReX_SPACEDIM_LAST}d)
-endif()
-
-# CUDA architectures amrex was built for
-if (OFF)
-    set(AMREX_CUDA_ARCHS "" CACHE INTERNAL "CUDA archs AMReX is built for")
-    # device LTO for targets set up with setup_target_for_cuda_compilation
-    set(AMREX_CUDA_IPO  CACHE INTERNAL "CUDA device LTO is requested and available")
-    foreach(D IN LISTS AMReX_SPACEDIM)
-        set_target_properties(AMReX::amrex_${D}d
-          PROPERTIES
-            CUDA_ARCHITECTURES "${AMREX_CUDA_ARCHS}")
-    endforeach()
+if (4.0.1 VERSION_GREATER_EQUAL 3.20 AND  OFF )
+   # CUDA architectures amrex was built for -- should we make
+   set(AMREX_CUDA_ARCHS  CACHE INTERNAL "CUDA archs AMReX is built for")
+   set_target_properties(AMReX::amrex
+      PROPERTIES
+      CUDA_ARCHITECTURES ${AMREX_CUDA_ARCHS})
 endif ()
 
 #

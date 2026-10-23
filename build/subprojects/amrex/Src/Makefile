@@ -162,25 +162,25 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
-subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/rule:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/rule
-.PHONY : subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/rule
+subprojects/amrex/Src/CMakeFiles/amrex.dir/rule:
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 subprojects/amrex/Src/CMakeFiles/amrex.dir/rule
+.PHONY : subprojects/amrex/Src/CMakeFiles/amrex.dir/rule
 
 # Convenience name for target.
-amrex_3d: subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/rule
-.PHONY : amrex_3d
+amrex: subprojects/amrex/Src/CMakeFiles/amrex.dir/rule
+.PHONY : amrex
 
 # fast build rule for target.
-amrex_3d/fast:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build
-.PHONY : amrex_3d/fast
+amrex/fast:
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/build
+.PHONY : amrex/fast
 
 Amr/AMReX_Amr.o: Amr/AMReX_Amr.cpp.o
 .PHONY : Amr/AMReX_Amr.o
 
 # target to build an object file
 Amr/AMReX_Amr.cpp.o:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/Amr/AMReX_Amr.cpp.o
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/Amr/AMReX_Amr.cpp.o
 .PHONY : Amr/AMReX_Amr.cpp.o
 
 Amr/AMReX_Amr.i: Amr/AMReX_Amr.cpp.i
@@ -188,7 +188,7 @@ Amr/AMReX_Amr.i: Amr/AMReX_Amr.cpp.i
 
 # target to preprocess a source file
 Amr/AMReX_Amr.cpp.i:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/Amr/AMReX_Amr.cpp.i
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/Amr/AMReX_Amr.cpp.i
 .PHONY : Amr/AMReX_Amr.cpp.i
 
 Amr/AMReX_Amr.s: Amr/AMReX_Amr.cpp.s
@@ -196,7 +196,7 @@ Amr/AMReX_Amr.s: Amr/AMReX_Amr.cpp.s
 
 # target to generate assembly for a file
 Amr/AMReX_Amr.cpp.s:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/Amr/AMReX_Amr.cpp.s
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/Amr/AMReX_Amr.cpp.s
 .PHONY : Amr/AMReX_Amr.cpp.s
 
 Amr/AMReX_AmrLevel.o: Amr/AMReX_AmrLevel.cpp.o
@@ -204,7 +204,7 @@ Amr/AMReX_AmrLevel.o: Amr/AMReX_AmrLevel.cpp.o
 
 # target to build an object file
 Amr/AMReX_AmrLevel.cpp.o:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/Amr/AMReX_AmrLevel.cpp.o
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/Amr/AMReX_AmrLevel.cpp.o
 .PHONY : Amr/AMReX_AmrLevel.cpp.o
 
 Amr/AMReX_AmrLevel.i: Amr/AMReX_AmrLevel.cpp.i
@@ -212,7 +212,7 @@ Amr/AMReX_AmrLevel.i: Amr/AMReX_AmrLevel.cpp.i
 
 # target to preprocess a source file
 Amr/AMReX_AmrLevel.cpp.i:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/Amr/AMReX_AmrLevel.cpp.i
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/Amr/AMReX_AmrLevel.cpp.i
 .PHONY : Amr/AMReX_AmrLevel.cpp.i
 
 Amr/AMReX_AmrLevel.s: Amr/AMReX_AmrLevel.cpp.s
@@ -220,7 +220,7 @@ Amr/AMReX_AmrLevel.s: Amr/AMReX_AmrLevel.cpp.s
 
 # target to generate assembly for a file
 Amr/AMReX_AmrLevel.cpp.s:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/Amr/AMReX_AmrLevel.cpp.s
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/Amr/AMReX_AmrLevel.cpp.s
 .PHONY : Amr/AMReX_AmrLevel.cpp.s
 
 Amr/AMReX_AuxBoundaryData.o: Amr/AMReX_AuxBoundaryData.cpp.o
@@ -228,7 +228,7 @@ Amr/AMReX_AuxBoundaryData.o: Amr/AMReX_AuxBoundaryData.cpp.o
 
 # target to build an object file
 Amr/AMReX_AuxBoundaryData.cpp.o:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/Amr/AMReX_AuxBoundaryData.cpp.o
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/Amr/AMReX_AuxBoundaryData.cpp.o
 .PHONY : Amr/AMReX_AuxBoundaryData.cpp.o
 
 Amr/AMReX_AuxBoundaryData.i: Amr/AMReX_AuxBoundaryData.cpp.i
@@ -236,7 +236,7 @@ Amr/AMReX_AuxBoundaryData.i: Amr/AMReX_AuxBoundaryData.cpp.i
 
 # target to preprocess a source file
 Amr/AMReX_AuxBoundaryData.cpp.i:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/Amr/AMReX_AuxBoundaryData.cpp.i
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/Amr/AMReX_AuxBoundaryData.cpp.i
 .PHONY : Amr/AMReX_AuxBoundaryData.cpp.i
 
 Amr/AMReX_AuxBoundaryData.s: Amr/AMReX_AuxBoundaryData.cpp.s
@@ -244,7 +244,7 @@ Amr/AMReX_AuxBoundaryData.s: Amr/AMReX_AuxBoundaryData.cpp.s
 
 # target to generate assembly for a file
 Amr/AMReX_AuxBoundaryData.cpp.s:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/Amr/AMReX_AuxBoundaryData.cpp.s
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/Amr/AMReX_AuxBoundaryData.cpp.s
 .PHONY : Amr/AMReX_AuxBoundaryData.cpp.s
 
 Amr/AMReX_Derive.o: Amr/AMReX_Derive.cpp.o
@@ -252,7 +252,7 @@ Amr/AMReX_Derive.o: Amr/AMReX_Derive.cpp.o
 
 # target to build an object file
 Amr/AMReX_Derive.cpp.o:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/Amr/AMReX_Derive.cpp.o
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/Amr/AMReX_Derive.cpp.o
 .PHONY : Amr/AMReX_Derive.cpp.o
 
 Amr/AMReX_Derive.i: Amr/AMReX_Derive.cpp.i
@@ -260,7 +260,7 @@ Amr/AMReX_Derive.i: Amr/AMReX_Derive.cpp.i
 
 # target to preprocess a source file
 Amr/AMReX_Derive.cpp.i:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/Amr/AMReX_Derive.cpp.i
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/Amr/AMReX_Derive.cpp.i
 .PHONY : Amr/AMReX_Derive.cpp.i
 
 Amr/AMReX_Derive.s: Amr/AMReX_Derive.cpp.s
@@ -268,7 +268,7 @@ Amr/AMReX_Derive.s: Amr/AMReX_Derive.cpp.s
 
 # target to generate assembly for a file
 Amr/AMReX_Derive.cpp.s:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/Amr/AMReX_Derive.cpp.s
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/Amr/AMReX_Derive.cpp.s
 .PHONY : Amr/AMReX_Derive.cpp.s
 
 Amr/AMReX_Extrapolater.o: Amr/AMReX_Extrapolater.cpp.o
@@ -276,7 +276,7 @@ Amr/AMReX_Extrapolater.o: Amr/AMReX_Extrapolater.cpp.o
 
 # target to build an object file
 Amr/AMReX_Extrapolater.cpp.o:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/Amr/AMReX_Extrapolater.cpp.o
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/Amr/AMReX_Extrapolater.cpp.o
 .PHONY : Amr/AMReX_Extrapolater.cpp.o
 
 Amr/AMReX_Extrapolater.i: Amr/AMReX_Extrapolater.cpp.i
@@ -284,7 +284,7 @@ Amr/AMReX_Extrapolater.i: Amr/AMReX_Extrapolater.cpp.i
 
 # target to preprocess a source file
 Amr/AMReX_Extrapolater.cpp.i:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/Amr/AMReX_Extrapolater.cpp.i
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/Amr/AMReX_Extrapolater.cpp.i
 .PHONY : Amr/AMReX_Extrapolater.cpp.i
 
 Amr/AMReX_Extrapolater.s: Amr/AMReX_Extrapolater.cpp.s
@@ -292,7 +292,7 @@ Amr/AMReX_Extrapolater.s: Amr/AMReX_Extrapolater.cpp.s
 
 # target to generate assembly for a file
 Amr/AMReX_Extrapolater.cpp.s:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/Amr/AMReX_Extrapolater.cpp.s
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/Amr/AMReX_Extrapolater.cpp.s
 .PHONY : Amr/AMReX_Extrapolater.cpp.s
 
 Amr/AMReX_StateData.o: Amr/AMReX_StateData.cpp.o
@@ -300,7 +300,7 @@ Amr/AMReX_StateData.o: Amr/AMReX_StateData.cpp.o
 
 # target to build an object file
 Amr/AMReX_StateData.cpp.o:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/Amr/AMReX_StateData.cpp.o
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/Amr/AMReX_StateData.cpp.o
 .PHONY : Amr/AMReX_StateData.cpp.o
 
 Amr/AMReX_StateData.i: Amr/AMReX_StateData.cpp.i
@@ -308,7 +308,7 @@ Amr/AMReX_StateData.i: Amr/AMReX_StateData.cpp.i
 
 # target to preprocess a source file
 Amr/AMReX_StateData.cpp.i:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/Amr/AMReX_StateData.cpp.i
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/Amr/AMReX_StateData.cpp.i
 .PHONY : Amr/AMReX_StateData.cpp.i
 
 Amr/AMReX_StateData.s: Amr/AMReX_StateData.cpp.s
@@ -316,7 +316,7 @@ Amr/AMReX_StateData.s: Amr/AMReX_StateData.cpp.s
 
 # target to generate assembly for a file
 Amr/AMReX_StateData.cpp.s:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/Amr/AMReX_StateData.cpp.s
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/Amr/AMReX_StateData.cpp.s
 .PHONY : Amr/AMReX_StateData.cpp.s
 
 Amr/AMReX_StateDescriptor.o: Amr/AMReX_StateDescriptor.cpp.o
@@ -324,7 +324,7 @@ Amr/AMReX_StateDescriptor.o: Amr/AMReX_StateDescriptor.cpp.o
 
 # target to build an object file
 Amr/AMReX_StateDescriptor.cpp.o:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/Amr/AMReX_StateDescriptor.cpp.o
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/Amr/AMReX_StateDescriptor.cpp.o
 .PHONY : Amr/AMReX_StateDescriptor.cpp.o
 
 Amr/AMReX_StateDescriptor.i: Amr/AMReX_StateDescriptor.cpp.i
@@ -332,7 +332,7 @@ Amr/AMReX_StateDescriptor.i: Amr/AMReX_StateDescriptor.cpp.i
 
 # target to preprocess a source file
 Amr/AMReX_StateDescriptor.cpp.i:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/Amr/AMReX_StateDescriptor.cpp.i
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/Amr/AMReX_StateDescriptor.cpp.i
 .PHONY : Amr/AMReX_StateDescriptor.cpp.i
 
 Amr/AMReX_StateDescriptor.s: Amr/AMReX_StateDescriptor.cpp.s
@@ -340,7 +340,7 @@ Amr/AMReX_StateDescriptor.s: Amr/AMReX_StateDescriptor.cpp.s
 
 # target to generate assembly for a file
 Amr/AMReX_StateDescriptor.cpp.s:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/Amr/AMReX_StateDescriptor.cpp.s
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/Amr/AMReX_StateDescriptor.cpp.s
 .PHONY : Amr/AMReX_StateDescriptor.cpp.s
 
 AmrCore/AMReX_AmrCore.o: AmrCore/AMReX_AmrCore.cpp.o
@@ -348,7 +348,7 @@ AmrCore/AMReX_AmrCore.o: AmrCore/AMReX_AmrCore.cpp.o
 
 # target to build an object file
 AmrCore/AMReX_AmrCore.cpp.o:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/AmrCore/AMReX_AmrCore.cpp.o
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/AmrCore/AMReX_AmrCore.cpp.o
 .PHONY : AmrCore/AMReX_AmrCore.cpp.o
 
 AmrCore/AMReX_AmrCore.i: AmrCore/AMReX_AmrCore.cpp.i
@@ -356,7 +356,7 @@ AmrCore/AMReX_AmrCore.i: AmrCore/AMReX_AmrCore.cpp.i
 
 # target to preprocess a source file
 AmrCore/AMReX_AmrCore.cpp.i:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/AmrCore/AMReX_AmrCore.cpp.i
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/AmrCore/AMReX_AmrCore.cpp.i
 .PHONY : AmrCore/AMReX_AmrCore.cpp.i
 
 AmrCore/AMReX_AmrCore.s: AmrCore/AMReX_AmrCore.cpp.s
@@ -364,7 +364,7 @@ AmrCore/AMReX_AmrCore.s: AmrCore/AMReX_AmrCore.cpp.s
 
 # target to generate assembly for a file
 AmrCore/AMReX_AmrCore.cpp.s:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/AmrCore/AMReX_AmrCore.cpp.s
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/AmrCore/AMReX_AmrCore.cpp.s
 .PHONY : AmrCore/AMReX_AmrCore.cpp.s
 
 AmrCore/AMReX_AmrMesh.o: AmrCore/AMReX_AmrMesh.cpp.o
@@ -372,7 +372,7 @@ AmrCore/AMReX_AmrMesh.o: AmrCore/AMReX_AmrMesh.cpp.o
 
 # target to build an object file
 AmrCore/AMReX_AmrMesh.cpp.o:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/AmrCore/AMReX_AmrMesh.cpp.o
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/AmrCore/AMReX_AmrMesh.cpp.o
 .PHONY : AmrCore/AMReX_AmrMesh.cpp.o
 
 AmrCore/AMReX_AmrMesh.i: AmrCore/AMReX_AmrMesh.cpp.i
@@ -380,7 +380,7 @@ AmrCore/AMReX_AmrMesh.i: AmrCore/AMReX_AmrMesh.cpp.i
 
 # target to preprocess a source file
 AmrCore/AMReX_AmrMesh.cpp.i:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/AmrCore/AMReX_AmrMesh.cpp.i
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/AmrCore/AMReX_AmrMesh.cpp.i
 .PHONY : AmrCore/AMReX_AmrMesh.cpp.i
 
 AmrCore/AMReX_AmrMesh.s: AmrCore/AMReX_AmrMesh.cpp.s
@@ -388,39 +388,15 @@ AmrCore/AMReX_AmrMesh.s: AmrCore/AMReX_AmrMesh.cpp.s
 
 # target to generate assembly for a file
 AmrCore/AMReX_AmrMesh.cpp.s:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/AmrCore/AMReX_AmrMesh.cpp.s
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/AmrCore/AMReX_AmrMesh.cpp.s
 .PHONY : AmrCore/AMReX_AmrMesh.cpp.s
-
-AmrCore/AMReX_AmrMeshGridding.o: AmrCore/AMReX_AmrMeshGridding.cpp.o
-.PHONY : AmrCore/AMReX_AmrMeshGridding.o
-
-# target to build an object file
-AmrCore/AMReX_AmrMeshGridding.cpp.o:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/AmrCore/AMReX_AmrMeshGridding.cpp.o
-.PHONY : AmrCore/AMReX_AmrMeshGridding.cpp.o
-
-AmrCore/AMReX_AmrMeshGridding.i: AmrCore/AMReX_AmrMeshGridding.cpp.i
-.PHONY : AmrCore/AMReX_AmrMeshGridding.i
-
-# target to preprocess a source file
-AmrCore/AMReX_AmrMeshGridding.cpp.i:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/AmrCore/AMReX_AmrMeshGridding.cpp.i
-.PHONY : AmrCore/AMReX_AmrMeshGridding.cpp.i
-
-AmrCore/AMReX_AmrMeshGridding.s: AmrCore/AMReX_AmrMeshGridding.cpp.s
-.PHONY : AmrCore/AMReX_AmrMeshGridding.s
-
-# target to generate assembly for a file
-AmrCore/AMReX_AmrMeshGridding.cpp.s:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/AmrCore/AMReX_AmrMeshGridding.cpp.s
-.PHONY : AmrCore/AMReX_AmrMeshGridding.cpp.s
 
 AmrCore/AMReX_Cluster.o: AmrCore/AMReX_Cluster.cpp.o
 .PHONY : AmrCore/AMReX_Cluster.o
 
 # target to build an object file
 AmrCore/AMReX_Cluster.cpp.o:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/AmrCore/AMReX_Cluster.cpp.o
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/AmrCore/AMReX_Cluster.cpp.o
 .PHONY : AmrCore/AMReX_Cluster.cpp.o
 
 AmrCore/AMReX_Cluster.i: AmrCore/AMReX_Cluster.cpp.i
@@ -428,7 +404,7 @@ AmrCore/AMReX_Cluster.i: AmrCore/AMReX_Cluster.cpp.i
 
 # target to preprocess a source file
 AmrCore/AMReX_Cluster.cpp.i:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/AmrCore/AMReX_Cluster.cpp.i
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/AmrCore/AMReX_Cluster.cpp.i
 .PHONY : AmrCore/AMReX_Cluster.cpp.i
 
 AmrCore/AMReX_Cluster.s: AmrCore/AMReX_Cluster.cpp.s
@@ -436,7 +412,7 @@ AmrCore/AMReX_Cluster.s: AmrCore/AMReX_Cluster.cpp.s
 
 # target to generate assembly for a file
 AmrCore/AMReX_Cluster.cpp.s:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/AmrCore/AMReX_Cluster.cpp.s
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/AmrCore/AMReX_Cluster.cpp.s
 .PHONY : AmrCore/AMReX_Cluster.cpp.s
 
 AmrCore/AMReX_ErrorList.o: AmrCore/AMReX_ErrorList.cpp.o
@@ -444,7 +420,7 @@ AmrCore/AMReX_ErrorList.o: AmrCore/AMReX_ErrorList.cpp.o
 
 # target to build an object file
 AmrCore/AMReX_ErrorList.cpp.o:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/AmrCore/AMReX_ErrorList.cpp.o
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/AmrCore/AMReX_ErrorList.cpp.o
 .PHONY : AmrCore/AMReX_ErrorList.cpp.o
 
 AmrCore/AMReX_ErrorList.i: AmrCore/AMReX_ErrorList.cpp.i
@@ -452,7 +428,7 @@ AmrCore/AMReX_ErrorList.i: AmrCore/AMReX_ErrorList.cpp.i
 
 # target to preprocess a source file
 AmrCore/AMReX_ErrorList.cpp.i:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/AmrCore/AMReX_ErrorList.cpp.i
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/AmrCore/AMReX_ErrorList.cpp.i
 .PHONY : AmrCore/AMReX_ErrorList.cpp.i
 
 AmrCore/AMReX_ErrorList.s: AmrCore/AMReX_ErrorList.cpp.s
@@ -460,7 +436,7 @@ AmrCore/AMReX_ErrorList.s: AmrCore/AMReX_ErrorList.cpp.s
 
 # target to generate assembly for a file
 AmrCore/AMReX_ErrorList.cpp.s:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/AmrCore/AMReX_ErrorList.cpp.s
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/AmrCore/AMReX_ErrorList.cpp.s
 .PHONY : AmrCore/AMReX_ErrorList.cpp.s
 
 AmrCore/AMReX_FillPatchUtil.o: AmrCore/AMReX_FillPatchUtil.cpp.o
@@ -468,7 +444,7 @@ AmrCore/AMReX_FillPatchUtil.o: AmrCore/AMReX_FillPatchUtil.cpp.o
 
 # target to build an object file
 AmrCore/AMReX_FillPatchUtil.cpp.o:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/AmrCore/AMReX_FillPatchUtil.cpp.o
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/AmrCore/AMReX_FillPatchUtil.cpp.o
 .PHONY : AmrCore/AMReX_FillPatchUtil.cpp.o
 
 AmrCore/AMReX_FillPatchUtil.i: AmrCore/AMReX_FillPatchUtil.cpp.i
@@ -476,7 +452,7 @@ AmrCore/AMReX_FillPatchUtil.i: AmrCore/AMReX_FillPatchUtil.cpp.i
 
 # target to preprocess a source file
 AmrCore/AMReX_FillPatchUtil.cpp.i:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/AmrCore/AMReX_FillPatchUtil.cpp.i
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/AmrCore/AMReX_FillPatchUtil.cpp.i
 .PHONY : AmrCore/AMReX_FillPatchUtil.cpp.i
 
 AmrCore/AMReX_FillPatchUtil.s: AmrCore/AMReX_FillPatchUtil.cpp.s
@@ -484,7 +460,7 @@ AmrCore/AMReX_FillPatchUtil.s: AmrCore/AMReX_FillPatchUtil.cpp.s
 
 # target to generate assembly for a file
 AmrCore/AMReX_FillPatchUtil.cpp.s:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/AmrCore/AMReX_FillPatchUtil.cpp.s
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/AmrCore/AMReX_FillPatchUtil.cpp.s
 .PHONY : AmrCore/AMReX_FillPatchUtil.cpp.s
 
 AmrCore/AMReX_FluxRegister.o: AmrCore/AMReX_FluxRegister.cpp.o
@@ -492,7 +468,7 @@ AmrCore/AMReX_FluxRegister.o: AmrCore/AMReX_FluxRegister.cpp.o
 
 # target to build an object file
 AmrCore/AMReX_FluxRegister.cpp.o:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/AmrCore/AMReX_FluxRegister.cpp.o
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/AmrCore/AMReX_FluxRegister.cpp.o
 .PHONY : AmrCore/AMReX_FluxRegister.cpp.o
 
 AmrCore/AMReX_FluxRegister.i: AmrCore/AMReX_FluxRegister.cpp.i
@@ -500,7 +476,7 @@ AmrCore/AMReX_FluxRegister.i: AmrCore/AMReX_FluxRegister.cpp.i
 
 # target to preprocess a source file
 AmrCore/AMReX_FluxRegister.cpp.i:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/AmrCore/AMReX_FluxRegister.cpp.i
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/AmrCore/AMReX_FluxRegister.cpp.i
 .PHONY : AmrCore/AMReX_FluxRegister.cpp.i
 
 AmrCore/AMReX_FluxRegister.s: AmrCore/AMReX_FluxRegister.cpp.s
@@ -508,7 +484,7 @@ AmrCore/AMReX_FluxRegister.s: AmrCore/AMReX_FluxRegister.cpp.s
 
 # target to generate assembly for a file
 AmrCore/AMReX_FluxRegister.cpp.s:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/AmrCore/AMReX_FluxRegister.cpp.s
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/AmrCore/AMReX_FluxRegister.cpp.s
 .PHONY : AmrCore/AMReX_FluxRegister.cpp.s
 
 AmrCore/AMReX_InterpBase.o: AmrCore/AMReX_InterpBase.cpp.o
@@ -516,7 +492,7 @@ AmrCore/AMReX_InterpBase.o: AmrCore/AMReX_InterpBase.cpp.o
 
 # target to build an object file
 AmrCore/AMReX_InterpBase.cpp.o:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/AmrCore/AMReX_InterpBase.cpp.o
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/AmrCore/AMReX_InterpBase.cpp.o
 .PHONY : AmrCore/AMReX_InterpBase.cpp.o
 
 AmrCore/AMReX_InterpBase.i: AmrCore/AMReX_InterpBase.cpp.i
@@ -524,7 +500,7 @@ AmrCore/AMReX_InterpBase.i: AmrCore/AMReX_InterpBase.cpp.i
 
 # target to preprocess a source file
 AmrCore/AMReX_InterpBase.cpp.i:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/AmrCore/AMReX_InterpBase.cpp.i
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/AmrCore/AMReX_InterpBase.cpp.i
 .PHONY : AmrCore/AMReX_InterpBase.cpp.i
 
 AmrCore/AMReX_InterpBase.s: AmrCore/AMReX_InterpBase.cpp.s
@@ -532,7 +508,7 @@ AmrCore/AMReX_InterpBase.s: AmrCore/AMReX_InterpBase.cpp.s
 
 # target to generate assembly for a file
 AmrCore/AMReX_InterpBase.cpp.s:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/AmrCore/AMReX_InterpBase.cpp.s
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/AmrCore/AMReX_InterpBase.cpp.s
 .PHONY : AmrCore/AMReX_InterpBase.cpp.s
 
 AmrCore/AMReX_InterpFaceRegister.o: AmrCore/AMReX_InterpFaceRegister.cpp.o
@@ -540,7 +516,7 @@ AmrCore/AMReX_InterpFaceRegister.o: AmrCore/AMReX_InterpFaceRegister.cpp.o
 
 # target to build an object file
 AmrCore/AMReX_InterpFaceRegister.cpp.o:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/AmrCore/AMReX_InterpFaceRegister.cpp.o
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/AmrCore/AMReX_InterpFaceRegister.cpp.o
 .PHONY : AmrCore/AMReX_InterpFaceRegister.cpp.o
 
 AmrCore/AMReX_InterpFaceRegister.i: AmrCore/AMReX_InterpFaceRegister.cpp.i
@@ -548,7 +524,7 @@ AmrCore/AMReX_InterpFaceRegister.i: AmrCore/AMReX_InterpFaceRegister.cpp.i
 
 # target to preprocess a source file
 AmrCore/AMReX_InterpFaceRegister.cpp.i:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/AmrCore/AMReX_InterpFaceRegister.cpp.i
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/AmrCore/AMReX_InterpFaceRegister.cpp.i
 .PHONY : AmrCore/AMReX_InterpFaceRegister.cpp.i
 
 AmrCore/AMReX_InterpFaceRegister.s: AmrCore/AMReX_InterpFaceRegister.cpp.s
@@ -556,7 +532,7 @@ AmrCore/AMReX_InterpFaceRegister.s: AmrCore/AMReX_InterpFaceRegister.cpp.s
 
 # target to generate assembly for a file
 AmrCore/AMReX_InterpFaceRegister.cpp.s:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/AmrCore/AMReX_InterpFaceRegister.cpp.s
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/AmrCore/AMReX_InterpFaceRegister.cpp.s
 .PHONY : AmrCore/AMReX_InterpFaceRegister.cpp.s
 
 AmrCore/AMReX_Interpolater.o: AmrCore/AMReX_Interpolater.cpp.o
@@ -564,7 +540,7 @@ AmrCore/AMReX_Interpolater.o: AmrCore/AMReX_Interpolater.cpp.o
 
 # target to build an object file
 AmrCore/AMReX_Interpolater.cpp.o:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/AmrCore/AMReX_Interpolater.cpp.o
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/AmrCore/AMReX_Interpolater.cpp.o
 .PHONY : AmrCore/AMReX_Interpolater.cpp.o
 
 AmrCore/AMReX_Interpolater.i: AmrCore/AMReX_Interpolater.cpp.i
@@ -572,7 +548,7 @@ AmrCore/AMReX_Interpolater.i: AmrCore/AMReX_Interpolater.cpp.i
 
 # target to preprocess a source file
 AmrCore/AMReX_Interpolater.cpp.i:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/AmrCore/AMReX_Interpolater.cpp.i
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/AmrCore/AMReX_Interpolater.cpp.i
 .PHONY : AmrCore/AMReX_Interpolater.cpp.i
 
 AmrCore/AMReX_Interpolater.s: AmrCore/AMReX_Interpolater.cpp.s
@@ -580,7 +556,7 @@ AmrCore/AMReX_Interpolater.s: AmrCore/AMReX_Interpolater.cpp.s
 
 # target to generate assembly for a file
 AmrCore/AMReX_Interpolater.cpp.s:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/AmrCore/AMReX_Interpolater.cpp.s
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/AmrCore/AMReX_Interpolater.cpp.s
 .PHONY : AmrCore/AMReX_Interpolater.cpp.s
 
 AmrCore/AMReX_MFInterpolater.o: AmrCore/AMReX_MFInterpolater.cpp.o
@@ -588,7 +564,7 @@ AmrCore/AMReX_MFInterpolater.o: AmrCore/AMReX_MFInterpolater.cpp.o
 
 # target to build an object file
 AmrCore/AMReX_MFInterpolater.cpp.o:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/AmrCore/AMReX_MFInterpolater.cpp.o
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/AmrCore/AMReX_MFInterpolater.cpp.o
 .PHONY : AmrCore/AMReX_MFInterpolater.cpp.o
 
 AmrCore/AMReX_MFInterpolater.i: AmrCore/AMReX_MFInterpolater.cpp.i
@@ -596,7 +572,7 @@ AmrCore/AMReX_MFInterpolater.i: AmrCore/AMReX_MFInterpolater.cpp.i
 
 # target to preprocess a source file
 AmrCore/AMReX_MFInterpolater.cpp.i:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/AmrCore/AMReX_MFInterpolater.cpp.i
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/AmrCore/AMReX_MFInterpolater.cpp.i
 .PHONY : AmrCore/AMReX_MFInterpolater.cpp.i
 
 AmrCore/AMReX_MFInterpolater.s: AmrCore/AMReX_MFInterpolater.cpp.s
@@ -604,7 +580,7 @@ AmrCore/AMReX_MFInterpolater.s: AmrCore/AMReX_MFInterpolater.cpp.s
 
 # target to generate assembly for a file
 AmrCore/AMReX_MFInterpolater.cpp.s:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/AmrCore/AMReX_MFInterpolater.cpp.s
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/AmrCore/AMReX_MFInterpolater.cpp.s
 .PHONY : AmrCore/AMReX_MFInterpolater.cpp.s
 
 AmrCore/AMReX_TagBox.o: AmrCore/AMReX_TagBox.cpp.o
@@ -612,7 +588,7 @@ AmrCore/AMReX_TagBox.o: AmrCore/AMReX_TagBox.cpp.o
 
 # target to build an object file
 AmrCore/AMReX_TagBox.cpp.o:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/AmrCore/AMReX_TagBox.cpp.o
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/AmrCore/AMReX_TagBox.cpp.o
 .PHONY : AmrCore/AMReX_TagBox.cpp.o
 
 AmrCore/AMReX_TagBox.i: AmrCore/AMReX_TagBox.cpp.i
@@ -620,7 +596,7 @@ AmrCore/AMReX_TagBox.i: AmrCore/AMReX_TagBox.cpp.i
 
 # target to preprocess a source file
 AmrCore/AMReX_TagBox.cpp.i:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/AmrCore/AMReX_TagBox.cpp.i
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/AmrCore/AMReX_TagBox.cpp.i
 .PHONY : AmrCore/AMReX_TagBox.cpp.i
 
 AmrCore/AMReX_TagBox.s: AmrCore/AMReX_TagBox.cpp.s
@@ -628,7 +604,7 @@ AmrCore/AMReX_TagBox.s: AmrCore/AMReX_TagBox.cpp.s
 
 # target to generate assembly for a file
 AmrCore/AMReX_TagBox.cpp.s:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/AmrCore/AMReX_TagBox.cpp.s
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/AmrCore/AMReX_TagBox.cpp.s
 .PHONY : AmrCore/AMReX_TagBox.cpp.s
 
 Base/AMReX.o: Base/AMReX.cpp.o
@@ -636,7 +612,7 @@ Base/AMReX.o: Base/AMReX.cpp.o
 
 # target to build an object file
 Base/AMReX.cpp.o:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/Base/AMReX.cpp.o
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/Base/AMReX.cpp.o
 .PHONY : Base/AMReX.cpp.o
 
 Base/AMReX.i: Base/AMReX.cpp.i
@@ -644,7 +620,7 @@ Base/AMReX.i: Base/AMReX.cpp.i
 
 # target to preprocess a source file
 Base/AMReX.cpp.i:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/Base/AMReX.cpp.i
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/Base/AMReX.cpp.i
 .PHONY : Base/AMReX.cpp.i
 
 Base/AMReX.s: Base/AMReX.cpp.s
@@ -652,7 +628,7 @@ Base/AMReX.s: Base/AMReX.cpp.s
 
 # target to generate assembly for a file
 Base/AMReX.cpp.s:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/Base/AMReX.cpp.s
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/Base/AMReX.cpp.s
 .PHONY : Base/AMReX.cpp.s
 
 Base/AMReX_Arena.o: Base/AMReX_Arena.cpp.o
@@ -660,7 +636,7 @@ Base/AMReX_Arena.o: Base/AMReX_Arena.cpp.o
 
 # target to build an object file
 Base/AMReX_Arena.cpp.o:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/Base/AMReX_Arena.cpp.o
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/Base/AMReX_Arena.cpp.o
 .PHONY : Base/AMReX_Arena.cpp.o
 
 Base/AMReX_Arena.i: Base/AMReX_Arena.cpp.i
@@ -668,7 +644,7 @@ Base/AMReX_Arena.i: Base/AMReX_Arena.cpp.i
 
 # target to preprocess a source file
 Base/AMReX_Arena.cpp.i:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/Base/AMReX_Arena.cpp.i
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/Base/AMReX_Arena.cpp.i
 .PHONY : Base/AMReX_Arena.cpp.i
 
 Base/AMReX_Arena.s: Base/AMReX_Arena.cpp.s
@@ -676,7 +652,7 @@ Base/AMReX_Arena.s: Base/AMReX_Arena.cpp.s
 
 # target to generate assembly for a file
 Base/AMReX_Arena.cpp.s:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/Base/AMReX_Arena.cpp.s
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/Base/AMReX_Arena.cpp.s
 .PHONY : Base/AMReX_Arena.cpp.s
 
 Base/AMReX_AsyncOut.o: Base/AMReX_AsyncOut.cpp.o
@@ -684,7 +660,7 @@ Base/AMReX_AsyncOut.o: Base/AMReX_AsyncOut.cpp.o
 
 # target to build an object file
 Base/AMReX_AsyncOut.cpp.o:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/Base/AMReX_AsyncOut.cpp.o
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/Base/AMReX_AsyncOut.cpp.o
 .PHONY : Base/AMReX_AsyncOut.cpp.o
 
 Base/AMReX_AsyncOut.i: Base/AMReX_AsyncOut.cpp.i
@@ -692,7 +668,7 @@ Base/AMReX_AsyncOut.i: Base/AMReX_AsyncOut.cpp.i
 
 # target to preprocess a source file
 Base/AMReX_AsyncOut.cpp.i:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/Base/AMReX_AsyncOut.cpp.i
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/Base/AMReX_AsyncOut.cpp.i
 .PHONY : Base/AMReX_AsyncOut.cpp.i
 
 Base/AMReX_AsyncOut.s: Base/AMReX_AsyncOut.cpp.s
@@ -700,7 +676,7 @@ Base/AMReX_AsyncOut.s: Base/AMReX_AsyncOut.cpp.s
 
 # target to generate assembly for a file
 Base/AMReX_AsyncOut.cpp.s:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/Base/AMReX_AsyncOut.cpp.s
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/Base/AMReX_AsyncOut.cpp.s
 .PHONY : Base/AMReX_AsyncOut.cpp.s
 
 Base/AMReX_BArena.o: Base/AMReX_BArena.cpp.o
@@ -708,7 +684,7 @@ Base/AMReX_BArena.o: Base/AMReX_BArena.cpp.o
 
 # target to build an object file
 Base/AMReX_BArena.cpp.o:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/Base/AMReX_BArena.cpp.o
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/Base/AMReX_BArena.cpp.o
 .PHONY : Base/AMReX_BArena.cpp.o
 
 Base/AMReX_BArena.i: Base/AMReX_BArena.cpp.i
@@ -716,7 +692,7 @@ Base/AMReX_BArena.i: Base/AMReX_BArena.cpp.i
 
 # target to preprocess a source file
 Base/AMReX_BArena.cpp.i:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/Base/AMReX_BArena.cpp.i
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/Base/AMReX_BArena.cpp.i
 .PHONY : Base/AMReX_BArena.cpp.i
 
 Base/AMReX_BArena.s: Base/AMReX_BArena.cpp.s
@@ -724,7 +700,7 @@ Base/AMReX_BArena.s: Base/AMReX_BArena.cpp.s
 
 # target to generate assembly for a file
 Base/AMReX_BArena.cpp.s:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/Base/AMReX_BArena.cpp.s
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/Base/AMReX_BArena.cpp.s
 .PHONY : Base/AMReX_BArena.cpp.s
 
 Base/AMReX_BCRec.o: Base/AMReX_BCRec.cpp.o
@@ -732,7 +708,7 @@ Base/AMReX_BCRec.o: Base/AMReX_BCRec.cpp.o
 
 # target to build an object file
 Base/AMReX_BCRec.cpp.o:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/Base/AMReX_BCRec.cpp.o
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/Base/AMReX_BCRec.cpp.o
 .PHONY : Base/AMReX_BCRec.cpp.o
 
 Base/AMReX_BCRec.i: Base/AMReX_BCRec.cpp.i
@@ -740,7 +716,7 @@ Base/AMReX_BCRec.i: Base/AMReX_BCRec.cpp.i
 
 # target to preprocess a source file
 Base/AMReX_BCRec.cpp.i:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/Base/AMReX_BCRec.cpp.i
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/Base/AMReX_BCRec.cpp.i
 .PHONY : Base/AMReX_BCRec.cpp.i
 
 Base/AMReX_BCRec.s: Base/AMReX_BCRec.cpp.s
@@ -748,7 +724,7 @@ Base/AMReX_BCRec.s: Base/AMReX_BCRec.cpp.s
 
 # target to generate assembly for a file
 Base/AMReX_BCRec.cpp.s:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/Base/AMReX_BCRec.cpp.s
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/Base/AMReX_BCRec.cpp.s
 .PHONY : Base/AMReX_BCRec.cpp.s
 
 Base/AMReX_BCUtil.o: Base/AMReX_BCUtil.cpp.o
@@ -756,7 +732,7 @@ Base/AMReX_BCUtil.o: Base/AMReX_BCUtil.cpp.o
 
 # target to build an object file
 Base/AMReX_BCUtil.cpp.o:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/Base/AMReX_BCUtil.cpp.o
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/Base/AMReX_BCUtil.cpp.o
 .PHONY : Base/AMReX_BCUtil.cpp.o
 
 Base/AMReX_BCUtil.i: Base/AMReX_BCUtil.cpp.i
@@ -764,7 +740,7 @@ Base/AMReX_BCUtil.i: Base/AMReX_BCUtil.cpp.i
 
 # target to preprocess a source file
 Base/AMReX_BCUtil.cpp.i:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/Base/AMReX_BCUtil.cpp.i
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/Base/AMReX_BCUtil.cpp.i
 .PHONY : Base/AMReX_BCUtil.cpp.i
 
 Base/AMReX_BCUtil.s: Base/AMReX_BCUtil.cpp.s
@@ -772,7 +748,7 @@ Base/AMReX_BCUtil.s: Base/AMReX_BCUtil.cpp.s
 
 # target to generate assembly for a file
 Base/AMReX_BCUtil.cpp.s:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/Base/AMReX_BCUtil.cpp.s
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/Base/AMReX_BCUtil.cpp.s
 .PHONY : Base/AMReX_BCUtil.cpp.s
 
 Base/AMReX_BLBackTrace.o: Base/AMReX_BLBackTrace.cpp.o
@@ -780,7 +756,7 @@ Base/AMReX_BLBackTrace.o: Base/AMReX_BLBackTrace.cpp.o
 
 # target to build an object file
 Base/AMReX_BLBackTrace.cpp.o:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/Base/AMReX_BLBackTrace.cpp.o
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/Base/AMReX_BLBackTrace.cpp.o
 .PHONY : Base/AMReX_BLBackTrace.cpp.o
 
 Base/AMReX_BLBackTrace.i: Base/AMReX_BLBackTrace.cpp.i
@@ -788,7 +764,7 @@ Base/AMReX_BLBackTrace.i: Base/AMReX_BLBackTrace.cpp.i
 
 # target to preprocess a source file
 Base/AMReX_BLBackTrace.cpp.i:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/Base/AMReX_BLBackTrace.cpp.i
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/Base/AMReX_BLBackTrace.cpp.i
 .PHONY : Base/AMReX_BLBackTrace.cpp.i
 
 Base/AMReX_BLBackTrace.s: Base/AMReX_BLBackTrace.cpp.s
@@ -796,7 +772,7 @@ Base/AMReX_BLBackTrace.s: Base/AMReX_BLBackTrace.cpp.s
 
 # target to generate assembly for a file
 Base/AMReX_BLBackTrace.cpp.s:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/Base/AMReX_BLBackTrace.cpp.s
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/Base/AMReX_BLBackTrace.cpp.s
 .PHONY : Base/AMReX_BLBackTrace.cpp.s
 
 Base/AMReX_BackgroundThread.o: Base/AMReX_BackgroundThread.cpp.o
@@ -804,7 +780,7 @@ Base/AMReX_BackgroundThread.o: Base/AMReX_BackgroundThread.cpp.o
 
 # target to build an object file
 Base/AMReX_BackgroundThread.cpp.o:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/Base/AMReX_BackgroundThread.cpp.o
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/Base/AMReX_BackgroundThread.cpp.o
 .PHONY : Base/AMReX_BackgroundThread.cpp.o
 
 Base/AMReX_BackgroundThread.i: Base/AMReX_BackgroundThread.cpp.i
@@ -812,7 +788,7 @@ Base/AMReX_BackgroundThread.i: Base/AMReX_BackgroundThread.cpp.i
 
 # target to preprocess a source file
 Base/AMReX_BackgroundThread.cpp.i:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/Base/AMReX_BackgroundThread.cpp.i
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/Base/AMReX_BackgroundThread.cpp.i
 .PHONY : Base/AMReX_BackgroundThread.cpp.i
 
 Base/AMReX_BackgroundThread.s: Base/AMReX_BackgroundThread.cpp.s
@@ -820,7 +796,7 @@ Base/AMReX_BackgroundThread.s: Base/AMReX_BackgroundThread.cpp.s
 
 # target to generate assembly for a file
 Base/AMReX_BackgroundThread.cpp.s:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/Base/AMReX_BackgroundThread.cpp.s
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/Base/AMReX_BackgroundThread.cpp.s
 .PHONY : Base/AMReX_BackgroundThread.cpp.s
 
 Base/AMReX_BaseFab.o: Base/AMReX_BaseFab.cpp.o
@@ -828,7 +804,7 @@ Base/AMReX_BaseFab.o: Base/AMReX_BaseFab.cpp.o
 
 # target to build an object file
 Base/AMReX_BaseFab.cpp.o:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/Base/AMReX_BaseFab.cpp.o
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/Base/AMReX_BaseFab.cpp.o
 .PHONY : Base/AMReX_BaseFab.cpp.o
 
 Base/AMReX_BaseFab.i: Base/AMReX_BaseFab.cpp.i
@@ -836,7 +812,7 @@ Base/AMReX_BaseFab.i: Base/AMReX_BaseFab.cpp.i
 
 # target to preprocess a source file
 Base/AMReX_BaseFab.cpp.i:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/Base/AMReX_BaseFab.cpp.i
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/Base/AMReX_BaseFab.cpp.i
 .PHONY : Base/AMReX_BaseFab.cpp.i
 
 Base/AMReX_BaseFab.s: Base/AMReX_BaseFab.cpp.s
@@ -844,15 +820,39 @@ Base/AMReX_BaseFab.s: Base/AMReX_BaseFab.cpp.s
 
 # target to generate assembly for a file
 Base/AMReX_BaseFab.cpp.s:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/Base/AMReX_BaseFab.cpp.s
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/Base/AMReX_BaseFab.cpp.s
 .PHONY : Base/AMReX_BaseFab.cpp.s
+
+Base/AMReX_BlockMutex.o: Base/AMReX_BlockMutex.cpp.o
+.PHONY : Base/AMReX_BlockMutex.o
+
+# target to build an object file
+Base/AMReX_BlockMutex.cpp.o:
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/Base/AMReX_BlockMutex.cpp.o
+.PHONY : Base/AMReX_BlockMutex.cpp.o
+
+Base/AMReX_BlockMutex.i: Base/AMReX_BlockMutex.cpp.i
+.PHONY : Base/AMReX_BlockMutex.i
+
+# target to preprocess a source file
+Base/AMReX_BlockMutex.cpp.i:
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/Base/AMReX_BlockMutex.cpp.i
+.PHONY : Base/AMReX_BlockMutex.cpp.i
+
+Base/AMReX_BlockMutex.s: Base/AMReX_BlockMutex.cpp.s
+.PHONY : Base/AMReX_BlockMutex.s
+
+# target to generate assembly for a file
+Base/AMReX_BlockMutex.cpp.s:
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/Base/AMReX_BlockMutex.cpp.s
+.PHONY : Base/AMReX_BlockMutex.cpp.s
 
 Base/AMReX_Box.o: Base/AMReX_Box.cpp.o
 .PHONY : Base/AMReX_Box.o
 
 # target to build an object file
 Base/AMReX_Box.cpp.o:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/Base/AMReX_Box.cpp.o
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/Base/AMReX_Box.cpp.o
 .PHONY : Base/AMReX_Box.cpp.o
 
 Base/AMReX_Box.i: Base/AMReX_Box.cpp.i
@@ -860,7 +860,7 @@ Base/AMReX_Box.i: Base/AMReX_Box.cpp.i
 
 # target to preprocess a source file
 Base/AMReX_Box.cpp.i:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/Base/AMReX_Box.cpp.i
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/Base/AMReX_Box.cpp.i
 .PHONY : Base/AMReX_Box.cpp.i
 
 Base/AMReX_Box.s: Base/AMReX_Box.cpp.s
@@ -868,7 +868,7 @@ Base/AMReX_Box.s: Base/AMReX_Box.cpp.s
 
 # target to generate assembly for a file
 Base/AMReX_Box.cpp.s:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/Base/AMReX_Box.cpp.s
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/Base/AMReX_Box.cpp.s
 .PHONY : Base/AMReX_Box.cpp.s
 
 Base/AMReX_BoxArray.o: Base/AMReX_BoxArray.cpp.o
@@ -876,7 +876,7 @@ Base/AMReX_BoxArray.o: Base/AMReX_BoxArray.cpp.o
 
 # target to build an object file
 Base/AMReX_BoxArray.cpp.o:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/Base/AMReX_BoxArray.cpp.o
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/Base/AMReX_BoxArray.cpp.o
 .PHONY : Base/AMReX_BoxArray.cpp.o
 
 Base/AMReX_BoxArray.i: Base/AMReX_BoxArray.cpp.i
@@ -884,7 +884,7 @@ Base/AMReX_BoxArray.i: Base/AMReX_BoxArray.cpp.i
 
 # target to preprocess a source file
 Base/AMReX_BoxArray.cpp.i:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/Base/AMReX_BoxArray.cpp.i
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/Base/AMReX_BoxArray.cpp.i
 .PHONY : Base/AMReX_BoxArray.cpp.i
 
 Base/AMReX_BoxArray.s: Base/AMReX_BoxArray.cpp.s
@@ -892,7 +892,7 @@ Base/AMReX_BoxArray.s: Base/AMReX_BoxArray.cpp.s
 
 # target to generate assembly for a file
 Base/AMReX_BoxArray.cpp.s:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/Base/AMReX_BoxArray.cpp.s
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/Base/AMReX_BoxArray.cpp.s
 .PHONY : Base/AMReX_BoxArray.cpp.s
 
 Base/AMReX_BoxDomain.o: Base/AMReX_BoxDomain.cpp.o
@@ -900,7 +900,7 @@ Base/AMReX_BoxDomain.o: Base/AMReX_BoxDomain.cpp.o
 
 # target to build an object file
 Base/AMReX_BoxDomain.cpp.o:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/Base/AMReX_BoxDomain.cpp.o
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/Base/AMReX_BoxDomain.cpp.o
 .PHONY : Base/AMReX_BoxDomain.cpp.o
 
 Base/AMReX_BoxDomain.i: Base/AMReX_BoxDomain.cpp.i
@@ -908,7 +908,7 @@ Base/AMReX_BoxDomain.i: Base/AMReX_BoxDomain.cpp.i
 
 # target to preprocess a source file
 Base/AMReX_BoxDomain.cpp.i:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/Base/AMReX_BoxDomain.cpp.i
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/Base/AMReX_BoxDomain.cpp.i
 .PHONY : Base/AMReX_BoxDomain.cpp.i
 
 Base/AMReX_BoxDomain.s: Base/AMReX_BoxDomain.cpp.s
@@ -916,15 +916,39 @@ Base/AMReX_BoxDomain.s: Base/AMReX_BoxDomain.cpp.s
 
 # target to generate assembly for a file
 Base/AMReX_BoxDomain.cpp.s:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/Base/AMReX_BoxDomain.cpp.s
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/Base/AMReX_BoxDomain.cpp.s
 .PHONY : Base/AMReX_BoxDomain.cpp.s
+
+Base/AMReX_BoxIterator.o: Base/AMReX_BoxIterator.cpp.o
+.PHONY : Base/AMReX_BoxIterator.o
+
+# target to build an object file
+Base/AMReX_BoxIterator.cpp.o:
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/Base/AMReX_BoxIterator.cpp.o
+.PHONY : Base/AMReX_BoxIterator.cpp.o
+
+Base/AMReX_BoxIterator.i: Base/AMReX_BoxIterator.cpp.i
+.PHONY : Base/AMReX_BoxIterator.i
+
+# target to preprocess a source file
+Base/AMReX_BoxIterator.cpp.i:
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/Base/AMReX_BoxIterator.cpp.i
+.PHONY : Base/AMReX_BoxIterator.cpp.i
+
+Base/AMReX_BoxIterator.s: Base/AMReX_BoxIterator.cpp.s
+.PHONY : Base/AMReX_BoxIterator.s
+
+# target to generate assembly for a file
+Base/AMReX_BoxIterator.cpp.s:
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/Base/AMReX_BoxIterator.cpp.s
+.PHONY : Base/AMReX_BoxIterator.cpp.s
 
 Base/AMReX_BoxList.o: Base/AMReX_BoxList.cpp.o
 .PHONY : Base/AMReX_BoxList.o
 
 # target to build an object file
 Base/AMReX_BoxList.cpp.o:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/Base/AMReX_BoxList.cpp.o
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/Base/AMReX_BoxList.cpp.o
 .PHONY : Base/AMReX_BoxList.cpp.o
 
 Base/AMReX_BoxList.i: Base/AMReX_BoxList.cpp.i
@@ -932,7 +956,7 @@ Base/AMReX_BoxList.i: Base/AMReX_BoxList.cpp.i
 
 # target to preprocess a source file
 Base/AMReX_BoxList.cpp.i:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/Base/AMReX_BoxList.cpp.i
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/Base/AMReX_BoxList.cpp.i
 .PHONY : Base/AMReX_BoxList.cpp.i
 
 Base/AMReX_BoxList.s: Base/AMReX_BoxList.cpp.s
@@ -940,7 +964,7 @@ Base/AMReX_BoxList.s: Base/AMReX_BoxList.cpp.s
 
 # target to generate assembly for a file
 Base/AMReX_BoxList.cpp.s:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/Base/AMReX_BoxList.cpp.s
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/Base/AMReX_BoxList.cpp.s
 .PHONY : Base/AMReX_BoxList.cpp.s
 
 Base/AMReX_CArena.o: Base/AMReX_CArena.cpp.o
@@ -948,7 +972,7 @@ Base/AMReX_CArena.o: Base/AMReX_CArena.cpp.o
 
 # target to build an object file
 Base/AMReX_CArena.cpp.o:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/Base/AMReX_CArena.cpp.o
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/Base/AMReX_CArena.cpp.o
 .PHONY : Base/AMReX_CArena.cpp.o
 
 Base/AMReX_CArena.i: Base/AMReX_CArena.cpp.i
@@ -956,7 +980,7 @@ Base/AMReX_CArena.i: Base/AMReX_CArena.cpp.i
 
 # target to preprocess a source file
 Base/AMReX_CArena.cpp.i:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/Base/AMReX_CArena.cpp.i
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/Base/AMReX_CArena.cpp.i
 .PHONY : Base/AMReX_CArena.cpp.i
 
 Base/AMReX_CArena.s: Base/AMReX_CArena.cpp.s
@@ -964,7 +988,7 @@ Base/AMReX_CArena.s: Base/AMReX_CArena.cpp.s
 
 # target to generate assembly for a file
 Base/AMReX_CArena.cpp.s:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/Base/AMReX_CArena.cpp.s
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/Base/AMReX_CArena.cpp.s
 .PHONY : Base/AMReX_CArena.cpp.s
 
 Base/AMReX_CoordSys.o: Base/AMReX_CoordSys.cpp.o
@@ -972,7 +996,7 @@ Base/AMReX_CoordSys.o: Base/AMReX_CoordSys.cpp.o
 
 # target to build an object file
 Base/AMReX_CoordSys.cpp.o:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/Base/AMReX_CoordSys.cpp.o
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/Base/AMReX_CoordSys.cpp.o
 .PHONY : Base/AMReX_CoordSys.cpp.o
 
 Base/AMReX_CoordSys.i: Base/AMReX_CoordSys.cpp.i
@@ -980,7 +1004,7 @@ Base/AMReX_CoordSys.i: Base/AMReX_CoordSys.cpp.i
 
 # target to preprocess a source file
 Base/AMReX_CoordSys.cpp.i:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/Base/AMReX_CoordSys.cpp.i
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/Base/AMReX_CoordSys.cpp.i
 .PHONY : Base/AMReX_CoordSys.cpp.i
 
 Base/AMReX_CoordSys.s: Base/AMReX_CoordSys.cpp.s
@@ -988,39 +1012,15 @@ Base/AMReX_CoordSys.s: Base/AMReX_CoordSys.cpp.s
 
 # target to generate assembly for a file
 Base/AMReX_CoordSys.cpp.s:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/Base/AMReX_CoordSys.cpp.s
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/Base/AMReX_CoordSys.cpp.s
 .PHONY : Base/AMReX_CoordSys.cpp.s
-
-Base/AMReX_CrtReport.o: Base/AMReX_CrtReport.cpp.o
-.PHONY : Base/AMReX_CrtReport.o
-
-# target to build an object file
-Base/AMReX_CrtReport.cpp.o:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/Base/AMReX_CrtReport.cpp.o
-.PHONY : Base/AMReX_CrtReport.cpp.o
-
-Base/AMReX_CrtReport.i: Base/AMReX_CrtReport.cpp.i
-.PHONY : Base/AMReX_CrtReport.i
-
-# target to preprocess a source file
-Base/AMReX_CrtReport.cpp.i:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/Base/AMReX_CrtReport.cpp.i
-.PHONY : Base/AMReX_CrtReport.cpp.i
-
-Base/AMReX_CrtReport.s: Base/AMReX_CrtReport.cpp.s
-.PHONY : Base/AMReX_CrtReport.s
-
-# target to generate assembly for a file
-Base/AMReX_CrtReport.cpp.s:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/Base/AMReX_CrtReport.cpp.s
-.PHONY : Base/AMReX_CrtReport.cpp.s
 
 Base/AMReX_DistributionMapping.o: Base/AMReX_DistributionMapping.cpp.o
 .PHONY : Base/AMReX_DistributionMapping.o
 
 # target to build an object file
 Base/AMReX_DistributionMapping.cpp.o:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/Base/AMReX_DistributionMapping.cpp.o
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/Base/AMReX_DistributionMapping.cpp.o
 .PHONY : Base/AMReX_DistributionMapping.cpp.o
 
 Base/AMReX_DistributionMapping.i: Base/AMReX_DistributionMapping.cpp.i
@@ -1028,7 +1028,7 @@ Base/AMReX_DistributionMapping.i: Base/AMReX_DistributionMapping.cpp.i
 
 # target to preprocess a source file
 Base/AMReX_DistributionMapping.cpp.i:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/Base/AMReX_DistributionMapping.cpp.i
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/Base/AMReX_DistributionMapping.cpp.i
 .PHONY : Base/AMReX_DistributionMapping.cpp.i
 
 Base/AMReX_DistributionMapping.s: Base/AMReX_DistributionMapping.cpp.s
@@ -1036,7 +1036,7 @@ Base/AMReX_DistributionMapping.s: Base/AMReX_DistributionMapping.cpp.s
 
 # target to generate assembly for a file
 Base/AMReX_DistributionMapping.cpp.s:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/Base/AMReX_DistributionMapping.cpp.s
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/Base/AMReX_DistributionMapping.cpp.s
 .PHONY : Base/AMReX_DistributionMapping.cpp.s
 
 Base/AMReX_FArrayBox.o: Base/AMReX_FArrayBox.cpp.o
@@ -1044,7 +1044,7 @@ Base/AMReX_FArrayBox.o: Base/AMReX_FArrayBox.cpp.o
 
 # target to build an object file
 Base/AMReX_FArrayBox.cpp.o:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/Base/AMReX_FArrayBox.cpp.o
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/Base/AMReX_FArrayBox.cpp.o
 .PHONY : Base/AMReX_FArrayBox.cpp.o
 
 Base/AMReX_FArrayBox.i: Base/AMReX_FArrayBox.cpp.i
@@ -1052,7 +1052,7 @@ Base/AMReX_FArrayBox.i: Base/AMReX_FArrayBox.cpp.i
 
 # target to preprocess a source file
 Base/AMReX_FArrayBox.cpp.i:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/Base/AMReX_FArrayBox.cpp.i
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/Base/AMReX_FArrayBox.cpp.i
 .PHONY : Base/AMReX_FArrayBox.cpp.i
 
 Base/AMReX_FArrayBox.s: Base/AMReX_FArrayBox.cpp.s
@@ -1060,7 +1060,7 @@ Base/AMReX_FArrayBox.s: Base/AMReX_FArrayBox.cpp.s
 
 # target to generate assembly for a file
 Base/AMReX_FArrayBox.cpp.s:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/Base/AMReX_FArrayBox.cpp.s
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/Base/AMReX_FArrayBox.cpp.s
 .PHONY : Base/AMReX_FArrayBox.cpp.s
 
 Base/AMReX_FPC.o: Base/AMReX_FPC.cpp.o
@@ -1068,7 +1068,7 @@ Base/AMReX_FPC.o: Base/AMReX_FPC.cpp.o
 
 # target to build an object file
 Base/AMReX_FPC.cpp.o:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/Base/AMReX_FPC.cpp.o
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/Base/AMReX_FPC.cpp.o
 .PHONY : Base/AMReX_FPC.cpp.o
 
 Base/AMReX_FPC.i: Base/AMReX_FPC.cpp.i
@@ -1076,7 +1076,7 @@ Base/AMReX_FPC.i: Base/AMReX_FPC.cpp.i
 
 # target to preprocess a source file
 Base/AMReX_FPC.cpp.i:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/Base/AMReX_FPC.cpp.i
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/Base/AMReX_FPC.cpp.i
 .PHONY : Base/AMReX_FPC.cpp.i
 
 Base/AMReX_FPC.s: Base/AMReX_FPC.cpp.s
@@ -1084,7 +1084,7 @@ Base/AMReX_FPC.s: Base/AMReX_FPC.cpp.s
 
 # target to generate assembly for a file
 Base/AMReX_FPC.cpp.s:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/Base/AMReX_FPC.cpp.s
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/Base/AMReX_FPC.cpp.s
 .PHONY : Base/AMReX_FPC.cpp.s
 
 Base/AMReX_FabArrayBase.o: Base/AMReX_FabArrayBase.cpp.o
@@ -1092,7 +1092,7 @@ Base/AMReX_FabArrayBase.o: Base/AMReX_FabArrayBase.cpp.o
 
 # target to build an object file
 Base/AMReX_FabArrayBase.cpp.o:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/Base/AMReX_FabArrayBase.cpp.o
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/Base/AMReX_FabArrayBase.cpp.o
 .PHONY : Base/AMReX_FabArrayBase.cpp.o
 
 Base/AMReX_FabArrayBase.i: Base/AMReX_FabArrayBase.cpp.i
@@ -1100,7 +1100,7 @@ Base/AMReX_FabArrayBase.i: Base/AMReX_FabArrayBase.cpp.i
 
 # target to preprocess a source file
 Base/AMReX_FabArrayBase.cpp.i:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/Base/AMReX_FabArrayBase.cpp.i
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/Base/AMReX_FabArrayBase.cpp.i
 .PHONY : Base/AMReX_FabArrayBase.cpp.i
 
 Base/AMReX_FabArrayBase.s: Base/AMReX_FabArrayBase.cpp.s
@@ -1108,7 +1108,7 @@ Base/AMReX_FabArrayBase.s: Base/AMReX_FabArrayBase.cpp.s
 
 # target to generate assembly for a file
 Base/AMReX_FabArrayBase.cpp.s:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/Base/AMReX_FabArrayBase.cpp.s
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/Base/AMReX_FabArrayBase.cpp.s
 .PHONY : Base/AMReX_FabArrayBase.cpp.s
 
 Base/AMReX_FabConv.o: Base/AMReX_FabConv.cpp.o
@@ -1116,7 +1116,7 @@ Base/AMReX_FabConv.o: Base/AMReX_FabConv.cpp.o
 
 # target to build an object file
 Base/AMReX_FabConv.cpp.o:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/Base/AMReX_FabConv.cpp.o
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/Base/AMReX_FabConv.cpp.o
 .PHONY : Base/AMReX_FabConv.cpp.o
 
 Base/AMReX_FabConv.i: Base/AMReX_FabConv.cpp.i
@@ -1124,7 +1124,7 @@ Base/AMReX_FabConv.i: Base/AMReX_FabConv.cpp.i
 
 # target to preprocess a source file
 Base/AMReX_FabConv.cpp.i:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/Base/AMReX_FabConv.cpp.i
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/Base/AMReX_FabConv.cpp.i
 .PHONY : Base/AMReX_FabConv.cpp.i
 
 Base/AMReX_FabConv.s: Base/AMReX_FabConv.cpp.s
@@ -1132,7 +1132,7 @@ Base/AMReX_FabConv.s: Base/AMReX_FabConv.cpp.s
 
 # target to generate assembly for a file
 Base/AMReX_FabConv.cpp.s:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/Base/AMReX_FabConv.cpp.s
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/Base/AMReX_FabConv.cpp.s
 .PHONY : Base/AMReX_FabConv.cpp.s
 
 Base/AMReX_FilCC_C.o: Base/AMReX_FilCC_C.cpp.o
@@ -1140,7 +1140,7 @@ Base/AMReX_FilCC_C.o: Base/AMReX_FilCC_C.cpp.o
 
 # target to build an object file
 Base/AMReX_FilCC_C.cpp.o:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/Base/AMReX_FilCC_C.cpp.o
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/Base/AMReX_FilCC_C.cpp.o
 .PHONY : Base/AMReX_FilCC_C.cpp.o
 
 Base/AMReX_FilCC_C.i: Base/AMReX_FilCC_C.cpp.i
@@ -1148,7 +1148,7 @@ Base/AMReX_FilCC_C.i: Base/AMReX_FilCC_C.cpp.i
 
 # target to preprocess a source file
 Base/AMReX_FilCC_C.cpp.i:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/Base/AMReX_FilCC_C.cpp.i
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/Base/AMReX_FilCC_C.cpp.i
 .PHONY : Base/AMReX_FilCC_C.cpp.i
 
 Base/AMReX_FilCC_C.s: Base/AMReX_FilCC_C.cpp.s
@@ -1156,7 +1156,7 @@ Base/AMReX_FilCC_C.s: Base/AMReX_FilCC_C.cpp.s
 
 # target to generate assembly for a file
 Base/AMReX_FilCC_C.cpp.s:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/Base/AMReX_FilCC_C.cpp.s
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/Base/AMReX_FilCC_C.cpp.s
 .PHONY : Base/AMReX_FilCC_C.cpp.s
 
 Base/AMReX_FilFC_C.o: Base/AMReX_FilFC_C.cpp.o
@@ -1164,7 +1164,7 @@ Base/AMReX_FilFC_C.o: Base/AMReX_FilFC_C.cpp.o
 
 # target to build an object file
 Base/AMReX_FilFC_C.cpp.o:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/Base/AMReX_FilFC_C.cpp.o
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/Base/AMReX_FilFC_C.cpp.o
 .PHONY : Base/AMReX_FilFC_C.cpp.o
 
 Base/AMReX_FilFC_C.i: Base/AMReX_FilFC_C.cpp.i
@@ -1172,7 +1172,7 @@ Base/AMReX_FilFC_C.i: Base/AMReX_FilFC_C.cpp.i
 
 # target to preprocess a source file
 Base/AMReX_FilFC_C.cpp.i:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/Base/AMReX_FilFC_C.cpp.i
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/Base/AMReX_FilFC_C.cpp.i
 .PHONY : Base/AMReX_FilFC_C.cpp.i
 
 Base/AMReX_FilFC_C.s: Base/AMReX_FilFC_C.cpp.s
@@ -1180,7 +1180,7 @@ Base/AMReX_FilFC_C.s: Base/AMReX_FilFC_C.cpp.s
 
 # target to generate assembly for a file
 Base/AMReX_FilFC_C.cpp.s:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/Base/AMReX_FilFC_C.cpp.s
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/Base/AMReX_FilFC_C.cpp.s
 .PHONY : Base/AMReX_FilFC_C.cpp.s
 
 Base/AMReX_FilND_C.o: Base/AMReX_FilND_C.cpp.o
@@ -1188,7 +1188,7 @@ Base/AMReX_FilND_C.o: Base/AMReX_FilND_C.cpp.o
 
 # target to build an object file
 Base/AMReX_FilND_C.cpp.o:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/Base/AMReX_FilND_C.cpp.o
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/Base/AMReX_FilND_C.cpp.o
 .PHONY : Base/AMReX_FilND_C.cpp.o
 
 Base/AMReX_FilND_C.i: Base/AMReX_FilND_C.cpp.i
@@ -1196,7 +1196,7 @@ Base/AMReX_FilND_C.i: Base/AMReX_FilND_C.cpp.i
 
 # target to preprocess a source file
 Base/AMReX_FilND_C.cpp.i:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/Base/AMReX_FilND_C.cpp.i
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/Base/AMReX_FilND_C.cpp.i
 .PHONY : Base/AMReX_FilND_C.cpp.i
 
 Base/AMReX_FilND_C.s: Base/AMReX_FilND_C.cpp.s
@@ -1204,7 +1204,7 @@ Base/AMReX_FilND_C.s: Base/AMReX_FilND_C.cpp.s
 
 # target to generate assembly for a file
 Base/AMReX_FilND_C.cpp.s:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/Base/AMReX_FilND_C.cpp.s
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/Base/AMReX_FilND_C.cpp.s
 .PHONY : Base/AMReX_FilND_C.cpp.s
 
 Base/AMReX_FileSystem.o: Base/AMReX_FileSystem.cpp.o
@@ -1212,7 +1212,7 @@ Base/AMReX_FileSystem.o: Base/AMReX_FileSystem.cpp.o
 
 # target to build an object file
 Base/AMReX_FileSystem.cpp.o:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/Base/AMReX_FileSystem.cpp.o
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/Base/AMReX_FileSystem.cpp.o
 .PHONY : Base/AMReX_FileSystem.cpp.o
 
 Base/AMReX_FileSystem.i: Base/AMReX_FileSystem.cpp.i
@@ -1220,7 +1220,7 @@ Base/AMReX_FileSystem.i: Base/AMReX_FileSystem.cpp.i
 
 # target to preprocess a source file
 Base/AMReX_FileSystem.cpp.i:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/Base/AMReX_FileSystem.cpp.i
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/Base/AMReX_FileSystem.cpp.i
 .PHONY : Base/AMReX_FileSystem.cpp.i
 
 Base/AMReX_FileSystem.s: Base/AMReX_FileSystem.cpp.s
@@ -1228,7 +1228,7 @@ Base/AMReX_FileSystem.s: Base/AMReX_FileSystem.cpp.s
 
 # target to generate assembly for a file
 Base/AMReX_FileSystem.cpp.s:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/Base/AMReX_FileSystem.cpp.s
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/Base/AMReX_FileSystem.cpp.s
 .PHONY : Base/AMReX_FileSystem.cpp.s
 
 Base/AMReX_ForkJoin.o: Base/AMReX_ForkJoin.cpp.o
@@ -1236,7 +1236,7 @@ Base/AMReX_ForkJoin.o: Base/AMReX_ForkJoin.cpp.o
 
 # target to build an object file
 Base/AMReX_ForkJoin.cpp.o:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/Base/AMReX_ForkJoin.cpp.o
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/Base/AMReX_ForkJoin.cpp.o
 .PHONY : Base/AMReX_ForkJoin.cpp.o
 
 Base/AMReX_ForkJoin.i: Base/AMReX_ForkJoin.cpp.i
@@ -1244,7 +1244,7 @@ Base/AMReX_ForkJoin.i: Base/AMReX_ForkJoin.cpp.i
 
 # target to preprocess a source file
 Base/AMReX_ForkJoin.cpp.i:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/Base/AMReX_ForkJoin.cpp.i
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/Base/AMReX_ForkJoin.cpp.i
 .PHONY : Base/AMReX_ForkJoin.cpp.i
 
 Base/AMReX_ForkJoin.s: Base/AMReX_ForkJoin.cpp.s
@@ -1252,7 +1252,7 @@ Base/AMReX_ForkJoin.s: Base/AMReX_ForkJoin.cpp.s
 
 # target to generate assembly for a file
 Base/AMReX_ForkJoin.cpp.s:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/Base/AMReX_ForkJoin.cpp.s
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/Base/AMReX_ForkJoin.cpp.s
 .PHONY : Base/AMReX_ForkJoin.cpp.s
 
 Base/AMReX_Geometry.o: Base/AMReX_Geometry.cpp.o
@@ -1260,7 +1260,7 @@ Base/AMReX_Geometry.o: Base/AMReX_Geometry.cpp.o
 
 # target to build an object file
 Base/AMReX_Geometry.cpp.o:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/Base/AMReX_Geometry.cpp.o
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/Base/AMReX_Geometry.cpp.o
 .PHONY : Base/AMReX_Geometry.cpp.o
 
 Base/AMReX_Geometry.i: Base/AMReX_Geometry.cpp.i
@@ -1268,7 +1268,7 @@ Base/AMReX_Geometry.i: Base/AMReX_Geometry.cpp.i
 
 # target to preprocess a source file
 Base/AMReX_Geometry.cpp.i:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/Base/AMReX_Geometry.cpp.i
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/Base/AMReX_Geometry.cpp.i
 .PHONY : Base/AMReX_Geometry.cpp.i
 
 Base/AMReX_Geometry.s: Base/AMReX_Geometry.cpp.s
@@ -1276,7 +1276,7 @@ Base/AMReX_Geometry.s: Base/AMReX_Geometry.cpp.s
 
 # target to generate assembly for a file
 Base/AMReX_Geometry.cpp.s:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/Base/AMReX_Geometry.cpp.s
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/Base/AMReX_Geometry.cpp.s
 .PHONY : Base/AMReX_Geometry.cpp.s
 
 Base/AMReX_GpuAsyncArray.o: Base/AMReX_GpuAsyncArray.cpp.o
@@ -1284,7 +1284,7 @@ Base/AMReX_GpuAsyncArray.o: Base/AMReX_GpuAsyncArray.cpp.o
 
 # target to build an object file
 Base/AMReX_GpuAsyncArray.cpp.o:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/Base/AMReX_GpuAsyncArray.cpp.o
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/Base/AMReX_GpuAsyncArray.cpp.o
 .PHONY : Base/AMReX_GpuAsyncArray.cpp.o
 
 Base/AMReX_GpuAsyncArray.i: Base/AMReX_GpuAsyncArray.cpp.i
@@ -1292,7 +1292,7 @@ Base/AMReX_GpuAsyncArray.i: Base/AMReX_GpuAsyncArray.cpp.i
 
 # target to preprocess a source file
 Base/AMReX_GpuAsyncArray.cpp.i:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/Base/AMReX_GpuAsyncArray.cpp.i
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/Base/AMReX_GpuAsyncArray.cpp.i
 .PHONY : Base/AMReX_GpuAsyncArray.cpp.i
 
 Base/AMReX_GpuAsyncArray.s: Base/AMReX_GpuAsyncArray.cpp.s
@@ -1300,7 +1300,7 @@ Base/AMReX_GpuAsyncArray.s: Base/AMReX_GpuAsyncArray.cpp.s
 
 # target to generate assembly for a file
 Base/AMReX_GpuAsyncArray.cpp.s:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/Base/AMReX_GpuAsyncArray.cpp.s
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/Base/AMReX_GpuAsyncArray.cpp.s
 .PHONY : Base/AMReX_GpuAsyncArray.cpp.s
 
 Base/AMReX_GpuControl.o: Base/AMReX_GpuControl.cpp.o
@@ -1308,7 +1308,7 @@ Base/AMReX_GpuControl.o: Base/AMReX_GpuControl.cpp.o
 
 # target to build an object file
 Base/AMReX_GpuControl.cpp.o:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/Base/AMReX_GpuControl.cpp.o
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/Base/AMReX_GpuControl.cpp.o
 .PHONY : Base/AMReX_GpuControl.cpp.o
 
 Base/AMReX_GpuControl.i: Base/AMReX_GpuControl.cpp.i
@@ -1316,7 +1316,7 @@ Base/AMReX_GpuControl.i: Base/AMReX_GpuControl.cpp.i
 
 # target to preprocess a source file
 Base/AMReX_GpuControl.cpp.i:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/Base/AMReX_GpuControl.cpp.i
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/Base/AMReX_GpuControl.cpp.i
 .PHONY : Base/AMReX_GpuControl.cpp.i
 
 Base/AMReX_GpuControl.s: Base/AMReX_GpuControl.cpp.s
@@ -1324,7 +1324,7 @@ Base/AMReX_GpuControl.s: Base/AMReX_GpuControl.cpp.s
 
 # target to generate assembly for a file
 Base/AMReX_GpuControl.cpp.s:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/Base/AMReX_GpuControl.cpp.s
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/Base/AMReX_GpuControl.cpp.s
 .PHONY : Base/AMReX_GpuControl.cpp.s
 
 Base/AMReX_GpuDevice.o: Base/AMReX_GpuDevice.cpp.o
@@ -1332,7 +1332,7 @@ Base/AMReX_GpuDevice.o: Base/AMReX_GpuDevice.cpp.o
 
 # target to build an object file
 Base/AMReX_GpuDevice.cpp.o:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/Base/AMReX_GpuDevice.cpp.o
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/Base/AMReX_GpuDevice.cpp.o
 .PHONY : Base/AMReX_GpuDevice.cpp.o
 
 Base/AMReX_GpuDevice.i: Base/AMReX_GpuDevice.cpp.i
@@ -1340,7 +1340,7 @@ Base/AMReX_GpuDevice.i: Base/AMReX_GpuDevice.cpp.i
 
 # target to preprocess a source file
 Base/AMReX_GpuDevice.cpp.i:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/Base/AMReX_GpuDevice.cpp.i
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/Base/AMReX_GpuDevice.cpp.i
 .PHONY : Base/AMReX_GpuDevice.cpp.i
 
 Base/AMReX_GpuDevice.s: Base/AMReX_GpuDevice.cpp.s
@@ -1348,7 +1348,7 @@ Base/AMReX_GpuDevice.s: Base/AMReX_GpuDevice.cpp.s
 
 # target to generate assembly for a file
 Base/AMReX_GpuDevice.cpp.s:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/Base/AMReX_GpuDevice.cpp.s
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/Base/AMReX_GpuDevice.cpp.s
 .PHONY : Base/AMReX_GpuDevice.cpp.s
 
 Base/AMReX_GpuElixir.o: Base/AMReX_GpuElixir.cpp.o
@@ -1356,7 +1356,7 @@ Base/AMReX_GpuElixir.o: Base/AMReX_GpuElixir.cpp.o
 
 # target to build an object file
 Base/AMReX_GpuElixir.cpp.o:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/Base/AMReX_GpuElixir.cpp.o
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/Base/AMReX_GpuElixir.cpp.o
 .PHONY : Base/AMReX_GpuElixir.cpp.o
 
 Base/AMReX_GpuElixir.i: Base/AMReX_GpuElixir.cpp.i
@@ -1364,7 +1364,7 @@ Base/AMReX_GpuElixir.i: Base/AMReX_GpuElixir.cpp.i
 
 # target to preprocess a source file
 Base/AMReX_GpuElixir.cpp.i:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/Base/AMReX_GpuElixir.cpp.i
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/Base/AMReX_GpuElixir.cpp.i
 .PHONY : Base/AMReX_GpuElixir.cpp.i
 
 Base/AMReX_GpuElixir.s: Base/AMReX_GpuElixir.cpp.s
@@ -1372,7 +1372,7 @@ Base/AMReX_GpuElixir.s: Base/AMReX_GpuElixir.cpp.s
 
 # target to generate assembly for a file
 Base/AMReX_GpuElixir.cpp.s:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/Base/AMReX_GpuElixir.cpp.s
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/Base/AMReX_GpuElixir.cpp.s
 .PHONY : Base/AMReX_GpuElixir.cpp.s
 
 Base/AMReX_GpuUtility.o: Base/AMReX_GpuUtility.cpp.o
@@ -1380,7 +1380,7 @@ Base/AMReX_GpuUtility.o: Base/AMReX_GpuUtility.cpp.o
 
 # target to build an object file
 Base/AMReX_GpuUtility.cpp.o:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/Base/AMReX_GpuUtility.cpp.o
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/Base/AMReX_GpuUtility.cpp.o
 .PHONY : Base/AMReX_GpuUtility.cpp.o
 
 Base/AMReX_GpuUtility.i: Base/AMReX_GpuUtility.cpp.i
@@ -1388,7 +1388,7 @@ Base/AMReX_GpuUtility.i: Base/AMReX_GpuUtility.cpp.i
 
 # target to preprocess a source file
 Base/AMReX_GpuUtility.cpp.i:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/Base/AMReX_GpuUtility.cpp.i
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/Base/AMReX_GpuUtility.cpp.i
 .PHONY : Base/AMReX_GpuUtility.cpp.i
 
 Base/AMReX_GpuUtility.s: Base/AMReX_GpuUtility.cpp.s
@@ -1396,7 +1396,7 @@ Base/AMReX_GpuUtility.s: Base/AMReX_GpuUtility.cpp.s
 
 # target to generate assembly for a file
 Base/AMReX_GpuUtility.cpp.s:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/Base/AMReX_GpuUtility.cpp.s
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/Base/AMReX_GpuUtility.cpp.s
 .PHONY : Base/AMReX_GpuUtility.cpp.s
 
 Base/AMReX_IArrayBox.o: Base/AMReX_IArrayBox.cpp.o
@@ -1404,7 +1404,7 @@ Base/AMReX_IArrayBox.o: Base/AMReX_IArrayBox.cpp.o
 
 # target to build an object file
 Base/AMReX_IArrayBox.cpp.o:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/Base/AMReX_IArrayBox.cpp.o
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/Base/AMReX_IArrayBox.cpp.o
 .PHONY : Base/AMReX_IArrayBox.cpp.o
 
 Base/AMReX_IArrayBox.i: Base/AMReX_IArrayBox.cpp.i
@@ -1412,7 +1412,7 @@ Base/AMReX_IArrayBox.i: Base/AMReX_IArrayBox.cpp.i
 
 # target to preprocess a source file
 Base/AMReX_IArrayBox.cpp.i:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/Base/AMReX_IArrayBox.cpp.i
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/Base/AMReX_IArrayBox.cpp.i
 .PHONY : Base/AMReX_IArrayBox.cpp.i
 
 Base/AMReX_IArrayBox.s: Base/AMReX_IArrayBox.cpp.s
@@ -1420,7 +1420,7 @@ Base/AMReX_IArrayBox.s: Base/AMReX_IArrayBox.cpp.s
 
 # target to generate assembly for a file
 Base/AMReX_IArrayBox.cpp.s:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/Base/AMReX_IArrayBox.cpp.s
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/Base/AMReX_IArrayBox.cpp.s
 .PHONY : Base/AMReX_IArrayBox.cpp.s
 
 Base/AMReX_IndexType.o: Base/AMReX_IndexType.cpp.o
@@ -1428,7 +1428,7 @@ Base/AMReX_IndexType.o: Base/AMReX_IndexType.cpp.o
 
 # target to build an object file
 Base/AMReX_IndexType.cpp.o:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/Base/AMReX_IndexType.cpp.o
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/Base/AMReX_IndexType.cpp.o
 .PHONY : Base/AMReX_IndexType.cpp.o
 
 Base/AMReX_IndexType.i: Base/AMReX_IndexType.cpp.i
@@ -1436,7 +1436,7 @@ Base/AMReX_IndexType.i: Base/AMReX_IndexType.cpp.i
 
 # target to preprocess a source file
 Base/AMReX_IndexType.cpp.i:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/Base/AMReX_IndexType.cpp.i
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/Base/AMReX_IndexType.cpp.i
 .PHONY : Base/AMReX_IndexType.cpp.i
 
 Base/AMReX_IndexType.s: Base/AMReX_IndexType.cpp.s
@@ -1444,7 +1444,7 @@ Base/AMReX_IndexType.s: Base/AMReX_IndexType.cpp.s
 
 # target to generate assembly for a file
 Base/AMReX_IndexType.cpp.s:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/Base/AMReX_IndexType.cpp.s
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/Base/AMReX_IndexType.cpp.s
 .PHONY : Base/AMReX_IndexType.cpp.s
 
 Base/AMReX_IntConv.o: Base/AMReX_IntConv.cpp.o
@@ -1452,7 +1452,7 @@ Base/AMReX_IntConv.o: Base/AMReX_IntConv.cpp.o
 
 # target to build an object file
 Base/AMReX_IntConv.cpp.o:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/Base/AMReX_IntConv.cpp.o
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/Base/AMReX_IntConv.cpp.o
 .PHONY : Base/AMReX_IntConv.cpp.o
 
 Base/AMReX_IntConv.i: Base/AMReX_IntConv.cpp.i
@@ -1460,7 +1460,7 @@ Base/AMReX_IntConv.i: Base/AMReX_IntConv.cpp.i
 
 # target to preprocess a source file
 Base/AMReX_IntConv.cpp.i:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/Base/AMReX_IntConv.cpp.i
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/Base/AMReX_IntConv.cpp.i
 .PHONY : Base/AMReX_IntConv.cpp.i
 
 Base/AMReX_IntConv.s: Base/AMReX_IntConv.cpp.s
@@ -1468,15 +1468,39 @@ Base/AMReX_IntConv.s: Base/AMReX_IntConv.cpp.s
 
 # target to generate assembly for a file
 Base/AMReX_IntConv.cpp.s:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/Base/AMReX_IntConv.cpp.s
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/Base/AMReX_IntConv.cpp.s
 .PHONY : Base/AMReX_IntConv.cpp.s
+
+Base/AMReX_IntVect.o: Base/AMReX_IntVect.cpp.o
+.PHONY : Base/AMReX_IntVect.o
+
+# target to build an object file
+Base/AMReX_IntVect.cpp.o:
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/Base/AMReX_IntVect.cpp.o
+.PHONY : Base/AMReX_IntVect.cpp.o
+
+Base/AMReX_IntVect.i: Base/AMReX_IntVect.cpp.i
+.PHONY : Base/AMReX_IntVect.i
+
+# target to preprocess a source file
+Base/AMReX_IntVect.cpp.i:
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/Base/AMReX_IntVect.cpp.i
+.PHONY : Base/AMReX_IntVect.cpp.i
+
+Base/AMReX_IntVect.s: Base/AMReX_IntVect.cpp.s
+.PHONY : Base/AMReX_IntVect.s
+
+# target to generate assembly for a file
+Base/AMReX_IntVect.cpp.s:
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/Base/AMReX_IntVect.cpp.s
+.PHONY : Base/AMReX_IntVect.cpp.s
 
 Base/AMReX_MFCopyDescriptor.o: Base/AMReX_MFCopyDescriptor.cpp.o
 .PHONY : Base/AMReX_MFCopyDescriptor.o
 
 # target to build an object file
 Base/AMReX_MFCopyDescriptor.cpp.o:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/Base/AMReX_MFCopyDescriptor.cpp.o
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/Base/AMReX_MFCopyDescriptor.cpp.o
 .PHONY : Base/AMReX_MFCopyDescriptor.cpp.o
 
 Base/AMReX_MFCopyDescriptor.i: Base/AMReX_MFCopyDescriptor.cpp.i
@@ -1484,7 +1508,7 @@ Base/AMReX_MFCopyDescriptor.i: Base/AMReX_MFCopyDescriptor.cpp.i
 
 # target to preprocess a source file
 Base/AMReX_MFCopyDescriptor.cpp.i:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/Base/AMReX_MFCopyDescriptor.cpp.i
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/Base/AMReX_MFCopyDescriptor.cpp.i
 .PHONY : Base/AMReX_MFCopyDescriptor.cpp.i
 
 Base/AMReX_MFCopyDescriptor.s: Base/AMReX_MFCopyDescriptor.cpp.s
@@ -1492,7 +1516,7 @@ Base/AMReX_MFCopyDescriptor.s: Base/AMReX_MFCopyDescriptor.cpp.s
 
 # target to generate assembly for a file
 Base/AMReX_MFCopyDescriptor.cpp.s:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/Base/AMReX_MFCopyDescriptor.cpp.s
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/Base/AMReX_MFCopyDescriptor.cpp.s
 .PHONY : Base/AMReX_MFCopyDescriptor.cpp.s
 
 Base/AMReX_MFIter.o: Base/AMReX_MFIter.cpp.o
@@ -1500,7 +1524,7 @@ Base/AMReX_MFIter.o: Base/AMReX_MFIter.cpp.o
 
 # target to build an object file
 Base/AMReX_MFIter.cpp.o:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/Base/AMReX_MFIter.cpp.o
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/Base/AMReX_MFIter.cpp.o
 .PHONY : Base/AMReX_MFIter.cpp.o
 
 Base/AMReX_MFIter.i: Base/AMReX_MFIter.cpp.i
@@ -1508,7 +1532,7 @@ Base/AMReX_MFIter.i: Base/AMReX_MFIter.cpp.i
 
 # target to preprocess a source file
 Base/AMReX_MFIter.cpp.i:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/Base/AMReX_MFIter.cpp.i
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/Base/AMReX_MFIter.cpp.i
 .PHONY : Base/AMReX_MFIter.cpp.i
 
 Base/AMReX_MFIter.s: Base/AMReX_MFIter.cpp.s
@@ -1516,39 +1540,15 @@ Base/AMReX_MFIter.s: Base/AMReX_MFIter.cpp.s
 
 # target to generate assembly for a file
 Base/AMReX_MFIter.cpp.s:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/Base/AMReX_MFIter.cpp.s
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/Base/AMReX_MFIter.cpp.s
 .PHONY : Base/AMReX_MFIter.cpp.s
-
-Base/AMReX_MPMD.o: Base/AMReX_MPMD.cpp.o
-.PHONY : Base/AMReX_MPMD.o
-
-# target to build an object file
-Base/AMReX_MPMD.cpp.o:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/Base/AMReX_MPMD.cpp.o
-.PHONY : Base/AMReX_MPMD.cpp.o
-
-Base/AMReX_MPMD.i: Base/AMReX_MPMD.cpp.i
-.PHONY : Base/AMReX_MPMD.i
-
-# target to preprocess a source file
-Base/AMReX_MPMD.cpp.i:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/Base/AMReX_MPMD.cpp.i
-.PHONY : Base/AMReX_MPMD.cpp.i
-
-Base/AMReX_MPMD.s: Base/AMReX_MPMD.cpp.s
-.PHONY : Base/AMReX_MPMD.s
-
-# target to generate assembly for a file
-Base/AMReX_MPMD.cpp.s:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/Base/AMReX_MPMD.cpp.s
-.PHONY : Base/AMReX_MPMD.cpp.s
 
 Base/AMReX_Machine.o: Base/AMReX_Machine.cpp.o
 .PHONY : Base/AMReX_Machine.o
 
 # target to build an object file
 Base/AMReX_Machine.cpp.o:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/Base/AMReX_Machine.cpp.o
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/Base/AMReX_Machine.cpp.o
 .PHONY : Base/AMReX_Machine.cpp.o
 
 Base/AMReX_Machine.i: Base/AMReX_Machine.cpp.i
@@ -1556,7 +1556,7 @@ Base/AMReX_Machine.i: Base/AMReX_Machine.cpp.i
 
 # target to preprocess a source file
 Base/AMReX_Machine.cpp.i:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/Base/AMReX_Machine.cpp.i
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/Base/AMReX_Machine.cpp.i
 .PHONY : Base/AMReX_Machine.cpp.i
 
 Base/AMReX_Machine.s: Base/AMReX_Machine.cpp.s
@@ -1564,7 +1564,7 @@ Base/AMReX_Machine.s: Base/AMReX_Machine.cpp.s
 
 # target to generate assembly for a file
 Base/AMReX_Machine.cpp.s:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/Base/AMReX_Machine.cpp.s
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/Base/AMReX_Machine.cpp.s
 .PHONY : Base/AMReX_Machine.cpp.s
 
 Base/AMReX_MemPool.o: Base/AMReX_MemPool.cpp.o
@@ -1572,7 +1572,7 @@ Base/AMReX_MemPool.o: Base/AMReX_MemPool.cpp.o
 
 # target to build an object file
 Base/AMReX_MemPool.cpp.o:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/Base/AMReX_MemPool.cpp.o
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/Base/AMReX_MemPool.cpp.o
 .PHONY : Base/AMReX_MemPool.cpp.o
 
 Base/AMReX_MemPool.i: Base/AMReX_MemPool.cpp.i
@@ -1580,7 +1580,7 @@ Base/AMReX_MemPool.i: Base/AMReX_MemPool.cpp.i
 
 # target to preprocess a source file
 Base/AMReX_MemPool.cpp.i:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/Base/AMReX_MemPool.cpp.i
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/Base/AMReX_MemPool.cpp.i
 .PHONY : Base/AMReX_MemPool.cpp.i
 
 Base/AMReX_MemPool.s: Base/AMReX_MemPool.cpp.s
@@ -1588,7 +1588,7 @@ Base/AMReX_MemPool.s: Base/AMReX_MemPool.cpp.s
 
 # target to generate assembly for a file
 Base/AMReX_MemPool.cpp.s:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/Base/AMReX_MemPool.cpp.s
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/Base/AMReX_MemPool.cpp.s
 .PHONY : Base/AMReX_MemPool.cpp.s
 
 Base/AMReX_MultiFab.o: Base/AMReX_MultiFab.cpp.o
@@ -1596,7 +1596,7 @@ Base/AMReX_MultiFab.o: Base/AMReX_MultiFab.cpp.o
 
 # target to build an object file
 Base/AMReX_MultiFab.cpp.o:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/Base/AMReX_MultiFab.cpp.o
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/Base/AMReX_MultiFab.cpp.o
 .PHONY : Base/AMReX_MultiFab.cpp.o
 
 Base/AMReX_MultiFab.i: Base/AMReX_MultiFab.cpp.i
@@ -1604,7 +1604,7 @@ Base/AMReX_MultiFab.i: Base/AMReX_MultiFab.cpp.i
 
 # target to preprocess a source file
 Base/AMReX_MultiFab.cpp.i:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/Base/AMReX_MultiFab.cpp.i
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/Base/AMReX_MultiFab.cpp.i
 .PHONY : Base/AMReX_MultiFab.cpp.i
 
 Base/AMReX_MultiFab.s: Base/AMReX_MultiFab.cpp.s
@@ -1612,7 +1612,7 @@ Base/AMReX_MultiFab.s: Base/AMReX_MultiFab.cpp.s
 
 # target to generate assembly for a file
 Base/AMReX_MultiFab.cpp.s:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/Base/AMReX_MultiFab.cpp.s
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/Base/AMReX_MultiFab.cpp.s
 .PHONY : Base/AMReX_MultiFab.cpp.s
 
 Base/AMReX_MultiFabUtil.o: Base/AMReX_MultiFabUtil.cpp.o
@@ -1620,7 +1620,7 @@ Base/AMReX_MultiFabUtil.o: Base/AMReX_MultiFabUtil.cpp.o
 
 # target to build an object file
 Base/AMReX_MultiFabUtil.cpp.o:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/Base/AMReX_MultiFabUtil.cpp.o
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/Base/AMReX_MultiFabUtil.cpp.o
 .PHONY : Base/AMReX_MultiFabUtil.cpp.o
 
 Base/AMReX_MultiFabUtil.i: Base/AMReX_MultiFabUtil.cpp.i
@@ -1628,7 +1628,7 @@ Base/AMReX_MultiFabUtil.i: Base/AMReX_MultiFabUtil.cpp.i
 
 # target to preprocess a source file
 Base/AMReX_MultiFabUtil.cpp.i:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/Base/AMReX_MultiFabUtil.cpp.i
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/Base/AMReX_MultiFabUtil.cpp.i
 .PHONY : Base/AMReX_MultiFabUtil.cpp.i
 
 Base/AMReX_MultiFabUtil.s: Base/AMReX_MultiFabUtil.cpp.s
@@ -1636,7 +1636,7 @@ Base/AMReX_MultiFabUtil.s: Base/AMReX_MultiFabUtil.cpp.s
 
 # target to generate assembly for a file
 Base/AMReX_MultiFabUtil.cpp.s:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/Base/AMReX_MultiFabUtil.cpp.s
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/Base/AMReX_MultiFabUtil.cpp.s
 .PHONY : Base/AMReX_MultiFabUtil.cpp.s
 
 Base/AMReX_NFiles.o: Base/AMReX_NFiles.cpp.o
@@ -1644,7 +1644,7 @@ Base/AMReX_NFiles.o: Base/AMReX_NFiles.cpp.o
 
 # target to build an object file
 Base/AMReX_NFiles.cpp.o:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/Base/AMReX_NFiles.cpp.o
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/Base/AMReX_NFiles.cpp.o
 .PHONY : Base/AMReX_NFiles.cpp.o
 
 Base/AMReX_NFiles.i: Base/AMReX_NFiles.cpp.i
@@ -1652,7 +1652,7 @@ Base/AMReX_NFiles.i: Base/AMReX_NFiles.cpp.i
 
 # target to preprocess a source file
 Base/AMReX_NFiles.cpp.i:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/Base/AMReX_NFiles.cpp.i
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/Base/AMReX_NFiles.cpp.i
 .PHONY : Base/AMReX_NFiles.cpp.i
 
 Base/AMReX_NFiles.s: Base/AMReX_NFiles.cpp.s
@@ -1660,7 +1660,7 @@ Base/AMReX_NFiles.s: Base/AMReX_NFiles.cpp.s
 
 # target to generate assembly for a file
 Base/AMReX_NFiles.cpp.s:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/Base/AMReX_NFiles.cpp.s
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/Base/AMReX_NFiles.cpp.s
 .PHONY : Base/AMReX_NFiles.cpp.s
 
 Base/AMReX_NonLocalBC.o: Base/AMReX_NonLocalBC.cpp.o
@@ -1668,7 +1668,7 @@ Base/AMReX_NonLocalBC.o: Base/AMReX_NonLocalBC.cpp.o
 
 # target to build an object file
 Base/AMReX_NonLocalBC.cpp.o:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/Base/AMReX_NonLocalBC.cpp.o
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/Base/AMReX_NonLocalBC.cpp.o
 .PHONY : Base/AMReX_NonLocalBC.cpp.o
 
 Base/AMReX_NonLocalBC.i: Base/AMReX_NonLocalBC.cpp.i
@@ -1676,7 +1676,7 @@ Base/AMReX_NonLocalBC.i: Base/AMReX_NonLocalBC.cpp.i
 
 # target to preprocess a source file
 Base/AMReX_NonLocalBC.cpp.i:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/Base/AMReX_NonLocalBC.cpp.i
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/Base/AMReX_NonLocalBC.cpp.i
 .PHONY : Base/AMReX_NonLocalBC.cpp.i
 
 Base/AMReX_NonLocalBC.s: Base/AMReX_NonLocalBC.cpp.s
@@ -1684,39 +1684,15 @@ Base/AMReX_NonLocalBC.s: Base/AMReX_NonLocalBC.cpp.s
 
 # target to generate assembly for a file
 Base/AMReX_NonLocalBC.cpp.s:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/Base/AMReX_NonLocalBC.cpp.s
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/Base/AMReX_NonLocalBC.cpp.s
 .PHONY : Base/AMReX_NonLocalBC.cpp.s
-
-Base/AMReX_OpenMP.o: Base/AMReX_OpenMP.cpp.o
-.PHONY : Base/AMReX_OpenMP.o
-
-# target to build an object file
-Base/AMReX_OpenMP.cpp.o:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/Base/AMReX_OpenMP.cpp.o
-.PHONY : Base/AMReX_OpenMP.cpp.o
-
-Base/AMReX_OpenMP.i: Base/AMReX_OpenMP.cpp.i
-.PHONY : Base/AMReX_OpenMP.i
-
-# target to preprocess a source file
-Base/AMReX_OpenMP.cpp.i:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/Base/AMReX_OpenMP.cpp.i
-.PHONY : Base/AMReX_OpenMP.cpp.i
-
-Base/AMReX_OpenMP.s: Base/AMReX_OpenMP.cpp.s
-.PHONY : Base/AMReX_OpenMP.s
-
-# target to generate assembly for a file
-Base/AMReX_OpenMP.cpp.s:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/Base/AMReX_OpenMP.cpp.s
-.PHONY : Base/AMReX_OpenMP.cpp.s
 
 Base/AMReX_Orientation.o: Base/AMReX_Orientation.cpp.o
 .PHONY : Base/AMReX_Orientation.o
 
 # target to build an object file
 Base/AMReX_Orientation.cpp.o:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/Base/AMReX_Orientation.cpp.o
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/Base/AMReX_Orientation.cpp.o
 .PHONY : Base/AMReX_Orientation.cpp.o
 
 Base/AMReX_Orientation.i: Base/AMReX_Orientation.cpp.i
@@ -1724,7 +1700,7 @@ Base/AMReX_Orientation.i: Base/AMReX_Orientation.cpp.i
 
 # target to preprocess a source file
 Base/AMReX_Orientation.cpp.i:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/Base/AMReX_Orientation.cpp.i
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/Base/AMReX_Orientation.cpp.i
 .PHONY : Base/AMReX_Orientation.cpp.i
 
 Base/AMReX_Orientation.s: Base/AMReX_Orientation.cpp.s
@@ -1732,7 +1708,7 @@ Base/AMReX_Orientation.s: Base/AMReX_Orientation.cpp.s
 
 # target to generate assembly for a file
 Base/AMReX_Orientation.cpp.s:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/Base/AMReX_Orientation.cpp.s
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/Base/AMReX_Orientation.cpp.s
 .PHONY : Base/AMReX_Orientation.cpp.s
 
 Base/AMReX_PArena.o: Base/AMReX_PArena.cpp.o
@@ -1740,7 +1716,7 @@ Base/AMReX_PArena.o: Base/AMReX_PArena.cpp.o
 
 # target to build an object file
 Base/AMReX_PArena.cpp.o:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/Base/AMReX_PArena.cpp.o
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/Base/AMReX_PArena.cpp.o
 .PHONY : Base/AMReX_PArena.cpp.o
 
 Base/AMReX_PArena.i: Base/AMReX_PArena.cpp.i
@@ -1748,7 +1724,7 @@ Base/AMReX_PArena.i: Base/AMReX_PArena.cpp.i
 
 # target to preprocess a source file
 Base/AMReX_PArena.cpp.i:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/Base/AMReX_PArena.cpp.i
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/Base/AMReX_PArena.cpp.i
 .PHONY : Base/AMReX_PArena.cpp.i
 
 Base/AMReX_PArena.s: Base/AMReX_PArena.cpp.s
@@ -1756,39 +1732,15 @@ Base/AMReX_PArena.s: Base/AMReX_PArena.cpp.s
 
 # target to generate assembly for a file
 Base/AMReX_PArena.cpp.s:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/Base/AMReX_PArena.cpp.s
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/Base/AMReX_PArena.cpp.s
 .PHONY : Base/AMReX_PArena.cpp.s
-
-Base/AMReX_PODVector.o: Base/AMReX_PODVector.cpp.o
-.PHONY : Base/AMReX_PODVector.o
-
-# target to build an object file
-Base/AMReX_PODVector.cpp.o:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/Base/AMReX_PODVector.cpp.o
-.PHONY : Base/AMReX_PODVector.cpp.o
-
-Base/AMReX_PODVector.i: Base/AMReX_PODVector.cpp.i
-.PHONY : Base/AMReX_PODVector.i
-
-# target to preprocess a source file
-Base/AMReX_PODVector.cpp.i:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/Base/AMReX_PODVector.cpp.i
-.PHONY : Base/AMReX_PODVector.cpp.i
-
-Base/AMReX_PODVector.s: Base/AMReX_PODVector.cpp.s
-.PHONY : Base/AMReX_PODVector.s
-
-# target to generate assembly for a file
-Base/AMReX_PODVector.cpp.s:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/Base/AMReX_PODVector.cpp.s
-.PHONY : Base/AMReX_PODVector.cpp.s
 
 Base/AMReX_ParallelContext.o: Base/AMReX_ParallelContext.cpp.o
 .PHONY : Base/AMReX_ParallelContext.o
 
 # target to build an object file
 Base/AMReX_ParallelContext.cpp.o:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/Base/AMReX_ParallelContext.cpp.o
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/Base/AMReX_ParallelContext.cpp.o
 .PHONY : Base/AMReX_ParallelContext.cpp.o
 
 Base/AMReX_ParallelContext.i: Base/AMReX_ParallelContext.cpp.i
@@ -1796,7 +1748,7 @@ Base/AMReX_ParallelContext.i: Base/AMReX_ParallelContext.cpp.i
 
 # target to preprocess a source file
 Base/AMReX_ParallelContext.cpp.i:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/Base/AMReX_ParallelContext.cpp.i
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/Base/AMReX_ParallelContext.cpp.i
 .PHONY : Base/AMReX_ParallelContext.cpp.i
 
 Base/AMReX_ParallelContext.s: Base/AMReX_ParallelContext.cpp.s
@@ -1804,7 +1756,7 @@ Base/AMReX_ParallelContext.s: Base/AMReX_ParallelContext.cpp.s
 
 # target to generate assembly for a file
 Base/AMReX_ParallelContext.cpp.s:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/Base/AMReX_ParallelContext.cpp.s
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/Base/AMReX_ParallelContext.cpp.s
 .PHONY : Base/AMReX_ParallelContext.cpp.s
 
 Base/AMReX_ParallelDescriptor.o: Base/AMReX_ParallelDescriptor.cpp.o
@@ -1812,7 +1764,7 @@ Base/AMReX_ParallelDescriptor.o: Base/AMReX_ParallelDescriptor.cpp.o
 
 # target to build an object file
 Base/AMReX_ParallelDescriptor.cpp.o:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/Base/AMReX_ParallelDescriptor.cpp.o
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/Base/AMReX_ParallelDescriptor.cpp.o
 .PHONY : Base/AMReX_ParallelDescriptor.cpp.o
 
 Base/AMReX_ParallelDescriptor.i: Base/AMReX_ParallelDescriptor.cpp.i
@@ -1820,7 +1772,7 @@ Base/AMReX_ParallelDescriptor.i: Base/AMReX_ParallelDescriptor.cpp.i
 
 # target to preprocess a source file
 Base/AMReX_ParallelDescriptor.cpp.i:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/Base/AMReX_ParallelDescriptor.cpp.i
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/Base/AMReX_ParallelDescriptor.cpp.i
 .PHONY : Base/AMReX_ParallelDescriptor.cpp.i
 
 Base/AMReX_ParallelDescriptor.s: Base/AMReX_ParallelDescriptor.cpp.s
@@ -1828,7 +1780,7 @@ Base/AMReX_ParallelDescriptor.s: Base/AMReX_ParallelDescriptor.cpp.s
 
 # target to generate assembly for a file
 Base/AMReX_ParallelDescriptor.cpp.s:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/Base/AMReX_ParallelDescriptor.cpp.s
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/Base/AMReX_ParallelDescriptor.cpp.s
 .PHONY : Base/AMReX_ParallelDescriptor.cpp.s
 
 Base/AMReX_ParmParse.o: Base/AMReX_ParmParse.cpp.o
@@ -1836,7 +1788,7 @@ Base/AMReX_ParmParse.o: Base/AMReX_ParmParse.cpp.o
 
 # target to build an object file
 Base/AMReX_ParmParse.cpp.o:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/Base/AMReX_ParmParse.cpp.o
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/Base/AMReX_ParmParse.cpp.o
 .PHONY : Base/AMReX_ParmParse.cpp.o
 
 Base/AMReX_ParmParse.i: Base/AMReX_ParmParse.cpp.i
@@ -1844,7 +1796,7 @@ Base/AMReX_ParmParse.i: Base/AMReX_ParmParse.cpp.i
 
 # target to preprocess a source file
 Base/AMReX_ParmParse.cpp.i:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/Base/AMReX_ParmParse.cpp.i
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/Base/AMReX_ParmParse.cpp.i
 .PHONY : Base/AMReX_ParmParse.cpp.i
 
 Base/AMReX_ParmParse.s: Base/AMReX_ParmParse.cpp.s
@@ -1852,7 +1804,7 @@ Base/AMReX_ParmParse.s: Base/AMReX_ParmParse.cpp.s
 
 # target to generate assembly for a file
 Base/AMReX_ParmParse.cpp.s:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/Base/AMReX_ParmParse.cpp.s
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/Base/AMReX_ParmParse.cpp.s
 .PHONY : Base/AMReX_ParmParse.cpp.s
 
 Base/AMReX_Periodicity.o: Base/AMReX_Periodicity.cpp.o
@@ -1860,7 +1812,7 @@ Base/AMReX_Periodicity.o: Base/AMReX_Periodicity.cpp.o
 
 # target to build an object file
 Base/AMReX_Periodicity.cpp.o:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/Base/AMReX_Periodicity.cpp.o
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/Base/AMReX_Periodicity.cpp.o
 .PHONY : Base/AMReX_Periodicity.cpp.o
 
 Base/AMReX_Periodicity.i: Base/AMReX_Periodicity.cpp.i
@@ -1868,7 +1820,7 @@ Base/AMReX_Periodicity.i: Base/AMReX_Periodicity.cpp.i
 
 # target to preprocess a source file
 Base/AMReX_Periodicity.cpp.i:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/Base/AMReX_Periodicity.cpp.i
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/Base/AMReX_Periodicity.cpp.i
 .PHONY : Base/AMReX_Periodicity.cpp.i
 
 Base/AMReX_Periodicity.s: Base/AMReX_Periodicity.cpp.s
@@ -1876,7 +1828,7 @@ Base/AMReX_Periodicity.s: Base/AMReX_Periodicity.cpp.s
 
 # target to generate assembly for a file
 Base/AMReX_Periodicity.cpp.s:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/Base/AMReX_Periodicity.cpp.s
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/Base/AMReX_Periodicity.cpp.s
 .PHONY : Base/AMReX_Periodicity.cpp.s
 
 Base/AMReX_PhysBCFunct.o: Base/AMReX_PhysBCFunct.cpp.o
@@ -1884,7 +1836,7 @@ Base/AMReX_PhysBCFunct.o: Base/AMReX_PhysBCFunct.cpp.o
 
 # target to build an object file
 Base/AMReX_PhysBCFunct.cpp.o:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/Base/AMReX_PhysBCFunct.cpp.o
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/Base/AMReX_PhysBCFunct.cpp.o
 .PHONY : Base/AMReX_PhysBCFunct.cpp.o
 
 Base/AMReX_PhysBCFunct.i: Base/AMReX_PhysBCFunct.cpp.i
@@ -1892,7 +1844,7 @@ Base/AMReX_PhysBCFunct.i: Base/AMReX_PhysBCFunct.cpp.i
 
 # target to preprocess a source file
 Base/AMReX_PhysBCFunct.cpp.i:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/Base/AMReX_PhysBCFunct.cpp.i
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/Base/AMReX_PhysBCFunct.cpp.i
 .PHONY : Base/AMReX_PhysBCFunct.cpp.i
 
 Base/AMReX_PhysBCFunct.s: Base/AMReX_PhysBCFunct.cpp.s
@@ -1900,7 +1852,7 @@ Base/AMReX_PhysBCFunct.s: Base/AMReX_PhysBCFunct.cpp.s
 
 # target to generate assembly for a file
 Base/AMReX_PhysBCFunct.cpp.s:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/Base/AMReX_PhysBCFunct.cpp.s
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/Base/AMReX_PhysBCFunct.cpp.s
 .PHONY : Base/AMReX_PhysBCFunct.cpp.s
 
 Base/AMReX_PlotFileDataImpl.o: Base/AMReX_PlotFileDataImpl.cpp.o
@@ -1908,7 +1860,7 @@ Base/AMReX_PlotFileDataImpl.o: Base/AMReX_PlotFileDataImpl.cpp.o
 
 # target to build an object file
 Base/AMReX_PlotFileDataImpl.cpp.o:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/Base/AMReX_PlotFileDataImpl.cpp.o
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/Base/AMReX_PlotFileDataImpl.cpp.o
 .PHONY : Base/AMReX_PlotFileDataImpl.cpp.o
 
 Base/AMReX_PlotFileDataImpl.i: Base/AMReX_PlotFileDataImpl.cpp.i
@@ -1916,7 +1868,7 @@ Base/AMReX_PlotFileDataImpl.i: Base/AMReX_PlotFileDataImpl.cpp.i
 
 # target to preprocess a source file
 Base/AMReX_PlotFileDataImpl.cpp.i:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/Base/AMReX_PlotFileDataImpl.cpp.i
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/Base/AMReX_PlotFileDataImpl.cpp.i
 .PHONY : Base/AMReX_PlotFileDataImpl.cpp.i
 
 Base/AMReX_PlotFileDataImpl.s: Base/AMReX_PlotFileDataImpl.cpp.s
@@ -1924,7 +1876,7 @@ Base/AMReX_PlotFileDataImpl.s: Base/AMReX_PlotFileDataImpl.cpp.s
 
 # target to generate assembly for a file
 Base/AMReX_PlotFileDataImpl.cpp.s:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/Base/AMReX_PlotFileDataImpl.cpp.s
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/Base/AMReX_PlotFileDataImpl.cpp.s
 .PHONY : Base/AMReX_PlotFileDataImpl.cpp.s
 
 Base/AMReX_PlotFileUtil.o: Base/AMReX_PlotFileUtil.cpp.o
@@ -1932,7 +1884,7 @@ Base/AMReX_PlotFileUtil.o: Base/AMReX_PlotFileUtil.cpp.o
 
 # target to build an object file
 Base/AMReX_PlotFileUtil.cpp.o:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/Base/AMReX_PlotFileUtil.cpp.o
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/Base/AMReX_PlotFileUtil.cpp.o
 .PHONY : Base/AMReX_PlotFileUtil.cpp.o
 
 Base/AMReX_PlotFileUtil.i: Base/AMReX_PlotFileUtil.cpp.i
@@ -1940,7 +1892,7 @@ Base/AMReX_PlotFileUtil.i: Base/AMReX_PlotFileUtil.cpp.i
 
 # target to preprocess a source file
 Base/AMReX_PlotFileUtil.cpp.i:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/Base/AMReX_PlotFileUtil.cpp.i
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/Base/AMReX_PlotFileUtil.cpp.i
 .PHONY : Base/AMReX_PlotFileUtil.cpp.i
 
 Base/AMReX_PlotFileUtil.s: Base/AMReX_PlotFileUtil.cpp.s
@@ -1948,7 +1900,7 @@ Base/AMReX_PlotFileUtil.s: Base/AMReX_PlotFileUtil.cpp.s
 
 # target to generate assembly for a file
 Base/AMReX_PlotFileUtil.cpp.s:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/Base/AMReX_PlotFileUtil.cpp.s
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/Base/AMReX_PlotFileUtil.cpp.s
 .PHONY : Base/AMReX_PlotFileUtil.cpp.s
 
 Base/AMReX_Random.o: Base/AMReX_Random.cpp.o
@@ -1956,7 +1908,7 @@ Base/AMReX_Random.o: Base/AMReX_Random.cpp.o
 
 # target to build an object file
 Base/AMReX_Random.cpp.o:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/Base/AMReX_Random.cpp.o
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/Base/AMReX_Random.cpp.o
 .PHONY : Base/AMReX_Random.cpp.o
 
 Base/AMReX_Random.i: Base/AMReX_Random.cpp.i
@@ -1964,7 +1916,7 @@ Base/AMReX_Random.i: Base/AMReX_Random.cpp.i
 
 # target to preprocess a source file
 Base/AMReX_Random.cpp.i:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/Base/AMReX_Random.cpp.i
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/Base/AMReX_Random.cpp.i
 .PHONY : Base/AMReX_Random.cpp.i
 
 Base/AMReX_Random.s: Base/AMReX_Random.cpp.s
@@ -1972,7 +1924,7 @@ Base/AMReX_Random.s: Base/AMReX_Random.cpp.s
 
 # target to generate assembly for a file
 Base/AMReX_Random.cpp.s:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/Base/AMReX_Random.cpp.s
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/Base/AMReX_Random.cpp.s
 .PHONY : Base/AMReX_Random.cpp.s
 
 Base/AMReX_RealBox.o: Base/AMReX_RealBox.cpp.o
@@ -1980,7 +1932,7 @@ Base/AMReX_RealBox.o: Base/AMReX_RealBox.cpp.o
 
 # target to build an object file
 Base/AMReX_RealBox.cpp.o:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/Base/AMReX_RealBox.cpp.o
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/Base/AMReX_RealBox.cpp.o
 .PHONY : Base/AMReX_RealBox.cpp.o
 
 Base/AMReX_RealBox.i: Base/AMReX_RealBox.cpp.i
@@ -1988,7 +1940,7 @@ Base/AMReX_RealBox.i: Base/AMReX_RealBox.cpp.i
 
 # target to preprocess a source file
 Base/AMReX_RealBox.cpp.i:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/Base/AMReX_RealBox.cpp.i
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/Base/AMReX_RealBox.cpp.i
 .PHONY : Base/AMReX_RealBox.cpp.i
 
 Base/AMReX_RealBox.s: Base/AMReX_RealBox.cpp.s
@@ -1996,63 +1948,39 @@ Base/AMReX_RealBox.s: Base/AMReX_RealBox.cpp.s
 
 # target to generate assembly for a file
 Base/AMReX_RealBox.cpp.s:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/Base/AMReX_RealBox.cpp.s
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/Base/AMReX_RealBox.cpp.s
 .PHONY : Base/AMReX_RealBox.cpp.s
 
-Base/AMReX_SArena.o: Base/AMReX_SArena.cpp.o
-.PHONY : Base/AMReX_SArena.o
+Base/AMReX_RealVect.o: Base/AMReX_RealVect.cpp.o
+.PHONY : Base/AMReX_RealVect.o
 
 # target to build an object file
-Base/AMReX_SArena.cpp.o:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/Base/AMReX_SArena.cpp.o
-.PHONY : Base/AMReX_SArena.cpp.o
+Base/AMReX_RealVect.cpp.o:
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/Base/AMReX_RealVect.cpp.o
+.PHONY : Base/AMReX_RealVect.cpp.o
 
-Base/AMReX_SArena.i: Base/AMReX_SArena.cpp.i
-.PHONY : Base/AMReX_SArena.i
-
-# target to preprocess a source file
-Base/AMReX_SArena.cpp.i:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/Base/AMReX_SArena.cpp.i
-.PHONY : Base/AMReX_SArena.cpp.i
-
-Base/AMReX_SArena.s: Base/AMReX_SArena.cpp.s
-.PHONY : Base/AMReX_SArena.s
-
-# target to generate assembly for a file
-Base/AMReX_SArena.cpp.s:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/Base/AMReX_SArena.cpp.s
-.PHONY : Base/AMReX_SArena.cpp.s
-
-Base/AMReX_String.o: Base/AMReX_String.cpp.o
-.PHONY : Base/AMReX_String.o
-
-# target to build an object file
-Base/AMReX_String.cpp.o:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/Base/AMReX_String.cpp.o
-.PHONY : Base/AMReX_String.cpp.o
-
-Base/AMReX_String.i: Base/AMReX_String.cpp.i
-.PHONY : Base/AMReX_String.i
+Base/AMReX_RealVect.i: Base/AMReX_RealVect.cpp.i
+.PHONY : Base/AMReX_RealVect.i
 
 # target to preprocess a source file
-Base/AMReX_String.cpp.i:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/Base/AMReX_String.cpp.i
-.PHONY : Base/AMReX_String.cpp.i
+Base/AMReX_RealVect.cpp.i:
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/Base/AMReX_RealVect.cpp.i
+.PHONY : Base/AMReX_RealVect.cpp.i
 
-Base/AMReX_String.s: Base/AMReX_String.cpp.s
-.PHONY : Base/AMReX_String.s
+Base/AMReX_RealVect.s: Base/AMReX_RealVect.cpp.s
+.PHONY : Base/AMReX_RealVect.s
 
 # target to generate assembly for a file
-Base/AMReX_String.cpp.s:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/Base/AMReX_String.cpp.s
-.PHONY : Base/AMReX_String.cpp.s
+Base/AMReX_RealVect.cpp.s:
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/Base/AMReX_RealVect.cpp.s
+.PHONY : Base/AMReX_RealVect.cpp.s
 
 Base/AMReX_Utility.o: Base/AMReX_Utility.cpp.o
 .PHONY : Base/AMReX_Utility.o
 
 # target to build an object file
 Base/AMReX_Utility.cpp.o:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/Base/AMReX_Utility.cpp.o
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/Base/AMReX_Utility.cpp.o
 .PHONY : Base/AMReX_Utility.cpp.o
 
 Base/AMReX_Utility.i: Base/AMReX_Utility.cpp.i
@@ -2060,7 +1988,7 @@ Base/AMReX_Utility.i: Base/AMReX_Utility.cpp.i
 
 # target to preprocess a source file
 Base/AMReX_Utility.cpp.i:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/Base/AMReX_Utility.cpp.i
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/Base/AMReX_Utility.cpp.i
 .PHONY : Base/AMReX_Utility.cpp.i
 
 Base/AMReX_Utility.s: Base/AMReX_Utility.cpp.s
@@ -2068,7 +1996,7 @@ Base/AMReX_Utility.s: Base/AMReX_Utility.cpp.s
 
 # target to generate assembly for a file
 Base/AMReX_Utility.cpp.s:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/Base/AMReX_Utility.cpp.s
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/Base/AMReX_Utility.cpp.s
 .PHONY : Base/AMReX_Utility.cpp.s
 
 Base/AMReX_VectorIO.o: Base/AMReX_VectorIO.cpp.o
@@ -2076,7 +2004,7 @@ Base/AMReX_VectorIO.o: Base/AMReX_VectorIO.cpp.o
 
 # target to build an object file
 Base/AMReX_VectorIO.cpp.o:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/Base/AMReX_VectorIO.cpp.o
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/Base/AMReX_VectorIO.cpp.o
 .PHONY : Base/AMReX_VectorIO.cpp.o
 
 Base/AMReX_VectorIO.i: Base/AMReX_VectorIO.cpp.i
@@ -2084,7 +2012,7 @@ Base/AMReX_VectorIO.i: Base/AMReX_VectorIO.cpp.i
 
 # target to preprocess a source file
 Base/AMReX_VectorIO.cpp.i:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/Base/AMReX_VectorIO.cpp.i
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/Base/AMReX_VectorIO.cpp.i
 .PHONY : Base/AMReX_VectorIO.cpp.i
 
 Base/AMReX_VectorIO.s: Base/AMReX_VectorIO.cpp.s
@@ -2092,7 +2020,7 @@ Base/AMReX_VectorIO.s: Base/AMReX_VectorIO.cpp.s
 
 # target to generate assembly for a file
 Base/AMReX_VectorIO.cpp.s:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/Base/AMReX_VectorIO.cpp.s
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/Base/AMReX_VectorIO.cpp.s
 .PHONY : Base/AMReX_VectorIO.cpp.s
 
 Base/AMReX_Version.o: Base/AMReX_Version.cpp.o
@@ -2100,7 +2028,7 @@ Base/AMReX_Version.o: Base/AMReX_Version.cpp.o
 
 # target to build an object file
 Base/AMReX_Version.cpp.o:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/Base/AMReX_Version.cpp.o
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/Base/AMReX_Version.cpp.o
 .PHONY : Base/AMReX_Version.cpp.o
 
 Base/AMReX_Version.i: Base/AMReX_Version.cpp.i
@@ -2108,7 +2036,7 @@ Base/AMReX_Version.i: Base/AMReX_Version.cpp.i
 
 # target to preprocess a source file
 Base/AMReX_Version.cpp.i:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/Base/AMReX_Version.cpp.i
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/Base/AMReX_Version.cpp.i
 .PHONY : Base/AMReX_Version.cpp.i
 
 Base/AMReX_Version.s: Base/AMReX_Version.cpp.s
@@ -2116,7 +2044,7 @@ Base/AMReX_Version.s: Base/AMReX_Version.cpp.s
 
 # target to generate assembly for a file
 Base/AMReX_Version.cpp.s:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/Base/AMReX_Version.cpp.s
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/Base/AMReX_Version.cpp.s
 .PHONY : Base/AMReX_Version.cpp.s
 
 Base/AMReX_VisMF.o: Base/AMReX_VisMF.cpp.o
@@ -2124,7 +2052,7 @@ Base/AMReX_VisMF.o: Base/AMReX_VisMF.cpp.o
 
 # target to build an object file
 Base/AMReX_VisMF.cpp.o:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/Base/AMReX_VisMF.cpp.o
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/Base/AMReX_VisMF.cpp.o
 .PHONY : Base/AMReX_VisMF.cpp.o
 
 Base/AMReX_VisMF.i: Base/AMReX_VisMF.cpp.i
@@ -2132,7 +2060,7 @@ Base/AMReX_VisMF.i: Base/AMReX_VisMF.cpp.i
 
 # target to preprocess a source file
 Base/AMReX_VisMF.cpp.i:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/Base/AMReX_VisMF.cpp.i
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/Base/AMReX_VisMF.cpp.i
 .PHONY : Base/AMReX_VisMF.cpp.i
 
 Base/AMReX_VisMF.s: Base/AMReX_VisMF.cpp.s
@@ -2140,7 +2068,7 @@ Base/AMReX_VisMF.s: Base/AMReX_VisMF.cpp.s
 
 # target to generate assembly for a file
 Base/AMReX_VisMF.cpp.s:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/Base/AMReX_VisMF.cpp.s
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/Base/AMReX_VisMF.cpp.s
 .PHONY : Base/AMReX_VisMF.cpp.s
 
 Base/AMReX_error_fi.o: Base/AMReX_error_fi.cpp.o
@@ -2148,7 +2076,7 @@ Base/AMReX_error_fi.o: Base/AMReX_error_fi.cpp.o
 
 # target to build an object file
 Base/AMReX_error_fi.cpp.o:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/Base/AMReX_error_fi.cpp.o
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/Base/AMReX_error_fi.cpp.o
 .PHONY : Base/AMReX_error_fi.cpp.o
 
 Base/AMReX_error_fi.i: Base/AMReX_error_fi.cpp.i
@@ -2156,7 +2084,7 @@ Base/AMReX_error_fi.i: Base/AMReX_error_fi.cpp.i
 
 # target to preprocess a source file
 Base/AMReX_error_fi.cpp.i:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/Base/AMReX_error_fi.cpp.i
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/Base/AMReX_error_fi.cpp.i
 .PHONY : Base/AMReX_error_fi.cpp.i
 
 Base/AMReX_error_fi.s: Base/AMReX_error_fi.cpp.s
@@ -2164,7 +2092,7 @@ Base/AMReX_error_fi.s: Base/AMReX_error_fi.cpp.s
 
 # target to generate assembly for a file
 Base/AMReX_error_fi.cpp.s:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/Base/AMReX_error_fi.cpp.s
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/Base/AMReX_error_fi.cpp.s
 .PHONY : Base/AMReX_error_fi.cpp.s
 
 Base/AMReX_iMultiFab.o: Base/AMReX_iMultiFab.cpp.o
@@ -2172,7 +2100,7 @@ Base/AMReX_iMultiFab.o: Base/AMReX_iMultiFab.cpp.o
 
 # target to build an object file
 Base/AMReX_iMultiFab.cpp.o:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/Base/AMReX_iMultiFab.cpp.o
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/Base/AMReX_iMultiFab.cpp.o
 .PHONY : Base/AMReX_iMultiFab.cpp.o
 
 Base/AMReX_iMultiFab.i: Base/AMReX_iMultiFab.cpp.i
@@ -2180,7 +2108,7 @@ Base/AMReX_iMultiFab.i: Base/AMReX_iMultiFab.cpp.i
 
 # target to preprocess a source file
 Base/AMReX_iMultiFab.cpp.i:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/Base/AMReX_iMultiFab.cpp.i
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/Base/AMReX_iMultiFab.cpp.i
 .PHONY : Base/AMReX_iMultiFab.cpp.i
 
 Base/AMReX_iMultiFab.s: Base/AMReX_iMultiFab.cpp.s
@@ -2188,7 +2116,7 @@ Base/AMReX_iMultiFab.s: Base/AMReX_iMultiFab.cpp.s
 
 # target to generate assembly for a file
 Base/AMReX_iMultiFab.cpp.s:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/Base/AMReX_iMultiFab.cpp.s
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/Base/AMReX_iMultiFab.cpp.s
 .PHONY : Base/AMReX_iMultiFab.cpp.s
 
 Base/AMReX_parmparse_fi.o: Base/AMReX_parmparse_fi.cpp.o
@@ -2196,7 +2124,7 @@ Base/AMReX_parmparse_fi.o: Base/AMReX_parmparse_fi.cpp.o
 
 # target to build an object file
 Base/AMReX_parmparse_fi.cpp.o:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/Base/AMReX_parmparse_fi.cpp.o
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/Base/AMReX_parmparse_fi.cpp.o
 .PHONY : Base/AMReX_parmparse_fi.cpp.o
 
 Base/AMReX_parmparse_fi.i: Base/AMReX_parmparse_fi.cpp.i
@@ -2204,7 +2132,7 @@ Base/AMReX_parmparse_fi.i: Base/AMReX_parmparse_fi.cpp.i
 
 # target to preprocess a source file
 Base/AMReX_parmparse_fi.cpp.i:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/Base/AMReX_parmparse_fi.cpp.i
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/Base/AMReX_parmparse_fi.cpp.i
 .PHONY : Base/AMReX_parmparse_fi.cpp.i
 
 Base/AMReX_parmparse_fi.s: Base/AMReX_parmparse_fi.cpp.s
@@ -2212,7 +2140,7 @@ Base/AMReX_parmparse_fi.s: Base/AMReX_parmparse_fi.cpp.s
 
 # target to generate assembly for a file
 Base/AMReX_parmparse_fi.cpp.s:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/Base/AMReX_parmparse_fi.cpp.s
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/Base/AMReX_parmparse_fi.cpp.s
 .PHONY : Base/AMReX_parmparse_fi.cpp.s
 
 Base/AMReX_parstream.o: Base/AMReX_parstream.cpp.o
@@ -2220,7 +2148,7 @@ Base/AMReX_parstream.o: Base/AMReX_parstream.cpp.o
 
 # target to build an object file
 Base/AMReX_parstream.cpp.o:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/Base/AMReX_parstream.cpp.o
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/Base/AMReX_parstream.cpp.o
 .PHONY : Base/AMReX_parstream.cpp.o
 
 Base/AMReX_parstream.i: Base/AMReX_parstream.cpp.i
@@ -2228,7 +2156,7 @@ Base/AMReX_parstream.i: Base/AMReX_parstream.cpp.i
 
 # target to preprocess a source file
 Base/AMReX_parstream.cpp.i:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/Base/AMReX_parstream.cpp.i
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/Base/AMReX_parstream.cpp.i
 .PHONY : Base/AMReX_parstream.cpp.i
 
 Base/AMReX_parstream.s: Base/AMReX_parstream.cpp.s
@@ -2236,7 +2164,7 @@ Base/AMReX_parstream.s: Base/AMReX_parstream.cpp.s
 
 # target to generate assembly for a file
 Base/AMReX_parstream.cpp.s:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/Base/AMReX_parstream.cpp.s
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/Base/AMReX_parstream.cpp.s
 .PHONY : Base/AMReX_parstream.cpp.s
 
 Base/Parser/AMReX_IParser.o: Base/Parser/AMReX_IParser.cpp.o
@@ -2244,7 +2172,7 @@ Base/Parser/AMReX_IParser.o: Base/Parser/AMReX_IParser.cpp.o
 
 # target to build an object file
 Base/Parser/AMReX_IParser.cpp.o:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/Base/Parser/AMReX_IParser.cpp.o
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/Base/Parser/AMReX_IParser.cpp.o
 .PHONY : Base/Parser/AMReX_IParser.cpp.o
 
 Base/Parser/AMReX_IParser.i: Base/Parser/AMReX_IParser.cpp.i
@@ -2252,7 +2180,7 @@ Base/Parser/AMReX_IParser.i: Base/Parser/AMReX_IParser.cpp.i
 
 # target to preprocess a source file
 Base/Parser/AMReX_IParser.cpp.i:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/Base/Parser/AMReX_IParser.cpp.i
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/Base/Parser/AMReX_IParser.cpp.i
 .PHONY : Base/Parser/AMReX_IParser.cpp.i
 
 Base/Parser/AMReX_IParser.s: Base/Parser/AMReX_IParser.cpp.s
@@ -2260,7 +2188,7 @@ Base/Parser/AMReX_IParser.s: Base/Parser/AMReX_IParser.cpp.s
 
 # target to generate assembly for a file
 Base/Parser/AMReX_IParser.cpp.s:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/Base/Parser/AMReX_IParser.cpp.s
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/Base/Parser/AMReX_IParser.cpp.s
 .PHONY : Base/Parser/AMReX_IParser.cpp.s
 
 Base/Parser/AMReX_IParser_Exe.o: Base/Parser/AMReX_IParser_Exe.cpp.o
@@ -2268,7 +2196,7 @@ Base/Parser/AMReX_IParser_Exe.o: Base/Parser/AMReX_IParser_Exe.cpp.o
 
 # target to build an object file
 Base/Parser/AMReX_IParser_Exe.cpp.o:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/Base/Parser/AMReX_IParser_Exe.cpp.o
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/Base/Parser/AMReX_IParser_Exe.cpp.o
 .PHONY : Base/Parser/AMReX_IParser_Exe.cpp.o
 
 Base/Parser/AMReX_IParser_Exe.i: Base/Parser/AMReX_IParser_Exe.cpp.i
@@ -2276,7 +2204,7 @@ Base/Parser/AMReX_IParser_Exe.i: Base/Parser/AMReX_IParser_Exe.cpp.i
 
 # target to preprocess a source file
 Base/Parser/AMReX_IParser_Exe.cpp.i:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/Base/Parser/AMReX_IParser_Exe.cpp.i
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/Base/Parser/AMReX_IParser_Exe.cpp.i
 .PHONY : Base/Parser/AMReX_IParser_Exe.cpp.i
 
 Base/Parser/AMReX_IParser_Exe.s: Base/Parser/AMReX_IParser_Exe.cpp.s
@@ -2284,7 +2212,7 @@ Base/Parser/AMReX_IParser_Exe.s: Base/Parser/AMReX_IParser_Exe.cpp.s
 
 # target to generate assembly for a file
 Base/Parser/AMReX_IParser_Exe.cpp.s:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/Base/Parser/AMReX_IParser_Exe.cpp.s
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/Base/Parser/AMReX_IParser_Exe.cpp.s
 .PHONY : Base/Parser/AMReX_IParser_Exe.cpp.s
 
 Base/Parser/AMReX_IParser_Y.o: Base/Parser/AMReX_IParser_Y.cpp.o
@@ -2292,7 +2220,7 @@ Base/Parser/AMReX_IParser_Y.o: Base/Parser/AMReX_IParser_Y.cpp.o
 
 # target to build an object file
 Base/Parser/AMReX_IParser_Y.cpp.o:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/Base/Parser/AMReX_IParser_Y.cpp.o
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/Base/Parser/AMReX_IParser_Y.cpp.o
 .PHONY : Base/Parser/AMReX_IParser_Y.cpp.o
 
 Base/Parser/AMReX_IParser_Y.i: Base/Parser/AMReX_IParser_Y.cpp.i
@@ -2300,7 +2228,7 @@ Base/Parser/AMReX_IParser_Y.i: Base/Parser/AMReX_IParser_Y.cpp.i
 
 # target to preprocess a source file
 Base/Parser/AMReX_IParser_Y.cpp.i:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/Base/Parser/AMReX_IParser_Y.cpp.i
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/Base/Parser/AMReX_IParser_Y.cpp.i
 .PHONY : Base/Parser/AMReX_IParser_Y.cpp.i
 
 Base/Parser/AMReX_IParser_Y.s: Base/Parser/AMReX_IParser_Y.cpp.s
@@ -2308,7 +2236,7 @@ Base/Parser/AMReX_IParser_Y.s: Base/Parser/AMReX_IParser_Y.cpp.s
 
 # target to generate assembly for a file
 Base/Parser/AMReX_IParser_Y.cpp.s:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/Base/Parser/AMReX_IParser_Y.cpp.s
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/Base/Parser/AMReX_IParser_Y.cpp.s
 .PHONY : Base/Parser/AMReX_IParser_Y.cpp.s
 
 Base/Parser/AMReX_Parser.o: Base/Parser/AMReX_Parser.cpp.o
@@ -2316,7 +2244,7 @@ Base/Parser/AMReX_Parser.o: Base/Parser/AMReX_Parser.cpp.o
 
 # target to build an object file
 Base/Parser/AMReX_Parser.cpp.o:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/Base/Parser/AMReX_Parser.cpp.o
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/Base/Parser/AMReX_Parser.cpp.o
 .PHONY : Base/Parser/AMReX_Parser.cpp.o
 
 Base/Parser/AMReX_Parser.i: Base/Parser/AMReX_Parser.cpp.i
@@ -2324,7 +2252,7 @@ Base/Parser/AMReX_Parser.i: Base/Parser/AMReX_Parser.cpp.i
 
 # target to preprocess a source file
 Base/Parser/AMReX_Parser.cpp.i:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/Base/Parser/AMReX_Parser.cpp.i
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/Base/Parser/AMReX_Parser.cpp.i
 .PHONY : Base/Parser/AMReX_Parser.cpp.i
 
 Base/Parser/AMReX_Parser.s: Base/Parser/AMReX_Parser.cpp.s
@@ -2332,7 +2260,7 @@ Base/Parser/AMReX_Parser.s: Base/Parser/AMReX_Parser.cpp.s
 
 # target to generate assembly for a file
 Base/Parser/AMReX_Parser.cpp.s:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/Base/Parser/AMReX_Parser.cpp.s
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/Base/Parser/AMReX_Parser.cpp.s
 .PHONY : Base/Parser/AMReX_Parser.cpp.s
 
 Base/Parser/AMReX_Parser_Exe.o: Base/Parser/AMReX_Parser_Exe.cpp.o
@@ -2340,7 +2268,7 @@ Base/Parser/AMReX_Parser_Exe.o: Base/Parser/AMReX_Parser_Exe.cpp.o
 
 # target to build an object file
 Base/Parser/AMReX_Parser_Exe.cpp.o:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/Base/Parser/AMReX_Parser_Exe.cpp.o
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/Base/Parser/AMReX_Parser_Exe.cpp.o
 .PHONY : Base/Parser/AMReX_Parser_Exe.cpp.o
 
 Base/Parser/AMReX_Parser_Exe.i: Base/Parser/AMReX_Parser_Exe.cpp.i
@@ -2348,7 +2276,7 @@ Base/Parser/AMReX_Parser_Exe.i: Base/Parser/AMReX_Parser_Exe.cpp.i
 
 # target to preprocess a source file
 Base/Parser/AMReX_Parser_Exe.cpp.i:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/Base/Parser/AMReX_Parser_Exe.cpp.i
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/Base/Parser/AMReX_Parser_Exe.cpp.i
 .PHONY : Base/Parser/AMReX_Parser_Exe.cpp.i
 
 Base/Parser/AMReX_Parser_Exe.s: Base/Parser/AMReX_Parser_Exe.cpp.s
@@ -2356,7 +2284,7 @@ Base/Parser/AMReX_Parser_Exe.s: Base/Parser/AMReX_Parser_Exe.cpp.s
 
 # target to generate assembly for a file
 Base/Parser/AMReX_Parser_Exe.cpp.s:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/Base/Parser/AMReX_Parser_Exe.cpp.s
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/Base/Parser/AMReX_Parser_Exe.cpp.s
 .PHONY : Base/Parser/AMReX_Parser_Exe.cpp.s
 
 Base/Parser/AMReX_Parser_Y.o: Base/Parser/AMReX_Parser_Y.cpp.o
@@ -2364,7 +2292,7 @@ Base/Parser/AMReX_Parser_Y.o: Base/Parser/AMReX_Parser_Y.cpp.o
 
 # target to build an object file
 Base/Parser/AMReX_Parser_Y.cpp.o:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/Base/Parser/AMReX_Parser_Y.cpp.o
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/Base/Parser/AMReX_Parser_Y.cpp.o
 .PHONY : Base/Parser/AMReX_Parser_Y.cpp.o
 
 Base/Parser/AMReX_Parser_Y.i: Base/Parser/AMReX_Parser_Y.cpp.i
@@ -2372,7 +2300,7 @@ Base/Parser/AMReX_Parser_Y.i: Base/Parser/AMReX_Parser_Y.cpp.i
 
 # target to preprocess a source file
 Base/Parser/AMReX_Parser_Y.cpp.i:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/Base/Parser/AMReX_Parser_Y.cpp.i
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/Base/Parser/AMReX_Parser_Y.cpp.i
 .PHONY : Base/Parser/AMReX_Parser_Y.cpp.i
 
 Base/Parser/AMReX_Parser_Y.s: Base/Parser/AMReX_Parser_Y.cpp.s
@@ -2380,7 +2308,7 @@ Base/Parser/AMReX_Parser_Y.s: Base/Parser/AMReX_Parser_Y.cpp.s
 
 # target to generate assembly for a file
 Base/Parser/AMReX_Parser_Y.cpp.s:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/Base/Parser/AMReX_Parser_Y.cpp.s
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/Base/Parser/AMReX_Parser_Y.cpp.s
 .PHONY : Base/Parser/AMReX_Parser_Y.cpp.s
 
 Base/Parser/amrex_iparser.lex.o: Base/Parser/amrex_iparser.lex.cpp.o
@@ -2388,7 +2316,7 @@ Base/Parser/amrex_iparser.lex.o: Base/Parser/amrex_iparser.lex.cpp.o
 
 # target to build an object file
 Base/Parser/amrex_iparser.lex.cpp.o:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/Base/Parser/amrex_iparser.lex.cpp.o
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/Base/Parser/amrex_iparser.lex.cpp.o
 .PHONY : Base/Parser/amrex_iparser.lex.cpp.o
 
 Base/Parser/amrex_iparser.lex.i: Base/Parser/amrex_iparser.lex.cpp.i
@@ -2396,7 +2324,7 @@ Base/Parser/amrex_iparser.lex.i: Base/Parser/amrex_iparser.lex.cpp.i
 
 # target to preprocess a source file
 Base/Parser/amrex_iparser.lex.cpp.i:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/Base/Parser/amrex_iparser.lex.cpp.i
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/Base/Parser/amrex_iparser.lex.cpp.i
 .PHONY : Base/Parser/amrex_iparser.lex.cpp.i
 
 Base/Parser/amrex_iparser.lex.s: Base/Parser/amrex_iparser.lex.cpp.s
@@ -2404,7 +2332,7 @@ Base/Parser/amrex_iparser.lex.s: Base/Parser/amrex_iparser.lex.cpp.s
 
 # target to generate assembly for a file
 Base/Parser/amrex_iparser.lex.cpp.s:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/Base/Parser/amrex_iparser.lex.cpp.s
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/Base/Parser/amrex_iparser.lex.cpp.s
 .PHONY : Base/Parser/amrex_iparser.lex.cpp.s
 
 Base/Parser/amrex_iparser.tab.o: Base/Parser/amrex_iparser.tab.cpp.o
@@ -2412,7 +2340,7 @@ Base/Parser/amrex_iparser.tab.o: Base/Parser/amrex_iparser.tab.cpp.o
 
 # target to build an object file
 Base/Parser/amrex_iparser.tab.cpp.o:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/Base/Parser/amrex_iparser.tab.cpp.o
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/Base/Parser/amrex_iparser.tab.cpp.o
 .PHONY : Base/Parser/amrex_iparser.tab.cpp.o
 
 Base/Parser/amrex_iparser.tab.i: Base/Parser/amrex_iparser.tab.cpp.i
@@ -2420,7 +2348,7 @@ Base/Parser/amrex_iparser.tab.i: Base/Parser/amrex_iparser.tab.cpp.i
 
 # target to preprocess a source file
 Base/Parser/amrex_iparser.tab.cpp.i:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/Base/Parser/amrex_iparser.tab.cpp.i
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/Base/Parser/amrex_iparser.tab.cpp.i
 .PHONY : Base/Parser/amrex_iparser.tab.cpp.i
 
 Base/Parser/amrex_iparser.tab.s: Base/Parser/amrex_iparser.tab.cpp.s
@@ -2428,7 +2356,7 @@ Base/Parser/amrex_iparser.tab.s: Base/Parser/amrex_iparser.tab.cpp.s
 
 # target to generate assembly for a file
 Base/Parser/amrex_iparser.tab.cpp.s:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/Base/Parser/amrex_iparser.tab.cpp.s
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/Base/Parser/amrex_iparser.tab.cpp.s
 .PHONY : Base/Parser/amrex_iparser.tab.cpp.s
 
 Base/Parser/amrex_parser.lex.o: Base/Parser/amrex_parser.lex.cpp.o
@@ -2436,7 +2364,7 @@ Base/Parser/amrex_parser.lex.o: Base/Parser/amrex_parser.lex.cpp.o
 
 # target to build an object file
 Base/Parser/amrex_parser.lex.cpp.o:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/Base/Parser/amrex_parser.lex.cpp.o
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/Base/Parser/amrex_parser.lex.cpp.o
 .PHONY : Base/Parser/amrex_parser.lex.cpp.o
 
 Base/Parser/amrex_parser.lex.i: Base/Parser/amrex_parser.lex.cpp.i
@@ -2444,7 +2372,7 @@ Base/Parser/amrex_parser.lex.i: Base/Parser/amrex_parser.lex.cpp.i
 
 # target to preprocess a source file
 Base/Parser/amrex_parser.lex.cpp.i:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/Base/Parser/amrex_parser.lex.cpp.i
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/Base/Parser/amrex_parser.lex.cpp.i
 .PHONY : Base/Parser/amrex_parser.lex.cpp.i
 
 Base/Parser/amrex_parser.lex.s: Base/Parser/amrex_parser.lex.cpp.s
@@ -2452,7 +2380,7 @@ Base/Parser/amrex_parser.lex.s: Base/Parser/amrex_parser.lex.cpp.s
 
 # target to generate assembly for a file
 Base/Parser/amrex_parser.lex.cpp.s:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/Base/Parser/amrex_parser.lex.cpp.s
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/Base/Parser/amrex_parser.lex.cpp.s
 .PHONY : Base/Parser/amrex_parser.lex.cpp.s
 
 Base/Parser/amrex_parser.tab.o: Base/Parser/amrex_parser.tab.cpp.o
@@ -2460,7 +2388,7 @@ Base/Parser/amrex_parser.tab.o: Base/Parser/amrex_parser.tab.cpp.o
 
 # target to build an object file
 Base/Parser/amrex_parser.tab.cpp.o:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/Base/Parser/amrex_parser.tab.cpp.o
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/Base/Parser/amrex_parser.tab.cpp.o
 .PHONY : Base/Parser/amrex_parser.tab.cpp.o
 
 Base/Parser/amrex_parser.tab.i: Base/Parser/amrex_parser.tab.cpp.i
@@ -2468,7 +2396,7 @@ Base/Parser/amrex_parser.tab.i: Base/Parser/amrex_parser.tab.cpp.i
 
 # target to preprocess a source file
 Base/Parser/amrex_parser.tab.cpp.i:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/Base/Parser/amrex_parser.tab.cpp.i
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/Base/Parser/amrex_parser.tab.cpp.i
 .PHONY : Base/Parser/amrex_parser.tab.cpp.i
 
 Base/Parser/amrex_parser.tab.s: Base/Parser/amrex_parser.tab.cpp.s
@@ -2476,39 +2404,111 @@ Base/Parser/amrex_parser.tab.s: Base/Parser/amrex_parser.tab.cpp.s
 
 # target to generate assembly for a file
 Base/Parser/amrex_parser.tab.cpp.s:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/Base/Parser/amrex_parser.tab.cpp.s
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/Base/Parser/amrex_parser.tab.cpp.s
 .PHONY : Base/Parser/amrex_parser.tab.cpp.s
 
-Boundary/AMReX_EdgeFluxRegister.o: Boundary/AMReX_EdgeFluxRegister.cpp.o
-.PHONY : Boundary/AMReX_EdgeFluxRegister.o
+Boundary/AMReX_BndryData.o: Boundary/AMReX_BndryData.cpp.o
+.PHONY : Boundary/AMReX_BndryData.o
 
 # target to build an object file
-Boundary/AMReX_EdgeFluxRegister.cpp.o:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/Boundary/AMReX_EdgeFluxRegister.cpp.o
-.PHONY : Boundary/AMReX_EdgeFluxRegister.cpp.o
+Boundary/AMReX_BndryData.cpp.o:
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/Boundary/AMReX_BndryData.cpp.o
+.PHONY : Boundary/AMReX_BndryData.cpp.o
 
-Boundary/AMReX_EdgeFluxRegister.i: Boundary/AMReX_EdgeFluxRegister.cpp.i
-.PHONY : Boundary/AMReX_EdgeFluxRegister.i
+Boundary/AMReX_BndryData.i: Boundary/AMReX_BndryData.cpp.i
+.PHONY : Boundary/AMReX_BndryData.i
 
 # target to preprocess a source file
-Boundary/AMReX_EdgeFluxRegister.cpp.i:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/Boundary/AMReX_EdgeFluxRegister.cpp.i
-.PHONY : Boundary/AMReX_EdgeFluxRegister.cpp.i
+Boundary/AMReX_BndryData.cpp.i:
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/Boundary/AMReX_BndryData.cpp.i
+.PHONY : Boundary/AMReX_BndryData.cpp.i
 
-Boundary/AMReX_EdgeFluxRegister.s: Boundary/AMReX_EdgeFluxRegister.cpp.s
-.PHONY : Boundary/AMReX_EdgeFluxRegister.s
+Boundary/AMReX_BndryData.s: Boundary/AMReX_BndryData.cpp.s
+.PHONY : Boundary/AMReX_BndryData.s
 
 # target to generate assembly for a file
-Boundary/AMReX_EdgeFluxRegister.cpp.s:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/Boundary/AMReX_EdgeFluxRegister.cpp.s
-.PHONY : Boundary/AMReX_EdgeFluxRegister.cpp.s
+Boundary/AMReX_BndryData.cpp.s:
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/Boundary/AMReX_BndryData.cpp.s
+.PHONY : Boundary/AMReX_BndryData.cpp.s
+
+Boundary/AMReX_BndryRegister.o: Boundary/AMReX_BndryRegister.cpp.o
+.PHONY : Boundary/AMReX_BndryRegister.o
+
+# target to build an object file
+Boundary/AMReX_BndryRegister.cpp.o:
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/Boundary/AMReX_BndryRegister.cpp.o
+.PHONY : Boundary/AMReX_BndryRegister.cpp.o
+
+Boundary/AMReX_BndryRegister.i: Boundary/AMReX_BndryRegister.cpp.i
+.PHONY : Boundary/AMReX_BndryRegister.i
+
+# target to preprocess a source file
+Boundary/AMReX_BndryRegister.cpp.i:
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/Boundary/AMReX_BndryRegister.cpp.i
+.PHONY : Boundary/AMReX_BndryRegister.cpp.i
+
+Boundary/AMReX_BndryRegister.s: Boundary/AMReX_BndryRegister.cpp.s
+.PHONY : Boundary/AMReX_BndryRegister.s
+
+# target to generate assembly for a file
+Boundary/AMReX_BndryRegister.cpp.s:
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/Boundary/AMReX_BndryRegister.cpp.s
+.PHONY : Boundary/AMReX_BndryRegister.cpp.s
+
+Boundary/AMReX_FabSet.o: Boundary/AMReX_FabSet.cpp.o
+.PHONY : Boundary/AMReX_FabSet.o
+
+# target to build an object file
+Boundary/AMReX_FabSet.cpp.o:
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/Boundary/AMReX_FabSet.cpp.o
+.PHONY : Boundary/AMReX_FabSet.cpp.o
+
+Boundary/AMReX_FabSet.i: Boundary/AMReX_FabSet.cpp.i
+.PHONY : Boundary/AMReX_FabSet.i
+
+# target to preprocess a source file
+Boundary/AMReX_FabSet.cpp.i:
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/Boundary/AMReX_FabSet.cpp.i
+.PHONY : Boundary/AMReX_FabSet.cpp.i
+
+Boundary/AMReX_FabSet.s: Boundary/AMReX_FabSet.cpp.s
+.PHONY : Boundary/AMReX_FabSet.s
+
+# target to generate assembly for a file
+Boundary/AMReX_FabSet.cpp.s:
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/Boundary/AMReX_FabSet.cpp.s
+.PHONY : Boundary/AMReX_FabSet.cpp.s
+
+Boundary/AMReX_InterpBndryData.o: Boundary/AMReX_InterpBndryData.cpp.o
+.PHONY : Boundary/AMReX_InterpBndryData.o
+
+# target to build an object file
+Boundary/AMReX_InterpBndryData.cpp.o:
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/Boundary/AMReX_InterpBndryData.cpp.o
+.PHONY : Boundary/AMReX_InterpBndryData.cpp.o
+
+Boundary/AMReX_InterpBndryData.i: Boundary/AMReX_InterpBndryData.cpp.i
+.PHONY : Boundary/AMReX_InterpBndryData.i
+
+# target to preprocess a source file
+Boundary/AMReX_InterpBndryData.cpp.i:
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/Boundary/AMReX_InterpBndryData.cpp.i
+.PHONY : Boundary/AMReX_InterpBndryData.cpp.i
+
+Boundary/AMReX_InterpBndryData.s: Boundary/AMReX_InterpBndryData.cpp.s
+.PHONY : Boundary/AMReX_InterpBndryData.s
+
+# target to generate assembly for a file
+Boundary/AMReX_InterpBndryData.cpp.s:
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/Boundary/AMReX_InterpBndryData.cpp.s
+.PHONY : Boundary/AMReX_InterpBndryData.cpp.s
 
 Boundary/AMReX_LO_BCTYPES.o: Boundary/AMReX_LO_BCTYPES.cpp.o
 .PHONY : Boundary/AMReX_LO_BCTYPES.o
 
 # target to build an object file
 Boundary/AMReX_LO_BCTYPES.cpp.o:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/Boundary/AMReX_LO_BCTYPES.cpp.o
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/Boundary/AMReX_LO_BCTYPES.cpp.o
 .PHONY : Boundary/AMReX_LO_BCTYPES.cpp.o
 
 Boundary/AMReX_LO_BCTYPES.i: Boundary/AMReX_LO_BCTYPES.cpp.i
@@ -2516,7 +2516,7 @@ Boundary/AMReX_LO_BCTYPES.i: Boundary/AMReX_LO_BCTYPES.cpp.i
 
 # target to preprocess a source file
 Boundary/AMReX_LO_BCTYPES.cpp.i:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/Boundary/AMReX_LO_BCTYPES.cpp.i
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/Boundary/AMReX_LO_BCTYPES.cpp.i
 .PHONY : Boundary/AMReX_LO_BCTYPES.cpp.i
 
 Boundary/AMReX_LO_BCTYPES.s: Boundary/AMReX_LO_BCTYPES.cpp.s
@@ -2524,15 +2524,39 @@ Boundary/AMReX_LO_BCTYPES.s: Boundary/AMReX_LO_BCTYPES.cpp.s
 
 # target to generate assembly for a file
 Boundary/AMReX_LO_BCTYPES.cpp.s:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/Boundary/AMReX_LO_BCTYPES.cpp.s
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/Boundary/AMReX_LO_BCTYPES.cpp.s
 .PHONY : Boundary/AMReX_LO_BCTYPES.cpp.s
+
+Boundary/AMReX_MacBndry.o: Boundary/AMReX_MacBndry.cpp.o
+.PHONY : Boundary/AMReX_MacBndry.o
+
+# target to build an object file
+Boundary/AMReX_MacBndry.cpp.o:
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/Boundary/AMReX_MacBndry.cpp.o
+.PHONY : Boundary/AMReX_MacBndry.cpp.o
+
+Boundary/AMReX_MacBndry.i: Boundary/AMReX_MacBndry.cpp.i
+.PHONY : Boundary/AMReX_MacBndry.i
+
+# target to preprocess a source file
+Boundary/AMReX_MacBndry.cpp.i:
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/Boundary/AMReX_MacBndry.cpp.i
+.PHONY : Boundary/AMReX_MacBndry.cpp.i
+
+Boundary/AMReX_MacBndry.s: Boundary/AMReX_MacBndry.cpp.s
+.PHONY : Boundary/AMReX_MacBndry.s
+
+# target to generate assembly for a file
+Boundary/AMReX_MacBndry.cpp.s:
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/Boundary/AMReX_MacBndry.cpp.s
+.PHONY : Boundary/AMReX_MacBndry.cpp.s
 
 Boundary/AMReX_Mask.o: Boundary/AMReX_Mask.cpp.o
 .PHONY : Boundary/AMReX_Mask.o
 
 # target to build an object file
 Boundary/AMReX_Mask.cpp.o:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/Boundary/AMReX_Mask.cpp.o
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/Boundary/AMReX_Mask.cpp.o
 .PHONY : Boundary/AMReX_Mask.cpp.o
 
 Boundary/AMReX_Mask.i: Boundary/AMReX_Mask.cpp.i
@@ -2540,7 +2564,7 @@ Boundary/AMReX_Mask.i: Boundary/AMReX_Mask.cpp.i
 
 # target to preprocess a source file
 Boundary/AMReX_Mask.cpp.i:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/Boundary/AMReX_Mask.cpp.i
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/Boundary/AMReX_Mask.cpp.i
 .PHONY : Boundary/AMReX_Mask.cpp.i
 
 Boundary/AMReX_Mask.s: Boundary/AMReX_Mask.cpp.s
@@ -2548,7 +2572,7 @@ Boundary/AMReX_Mask.s: Boundary/AMReX_Mask.cpp.s
 
 # target to generate assembly for a file
 Boundary/AMReX_Mask.cpp.s:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/Boundary/AMReX_Mask.cpp.s
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/Boundary/AMReX_Mask.cpp.s
 .PHONY : Boundary/AMReX_Mask.cpp.s
 
 Boundary/AMReX_MultiMask.o: Boundary/AMReX_MultiMask.cpp.o
@@ -2556,7 +2580,7 @@ Boundary/AMReX_MultiMask.o: Boundary/AMReX_MultiMask.cpp.o
 
 # target to build an object file
 Boundary/AMReX_MultiMask.cpp.o:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/Boundary/AMReX_MultiMask.cpp.o
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/Boundary/AMReX_MultiMask.cpp.o
 .PHONY : Boundary/AMReX_MultiMask.cpp.o
 
 Boundary/AMReX_MultiMask.i: Boundary/AMReX_MultiMask.cpp.i
@@ -2564,7 +2588,7 @@ Boundary/AMReX_MultiMask.i: Boundary/AMReX_MultiMask.cpp.i
 
 # target to preprocess a source file
 Boundary/AMReX_MultiMask.cpp.i:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/Boundary/AMReX_MultiMask.cpp.i
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/Boundary/AMReX_MultiMask.cpp.i
 .PHONY : Boundary/AMReX_MultiMask.cpp.i
 
 Boundary/AMReX_MultiMask.s: Boundary/AMReX_MultiMask.cpp.s
@@ -2572,15 +2596,39 @@ Boundary/AMReX_MultiMask.s: Boundary/AMReX_MultiMask.cpp.s
 
 # target to generate assembly for a file
 Boundary/AMReX_MultiMask.cpp.s:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/Boundary/AMReX_MultiMask.cpp.s
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/Boundary/AMReX_MultiMask.cpp.s
 .PHONY : Boundary/AMReX_MultiMask.cpp.s
+
+Boundary/AMReX_YAFluxRegister.o: Boundary/AMReX_YAFluxRegister.cpp.o
+.PHONY : Boundary/AMReX_YAFluxRegister.o
+
+# target to build an object file
+Boundary/AMReX_YAFluxRegister.cpp.o:
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/Boundary/AMReX_YAFluxRegister.cpp.o
+.PHONY : Boundary/AMReX_YAFluxRegister.cpp.o
+
+Boundary/AMReX_YAFluxRegister.i: Boundary/AMReX_YAFluxRegister.cpp.i
+.PHONY : Boundary/AMReX_YAFluxRegister.i
+
+# target to preprocess a source file
+Boundary/AMReX_YAFluxRegister.cpp.i:
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/Boundary/AMReX_YAFluxRegister.cpp.i
+.PHONY : Boundary/AMReX_YAFluxRegister.cpp.i
+
+Boundary/AMReX_YAFluxRegister.s: Boundary/AMReX_YAFluxRegister.cpp.s
+.PHONY : Boundary/AMReX_YAFluxRegister.s
+
+# target to generate assembly for a file
+Boundary/AMReX_YAFluxRegister.cpp.s:
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/Boundary/AMReX_YAFluxRegister.cpp.s
+.PHONY : Boundary/AMReX_YAFluxRegister.cpp.s
 
 EB/AMReX_EB2.o: EB/AMReX_EB2.cpp.o
 .PHONY : EB/AMReX_EB2.o
 
 # target to build an object file
 EB/AMReX_EB2.cpp.o:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/EB/AMReX_EB2.cpp.o
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/EB/AMReX_EB2.cpp.o
 .PHONY : EB/AMReX_EB2.cpp.o
 
 EB/AMReX_EB2.i: EB/AMReX_EB2.cpp.i
@@ -2588,7 +2636,7 @@ EB/AMReX_EB2.i: EB/AMReX_EB2.cpp.i
 
 # target to preprocess a source file
 EB/AMReX_EB2.cpp.i:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/EB/AMReX_EB2.cpp.i
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/EB/AMReX_EB2.cpp.i
 .PHONY : EB/AMReX_EB2.cpp.i
 
 EB/AMReX_EB2.s: EB/AMReX_EB2.cpp.s
@@ -2596,7 +2644,7 @@ EB/AMReX_EB2.s: EB/AMReX_EB2.cpp.s
 
 # target to generate assembly for a file
 EB/AMReX_EB2.cpp.s:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/EB/AMReX_EB2.cpp.s
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/EB/AMReX_EB2.cpp.s
 .PHONY : EB/AMReX_EB2.cpp.s
 
 EB/AMReX_EB2_3D_C.o: EB/AMReX_EB2_3D_C.cpp.o
@@ -2604,7 +2652,7 @@ EB/AMReX_EB2_3D_C.o: EB/AMReX_EB2_3D_C.cpp.o
 
 # target to build an object file
 EB/AMReX_EB2_3D_C.cpp.o:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/EB/AMReX_EB2_3D_C.cpp.o
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/EB/AMReX_EB2_3D_C.cpp.o
 .PHONY : EB/AMReX_EB2_3D_C.cpp.o
 
 EB/AMReX_EB2_3D_C.i: EB/AMReX_EB2_3D_C.cpp.i
@@ -2612,7 +2660,7 @@ EB/AMReX_EB2_3D_C.i: EB/AMReX_EB2_3D_C.cpp.i
 
 # target to preprocess a source file
 EB/AMReX_EB2_3D_C.cpp.i:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/EB/AMReX_EB2_3D_C.cpp.i
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/EB/AMReX_EB2_3D_C.cpp.i
 .PHONY : EB/AMReX_EB2_3D_C.cpp.i
 
 EB/AMReX_EB2_3D_C.s: EB/AMReX_EB2_3D_C.cpp.s
@@ -2620,7 +2668,7 @@ EB/AMReX_EB2_3D_C.s: EB/AMReX_EB2_3D_C.cpp.s
 
 # target to generate assembly for a file
 EB/AMReX_EB2_3D_C.cpp.s:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/EB/AMReX_EB2_3D_C.cpp.s
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/EB/AMReX_EB2_3D_C.cpp.s
 .PHONY : EB/AMReX_EB2_3D_C.cpp.s
 
 EB/AMReX_EB2_IndexSpace_STL.o: EB/AMReX_EB2_IndexSpace_STL.cpp.o
@@ -2628,7 +2676,7 @@ EB/AMReX_EB2_IndexSpace_STL.o: EB/AMReX_EB2_IndexSpace_STL.cpp.o
 
 # target to build an object file
 EB/AMReX_EB2_IndexSpace_STL.cpp.o:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/EB/AMReX_EB2_IndexSpace_STL.cpp.o
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/EB/AMReX_EB2_IndexSpace_STL.cpp.o
 .PHONY : EB/AMReX_EB2_IndexSpace_STL.cpp.o
 
 EB/AMReX_EB2_IndexSpace_STL.i: EB/AMReX_EB2_IndexSpace_STL.cpp.i
@@ -2636,7 +2684,7 @@ EB/AMReX_EB2_IndexSpace_STL.i: EB/AMReX_EB2_IndexSpace_STL.cpp.i
 
 # target to preprocess a source file
 EB/AMReX_EB2_IndexSpace_STL.cpp.i:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/EB/AMReX_EB2_IndexSpace_STL.cpp.i
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/EB/AMReX_EB2_IndexSpace_STL.cpp.i
 .PHONY : EB/AMReX_EB2_IndexSpace_STL.cpp.i
 
 EB/AMReX_EB2_IndexSpace_STL.s: EB/AMReX_EB2_IndexSpace_STL.cpp.s
@@ -2644,39 +2692,15 @@ EB/AMReX_EB2_IndexSpace_STL.s: EB/AMReX_EB2_IndexSpace_STL.cpp.s
 
 # target to generate assembly for a file
 EB/AMReX_EB2_IndexSpace_STL.cpp.s:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/EB/AMReX_EB2_IndexSpace_STL.cpp.s
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/EB/AMReX_EB2_IndexSpace_STL.cpp.s
 .PHONY : EB/AMReX_EB2_IndexSpace_STL.cpp.s
-
-EB/AMReX_EB2_IndexSpace_chkpt_file.o: EB/AMReX_EB2_IndexSpace_chkpt_file.cpp.o
-.PHONY : EB/AMReX_EB2_IndexSpace_chkpt_file.o
-
-# target to build an object file
-EB/AMReX_EB2_IndexSpace_chkpt_file.cpp.o:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/EB/AMReX_EB2_IndexSpace_chkpt_file.cpp.o
-.PHONY : EB/AMReX_EB2_IndexSpace_chkpt_file.cpp.o
-
-EB/AMReX_EB2_IndexSpace_chkpt_file.i: EB/AMReX_EB2_IndexSpace_chkpt_file.cpp.i
-.PHONY : EB/AMReX_EB2_IndexSpace_chkpt_file.i
-
-# target to preprocess a source file
-EB/AMReX_EB2_IndexSpace_chkpt_file.cpp.i:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/EB/AMReX_EB2_IndexSpace_chkpt_file.cpp.i
-.PHONY : EB/AMReX_EB2_IndexSpace_chkpt_file.cpp.i
-
-EB/AMReX_EB2_IndexSpace_chkpt_file.s: EB/AMReX_EB2_IndexSpace_chkpt_file.cpp.s
-.PHONY : EB/AMReX_EB2_IndexSpace_chkpt_file.s
-
-# target to generate assembly for a file
-EB/AMReX_EB2_IndexSpace_chkpt_file.cpp.s:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/EB/AMReX_EB2_IndexSpace_chkpt_file.cpp.s
-.PHONY : EB/AMReX_EB2_IndexSpace_chkpt_file.cpp.s
 
 EB/AMReX_EB2_Level.o: EB/AMReX_EB2_Level.cpp.o
 .PHONY : EB/AMReX_EB2_Level.o
 
 # target to build an object file
 EB/AMReX_EB2_Level.cpp.o:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/EB/AMReX_EB2_Level.cpp.o
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/EB/AMReX_EB2_Level.cpp.o
 .PHONY : EB/AMReX_EB2_Level.cpp.o
 
 EB/AMReX_EB2_Level.i: EB/AMReX_EB2_Level.cpp.i
@@ -2684,7 +2708,7 @@ EB/AMReX_EB2_Level.i: EB/AMReX_EB2_Level.cpp.i
 
 # target to preprocess a source file
 EB/AMReX_EB2_Level.cpp.i:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/EB/AMReX_EB2_Level.cpp.i
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/EB/AMReX_EB2_Level.cpp.i
 .PHONY : EB/AMReX_EB2_Level.cpp.i
 
 EB/AMReX_EB2_Level.s: EB/AMReX_EB2_Level.cpp.s
@@ -2692,7 +2716,7 @@ EB/AMReX_EB2_Level.s: EB/AMReX_EB2_Level.cpp.s
 
 # target to generate assembly for a file
 EB/AMReX_EB2_Level.cpp.s:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/EB/AMReX_EB2_Level.cpp.s
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/EB/AMReX_EB2_Level.cpp.s
 .PHONY : EB/AMReX_EB2_Level.cpp.s
 
 EB/AMReX_EB2_Level_STL.o: EB/AMReX_EB2_Level_STL.cpp.o
@@ -2700,7 +2724,7 @@ EB/AMReX_EB2_Level_STL.o: EB/AMReX_EB2_Level_STL.cpp.o
 
 # target to build an object file
 EB/AMReX_EB2_Level_STL.cpp.o:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/EB/AMReX_EB2_Level_STL.cpp.o
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/EB/AMReX_EB2_Level_STL.cpp.o
 .PHONY : EB/AMReX_EB2_Level_STL.cpp.o
 
 EB/AMReX_EB2_Level_STL.i: EB/AMReX_EB2_Level_STL.cpp.i
@@ -2708,7 +2732,7 @@ EB/AMReX_EB2_Level_STL.i: EB/AMReX_EB2_Level_STL.cpp.i
 
 # target to preprocess a source file
 EB/AMReX_EB2_Level_STL.cpp.i:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/EB/AMReX_EB2_Level_STL.cpp.i
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/EB/AMReX_EB2_Level_STL.cpp.i
 .PHONY : EB/AMReX_EB2_Level_STL.cpp.i
 
 EB/AMReX_EB2_Level_STL.s: EB/AMReX_EB2_Level_STL.cpp.s
@@ -2716,39 +2740,15 @@ EB/AMReX_EB2_Level_STL.s: EB/AMReX_EB2_Level_STL.cpp.s
 
 # target to generate assembly for a file
 EB/AMReX_EB2_Level_STL.cpp.s:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/EB/AMReX_EB2_Level_STL.cpp.s
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/EB/AMReX_EB2_Level_STL.cpp.s
 .PHONY : EB/AMReX_EB2_Level_STL.cpp.s
-
-EB/AMReX_EB2_Level_chkpt_file.o: EB/AMReX_EB2_Level_chkpt_file.cpp.o
-.PHONY : EB/AMReX_EB2_Level_chkpt_file.o
-
-# target to build an object file
-EB/AMReX_EB2_Level_chkpt_file.cpp.o:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/EB/AMReX_EB2_Level_chkpt_file.cpp.o
-.PHONY : EB/AMReX_EB2_Level_chkpt_file.cpp.o
-
-EB/AMReX_EB2_Level_chkpt_file.i: EB/AMReX_EB2_Level_chkpt_file.cpp.i
-.PHONY : EB/AMReX_EB2_Level_chkpt_file.i
-
-# target to preprocess a source file
-EB/AMReX_EB2_Level_chkpt_file.cpp.i:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/EB/AMReX_EB2_Level_chkpt_file.cpp.i
-.PHONY : EB/AMReX_EB2_Level_chkpt_file.cpp.i
-
-EB/AMReX_EB2_Level_chkpt_file.s: EB/AMReX_EB2_Level_chkpt_file.cpp.s
-.PHONY : EB/AMReX_EB2_Level_chkpt_file.s
-
-# target to generate assembly for a file
-EB/AMReX_EB2_Level_chkpt_file.cpp.s:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/EB/AMReX_EB2_Level_chkpt_file.cpp.s
-.PHONY : EB/AMReX_EB2_Level_chkpt_file.cpp.s
 
 EB/AMReX_EB2_MultiGFab.o: EB/AMReX_EB2_MultiGFab.cpp.o
 .PHONY : EB/AMReX_EB2_MultiGFab.o
 
 # target to build an object file
 EB/AMReX_EB2_MultiGFab.cpp.o:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/EB/AMReX_EB2_MultiGFab.cpp.o
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/EB/AMReX_EB2_MultiGFab.cpp.o
 .PHONY : EB/AMReX_EB2_MultiGFab.cpp.o
 
 EB/AMReX_EB2_MultiGFab.i: EB/AMReX_EB2_MultiGFab.cpp.i
@@ -2756,7 +2756,7 @@ EB/AMReX_EB2_MultiGFab.i: EB/AMReX_EB2_MultiGFab.cpp.i
 
 # target to preprocess a source file
 EB/AMReX_EB2_MultiGFab.cpp.i:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/EB/AMReX_EB2_MultiGFab.cpp.i
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/EB/AMReX_EB2_MultiGFab.cpp.i
 .PHONY : EB/AMReX_EB2_MultiGFab.cpp.i
 
 EB/AMReX_EB2_MultiGFab.s: EB/AMReX_EB2_MultiGFab.cpp.s
@@ -2764,7 +2764,7 @@ EB/AMReX_EB2_MultiGFab.s: EB/AMReX_EB2_MultiGFab.cpp.s
 
 # target to generate assembly for a file
 EB/AMReX_EB2_MultiGFab.cpp.s:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/EB/AMReX_EB2_MultiGFab.cpp.s
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/EB/AMReX_EB2_MultiGFab.cpp.s
 .PHONY : EB/AMReX_EB2_MultiGFab.cpp.s
 
 EB/AMReX_EB2_ND_C.o: EB/AMReX_EB2_ND_C.cpp.o
@@ -2772,7 +2772,7 @@ EB/AMReX_EB2_ND_C.o: EB/AMReX_EB2_ND_C.cpp.o
 
 # target to build an object file
 EB/AMReX_EB2_ND_C.cpp.o:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/EB/AMReX_EB2_ND_C.cpp.o
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/EB/AMReX_EB2_ND_C.cpp.o
 .PHONY : EB/AMReX_EB2_ND_C.cpp.o
 
 EB/AMReX_EB2_ND_C.i: EB/AMReX_EB2_ND_C.cpp.i
@@ -2780,7 +2780,7 @@ EB/AMReX_EB2_ND_C.i: EB/AMReX_EB2_ND_C.cpp.i
 
 # target to preprocess a source file
 EB/AMReX_EB2_ND_C.cpp.i:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/EB/AMReX_EB2_ND_C.cpp.i
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/EB/AMReX_EB2_ND_C.cpp.i
 .PHONY : EB/AMReX_EB2_ND_C.cpp.i
 
 EB/AMReX_EB2_ND_C.s: EB/AMReX_EB2_ND_C.cpp.s
@@ -2788,7 +2788,7 @@ EB/AMReX_EB2_ND_C.s: EB/AMReX_EB2_ND_C.cpp.s
 
 # target to generate assembly for a file
 EB/AMReX_EB2_ND_C.cpp.s:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/EB/AMReX_EB2_ND_C.cpp.s
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/EB/AMReX_EB2_ND_C.cpp.s
 .PHONY : EB/AMReX_EB2_ND_C.cpp.s
 
 EB/AMReX_EBAmrUtil.o: EB/AMReX_EBAmrUtil.cpp.o
@@ -2796,7 +2796,7 @@ EB/AMReX_EBAmrUtil.o: EB/AMReX_EBAmrUtil.cpp.o
 
 # target to build an object file
 EB/AMReX_EBAmrUtil.cpp.o:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/EB/AMReX_EBAmrUtil.cpp.o
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/EB/AMReX_EBAmrUtil.cpp.o
 .PHONY : EB/AMReX_EBAmrUtil.cpp.o
 
 EB/AMReX_EBAmrUtil.i: EB/AMReX_EBAmrUtil.cpp.i
@@ -2804,7 +2804,7 @@ EB/AMReX_EBAmrUtil.i: EB/AMReX_EBAmrUtil.cpp.i
 
 # target to preprocess a source file
 EB/AMReX_EBAmrUtil.cpp.i:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/EB/AMReX_EBAmrUtil.cpp.i
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/EB/AMReX_EBAmrUtil.cpp.i
 .PHONY : EB/AMReX_EBAmrUtil.cpp.i
 
 EB/AMReX_EBAmrUtil.s: EB/AMReX_EBAmrUtil.cpp.s
@@ -2812,7 +2812,7 @@ EB/AMReX_EBAmrUtil.s: EB/AMReX_EBAmrUtil.cpp.s
 
 # target to generate assembly for a file
 EB/AMReX_EBAmrUtil.cpp.s:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/EB/AMReX_EBAmrUtil.cpp.s
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/EB/AMReX_EBAmrUtil.cpp.s
 .PHONY : EB/AMReX_EBAmrUtil.cpp.s
 
 EB/AMReX_EBCellFlag.o: EB/AMReX_EBCellFlag.cpp.o
@@ -2820,7 +2820,7 @@ EB/AMReX_EBCellFlag.o: EB/AMReX_EBCellFlag.cpp.o
 
 # target to build an object file
 EB/AMReX_EBCellFlag.cpp.o:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/EB/AMReX_EBCellFlag.cpp.o
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/EB/AMReX_EBCellFlag.cpp.o
 .PHONY : EB/AMReX_EBCellFlag.cpp.o
 
 EB/AMReX_EBCellFlag.i: EB/AMReX_EBCellFlag.cpp.i
@@ -2828,7 +2828,7 @@ EB/AMReX_EBCellFlag.i: EB/AMReX_EBCellFlag.cpp.i
 
 # target to preprocess a source file
 EB/AMReX_EBCellFlag.cpp.i:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/EB/AMReX_EBCellFlag.cpp.i
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/EB/AMReX_EBCellFlag.cpp.i
 .PHONY : EB/AMReX_EBCellFlag.cpp.i
 
 EB/AMReX_EBCellFlag.s: EB/AMReX_EBCellFlag.cpp.s
@@ -2836,7 +2836,7 @@ EB/AMReX_EBCellFlag.s: EB/AMReX_EBCellFlag.cpp.s
 
 # target to generate assembly for a file
 EB/AMReX_EBCellFlag.cpp.s:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/EB/AMReX_EBCellFlag.cpp.s
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/EB/AMReX_EBCellFlag.cpp.s
 .PHONY : EB/AMReX_EBCellFlag.cpp.s
 
 EB/AMReX_EBDataCollection.o: EB/AMReX_EBDataCollection.cpp.o
@@ -2844,7 +2844,7 @@ EB/AMReX_EBDataCollection.o: EB/AMReX_EBDataCollection.cpp.o
 
 # target to build an object file
 EB/AMReX_EBDataCollection.cpp.o:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/EB/AMReX_EBDataCollection.cpp.o
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/EB/AMReX_EBDataCollection.cpp.o
 .PHONY : EB/AMReX_EBDataCollection.cpp.o
 
 EB/AMReX_EBDataCollection.i: EB/AMReX_EBDataCollection.cpp.i
@@ -2852,7 +2852,7 @@ EB/AMReX_EBDataCollection.i: EB/AMReX_EBDataCollection.cpp.i
 
 # target to preprocess a source file
 EB/AMReX_EBDataCollection.cpp.i:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/EB/AMReX_EBDataCollection.cpp.i
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/EB/AMReX_EBDataCollection.cpp.i
 .PHONY : EB/AMReX_EBDataCollection.cpp.i
 
 EB/AMReX_EBDataCollection.s: EB/AMReX_EBDataCollection.cpp.s
@@ -2860,7 +2860,7 @@ EB/AMReX_EBDataCollection.s: EB/AMReX_EBDataCollection.cpp.s
 
 # target to generate assembly for a file
 EB/AMReX_EBDataCollection.cpp.s:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/EB/AMReX_EBDataCollection.cpp.s
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/EB/AMReX_EBDataCollection.cpp.s
 .PHONY : EB/AMReX_EBDataCollection.cpp.s
 
 EB/AMReX_EBFArrayBox.o: EB/AMReX_EBFArrayBox.cpp.o
@@ -2868,7 +2868,7 @@ EB/AMReX_EBFArrayBox.o: EB/AMReX_EBFArrayBox.cpp.o
 
 # target to build an object file
 EB/AMReX_EBFArrayBox.cpp.o:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/EB/AMReX_EBFArrayBox.cpp.o
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/EB/AMReX_EBFArrayBox.cpp.o
 .PHONY : EB/AMReX_EBFArrayBox.cpp.o
 
 EB/AMReX_EBFArrayBox.i: EB/AMReX_EBFArrayBox.cpp.i
@@ -2876,7 +2876,7 @@ EB/AMReX_EBFArrayBox.i: EB/AMReX_EBFArrayBox.cpp.i
 
 # target to preprocess a source file
 EB/AMReX_EBFArrayBox.cpp.i:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/EB/AMReX_EBFArrayBox.cpp.i
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/EB/AMReX_EBFArrayBox.cpp.i
 .PHONY : EB/AMReX_EBFArrayBox.cpp.i
 
 EB/AMReX_EBFArrayBox.s: EB/AMReX_EBFArrayBox.cpp.s
@@ -2884,7 +2884,7 @@ EB/AMReX_EBFArrayBox.s: EB/AMReX_EBFArrayBox.cpp.s
 
 # target to generate assembly for a file
 EB/AMReX_EBFArrayBox.cpp.s:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/EB/AMReX_EBFArrayBox.cpp.s
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/EB/AMReX_EBFArrayBox.cpp.s
 .PHONY : EB/AMReX_EBFArrayBox.cpp.s
 
 EB/AMReX_EBFabFactory.o: EB/AMReX_EBFabFactory.cpp.o
@@ -2892,7 +2892,7 @@ EB/AMReX_EBFabFactory.o: EB/AMReX_EBFabFactory.cpp.o
 
 # target to build an object file
 EB/AMReX_EBFabFactory.cpp.o:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/EB/AMReX_EBFabFactory.cpp.o
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/EB/AMReX_EBFabFactory.cpp.o
 .PHONY : EB/AMReX_EBFabFactory.cpp.o
 
 EB/AMReX_EBFabFactory.i: EB/AMReX_EBFabFactory.cpp.i
@@ -2900,7 +2900,7 @@ EB/AMReX_EBFabFactory.i: EB/AMReX_EBFabFactory.cpp.i
 
 # target to preprocess a source file
 EB/AMReX_EBFabFactory.cpp.i:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/EB/AMReX_EBFabFactory.cpp.i
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/EB/AMReX_EBFabFactory.cpp.i
 .PHONY : EB/AMReX_EBFabFactory.cpp.i
 
 EB/AMReX_EBFabFactory.s: EB/AMReX_EBFabFactory.cpp.s
@@ -2908,7 +2908,7 @@ EB/AMReX_EBFabFactory.s: EB/AMReX_EBFabFactory.cpp.s
 
 # target to generate assembly for a file
 EB/AMReX_EBFabFactory.cpp.s:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/EB/AMReX_EBFabFactory.cpp.s
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/EB/AMReX_EBFabFactory.cpp.s
 .PHONY : EB/AMReX_EBFabFactory.cpp.s
 
 EB/AMReX_EBFluxRegister.o: EB/AMReX_EBFluxRegister.cpp.o
@@ -2916,7 +2916,7 @@ EB/AMReX_EBFluxRegister.o: EB/AMReX_EBFluxRegister.cpp.o
 
 # target to build an object file
 EB/AMReX_EBFluxRegister.cpp.o:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/EB/AMReX_EBFluxRegister.cpp.o
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/EB/AMReX_EBFluxRegister.cpp.o
 .PHONY : EB/AMReX_EBFluxRegister.cpp.o
 
 EB/AMReX_EBFluxRegister.i: EB/AMReX_EBFluxRegister.cpp.i
@@ -2924,7 +2924,7 @@ EB/AMReX_EBFluxRegister.i: EB/AMReX_EBFluxRegister.cpp.i
 
 # target to preprocess a source file
 EB/AMReX_EBFluxRegister.cpp.i:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/EB/AMReX_EBFluxRegister.cpp.i
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/EB/AMReX_EBFluxRegister.cpp.i
 .PHONY : EB/AMReX_EBFluxRegister.cpp.i
 
 EB/AMReX_EBFluxRegister.s: EB/AMReX_EBFluxRegister.cpp.s
@@ -2932,7 +2932,7 @@ EB/AMReX_EBFluxRegister.s: EB/AMReX_EBFluxRegister.cpp.s
 
 # target to generate assembly for a file
 EB/AMReX_EBFluxRegister.cpp.s:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/EB/AMReX_EBFluxRegister.cpp.s
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/EB/AMReX_EBFluxRegister.cpp.s
 .PHONY : EB/AMReX_EBFluxRegister.cpp.s
 
 EB/AMReX_EBInterpolater.o: EB/AMReX_EBInterpolater.cpp.o
@@ -2940,7 +2940,7 @@ EB/AMReX_EBInterpolater.o: EB/AMReX_EBInterpolater.cpp.o
 
 # target to build an object file
 EB/AMReX_EBInterpolater.cpp.o:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/EB/AMReX_EBInterpolater.cpp.o
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/EB/AMReX_EBInterpolater.cpp.o
 .PHONY : EB/AMReX_EBInterpolater.cpp.o
 
 EB/AMReX_EBInterpolater.i: EB/AMReX_EBInterpolater.cpp.i
@@ -2948,7 +2948,7 @@ EB/AMReX_EBInterpolater.i: EB/AMReX_EBInterpolater.cpp.i
 
 # target to preprocess a source file
 EB/AMReX_EBInterpolater.cpp.i:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/EB/AMReX_EBInterpolater.cpp.i
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/EB/AMReX_EBInterpolater.cpp.i
 .PHONY : EB/AMReX_EBInterpolater.cpp.i
 
 EB/AMReX_EBInterpolater.s: EB/AMReX_EBInterpolater.cpp.s
@@ -2956,7 +2956,7 @@ EB/AMReX_EBInterpolater.s: EB/AMReX_EBInterpolater.cpp.s
 
 # target to generate assembly for a file
 EB/AMReX_EBInterpolater.cpp.s:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/EB/AMReX_EBInterpolater.cpp.s
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/EB/AMReX_EBInterpolater.cpp.s
 .PHONY : EB/AMReX_EBInterpolater.cpp.s
 
 EB/AMReX_EBMFInterpolater.o: EB/AMReX_EBMFInterpolater.cpp.o
@@ -2964,7 +2964,7 @@ EB/AMReX_EBMFInterpolater.o: EB/AMReX_EBMFInterpolater.cpp.o
 
 # target to build an object file
 EB/AMReX_EBMFInterpolater.cpp.o:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/EB/AMReX_EBMFInterpolater.cpp.o
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/EB/AMReX_EBMFInterpolater.cpp.o
 .PHONY : EB/AMReX_EBMFInterpolater.cpp.o
 
 EB/AMReX_EBMFInterpolater.i: EB/AMReX_EBMFInterpolater.cpp.i
@@ -2972,7 +2972,7 @@ EB/AMReX_EBMFInterpolater.i: EB/AMReX_EBMFInterpolater.cpp.i
 
 # target to preprocess a source file
 EB/AMReX_EBMFInterpolater.cpp.i:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/EB/AMReX_EBMFInterpolater.cpp.i
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/EB/AMReX_EBMFInterpolater.cpp.i
 .PHONY : EB/AMReX_EBMFInterpolater.cpp.i
 
 EB/AMReX_EBMFInterpolater.s: EB/AMReX_EBMFInterpolater.cpp.s
@@ -2980,7 +2980,7 @@ EB/AMReX_EBMFInterpolater.s: EB/AMReX_EBMFInterpolater.cpp.s
 
 # target to generate assembly for a file
 EB/AMReX_EBMFInterpolater.cpp.s:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/EB/AMReX_EBMFInterpolater.cpp.s
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/EB/AMReX_EBMFInterpolater.cpp.s
 .PHONY : EB/AMReX_EBMFInterpolater.cpp.s
 
 EB/AMReX_EBMultiFabUtil.o: EB/AMReX_EBMultiFabUtil.cpp.o
@@ -2988,7 +2988,7 @@ EB/AMReX_EBMultiFabUtil.o: EB/AMReX_EBMultiFabUtil.cpp.o
 
 # target to build an object file
 EB/AMReX_EBMultiFabUtil.cpp.o:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/EB/AMReX_EBMultiFabUtil.cpp.o
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/EB/AMReX_EBMultiFabUtil.cpp.o
 .PHONY : EB/AMReX_EBMultiFabUtil.cpp.o
 
 EB/AMReX_EBMultiFabUtil.i: EB/AMReX_EBMultiFabUtil.cpp.i
@@ -2996,7 +2996,7 @@ EB/AMReX_EBMultiFabUtil.i: EB/AMReX_EBMultiFabUtil.cpp.i
 
 # target to preprocess a source file
 EB/AMReX_EBMultiFabUtil.cpp.i:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/EB/AMReX_EBMultiFabUtil.cpp.i
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/EB/AMReX_EBMultiFabUtil.cpp.i
 .PHONY : EB/AMReX_EBMultiFabUtil.cpp.i
 
 EB/AMReX_EBMultiFabUtil.s: EB/AMReX_EBMultiFabUtil.cpp.s
@@ -3004,7 +3004,7 @@ EB/AMReX_EBMultiFabUtil.s: EB/AMReX_EBMultiFabUtil.cpp.s
 
 # target to generate assembly for a file
 EB/AMReX_EBMultiFabUtil.cpp.s:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/EB/AMReX_EBMultiFabUtil.cpp.s
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/EB/AMReX_EBMultiFabUtil.cpp.s
 .PHONY : EB/AMReX_EBMultiFabUtil.cpp.s
 
 EB/AMReX_EBToPVD.o: EB/AMReX_EBToPVD.cpp.o
@@ -3012,7 +3012,7 @@ EB/AMReX_EBToPVD.o: EB/AMReX_EBToPVD.cpp.o
 
 # target to build an object file
 EB/AMReX_EBToPVD.cpp.o:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/EB/AMReX_EBToPVD.cpp.o
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/EB/AMReX_EBToPVD.cpp.o
 .PHONY : EB/AMReX_EBToPVD.cpp.o
 
 EB/AMReX_EBToPVD.i: EB/AMReX_EBToPVD.cpp.i
@@ -3020,7 +3020,7 @@ EB/AMReX_EBToPVD.i: EB/AMReX_EBToPVD.cpp.i
 
 # target to preprocess a source file
 EB/AMReX_EBToPVD.cpp.i:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/EB/AMReX_EBToPVD.cpp.i
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/EB/AMReX_EBToPVD.cpp.i
 .PHONY : EB/AMReX_EBToPVD.cpp.i
 
 EB/AMReX_EBToPVD.s: EB/AMReX_EBToPVD.cpp.s
@@ -3028,87 +3028,15 @@ EB/AMReX_EBToPVD.s: EB/AMReX_EBToPVD.cpp.s
 
 # target to generate assembly for a file
 EB/AMReX_EBToPVD.cpp.s:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/EB/AMReX_EBToPVD.cpp.s
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/EB/AMReX_EBToPVD.cpp.s
 .PHONY : EB/AMReX_EBToPVD.cpp.s
-
-EB/AMReX_EB_FluxRedistribute.o: EB/AMReX_EB_FluxRedistribute.cpp.o
-.PHONY : EB/AMReX_EB_FluxRedistribute.o
-
-# target to build an object file
-EB/AMReX_EB_FluxRedistribute.cpp.o:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/EB/AMReX_EB_FluxRedistribute.cpp.o
-.PHONY : EB/AMReX_EB_FluxRedistribute.cpp.o
-
-EB/AMReX_EB_FluxRedistribute.i: EB/AMReX_EB_FluxRedistribute.cpp.i
-.PHONY : EB/AMReX_EB_FluxRedistribute.i
-
-# target to preprocess a source file
-EB/AMReX_EB_FluxRedistribute.cpp.i:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/EB/AMReX_EB_FluxRedistribute.cpp.i
-.PHONY : EB/AMReX_EB_FluxRedistribute.cpp.i
-
-EB/AMReX_EB_FluxRedistribute.s: EB/AMReX_EB_FluxRedistribute.cpp.s
-.PHONY : EB/AMReX_EB_FluxRedistribute.s
-
-# target to generate assembly for a file
-EB/AMReX_EB_FluxRedistribute.cpp.s:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/EB/AMReX_EB_FluxRedistribute.cpp.s
-.PHONY : EB/AMReX_EB_FluxRedistribute.cpp.s
-
-EB/AMReX_EB_Redistribution.o: EB/AMReX_EB_Redistribution.cpp.o
-.PHONY : EB/AMReX_EB_Redistribution.o
-
-# target to build an object file
-EB/AMReX_EB_Redistribution.cpp.o:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/EB/AMReX_EB_Redistribution.cpp.o
-.PHONY : EB/AMReX_EB_Redistribution.cpp.o
-
-EB/AMReX_EB_Redistribution.i: EB/AMReX_EB_Redistribution.cpp.i
-.PHONY : EB/AMReX_EB_Redistribution.i
-
-# target to preprocess a source file
-EB/AMReX_EB_Redistribution.cpp.i:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/EB/AMReX_EB_Redistribution.cpp.i
-.PHONY : EB/AMReX_EB_Redistribution.cpp.i
-
-EB/AMReX_EB_Redistribution.s: EB/AMReX_EB_Redistribution.cpp.s
-.PHONY : EB/AMReX_EB_Redistribution.s
-
-# target to generate assembly for a file
-EB/AMReX_EB_Redistribution.cpp.s:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/EB/AMReX_EB_Redistribution.cpp.s
-.PHONY : EB/AMReX_EB_Redistribution.cpp.s
-
-EB/AMReX_EB_RedistributionApply.o: EB/AMReX_EB_RedistributionApply.cpp.o
-.PHONY : EB/AMReX_EB_RedistributionApply.o
-
-# target to build an object file
-EB/AMReX_EB_RedistributionApply.cpp.o:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/EB/AMReX_EB_RedistributionApply.cpp.o
-.PHONY : EB/AMReX_EB_RedistributionApply.cpp.o
-
-EB/AMReX_EB_RedistributionApply.i: EB/AMReX_EB_RedistributionApply.cpp.i
-.PHONY : EB/AMReX_EB_RedistributionApply.i
-
-# target to preprocess a source file
-EB/AMReX_EB_RedistributionApply.cpp.i:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/EB/AMReX_EB_RedistributionApply.cpp.i
-.PHONY : EB/AMReX_EB_RedistributionApply.cpp.i
-
-EB/AMReX_EB_RedistributionApply.s: EB/AMReX_EB_RedistributionApply.cpp.s
-.PHONY : EB/AMReX_EB_RedistributionApply.s
-
-# target to generate assembly for a file
-EB/AMReX_EB_RedistributionApply.cpp.s:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/EB/AMReX_EB_RedistributionApply.cpp.s
-.PHONY : EB/AMReX_EB_RedistributionApply.cpp.s
 
 EB/AMReX_EB_STL_utils.o: EB/AMReX_EB_STL_utils.cpp.o
 .PHONY : EB/AMReX_EB_STL_utils.o
 
 # target to build an object file
 EB/AMReX_EB_STL_utils.cpp.o:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/EB/AMReX_EB_STL_utils.cpp.o
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/EB/AMReX_EB_STL_utils.cpp.o
 .PHONY : EB/AMReX_EB_STL_utils.cpp.o
 
 EB/AMReX_EB_STL_utils.i: EB/AMReX_EB_STL_utils.cpp.i
@@ -3116,7 +3044,7 @@ EB/AMReX_EB_STL_utils.i: EB/AMReX_EB_STL_utils.cpp.i
 
 # target to preprocess a source file
 EB/AMReX_EB_STL_utils.cpp.i:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/EB/AMReX_EB_STL_utils.cpp.i
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/EB/AMReX_EB_STL_utils.cpp.i
 .PHONY : EB/AMReX_EB_STL_utils.cpp.i
 
 EB/AMReX_EB_STL_utils.s: EB/AMReX_EB_STL_utils.cpp.s
@@ -3124,111 +3052,15 @@ EB/AMReX_EB_STL_utils.s: EB/AMReX_EB_STL_utils.cpp.s
 
 # target to generate assembly for a file
 EB/AMReX_EB_STL_utils.cpp.s:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/EB/AMReX_EB_STL_utils.cpp.s
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/EB/AMReX_EB_STL_utils.cpp.s
 .PHONY : EB/AMReX_EB_STL_utils.cpp.s
-
-EB/AMReX_EB_StateRedistItracker.o: EB/AMReX_EB_StateRedistItracker.cpp.o
-.PHONY : EB/AMReX_EB_StateRedistItracker.o
-
-# target to build an object file
-EB/AMReX_EB_StateRedistItracker.cpp.o:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/EB/AMReX_EB_StateRedistItracker.cpp.o
-.PHONY : EB/AMReX_EB_StateRedistItracker.cpp.o
-
-EB/AMReX_EB_StateRedistItracker.i: EB/AMReX_EB_StateRedistItracker.cpp.i
-.PHONY : EB/AMReX_EB_StateRedistItracker.i
-
-# target to preprocess a source file
-EB/AMReX_EB_StateRedistItracker.cpp.i:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/EB/AMReX_EB_StateRedistItracker.cpp.i
-.PHONY : EB/AMReX_EB_StateRedistItracker.cpp.i
-
-EB/AMReX_EB_StateRedistItracker.s: EB/AMReX_EB_StateRedistItracker.cpp.s
-.PHONY : EB/AMReX_EB_StateRedistItracker.s
-
-# target to generate assembly for a file
-EB/AMReX_EB_StateRedistItracker.cpp.s:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/EB/AMReX_EB_StateRedistItracker.cpp.s
-.PHONY : EB/AMReX_EB_StateRedistItracker.cpp.s
-
-EB/AMReX_EB_StateRedistUtils.o: EB/AMReX_EB_StateRedistUtils.cpp.o
-.PHONY : EB/AMReX_EB_StateRedistUtils.o
-
-# target to build an object file
-EB/AMReX_EB_StateRedistUtils.cpp.o:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/EB/AMReX_EB_StateRedistUtils.cpp.o
-.PHONY : EB/AMReX_EB_StateRedistUtils.cpp.o
-
-EB/AMReX_EB_StateRedistUtils.i: EB/AMReX_EB_StateRedistUtils.cpp.i
-.PHONY : EB/AMReX_EB_StateRedistUtils.i
-
-# target to preprocess a source file
-EB/AMReX_EB_StateRedistUtils.cpp.i:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/EB/AMReX_EB_StateRedistUtils.cpp.i
-.PHONY : EB/AMReX_EB_StateRedistUtils.cpp.i
-
-EB/AMReX_EB_StateRedistUtils.s: EB/AMReX_EB_StateRedistUtils.cpp.s
-.PHONY : EB/AMReX_EB_StateRedistUtils.s
-
-# target to generate assembly for a file
-EB/AMReX_EB_StateRedistUtils.cpp.s:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/EB/AMReX_EB_StateRedistUtils.cpp.s
-.PHONY : EB/AMReX_EB_StateRedistUtils.cpp.s
-
-EB/AMReX_EB_StateRedistribute.o: EB/AMReX_EB_StateRedistribute.cpp.o
-.PHONY : EB/AMReX_EB_StateRedistribute.o
-
-# target to build an object file
-EB/AMReX_EB_StateRedistribute.cpp.o:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/EB/AMReX_EB_StateRedistribute.cpp.o
-.PHONY : EB/AMReX_EB_StateRedistribute.cpp.o
-
-EB/AMReX_EB_StateRedistribute.i: EB/AMReX_EB_StateRedistribute.cpp.i
-.PHONY : EB/AMReX_EB_StateRedistribute.i
-
-# target to preprocess a source file
-EB/AMReX_EB_StateRedistribute.cpp.i:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/EB/AMReX_EB_StateRedistribute.cpp.i
-.PHONY : EB/AMReX_EB_StateRedistribute.cpp.i
-
-EB/AMReX_EB_StateRedistribute.s: EB/AMReX_EB_StateRedistribute.cpp.s
-.PHONY : EB/AMReX_EB_StateRedistribute.s
-
-# target to generate assembly for a file
-EB/AMReX_EB_StateRedistribute.cpp.s:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/EB/AMReX_EB_StateRedistribute.cpp.s
-.PHONY : EB/AMReX_EB_StateRedistribute.cpp.s
-
-EB/AMReX_EB_chkpt_file.o: EB/AMReX_EB_chkpt_file.cpp.o
-.PHONY : EB/AMReX_EB_chkpt_file.o
-
-# target to build an object file
-EB/AMReX_EB_chkpt_file.cpp.o:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/EB/AMReX_EB_chkpt_file.cpp.o
-.PHONY : EB/AMReX_EB_chkpt_file.cpp.o
-
-EB/AMReX_EB_chkpt_file.i: EB/AMReX_EB_chkpt_file.cpp.i
-.PHONY : EB/AMReX_EB_chkpt_file.i
-
-# target to preprocess a source file
-EB/AMReX_EB_chkpt_file.cpp.i:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/EB/AMReX_EB_chkpt_file.cpp.i
-.PHONY : EB/AMReX_EB_chkpt_file.cpp.i
-
-EB/AMReX_EB_chkpt_file.s: EB/AMReX_EB_chkpt_file.cpp.s
-.PHONY : EB/AMReX_EB_chkpt_file.s
-
-# target to generate assembly for a file
-EB/AMReX_EB_chkpt_file.cpp.s:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/EB/AMReX_EB_chkpt_file.cpp.s
-.PHONY : EB/AMReX_EB_chkpt_file.cpp.s
 
 EB/AMReX_EB_utils.o: EB/AMReX_EB_utils.cpp.o
 .PHONY : EB/AMReX_EB_utils.o
 
 # target to build an object file
 EB/AMReX_EB_utils.cpp.o:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/EB/AMReX_EB_utils.cpp.o
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/EB/AMReX_EB_utils.cpp.o
 .PHONY : EB/AMReX_EB_utils.cpp.o
 
 EB/AMReX_EB_utils.i: EB/AMReX_EB_utils.cpp.i
@@ -3236,7 +3068,7 @@ EB/AMReX_EB_utils.i: EB/AMReX_EB_utils.cpp.i
 
 # target to preprocess a source file
 EB/AMReX_EB_utils.cpp.i:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/EB/AMReX_EB_utils.cpp.i
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/EB/AMReX_EB_utils.cpp.i
 .PHONY : EB/AMReX_EB_utils.cpp.i
 
 EB/AMReX_EB_utils.s: EB/AMReX_EB_utils.cpp.s
@@ -3244,39 +3076,15 @@ EB/AMReX_EB_utils.s: EB/AMReX_EB_utils.cpp.s
 
 # target to generate assembly for a file
 EB/AMReX_EB_utils.cpp.s:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/EB/AMReX_EB_utils.cpp.s
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/EB/AMReX_EB_utils.cpp.s
 .PHONY : EB/AMReX_EB_utils.cpp.s
-
-EB/AMReX_MarchingCubes.o: EB/AMReX_MarchingCubes.cpp.o
-.PHONY : EB/AMReX_MarchingCubes.o
-
-# target to build an object file
-EB/AMReX_MarchingCubes.cpp.o:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/EB/AMReX_MarchingCubes.cpp.o
-.PHONY : EB/AMReX_MarchingCubes.cpp.o
-
-EB/AMReX_MarchingCubes.i: EB/AMReX_MarchingCubes.cpp.i
-.PHONY : EB/AMReX_MarchingCubes.i
-
-# target to preprocess a source file
-EB/AMReX_MarchingCubes.cpp.i:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/EB/AMReX_MarchingCubes.cpp.i
-.PHONY : EB/AMReX_MarchingCubes.cpp.i
-
-EB/AMReX_MarchingCubes.s: EB/AMReX_MarchingCubes.cpp.s
-.PHONY : EB/AMReX_MarchingCubes.s
-
-# target to generate assembly for a file
-EB/AMReX_MarchingCubes.cpp.s:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/EB/AMReX_MarchingCubes.cpp.s
-.PHONY : EB/AMReX_MarchingCubes.cpp.s
 
 EB/AMReX_MultiCutFab.o: EB/AMReX_MultiCutFab.cpp.o
 .PHONY : EB/AMReX_MultiCutFab.o
 
 # target to build an object file
 EB/AMReX_MultiCutFab.cpp.o:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/EB/AMReX_MultiCutFab.cpp.o
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/EB/AMReX_MultiCutFab.cpp.o
 .PHONY : EB/AMReX_MultiCutFab.cpp.o
 
 EB/AMReX_MultiCutFab.i: EB/AMReX_MultiCutFab.cpp.i
@@ -3284,7 +3092,7 @@ EB/AMReX_MultiCutFab.i: EB/AMReX_MultiCutFab.cpp.i
 
 # target to preprocess a source file
 EB/AMReX_MultiCutFab.cpp.i:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/EB/AMReX_MultiCutFab.cpp.i
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/EB/AMReX_MultiCutFab.cpp.i
 .PHONY : EB/AMReX_MultiCutFab.cpp.i
 
 EB/AMReX_MultiCutFab.s: EB/AMReX_MultiCutFab.cpp.s
@@ -3292,7 +3100,7 @@ EB/AMReX_MultiCutFab.s: EB/AMReX_MultiCutFab.cpp.s
 
 # target to generate assembly for a file
 EB/AMReX_MultiCutFab.cpp.s:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/EB/AMReX_MultiCutFab.cpp.s
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/EB/AMReX_MultiCutFab.cpp.s
 .PHONY : EB/AMReX_MultiCutFab.cpp.s
 
 EB/AMReX_WriteEBSurface.o: EB/AMReX_WriteEBSurface.cpp.o
@@ -3300,7 +3108,7 @@ EB/AMReX_WriteEBSurface.o: EB/AMReX_WriteEBSurface.cpp.o
 
 # target to build an object file
 EB/AMReX_WriteEBSurface.cpp.o:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/EB/AMReX_WriteEBSurface.cpp.o
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/EB/AMReX_WriteEBSurface.cpp.o
 .PHONY : EB/AMReX_WriteEBSurface.cpp.o
 
 EB/AMReX_WriteEBSurface.i: EB/AMReX_WriteEBSurface.cpp.i
@@ -3308,7 +3116,7 @@ EB/AMReX_WriteEBSurface.i: EB/AMReX_WriteEBSurface.cpp.i
 
 # target to preprocess a source file
 EB/AMReX_WriteEBSurface.cpp.i:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/EB/AMReX_WriteEBSurface.cpp.i
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/EB/AMReX_WriteEBSurface.cpp.i
 .PHONY : EB/AMReX_WriteEBSurface.cpp.i
 
 EB/AMReX_WriteEBSurface.s: EB/AMReX_WriteEBSurface.cpp.s
@@ -3316,7 +3124,7 @@ EB/AMReX_WriteEBSurface.s: EB/AMReX_WriteEBSurface.cpp.s
 
 # target to generate assembly for a file
 EB/AMReX_WriteEBSurface.cpp.s:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/EB/AMReX_WriteEBSurface.cpp.s
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/EB/AMReX_WriteEBSurface.cpp.s
 .PHONY : EB/AMReX_WriteEBSurface.cpp.s
 
 EB/AMReX_algoim.o: EB/AMReX_algoim.cpp.o
@@ -3324,7 +3132,7 @@ EB/AMReX_algoim.o: EB/AMReX_algoim.cpp.o
 
 # target to build an object file
 EB/AMReX_algoim.cpp.o:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/EB/AMReX_algoim.cpp.o
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/EB/AMReX_algoim.cpp.o
 .PHONY : EB/AMReX_algoim.cpp.o
 
 EB/AMReX_algoim.i: EB/AMReX_algoim.cpp.i
@@ -3332,7 +3140,7 @@ EB/AMReX_algoim.i: EB/AMReX_algoim.cpp.i
 
 # target to preprocess a source file
 EB/AMReX_algoim.cpp.i:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/EB/AMReX_algoim.cpp.i
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/EB/AMReX_algoim.cpp.i
 .PHONY : EB/AMReX_algoim.cpp.i
 
 EB/AMReX_algoim.s: EB/AMReX_algoim.cpp.s
@@ -3340,7 +3148,7 @@ EB/AMReX_algoim.s: EB/AMReX_algoim.cpp.s
 
 # target to generate assembly for a file
 EB/AMReX_algoim.cpp.s:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/EB/AMReX_algoim.cpp.s
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/EB/AMReX_algoim.cpp.s
 .PHONY : EB/AMReX_algoim.cpp.s
 
 EB/AMReX_distFcnElement.o: EB/AMReX_distFcnElement.cpp.o
@@ -3348,7 +3156,7 @@ EB/AMReX_distFcnElement.o: EB/AMReX_distFcnElement.cpp.o
 
 # target to build an object file
 EB/AMReX_distFcnElement.cpp.o:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/EB/AMReX_distFcnElement.cpp.o
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/EB/AMReX_distFcnElement.cpp.o
 .PHONY : EB/AMReX_distFcnElement.cpp.o
 
 EB/AMReX_distFcnElement.i: EB/AMReX_distFcnElement.cpp.i
@@ -3356,7 +3164,7 @@ EB/AMReX_distFcnElement.i: EB/AMReX_distFcnElement.cpp.i
 
 # target to preprocess a source file
 EB/AMReX_distFcnElement.cpp.i:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/EB/AMReX_distFcnElement.cpp.i
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/EB/AMReX_distFcnElement.cpp.i
 .PHONY : EB/AMReX_distFcnElement.cpp.i
 
 EB/AMReX_distFcnElement.s: EB/AMReX_distFcnElement.cpp.s
@@ -3364,111 +3172,135 @@ EB/AMReX_distFcnElement.s: EB/AMReX_distFcnElement.cpp.s
 
 # target to generate assembly for a file
 EB/AMReX_distFcnElement.cpp.s:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/EB/AMReX_distFcnElement.cpp.s
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/EB/AMReX_distFcnElement.cpp.s
 .PHONY : EB/AMReX_distFcnElement.cpp.s
 
-LinearSolvers/AMReX_AlgPartition.o: LinearSolvers/AMReX_AlgPartition.cpp.o
-.PHONY : LinearSolvers/AMReX_AlgPartition.o
+LinearSolvers/MLMG/AMReX_MLABecLaplacian.o: LinearSolvers/MLMG/AMReX_MLABecLaplacian.cpp.o
+.PHONY : LinearSolvers/MLMG/AMReX_MLABecLaplacian.o
 
 # target to build an object file
-LinearSolvers/AMReX_AlgPartition.cpp.o:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/LinearSolvers/AMReX_AlgPartition.cpp.o
-.PHONY : LinearSolvers/AMReX_AlgPartition.cpp.o
+LinearSolvers/MLMG/AMReX_MLABecLaplacian.cpp.o:
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/LinearSolvers/MLMG/AMReX_MLABecLaplacian.cpp.o
+.PHONY : LinearSolvers/MLMG/AMReX_MLABecLaplacian.cpp.o
 
-LinearSolvers/AMReX_AlgPartition.i: LinearSolvers/AMReX_AlgPartition.cpp.i
-.PHONY : LinearSolvers/AMReX_AlgPartition.i
+LinearSolvers/MLMG/AMReX_MLABecLaplacian.i: LinearSolvers/MLMG/AMReX_MLABecLaplacian.cpp.i
+.PHONY : LinearSolvers/MLMG/AMReX_MLABecLaplacian.i
 
 # target to preprocess a source file
-LinearSolvers/AMReX_AlgPartition.cpp.i:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/LinearSolvers/AMReX_AlgPartition.cpp.i
-.PHONY : LinearSolvers/AMReX_AlgPartition.cpp.i
+LinearSolvers/MLMG/AMReX_MLABecLaplacian.cpp.i:
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/LinearSolvers/MLMG/AMReX_MLABecLaplacian.cpp.i
+.PHONY : LinearSolvers/MLMG/AMReX_MLABecLaplacian.cpp.i
 
-LinearSolvers/AMReX_AlgPartition.s: LinearSolvers/AMReX_AlgPartition.cpp.s
-.PHONY : LinearSolvers/AMReX_AlgPartition.s
+LinearSolvers/MLMG/AMReX_MLABecLaplacian.s: LinearSolvers/MLMG/AMReX_MLABecLaplacian.cpp.s
+.PHONY : LinearSolvers/MLMG/AMReX_MLABecLaplacian.s
 
 # target to generate assembly for a file
-LinearSolvers/AMReX_AlgPartition.cpp.s:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/LinearSolvers/AMReX_AlgPartition.cpp.s
-.PHONY : LinearSolvers/AMReX_AlgPartition.cpp.s
+LinearSolvers/MLMG/AMReX_MLABecLaplacian.cpp.s:
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/LinearSolvers/MLMG/AMReX_MLABecLaplacian.cpp.s
+.PHONY : LinearSolvers/MLMG/AMReX_MLABecLaplacian.cpp.s
 
-LinearSolvers/AMReX_CrossProj.o: LinearSolvers/AMReX_CrossProj.cpp.o
-.PHONY : LinearSolvers/AMReX_CrossProj.o
+LinearSolvers/MLMG/AMReX_MLALaplacian.o: LinearSolvers/MLMG/AMReX_MLALaplacian.cpp.o
+.PHONY : LinearSolvers/MLMG/AMReX_MLALaplacian.o
 
 # target to build an object file
-LinearSolvers/AMReX_CrossProj.cpp.o:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/LinearSolvers/AMReX_CrossProj.cpp.o
-.PHONY : LinearSolvers/AMReX_CrossProj.cpp.o
+LinearSolvers/MLMG/AMReX_MLALaplacian.cpp.o:
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/LinearSolvers/MLMG/AMReX_MLALaplacian.cpp.o
+.PHONY : LinearSolvers/MLMG/AMReX_MLALaplacian.cpp.o
 
-LinearSolvers/AMReX_CrossProj.i: LinearSolvers/AMReX_CrossProj.cpp.i
-.PHONY : LinearSolvers/AMReX_CrossProj.i
+LinearSolvers/MLMG/AMReX_MLALaplacian.i: LinearSolvers/MLMG/AMReX_MLALaplacian.cpp.i
+.PHONY : LinearSolvers/MLMG/AMReX_MLALaplacian.i
 
 # target to preprocess a source file
-LinearSolvers/AMReX_CrossProj.cpp.i:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/LinearSolvers/AMReX_CrossProj.cpp.i
-.PHONY : LinearSolvers/AMReX_CrossProj.cpp.i
+LinearSolvers/MLMG/AMReX_MLALaplacian.cpp.i:
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/LinearSolvers/MLMG/AMReX_MLALaplacian.cpp.i
+.PHONY : LinearSolvers/MLMG/AMReX_MLALaplacian.cpp.i
 
-LinearSolvers/AMReX_CrossProj.s: LinearSolvers/AMReX_CrossProj.cpp.s
-.PHONY : LinearSolvers/AMReX_CrossProj.s
+LinearSolvers/MLMG/AMReX_MLALaplacian.s: LinearSolvers/MLMG/AMReX_MLALaplacian.cpp.s
+.PHONY : LinearSolvers/MLMG/AMReX_MLALaplacian.s
 
 # target to generate assembly for a file
-LinearSolvers/AMReX_CrossProj.cpp.s:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/LinearSolvers/AMReX_CrossProj.cpp.s
-.PHONY : LinearSolvers/AMReX_CrossProj.cpp.s
+LinearSolvers/MLMG/AMReX_MLALaplacian.cpp.s:
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/LinearSolvers/MLMG/AMReX_MLALaplacian.cpp.s
+.PHONY : LinearSolvers/MLMG/AMReX_MLALaplacian.cpp.s
 
-LinearSolvers/MLMG/AMReX_MLAlgMG.o: LinearSolvers/MLMG/AMReX_MLAlgMG.cpp.o
-.PHONY : LinearSolvers/MLMG/AMReX_MLAlgMG.o
+LinearSolvers/MLMG/AMReX_MLCGSolver.o: LinearSolvers/MLMG/AMReX_MLCGSolver.cpp.o
+.PHONY : LinearSolvers/MLMG/AMReX_MLCGSolver.o
 
 # target to build an object file
-LinearSolvers/MLMG/AMReX_MLAlgMG.cpp.o:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/LinearSolvers/MLMG/AMReX_MLAlgMG.cpp.o
-.PHONY : LinearSolvers/MLMG/AMReX_MLAlgMG.cpp.o
+LinearSolvers/MLMG/AMReX_MLCGSolver.cpp.o:
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/LinearSolvers/MLMG/AMReX_MLCGSolver.cpp.o
+.PHONY : LinearSolvers/MLMG/AMReX_MLCGSolver.cpp.o
 
-LinearSolvers/MLMG/AMReX_MLAlgMG.i: LinearSolvers/MLMG/AMReX_MLAlgMG.cpp.i
-.PHONY : LinearSolvers/MLMG/AMReX_MLAlgMG.i
+LinearSolvers/MLMG/AMReX_MLCGSolver.i: LinearSolvers/MLMG/AMReX_MLCGSolver.cpp.i
+.PHONY : LinearSolvers/MLMG/AMReX_MLCGSolver.i
 
 # target to preprocess a source file
-LinearSolvers/MLMG/AMReX_MLAlgMG.cpp.i:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/LinearSolvers/MLMG/AMReX_MLAlgMG.cpp.i
-.PHONY : LinearSolvers/MLMG/AMReX_MLAlgMG.cpp.i
+LinearSolvers/MLMG/AMReX_MLCGSolver.cpp.i:
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/LinearSolvers/MLMG/AMReX_MLCGSolver.cpp.i
+.PHONY : LinearSolvers/MLMG/AMReX_MLCGSolver.cpp.i
 
-LinearSolvers/MLMG/AMReX_MLAlgMG.s: LinearSolvers/MLMG/AMReX_MLAlgMG.cpp.s
-.PHONY : LinearSolvers/MLMG/AMReX_MLAlgMG.s
+LinearSolvers/MLMG/AMReX_MLCGSolver.s: LinearSolvers/MLMG/AMReX_MLCGSolver.cpp.s
+.PHONY : LinearSolvers/MLMG/AMReX_MLCGSolver.s
 
 # target to generate assembly for a file
-LinearSolvers/MLMG/AMReX_MLAlgMG.cpp.s:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/LinearSolvers/MLMG/AMReX_MLAlgMG.cpp.s
-.PHONY : LinearSolvers/MLMG/AMReX_MLAlgMG.cpp.s
+LinearSolvers/MLMG/AMReX_MLCGSolver.cpp.s:
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/LinearSolvers/MLMG/AMReX_MLCGSolver.cpp.s
+.PHONY : LinearSolvers/MLMG/AMReX_MLCGSolver.cpp.s
 
-LinearSolvers/MLMG/AMReX_MLCurlCurl.o: LinearSolvers/MLMG/AMReX_MLCurlCurl.cpp.o
-.PHONY : LinearSolvers/MLMG/AMReX_MLCurlCurl.o
+LinearSolvers/MLMG/AMReX_MLCellABecLap.o: LinearSolvers/MLMG/AMReX_MLCellABecLap.cpp.o
+.PHONY : LinearSolvers/MLMG/AMReX_MLCellABecLap.o
 
 # target to build an object file
-LinearSolvers/MLMG/AMReX_MLCurlCurl.cpp.o:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/LinearSolvers/MLMG/AMReX_MLCurlCurl.cpp.o
-.PHONY : LinearSolvers/MLMG/AMReX_MLCurlCurl.cpp.o
+LinearSolvers/MLMG/AMReX_MLCellABecLap.cpp.o:
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/LinearSolvers/MLMG/AMReX_MLCellABecLap.cpp.o
+.PHONY : LinearSolvers/MLMG/AMReX_MLCellABecLap.cpp.o
 
-LinearSolvers/MLMG/AMReX_MLCurlCurl.i: LinearSolvers/MLMG/AMReX_MLCurlCurl.cpp.i
-.PHONY : LinearSolvers/MLMG/AMReX_MLCurlCurl.i
+LinearSolvers/MLMG/AMReX_MLCellABecLap.i: LinearSolvers/MLMG/AMReX_MLCellABecLap.cpp.i
+.PHONY : LinearSolvers/MLMG/AMReX_MLCellABecLap.i
 
 # target to preprocess a source file
-LinearSolvers/MLMG/AMReX_MLCurlCurl.cpp.i:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/LinearSolvers/MLMG/AMReX_MLCurlCurl.cpp.i
-.PHONY : LinearSolvers/MLMG/AMReX_MLCurlCurl.cpp.i
+LinearSolvers/MLMG/AMReX_MLCellABecLap.cpp.i:
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/LinearSolvers/MLMG/AMReX_MLCellABecLap.cpp.i
+.PHONY : LinearSolvers/MLMG/AMReX_MLCellABecLap.cpp.i
 
-LinearSolvers/MLMG/AMReX_MLCurlCurl.s: LinearSolvers/MLMG/AMReX_MLCurlCurl.cpp.s
-.PHONY : LinearSolvers/MLMG/AMReX_MLCurlCurl.s
+LinearSolvers/MLMG/AMReX_MLCellABecLap.s: LinearSolvers/MLMG/AMReX_MLCellABecLap.cpp.s
+.PHONY : LinearSolvers/MLMG/AMReX_MLCellABecLap.s
 
 # target to generate assembly for a file
-LinearSolvers/MLMG/AMReX_MLCurlCurl.cpp.s:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/LinearSolvers/MLMG/AMReX_MLCurlCurl.cpp.s
-.PHONY : LinearSolvers/MLMG/AMReX_MLCurlCurl.cpp.s
+LinearSolvers/MLMG/AMReX_MLCellABecLap.cpp.s:
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/LinearSolvers/MLMG/AMReX_MLCellABecLap.cpp.s
+.PHONY : LinearSolvers/MLMG/AMReX_MLCellABecLap.cpp.s
+
+LinearSolvers/MLMG/AMReX_MLCellLinOp.o: LinearSolvers/MLMG/AMReX_MLCellLinOp.cpp.o
+.PHONY : LinearSolvers/MLMG/AMReX_MLCellLinOp.o
+
+# target to build an object file
+LinearSolvers/MLMG/AMReX_MLCellLinOp.cpp.o:
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/LinearSolvers/MLMG/AMReX_MLCellLinOp.cpp.o
+.PHONY : LinearSolvers/MLMG/AMReX_MLCellLinOp.cpp.o
+
+LinearSolvers/MLMG/AMReX_MLCellLinOp.i: LinearSolvers/MLMG/AMReX_MLCellLinOp.cpp.i
+.PHONY : LinearSolvers/MLMG/AMReX_MLCellLinOp.i
+
+# target to preprocess a source file
+LinearSolvers/MLMG/AMReX_MLCellLinOp.cpp.i:
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/LinearSolvers/MLMG/AMReX_MLCellLinOp.cpp.i
+.PHONY : LinearSolvers/MLMG/AMReX_MLCellLinOp.cpp.i
+
+LinearSolvers/MLMG/AMReX_MLCellLinOp.s: LinearSolvers/MLMG/AMReX_MLCellLinOp.cpp.s
+.PHONY : LinearSolvers/MLMG/AMReX_MLCellLinOp.s
+
+# target to generate assembly for a file
+LinearSolvers/MLMG/AMReX_MLCellLinOp.cpp.s:
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/LinearSolvers/MLMG/AMReX_MLCellLinOp.cpp.s
+.PHONY : LinearSolvers/MLMG/AMReX_MLCellLinOp.cpp.s
 
 LinearSolvers/MLMG/AMReX_MLEBABecLap.o: LinearSolvers/MLMG/AMReX_MLEBABecLap.cpp.o
 .PHONY : LinearSolvers/MLMG/AMReX_MLEBABecLap.o
 
 # target to build an object file
 LinearSolvers/MLMG/AMReX_MLEBABecLap.cpp.o:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/LinearSolvers/MLMG/AMReX_MLEBABecLap.cpp.o
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/LinearSolvers/MLMG/AMReX_MLEBABecLap.cpp.o
 .PHONY : LinearSolvers/MLMG/AMReX_MLEBABecLap.cpp.o
 
 LinearSolvers/MLMG/AMReX_MLEBABecLap.i: LinearSolvers/MLMG/AMReX_MLEBABecLap.cpp.i
@@ -3476,7 +3308,7 @@ LinearSolvers/MLMG/AMReX_MLEBABecLap.i: LinearSolvers/MLMG/AMReX_MLEBABecLap.cpp
 
 # target to preprocess a source file
 LinearSolvers/MLMG/AMReX_MLEBABecLap.cpp.i:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/LinearSolvers/MLMG/AMReX_MLEBABecLap.cpp.i
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/LinearSolvers/MLMG/AMReX_MLEBABecLap.cpp.i
 .PHONY : LinearSolvers/MLMG/AMReX_MLEBABecLap.cpp.i
 
 LinearSolvers/MLMG/AMReX_MLEBABecLap.s: LinearSolvers/MLMG/AMReX_MLEBABecLap.cpp.s
@@ -3484,7 +3316,7 @@ LinearSolvers/MLMG/AMReX_MLEBABecLap.s: LinearSolvers/MLMG/AMReX_MLEBABecLap.cpp
 
 # target to generate assembly for a file
 LinearSolvers/MLMG/AMReX_MLEBABecLap.cpp.s:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/LinearSolvers/MLMG/AMReX_MLEBABecLap.cpp.s
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/LinearSolvers/MLMG/AMReX_MLEBABecLap.cpp.s
 .PHONY : LinearSolvers/MLMG/AMReX_MLEBABecLap.cpp.s
 
 LinearSolvers/MLMG/AMReX_MLEBABecLap_F.o: LinearSolvers/MLMG/AMReX_MLEBABecLap_F.cpp.o
@@ -3492,7 +3324,7 @@ LinearSolvers/MLMG/AMReX_MLEBABecLap_F.o: LinearSolvers/MLMG/AMReX_MLEBABecLap_F
 
 # target to build an object file
 LinearSolvers/MLMG/AMReX_MLEBABecLap_F.cpp.o:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/LinearSolvers/MLMG/AMReX_MLEBABecLap_F.cpp.o
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/LinearSolvers/MLMG/AMReX_MLEBABecLap_F.cpp.o
 .PHONY : LinearSolvers/MLMG/AMReX_MLEBABecLap_F.cpp.o
 
 LinearSolvers/MLMG/AMReX_MLEBABecLap_F.i: LinearSolvers/MLMG/AMReX_MLEBABecLap_F.cpp.i
@@ -3500,7 +3332,7 @@ LinearSolvers/MLMG/AMReX_MLEBABecLap_F.i: LinearSolvers/MLMG/AMReX_MLEBABecLap_F
 
 # target to preprocess a source file
 LinearSolvers/MLMG/AMReX_MLEBABecLap_F.cpp.i:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/LinearSolvers/MLMG/AMReX_MLEBABecLap_F.cpp.i
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/LinearSolvers/MLMG/AMReX_MLEBABecLap_F.cpp.i
 .PHONY : LinearSolvers/MLMG/AMReX_MLEBABecLap_F.cpp.i
 
 LinearSolvers/MLMG/AMReX_MLEBABecLap_F.s: LinearSolvers/MLMG/AMReX_MLEBABecLap_F.cpp.s
@@ -3508,7 +3340,7 @@ LinearSolvers/MLMG/AMReX_MLEBABecLap_F.s: LinearSolvers/MLMG/AMReX_MLEBABecLap_F
 
 # target to generate assembly for a file
 LinearSolvers/MLMG/AMReX_MLEBABecLap_F.cpp.s:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/LinearSolvers/MLMG/AMReX_MLEBABecLap_F.cpp.s
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/LinearSolvers/MLMG/AMReX_MLEBABecLap_F.cpp.s
 .PHONY : LinearSolvers/MLMG/AMReX_MLEBABecLap_F.cpp.s
 
 LinearSolvers/MLMG/AMReX_MLEBNodeFDLaplacian.o: LinearSolvers/MLMG/AMReX_MLEBNodeFDLaplacian.cpp.o
@@ -3516,7 +3348,7 @@ LinearSolvers/MLMG/AMReX_MLEBNodeFDLaplacian.o: LinearSolvers/MLMG/AMReX_MLEBNod
 
 # target to build an object file
 LinearSolvers/MLMG/AMReX_MLEBNodeFDLaplacian.cpp.o:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/LinearSolvers/MLMG/AMReX_MLEBNodeFDLaplacian.cpp.o
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/LinearSolvers/MLMG/AMReX_MLEBNodeFDLaplacian.cpp.o
 .PHONY : LinearSolvers/MLMG/AMReX_MLEBNodeFDLaplacian.cpp.o
 
 LinearSolvers/MLMG/AMReX_MLEBNodeFDLaplacian.i: LinearSolvers/MLMG/AMReX_MLEBNodeFDLaplacian.cpp.i
@@ -3524,7 +3356,7 @@ LinearSolvers/MLMG/AMReX_MLEBNodeFDLaplacian.i: LinearSolvers/MLMG/AMReX_MLEBNod
 
 # target to preprocess a source file
 LinearSolvers/MLMG/AMReX_MLEBNodeFDLaplacian.cpp.i:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/LinearSolvers/MLMG/AMReX_MLEBNodeFDLaplacian.cpp.i
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/LinearSolvers/MLMG/AMReX_MLEBNodeFDLaplacian.cpp.i
 .PHONY : LinearSolvers/MLMG/AMReX_MLEBNodeFDLaplacian.cpp.i
 
 LinearSolvers/MLMG/AMReX_MLEBNodeFDLaplacian.s: LinearSolvers/MLMG/AMReX_MLEBNodeFDLaplacian.cpp.s
@@ -3532,7 +3364,7 @@ LinearSolvers/MLMG/AMReX_MLEBNodeFDLaplacian.s: LinearSolvers/MLMG/AMReX_MLEBNod
 
 # target to generate assembly for a file
 LinearSolvers/MLMG/AMReX_MLEBNodeFDLaplacian.cpp.s:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/LinearSolvers/MLMG/AMReX_MLEBNodeFDLaplacian.cpp.s
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/LinearSolvers/MLMG/AMReX_MLEBNodeFDLaplacian.cpp.s
 .PHONY : LinearSolvers/MLMG/AMReX_MLEBNodeFDLaplacian.cpp.s
 
 LinearSolvers/MLMG/AMReX_MLEBTensorOp.o: LinearSolvers/MLMG/AMReX_MLEBTensorOp.cpp.o
@@ -3540,7 +3372,7 @@ LinearSolvers/MLMG/AMReX_MLEBTensorOp.o: LinearSolvers/MLMG/AMReX_MLEBTensorOp.c
 
 # target to build an object file
 LinearSolvers/MLMG/AMReX_MLEBTensorOp.cpp.o:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/LinearSolvers/MLMG/AMReX_MLEBTensorOp.cpp.o
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/LinearSolvers/MLMG/AMReX_MLEBTensorOp.cpp.o
 .PHONY : LinearSolvers/MLMG/AMReX_MLEBTensorOp.cpp.o
 
 LinearSolvers/MLMG/AMReX_MLEBTensorOp.i: LinearSolvers/MLMG/AMReX_MLEBTensorOp.cpp.i
@@ -3548,7 +3380,7 @@ LinearSolvers/MLMG/AMReX_MLEBTensorOp.i: LinearSolvers/MLMG/AMReX_MLEBTensorOp.c
 
 # target to preprocess a source file
 LinearSolvers/MLMG/AMReX_MLEBTensorOp.cpp.i:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/LinearSolvers/MLMG/AMReX_MLEBTensorOp.cpp.i
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/LinearSolvers/MLMG/AMReX_MLEBTensorOp.cpp.i
 .PHONY : LinearSolvers/MLMG/AMReX_MLEBTensorOp.cpp.i
 
 LinearSolvers/MLMG/AMReX_MLEBTensorOp.s: LinearSolvers/MLMG/AMReX_MLEBTensorOp.cpp.s
@@ -3556,7 +3388,7 @@ LinearSolvers/MLMG/AMReX_MLEBTensorOp.s: LinearSolvers/MLMG/AMReX_MLEBTensorOp.c
 
 # target to generate assembly for a file
 LinearSolvers/MLMG/AMReX_MLEBTensorOp.cpp.s:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/LinearSolvers/MLMG/AMReX_MLEBTensorOp.cpp.s
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/LinearSolvers/MLMG/AMReX_MLEBTensorOp.cpp.s
 .PHONY : LinearSolvers/MLMG/AMReX_MLEBTensorOp.cpp.s
 
 LinearSolvers/MLMG/AMReX_MLEBTensorOp_bc.o: LinearSolvers/MLMG/AMReX_MLEBTensorOp_bc.cpp.o
@@ -3564,7 +3396,7 @@ LinearSolvers/MLMG/AMReX_MLEBTensorOp_bc.o: LinearSolvers/MLMG/AMReX_MLEBTensorO
 
 # target to build an object file
 LinearSolvers/MLMG/AMReX_MLEBTensorOp_bc.cpp.o:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/LinearSolvers/MLMG/AMReX_MLEBTensorOp_bc.cpp.o
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/LinearSolvers/MLMG/AMReX_MLEBTensorOp_bc.cpp.o
 .PHONY : LinearSolvers/MLMG/AMReX_MLEBTensorOp_bc.cpp.o
 
 LinearSolvers/MLMG/AMReX_MLEBTensorOp_bc.i: LinearSolvers/MLMG/AMReX_MLEBTensorOp_bc.cpp.i
@@ -3572,7 +3404,7 @@ LinearSolvers/MLMG/AMReX_MLEBTensorOp_bc.i: LinearSolvers/MLMG/AMReX_MLEBTensorO
 
 # target to preprocess a source file
 LinearSolvers/MLMG/AMReX_MLEBTensorOp_bc.cpp.i:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/LinearSolvers/MLMG/AMReX_MLEBTensorOp_bc.cpp.i
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/LinearSolvers/MLMG/AMReX_MLEBTensorOp_bc.cpp.i
 .PHONY : LinearSolvers/MLMG/AMReX_MLEBTensorOp_bc.cpp.i
 
 LinearSolvers/MLMG/AMReX_MLEBTensorOp_bc.s: LinearSolvers/MLMG/AMReX_MLEBTensorOp_bc.cpp.s
@@ -3580,15 +3412,39 @@ LinearSolvers/MLMG/AMReX_MLEBTensorOp_bc.s: LinearSolvers/MLMG/AMReX_MLEBTensorO
 
 # target to generate assembly for a file
 LinearSolvers/MLMG/AMReX_MLEBTensorOp_bc.cpp.s:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/LinearSolvers/MLMG/AMReX_MLEBTensorOp_bc.cpp.s
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/LinearSolvers/MLMG/AMReX_MLEBTensorOp_bc.cpp.s
 .PHONY : LinearSolvers/MLMG/AMReX_MLEBTensorOp_bc.cpp.s
+
+LinearSolvers/MLMG/AMReX_MLLinOp.o: LinearSolvers/MLMG/AMReX_MLLinOp.cpp.o
+.PHONY : LinearSolvers/MLMG/AMReX_MLLinOp.o
+
+# target to build an object file
+LinearSolvers/MLMG/AMReX_MLLinOp.cpp.o:
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/LinearSolvers/MLMG/AMReX_MLLinOp.cpp.o
+.PHONY : LinearSolvers/MLMG/AMReX_MLLinOp.cpp.o
+
+LinearSolvers/MLMG/AMReX_MLLinOp.i: LinearSolvers/MLMG/AMReX_MLLinOp.cpp.i
+.PHONY : LinearSolvers/MLMG/AMReX_MLLinOp.i
+
+# target to preprocess a source file
+LinearSolvers/MLMG/AMReX_MLLinOp.cpp.i:
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/LinearSolvers/MLMG/AMReX_MLLinOp.cpp.i
+.PHONY : LinearSolvers/MLMG/AMReX_MLLinOp.cpp.i
+
+LinearSolvers/MLMG/AMReX_MLLinOp.s: LinearSolvers/MLMG/AMReX_MLLinOp.cpp.s
+.PHONY : LinearSolvers/MLMG/AMReX_MLLinOp.s
+
+# target to generate assembly for a file
+LinearSolvers/MLMG/AMReX_MLLinOp.cpp.s:
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/LinearSolvers/MLMG/AMReX_MLLinOp.cpp.s
+.PHONY : LinearSolvers/MLMG/AMReX_MLLinOp.cpp.s
 
 LinearSolvers/MLMG/AMReX_MLMG.o: LinearSolvers/MLMG/AMReX_MLMG.cpp.o
 .PHONY : LinearSolvers/MLMG/AMReX_MLMG.o
 
 # target to build an object file
 LinearSolvers/MLMG/AMReX_MLMG.cpp.o:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/LinearSolvers/MLMG/AMReX_MLMG.cpp.o
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/LinearSolvers/MLMG/AMReX_MLMG.cpp.o
 .PHONY : LinearSolvers/MLMG/AMReX_MLMG.cpp.o
 
 LinearSolvers/MLMG/AMReX_MLMG.i: LinearSolvers/MLMG/AMReX_MLMG.cpp.i
@@ -3596,7 +3452,7 @@ LinearSolvers/MLMG/AMReX_MLMG.i: LinearSolvers/MLMG/AMReX_MLMG.cpp.i
 
 # target to preprocess a source file
 LinearSolvers/MLMG/AMReX_MLMG.cpp.i:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/LinearSolvers/MLMG/AMReX_MLMG.cpp.i
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/LinearSolvers/MLMG/AMReX_MLMG.cpp.i
 .PHONY : LinearSolvers/MLMG/AMReX_MLMG.cpp.i
 
 LinearSolvers/MLMG/AMReX_MLMG.s: LinearSolvers/MLMG/AMReX_MLMG.cpp.s
@@ -3604,39 +3460,39 @@ LinearSolvers/MLMG/AMReX_MLMG.s: LinearSolvers/MLMG/AMReX_MLMG.cpp.s
 
 # target to generate assembly for a file
 LinearSolvers/MLMG/AMReX_MLMG.cpp.s:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/LinearSolvers/MLMG/AMReX_MLMG.cpp.s
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/LinearSolvers/MLMG/AMReX_MLMG.cpp.s
 .PHONY : LinearSolvers/MLMG/AMReX_MLMG.cpp.s
 
-LinearSolvers/MLMG/AMReX_MLNodeABecLaplacian.o: LinearSolvers/MLMG/AMReX_MLNodeABecLaplacian.cpp.o
-.PHONY : LinearSolvers/MLMG/AMReX_MLNodeABecLaplacian.o
+LinearSolvers/MLMG/AMReX_MLMGBndry.o: LinearSolvers/MLMG/AMReX_MLMGBndry.cpp.o
+.PHONY : LinearSolvers/MLMG/AMReX_MLMGBndry.o
 
 # target to build an object file
-LinearSolvers/MLMG/AMReX_MLNodeABecLaplacian.cpp.o:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/LinearSolvers/MLMG/AMReX_MLNodeABecLaplacian.cpp.o
-.PHONY : LinearSolvers/MLMG/AMReX_MLNodeABecLaplacian.cpp.o
+LinearSolvers/MLMG/AMReX_MLMGBndry.cpp.o:
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/LinearSolvers/MLMG/AMReX_MLMGBndry.cpp.o
+.PHONY : LinearSolvers/MLMG/AMReX_MLMGBndry.cpp.o
 
-LinearSolvers/MLMG/AMReX_MLNodeABecLaplacian.i: LinearSolvers/MLMG/AMReX_MLNodeABecLaplacian.cpp.i
-.PHONY : LinearSolvers/MLMG/AMReX_MLNodeABecLaplacian.i
+LinearSolvers/MLMG/AMReX_MLMGBndry.i: LinearSolvers/MLMG/AMReX_MLMGBndry.cpp.i
+.PHONY : LinearSolvers/MLMG/AMReX_MLMGBndry.i
 
 # target to preprocess a source file
-LinearSolvers/MLMG/AMReX_MLNodeABecLaplacian.cpp.i:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/LinearSolvers/MLMG/AMReX_MLNodeABecLaplacian.cpp.i
-.PHONY : LinearSolvers/MLMG/AMReX_MLNodeABecLaplacian.cpp.i
+LinearSolvers/MLMG/AMReX_MLMGBndry.cpp.i:
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/LinearSolvers/MLMG/AMReX_MLMGBndry.cpp.i
+.PHONY : LinearSolvers/MLMG/AMReX_MLMGBndry.cpp.i
 
-LinearSolvers/MLMG/AMReX_MLNodeABecLaplacian.s: LinearSolvers/MLMG/AMReX_MLNodeABecLaplacian.cpp.s
-.PHONY : LinearSolvers/MLMG/AMReX_MLNodeABecLaplacian.s
+LinearSolvers/MLMG/AMReX_MLMGBndry.s: LinearSolvers/MLMG/AMReX_MLMGBndry.cpp.s
+.PHONY : LinearSolvers/MLMG/AMReX_MLMGBndry.s
 
 # target to generate assembly for a file
-LinearSolvers/MLMG/AMReX_MLNodeABecLaplacian.cpp.s:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/LinearSolvers/MLMG/AMReX_MLNodeABecLaplacian.cpp.s
-.PHONY : LinearSolvers/MLMG/AMReX_MLNodeABecLaplacian.cpp.s
+LinearSolvers/MLMG/AMReX_MLMGBndry.cpp.s:
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/LinearSolvers/MLMG/AMReX_MLMGBndry.cpp.s
+.PHONY : LinearSolvers/MLMG/AMReX_MLMGBndry.cpp.s
 
 LinearSolvers/MLMG/AMReX_MLNodeLaplacian.o: LinearSolvers/MLMG/AMReX_MLNodeLaplacian.cpp.o
 .PHONY : LinearSolvers/MLMG/AMReX_MLNodeLaplacian.o
 
 # target to build an object file
 LinearSolvers/MLMG/AMReX_MLNodeLaplacian.cpp.o:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/LinearSolvers/MLMG/AMReX_MLNodeLaplacian.cpp.o
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/LinearSolvers/MLMG/AMReX_MLNodeLaplacian.cpp.o
 .PHONY : LinearSolvers/MLMG/AMReX_MLNodeLaplacian.cpp.o
 
 LinearSolvers/MLMG/AMReX_MLNodeLaplacian.i: LinearSolvers/MLMG/AMReX_MLNodeLaplacian.cpp.i
@@ -3644,7 +3500,7 @@ LinearSolvers/MLMG/AMReX_MLNodeLaplacian.i: LinearSolvers/MLMG/AMReX_MLNodeLapla
 
 # target to preprocess a source file
 LinearSolvers/MLMG/AMReX_MLNodeLaplacian.cpp.i:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/LinearSolvers/MLMG/AMReX_MLNodeLaplacian.cpp.i
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/LinearSolvers/MLMG/AMReX_MLNodeLaplacian.cpp.i
 .PHONY : LinearSolvers/MLMG/AMReX_MLNodeLaplacian.cpp.i
 
 LinearSolvers/MLMG/AMReX_MLNodeLaplacian.s: LinearSolvers/MLMG/AMReX_MLNodeLaplacian.cpp.s
@@ -3652,7 +3508,7 @@ LinearSolvers/MLMG/AMReX_MLNodeLaplacian.s: LinearSolvers/MLMG/AMReX_MLNodeLapla
 
 # target to generate assembly for a file
 LinearSolvers/MLMG/AMReX_MLNodeLaplacian.cpp.s:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/LinearSolvers/MLMG/AMReX_MLNodeLaplacian.cpp.s
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/LinearSolvers/MLMG/AMReX_MLNodeLaplacian.cpp.s
 .PHONY : LinearSolvers/MLMG/AMReX_MLNodeLaplacian.cpp.s
 
 LinearSolvers/MLMG/AMReX_MLNodeLaplacian_eb.o: LinearSolvers/MLMG/AMReX_MLNodeLaplacian_eb.cpp.o
@@ -3660,7 +3516,7 @@ LinearSolvers/MLMG/AMReX_MLNodeLaplacian_eb.o: LinearSolvers/MLMG/AMReX_MLNodeLa
 
 # target to build an object file
 LinearSolvers/MLMG/AMReX_MLNodeLaplacian_eb.cpp.o:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/LinearSolvers/MLMG/AMReX_MLNodeLaplacian_eb.cpp.o
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/LinearSolvers/MLMG/AMReX_MLNodeLaplacian_eb.cpp.o
 .PHONY : LinearSolvers/MLMG/AMReX_MLNodeLaplacian_eb.cpp.o
 
 LinearSolvers/MLMG/AMReX_MLNodeLaplacian_eb.i: LinearSolvers/MLMG/AMReX_MLNodeLaplacian_eb.cpp.i
@@ -3668,7 +3524,7 @@ LinearSolvers/MLMG/AMReX_MLNodeLaplacian_eb.i: LinearSolvers/MLMG/AMReX_MLNodeLa
 
 # target to preprocess a source file
 LinearSolvers/MLMG/AMReX_MLNodeLaplacian_eb.cpp.i:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/LinearSolvers/MLMG/AMReX_MLNodeLaplacian_eb.cpp.i
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/LinearSolvers/MLMG/AMReX_MLNodeLaplacian_eb.cpp.i
 .PHONY : LinearSolvers/MLMG/AMReX_MLNodeLaplacian_eb.cpp.i
 
 LinearSolvers/MLMG/AMReX_MLNodeLaplacian_eb.s: LinearSolvers/MLMG/AMReX_MLNodeLaplacian_eb.cpp.s
@@ -3676,39 +3532,15 @@ LinearSolvers/MLMG/AMReX_MLNodeLaplacian_eb.s: LinearSolvers/MLMG/AMReX_MLNodeLa
 
 # target to generate assembly for a file
 LinearSolvers/MLMG/AMReX_MLNodeLaplacian_eb.cpp.s:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/LinearSolvers/MLMG/AMReX_MLNodeLaplacian_eb.cpp.s
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/LinearSolvers/MLMG/AMReX_MLNodeLaplacian_eb.cpp.s
 .PHONY : LinearSolvers/MLMG/AMReX_MLNodeLaplacian_eb.cpp.s
-
-LinearSolvers/MLMG/AMReX_MLNodeLaplacian_matrix.o: LinearSolvers/MLMG/AMReX_MLNodeLaplacian_matrix.cpp.o
-.PHONY : LinearSolvers/MLMG/AMReX_MLNodeLaplacian_matrix.o
-
-# target to build an object file
-LinearSolvers/MLMG/AMReX_MLNodeLaplacian_matrix.cpp.o:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/LinearSolvers/MLMG/AMReX_MLNodeLaplacian_matrix.cpp.o
-.PHONY : LinearSolvers/MLMG/AMReX_MLNodeLaplacian_matrix.cpp.o
-
-LinearSolvers/MLMG/AMReX_MLNodeLaplacian_matrix.i: LinearSolvers/MLMG/AMReX_MLNodeLaplacian_matrix.cpp.i
-.PHONY : LinearSolvers/MLMG/AMReX_MLNodeLaplacian_matrix.i
-
-# target to preprocess a source file
-LinearSolvers/MLMG/AMReX_MLNodeLaplacian_matrix.cpp.i:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/LinearSolvers/MLMG/AMReX_MLNodeLaplacian_matrix.cpp.i
-.PHONY : LinearSolvers/MLMG/AMReX_MLNodeLaplacian_matrix.cpp.i
-
-LinearSolvers/MLMG/AMReX_MLNodeLaplacian_matrix.s: LinearSolvers/MLMG/AMReX_MLNodeLaplacian_matrix.cpp.s
-.PHONY : LinearSolvers/MLMG/AMReX_MLNodeLaplacian_matrix.s
-
-# target to generate assembly for a file
-LinearSolvers/MLMG/AMReX_MLNodeLaplacian_matrix.cpp.s:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/LinearSolvers/MLMG/AMReX_MLNodeLaplacian_matrix.cpp.s
-.PHONY : LinearSolvers/MLMG/AMReX_MLNodeLaplacian_matrix.cpp.s
 
 LinearSolvers/MLMG/AMReX_MLNodeLaplacian_misc.o: LinearSolvers/MLMG/AMReX_MLNodeLaplacian_misc.cpp.o
 .PHONY : LinearSolvers/MLMG/AMReX_MLNodeLaplacian_misc.o
 
 # target to build an object file
 LinearSolvers/MLMG/AMReX_MLNodeLaplacian_misc.cpp.o:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/LinearSolvers/MLMG/AMReX_MLNodeLaplacian_misc.cpp.o
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/LinearSolvers/MLMG/AMReX_MLNodeLaplacian_misc.cpp.o
 .PHONY : LinearSolvers/MLMG/AMReX_MLNodeLaplacian_misc.cpp.o
 
 LinearSolvers/MLMG/AMReX_MLNodeLaplacian_misc.i: LinearSolvers/MLMG/AMReX_MLNodeLaplacian_misc.cpp.i
@@ -3716,7 +3548,7 @@ LinearSolvers/MLMG/AMReX_MLNodeLaplacian_misc.i: LinearSolvers/MLMG/AMReX_MLNode
 
 # target to preprocess a source file
 LinearSolvers/MLMG/AMReX_MLNodeLaplacian_misc.cpp.i:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/LinearSolvers/MLMG/AMReX_MLNodeLaplacian_misc.cpp.i
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/LinearSolvers/MLMG/AMReX_MLNodeLaplacian_misc.cpp.i
 .PHONY : LinearSolvers/MLMG/AMReX_MLNodeLaplacian_misc.cpp.i
 
 LinearSolvers/MLMG/AMReX_MLNodeLaplacian_misc.s: LinearSolvers/MLMG/AMReX_MLNodeLaplacian_misc.cpp.s
@@ -3724,7 +3556,7 @@ LinearSolvers/MLMG/AMReX_MLNodeLaplacian_misc.s: LinearSolvers/MLMG/AMReX_MLNode
 
 # target to generate assembly for a file
 LinearSolvers/MLMG/AMReX_MLNodeLaplacian_misc.cpp.s:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/LinearSolvers/MLMG/AMReX_MLNodeLaplacian_misc.cpp.s
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/LinearSolvers/MLMG/AMReX_MLNodeLaplacian_misc.cpp.s
 .PHONY : LinearSolvers/MLMG/AMReX_MLNodeLaplacian_misc.cpp.s
 
 LinearSolvers/MLMG/AMReX_MLNodeLaplacian_sten.o: LinearSolvers/MLMG/AMReX_MLNodeLaplacian_sten.cpp.o
@@ -3732,7 +3564,7 @@ LinearSolvers/MLMG/AMReX_MLNodeLaplacian_sten.o: LinearSolvers/MLMG/AMReX_MLNode
 
 # target to build an object file
 LinearSolvers/MLMG/AMReX_MLNodeLaplacian_sten.cpp.o:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/LinearSolvers/MLMG/AMReX_MLNodeLaplacian_sten.cpp.o
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/LinearSolvers/MLMG/AMReX_MLNodeLaplacian_sten.cpp.o
 .PHONY : LinearSolvers/MLMG/AMReX_MLNodeLaplacian_sten.cpp.o
 
 LinearSolvers/MLMG/AMReX_MLNodeLaplacian_sten.i: LinearSolvers/MLMG/AMReX_MLNodeLaplacian_sten.cpp.i
@@ -3740,7 +3572,7 @@ LinearSolvers/MLMG/AMReX_MLNodeLaplacian_sten.i: LinearSolvers/MLMG/AMReX_MLNode
 
 # target to preprocess a source file
 LinearSolvers/MLMG/AMReX_MLNodeLaplacian_sten.cpp.i:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/LinearSolvers/MLMG/AMReX_MLNodeLaplacian_sten.cpp.i
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/LinearSolvers/MLMG/AMReX_MLNodeLaplacian_sten.cpp.i
 .PHONY : LinearSolvers/MLMG/AMReX_MLNodeLaplacian_sten.cpp.i
 
 LinearSolvers/MLMG/AMReX_MLNodeLaplacian_sten.s: LinearSolvers/MLMG/AMReX_MLNodeLaplacian_sten.cpp.s
@@ -3748,7 +3580,7 @@ LinearSolvers/MLMG/AMReX_MLNodeLaplacian_sten.s: LinearSolvers/MLMG/AMReX_MLNode
 
 # target to generate assembly for a file
 LinearSolvers/MLMG/AMReX_MLNodeLaplacian_sten.cpp.s:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/LinearSolvers/MLMG/AMReX_MLNodeLaplacian_sten.cpp.s
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/LinearSolvers/MLMG/AMReX_MLNodeLaplacian_sten.cpp.s
 .PHONY : LinearSolvers/MLMG/AMReX_MLNodeLaplacian_sten.cpp.s
 
 LinearSolvers/MLMG/AMReX_MLNodeLaplacian_sync.o: LinearSolvers/MLMG/AMReX_MLNodeLaplacian_sync.cpp.o
@@ -3756,7 +3588,7 @@ LinearSolvers/MLMG/AMReX_MLNodeLaplacian_sync.o: LinearSolvers/MLMG/AMReX_MLNode
 
 # target to build an object file
 LinearSolvers/MLMG/AMReX_MLNodeLaplacian_sync.cpp.o:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/LinearSolvers/MLMG/AMReX_MLNodeLaplacian_sync.cpp.o
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/LinearSolvers/MLMG/AMReX_MLNodeLaplacian_sync.cpp.o
 .PHONY : LinearSolvers/MLMG/AMReX_MLNodeLaplacian_sync.cpp.o
 
 LinearSolvers/MLMG/AMReX_MLNodeLaplacian_sync.i: LinearSolvers/MLMG/AMReX_MLNodeLaplacian_sync.cpp.i
@@ -3764,7 +3596,7 @@ LinearSolvers/MLMG/AMReX_MLNodeLaplacian_sync.i: LinearSolvers/MLMG/AMReX_MLNode
 
 # target to preprocess a source file
 LinearSolvers/MLMG/AMReX_MLNodeLaplacian_sync.cpp.i:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/LinearSolvers/MLMG/AMReX_MLNodeLaplacian_sync.cpp.i
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/LinearSolvers/MLMG/AMReX_MLNodeLaplacian_sync.cpp.i
 .PHONY : LinearSolvers/MLMG/AMReX_MLNodeLaplacian_sync.cpp.i
 
 LinearSolvers/MLMG/AMReX_MLNodeLaplacian_sync.s: LinearSolvers/MLMG/AMReX_MLNodeLaplacian_sync.cpp.s
@@ -3772,7 +3604,7 @@ LinearSolvers/MLMG/AMReX_MLNodeLaplacian_sync.s: LinearSolvers/MLMG/AMReX_MLNode
 
 # target to generate assembly for a file
 LinearSolvers/MLMG/AMReX_MLNodeLaplacian_sync.cpp.s:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/LinearSolvers/MLMG/AMReX_MLNodeLaplacian_sync.cpp.s
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/LinearSolvers/MLMG/AMReX_MLNodeLaplacian_sync.cpp.s
 .PHONY : LinearSolvers/MLMG/AMReX_MLNodeLaplacian_sync.cpp.s
 
 LinearSolvers/MLMG/AMReX_MLNodeLinOp.o: LinearSolvers/MLMG/AMReX_MLNodeLinOp.cpp.o
@@ -3780,7 +3612,7 @@ LinearSolvers/MLMG/AMReX_MLNodeLinOp.o: LinearSolvers/MLMG/AMReX_MLNodeLinOp.cpp
 
 # target to build an object file
 LinearSolvers/MLMG/AMReX_MLNodeLinOp.cpp.o:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/LinearSolvers/MLMG/AMReX_MLNodeLinOp.cpp.o
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/LinearSolvers/MLMG/AMReX_MLNodeLinOp.cpp.o
 .PHONY : LinearSolvers/MLMG/AMReX_MLNodeLinOp.cpp.o
 
 LinearSolvers/MLMG/AMReX_MLNodeLinOp.i: LinearSolvers/MLMG/AMReX_MLNodeLinOp.cpp.i
@@ -3788,7 +3620,7 @@ LinearSolvers/MLMG/AMReX_MLNodeLinOp.i: LinearSolvers/MLMG/AMReX_MLNodeLinOp.cpp
 
 # target to preprocess a source file
 LinearSolvers/MLMG/AMReX_MLNodeLinOp.cpp.i:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/LinearSolvers/MLMG/AMReX_MLNodeLinOp.cpp.i
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/LinearSolvers/MLMG/AMReX_MLNodeLinOp.cpp.i
 .PHONY : LinearSolvers/MLMG/AMReX_MLNodeLinOp.cpp.i
 
 LinearSolvers/MLMG/AMReX_MLNodeLinOp.s: LinearSolvers/MLMG/AMReX_MLNodeLinOp.cpp.s
@@ -3796,7 +3628,7 @@ LinearSolvers/MLMG/AMReX_MLNodeLinOp.s: LinearSolvers/MLMG/AMReX_MLNodeLinOp.cpp
 
 # target to generate assembly for a file
 LinearSolvers/MLMG/AMReX_MLNodeLinOp.cpp.s:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/LinearSolvers/MLMG/AMReX_MLNodeLinOp.cpp.s
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/LinearSolvers/MLMG/AMReX_MLNodeLinOp.cpp.s
 .PHONY : LinearSolvers/MLMG/AMReX_MLNodeLinOp.cpp.s
 
 LinearSolvers/MLMG/AMReX_MLNodeTensorLaplacian.o: LinearSolvers/MLMG/AMReX_MLNodeTensorLaplacian.cpp.o
@@ -3804,7 +3636,7 @@ LinearSolvers/MLMG/AMReX_MLNodeTensorLaplacian.o: LinearSolvers/MLMG/AMReX_MLNod
 
 # target to build an object file
 LinearSolvers/MLMG/AMReX_MLNodeTensorLaplacian.cpp.o:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/LinearSolvers/MLMG/AMReX_MLNodeTensorLaplacian.cpp.o
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/LinearSolvers/MLMG/AMReX_MLNodeTensorLaplacian.cpp.o
 .PHONY : LinearSolvers/MLMG/AMReX_MLNodeTensorLaplacian.cpp.o
 
 LinearSolvers/MLMG/AMReX_MLNodeTensorLaplacian.i: LinearSolvers/MLMG/AMReX_MLNodeTensorLaplacian.cpp.i
@@ -3812,7 +3644,7 @@ LinearSolvers/MLMG/AMReX_MLNodeTensorLaplacian.i: LinearSolvers/MLMG/AMReX_MLNod
 
 # target to preprocess a source file
 LinearSolvers/MLMG/AMReX_MLNodeTensorLaplacian.cpp.i:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/LinearSolvers/MLMG/AMReX_MLNodeTensorLaplacian.cpp.i
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/LinearSolvers/MLMG/AMReX_MLNodeTensorLaplacian.cpp.i
 .PHONY : LinearSolvers/MLMG/AMReX_MLNodeTensorLaplacian.cpp.i
 
 LinearSolvers/MLMG/AMReX_MLNodeTensorLaplacian.s: LinearSolvers/MLMG/AMReX_MLNodeTensorLaplacian.cpp.s
@@ -3820,15 +3652,39 @@ LinearSolvers/MLMG/AMReX_MLNodeTensorLaplacian.s: LinearSolvers/MLMG/AMReX_MLNod
 
 # target to generate assembly for a file
 LinearSolvers/MLMG/AMReX_MLNodeTensorLaplacian.cpp.s:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/LinearSolvers/MLMG/AMReX_MLNodeTensorLaplacian.cpp.s
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/LinearSolvers/MLMG/AMReX_MLNodeTensorLaplacian.cpp.s
 .PHONY : LinearSolvers/MLMG/AMReX_MLNodeTensorLaplacian.cpp.s
+
+LinearSolvers/MLMG/AMReX_MLPoisson.o: LinearSolvers/MLMG/AMReX_MLPoisson.cpp.o
+.PHONY : LinearSolvers/MLMG/AMReX_MLPoisson.o
+
+# target to build an object file
+LinearSolvers/MLMG/AMReX_MLPoisson.cpp.o:
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/LinearSolvers/MLMG/AMReX_MLPoisson.cpp.o
+.PHONY : LinearSolvers/MLMG/AMReX_MLPoisson.cpp.o
+
+LinearSolvers/MLMG/AMReX_MLPoisson.i: LinearSolvers/MLMG/AMReX_MLPoisson.cpp.i
+.PHONY : LinearSolvers/MLMG/AMReX_MLPoisson.i
+
+# target to preprocess a source file
+LinearSolvers/MLMG/AMReX_MLPoisson.cpp.i:
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/LinearSolvers/MLMG/AMReX_MLPoisson.cpp.i
+.PHONY : LinearSolvers/MLMG/AMReX_MLPoisson.cpp.i
+
+LinearSolvers/MLMG/AMReX_MLPoisson.s: LinearSolvers/MLMG/AMReX_MLPoisson.cpp.s
+.PHONY : LinearSolvers/MLMG/AMReX_MLPoisson.s
+
+# target to generate assembly for a file
+LinearSolvers/MLMG/AMReX_MLPoisson.cpp.s:
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/LinearSolvers/MLMG/AMReX_MLPoisson.cpp.s
+.PHONY : LinearSolvers/MLMG/AMReX_MLPoisson.cpp.s
 
 LinearSolvers/MLMG/AMReX_MLTensorOp.o: LinearSolvers/MLMG/AMReX_MLTensorOp.cpp.o
 .PHONY : LinearSolvers/MLMG/AMReX_MLTensorOp.o
 
 # target to build an object file
 LinearSolvers/MLMG/AMReX_MLTensorOp.cpp.o:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/LinearSolvers/MLMG/AMReX_MLTensorOp.cpp.o
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/LinearSolvers/MLMG/AMReX_MLTensorOp.cpp.o
 .PHONY : LinearSolvers/MLMG/AMReX_MLTensorOp.cpp.o
 
 LinearSolvers/MLMG/AMReX_MLTensorOp.i: LinearSolvers/MLMG/AMReX_MLTensorOp.cpp.i
@@ -3836,7 +3692,7 @@ LinearSolvers/MLMG/AMReX_MLTensorOp.i: LinearSolvers/MLMG/AMReX_MLTensorOp.cpp.i
 
 # target to preprocess a source file
 LinearSolvers/MLMG/AMReX_MLTensorOp.cpp.i:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/LinearSolvers/MLMG/AMReX_MLTensorOp.cpp.i
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/LinearSolvers/MLMG/AMReX_MLTensorOp.cpp.i
 .PHONY : LinearSolvers/MLMG/AMReX_MLTensorOp.cpp.i
 
 LinearSolvers/MLMG/AMReX_MLTensorOp.s: LinearSolvers/MLMG/AMReX_MLTensorOp.cpp.s
@@ -3844,7 +3700,7 @@ LinearSolvers/MLMG/AMReX_MLTensorOp.s: LinearSolvers/MLMG/AMReX_MLTensorOp.cpp.s
 
 # target to generate assembly for a file
 LinearSolvers/MLMG/AMReX_MLTensorOp.cpp.s:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/LinearSolvers/MLMG/AMReX_MLTensorOp.cpp.s
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/LinearSolvers/MLMG/AMReX_MLTensorOp.cpp.s
 .PHONY : LinearSolvers/MLMG/AMReX_MLTensorOp.cpp.s
 
 LinearSolvers/MLMG/AMReX_MLTensorOp_grad.o: LinearSolvers/MLMG/AMReX_MLTensorOp_grad.cpp.o
@@ -3852,7 +3708,7 @@ LinearSolvers/MLMG/AMReX_MLTensorOp_grad.o: LinearSolvers/MLMG/AMReX_MLTensorOp_
 
 # target to build an object file
 LinearSolvers/MLMG/AMReX_MLTensorOp_grad.cpp.o:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/LinearSolvers/MLMG/AMReX_MLTensorOp_grad.cpp.o
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/LinearSolvers/MLMG/AMReX_MLTensorOp_grad.cpp.o
 .PHONY : LinearSolvers/MLMG/AMReX_MLTensorOp_grad.cpp.o
 
 LinearSolvers/MLMG/AMReX_MLTensorOp_grad.i: LinearSolvers/MLMG/AMReX_MLTensorOp_grad.cpp.i
@@ -3860,7 +3716,7 @@ LinearSolvers/MLMG/AMReX_MLTensorOp_grad.i: LinearSolvers/MLMG/AMReX_MLTensorOp_
 
 # target to preprocess a source file
 LinearSolvers/MLMG/AMReX_MLTensorOp_grad.cpp.i:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/LinearSolvers/MLMG/AMReX_MLTensorOp_grad.cpp.i
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/LinearSolvers/MLMG/AMReX_MLTensorOp_grad.cpp.i
 .PHONY : LinearSolvers/MLMG/AMReX_MLTensorOp_grad.cpp.i
 
 LinearSolvers/MLMG/AMReX_MLTensorOp_grad.s: LinearSolvers/MLMG/AMReX_MLTensorOp_grad.cpp.s
@@ -3868,63 +3724,15 @@ LinearSolvers/MLMG/AMReX_MLTensorOp_grad.s: LinearSolvers/MLMG/AMReX_MLTensorOp_
 
 # target to generate assembly for a file
 LinearSolvers/MLMG/AMReX_MLTensorOp_grad.cpp.s:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/LinearSolvers/MLMG/AMReX_MLTensorOp_grad.cpp.s
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/LinearSolvers/MLMG/AMReX_MLTensorOp_grad.cpp.s
 .PHONY : LinearSolvers/MLMG/AMReX_MLTensorOp_grad.cpp.s
-
-LinearSolvers/MLMG/AMReX_MLTerrainPoisson.o: LinearSolvers/MLMG/AMReX_MLTerrainPoisson.cpp.o
-.PHONY : LinearSolvers/MLMG/AMReX_MLTerrainPoisson.o
-
-# target to build an object file
-LinearSolvers/MLMG/AMReX_MLTerrainPoisson.cpp.o:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/LinearSolvers/MLMG/AMReX_MLTerrainPoisson.cpp.o
-.PHONY : LinearSolvers/MLMG/AMReX_MLTerrainPoisson.cpp.o
-
-LinearSolvers/MLMG/AMReX_MLTerrainPoisson.i: LinearSolvers/MLMG/AMReX_MLTerrainPoisson.cpp.i
-.PHONY : LinearSolvers/MLMG/AMReX_MLTerrainPoisson.i
-
-# target to preprocess a source file
-LinearSolvers/MLMG/AMReX_MLTerrainPoisson.cpp.i:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/LinearSolvers/MLMG/AMReX_MLTerrainPoisson.cpp.i
-.PHONY : LinearSolvers/MLMG/AMReX_MLTerrainPoisson.cpp.i
-
-LinearSolvers/MLMG/AMReX_MLTerrainPoisson.s: LinearSolvers/MLMG/AMReX_MLTerrainPoisson.cpp.s
-.PHONY : LinearSolvers/MLMG/AMReX_MLTerrainPoisson.s
-
-# target to generate assembly for a file
-LinearSolvers/MLMG/AMReX_MLTerrainPoisson.cpp.s:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/LinearSolvers/MLMG/AMReX_MLTerrainPoisson.cpp.s
-.PHONY : LinearSolvers/MLMG/AMReX_MLTerrainPoisson.cpp.s
-
-LinearSolvers/OpenBC/AMReX_OpenBC.o: LinearSolvers/OpenBC/AMReX_OpenBC.cpp.o
-.PHONY : LinearSolvers/OpenBC/AMReX_OpenBC.o
-
-# target to build an object file
-LinearSolvers/OpenBC/AMReX_OpenBC.cpp.o:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/LinearSolvers/OpenBC/AMReX_OpenBC.cpp.o
-.PHONY : LinearSolvers/OpenBC/AMReX_OpenBC.cpp.o
-
-LinearSolvers/OpenBC/AMReX_OpenBC.i: LinearSolvers/OpenBC/AMReX_OpenBC.cpp.i
-.PHONY : LinearSolvers/OpenBC/AMReX_OpenBC.i
-
-# target to preprocess a source file
-LinearSolvers/OpenBC/AMReX_OpenBC.cpp.i:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/LinearSolvers/OpenBC/AMReX_OpenBC.cpp.i
-.PHONY : LinearSolvers/OpenBC/AMReX_OpenBC.cpp.i
-
-LinearSolvers/OpenBC/AMReX_OpenBC.s: LinearSolvers/OpenBC/AMReX_OpenBC.cpp.s
-.PHONY : LinearSolvers/OpenBC/AMReX_OpenBC.s
-
-# target to generate assembly for a file
-LinearSolvers/OpenBC/AMReX_OpenBC.cpp.s:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/LinearSolvers/OpenBC/AMReX_OpenBC.cpp.s
-.PHONY : LinearSolvers/OpenBC/AMReX_OpenBC.cpp.s
 
 Particle/AMReX_ParticleBufferMap.o: Particle/AMReX_ParticleBufferMap.cpp.o
 .PHONY : Particle/AMReX_ParticleBufferMap.o
 
 # target to build an object file
 Particle/AMReX_ParticleBufferMap.cpp.o:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/Particle/AMReX_ParticleBufferMap.cpp.o
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/Particle/AMReX_ParticleBufferMap.cpp.o
 .PHONY : Particle/AMReX_ParticleBufferMap.cpp.o
 
 Particle/AMReX_ParticleBufferMap.i: Particle/AMReX_ParticleBufferMap.cpp.i
@@ -3932,7 +3740,7 @@ Particle/AMReX_ParticleBufferMap.i: Particle/AMReX_ParticleBufferMap.cpp.i
 
 # target to preprocess a source file
 Particle/AMReX_ParticleBufferMap.cpp.i:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/Particle/AMReX_ParticleBufferMap.cpp.i
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/Particle/AMReX_ParticleBufferMap.cpp.i
 .PHONY : Particle/AMReX_ParticleBufferMap.cpp.i
 
 Particle/AMReX_ParticleBufferMap.s: Particle/AMReX_ParticleBufferMap.cpp.s
@@ -3940,7 +3748,7 @@ Particle/AMReX_ParticleBufferMap.s: Particle/AMReX_ParticleBufferMap.cpp.s
 
 # target to generate assembly for a file
 Particle/AMReX_ParticleBufferMap.cpp.s:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/Particle/AMReX_ParticleBufferMap.cpp.s
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/Particle/AMReX_ParticleBufferMap.cpp.s
 .PHONY : Particle/AMReX_ParticleBufferMap.cpp.s
 
 Particle/AMReX_ParticleCommunication.o: Particle/AMReX_ParticleCommunication.cpp.o
@@ -3948,7 +3756,7 @@ Particle/AMReX_ParticleCommunication.o: Particle/AMReX_ParticleCommunication.cpp
 
 # target to build an object file
 Particle/AMReX_ParticleCommunication.cpp.o:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/Particle/AMReX_ParticleCommunication.cpp.o
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/Particle/AMReX_ParticleCommunication.cpp.o
 .PHONY : Particle/AMReX_ParticleCommunication.cpp.o
 
 Particle/AMReX_ParticleCommunication.i: Particle/AMReX_ParticleCommunication.cpp.i
@@ -3956,7 +3764,7 @@ Particle/AMReX_ParticleCommunication.i: Particle/AMReX_ParticleCommunication.cpp
 
 # target to preprocess a source file
 Particle/AMReX_ParticleCommunication.cpp.i:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/Particle/AMReX_ParticleCommunication.cpp.i
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/Particle/AMReX_ParticleCommunication.cpp.i
 .PHONY : Particle/AMReX_ParticleCommunication.cpp.i
 
 Particle/AMReX_ParticleCommunication.s: Particle/AMReX_ParticleCommunication.cpp.s
@@ -3964,7 +3772,7 @@ Particle/AMReX_ParticleCommunication.s: Particle/AMReX_ParticleCommunication.cpp
 
 # target to generate assembly for a file
 Particle/AMReX_ParticleCommunication.cpp.s:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/Particle/AMReX_ParticleCommunication.cpp.s
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/Particle/AMReX_ParticleCommunication.cpp.s
 .PHONY : Particle/AMReX_ParticleCommunication.cpp.s
 
 Particle/AMReX_ParticleContainerBase.o: Particle/AMReX_ParticleContainerBase.cpp.o
@@ -3972,7 +3780,7 @@ Particle/AMReX_ParticleContainerBase.o: Particle/AMReX_ParticleContainerBase.cpp
 
 # target to build an object file
 Particle/AMReX_ParticleContainerBase.cpp.o:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/Particle/AMReX_ParticleContainerBase.cpp.o
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/Particle/AMReX_ParticleContainerBase.cpp.o
 .PHONY : Particle/AMReX_ParticleContainerBase.cpp.o
 
 Particle/AMReX_ParticleContainerBase.i: Particle/AMReX_ParticleContainerBase.cpp.i
@@ -3980,7 +3788,7 @@ Particle/AMReX_ParticleContainerBase.i: Particle/AMReX_ParticleContainerBase.cpp
 
 # target to preprocess a source file
 Particle/AMReX_ParticleContainerBase.cpp.i:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/Particle/AMReX_ParticleContainerBase.cpp.i
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/Particle/AMReX_ParticleContainerBase.cpp.i
 .PHONY : Particle/AMReX_ParticleContainerBase.cpp.i
 
 Particle/AMReX_ParticleContainerBase.s: Particle/AMReX_ParticleContainerBase.cpp.s
@@ -3988,39 +3796,15 @@ Particle/AMReX_ParticleContainerBase.s: Particle/AMReX_ParticleContainerBase.cpp
 
 # target to generate assembly for a file
 Particle/AMReX_ParticleContainerBase.cpp.s:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/Particle/AMReX_ParticleContainerBase.cpp.s
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/Particle/AMReX_ParticleContainerBase.cpp.s
 .PHONY : Particle/AMReX_ParticleContainerBase.cpp.s
-
-Particle/AMReX_ParticleHeader.o: Particle/AMReX_ParticleHeader.cpp.o
-.PHONY : Particle/AMReX_ParticleHeader.o
-
-# target to build an object file
-Particle/AMReX_ParticleHeader.cpp.o:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/Particle/AMReX_ParticleHeader.cpp.o
-.PHONY : Particle/AMReX_ParticleHeader.cpp.o
-
-Particle/AMReX_ParticleHeader.i: Particle/AMReX_ParticleHeader.cpp.i
-.PHONY : Particle/AMReX_ParticleHeader.i
-
-# target to preprocess a source file
-Particle/AMReX_ParticleHeader.cpp.i:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/Particle/AMReX_ParticleHeader.cpp.i
-.PHONY : Particle/AMReX_ParticleHeader.cpp.i
-
-Particle/AMReX_ParticleHeader.s: Particle/AMReX_ParticleHeader.cpp.s
-.PHONY : Particle/AMReX_ParticleHeader.s
-
-# target to generate assembly for a file
-Particle/AMReX_ParticleHeader.cpp.s:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/Particle/AMReX_ParticleHeader.cpp.s
-.PHONY : Particle/AMReX_ParticleHeader.cpp.s
 
 Particle/AMReX_ParticleMPIUtil.o: Particle/AMReX_ParticleMPIUtil.cpp.o
 .PHONY : Particle/AMReX_ParticleMPIUtil.o
 
 # target to build an object file
 Particle/AMReX_ParticleMPIUtil.cpp.o:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/Particle/AMReX_ParticleMPIUtil.cpp.o
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/Particle/AMReX_ParticleMPIUtil.cpp.o
 .PHONY : Particle/AMReX_ParticleMPIUtil.cpp.o
 
 Particle/AMReX_ParticleMPIUtil.i: Particle/AMReX_ParticleMPIUtil.cpp.i
@@ -4028,7 +3812,7 @@ Particle/AMReX_ParticleMPIUtil.i: Particle/AMReX_ParticleMPIUtil.cpp.i
 
 # target to preprocess a source file
 Particle/AMReX_ParticleMPIUtil.cpp.i:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/Particle/AMReX_ParticleMPIUtil.cpp.i
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/Particle/AMReX_ParticleMPIUtil.cpp.i
 .PHONY : Particle/AMReX_ParticleMPIUtil.cpp.i
 
 Particle/AMReX_ParticleMPIUtil.s: Particle/AMReX_ParticleMPIUtil.cpp.s
@@ -4036,7 +3820,7 @@ Particle/AMReX_ParticleMPIUtil.s: Particle/AMReX_ParticleMPIUtil.cpp.s
 
 # target to generate assembly for a file
 Particle/AMReX_ParticleMPIUtil.cpp.s:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/Particle/AMReX_ParticleMPIUtil.cpp.s
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/Particle/AMReX_ParticleMPIUtil.cpp.s
 .PHONY : Particle/AMReX_ParticleMPIUtil.cpp.s
 
 Particle/AMReX_ParticleUtil.o: Particle/AMReX_ParticleUtil.cpp.o
@@ -4044,7 +3828,7 @@ Particle/AMReX_ParticleUtil.o: Particle/AMReX_ParticleUtil.cpp.o
 
 # target to build an object file
 Particle/AMReX_ParticleUtil.cpp.o:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/Particle/AMReX_ParticleUtil.cpp.o
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/Particle/AMReX_ParticleUtil.cpp.o
 .PHONY : Particle/AMReX_ParticleUtil.cpp.o
 
 Particle/AMReX_ParticleUtil.i: Particle/AMReX_ParticleUtil.cpp.i
@@ -4052,7 +3836,7 @@ Particle/AMReX_ParticleUtil.i: Particle/AMReX_ParticleUtil.cpp.i
 
 # target to preprocess a source file
 Particle/AMReX_ParticleUtil.cpp.i:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/Particle/AMReX_ParticleUtil.cpp.i
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/Particle/AMReX_ParticleUtil.cpp.i
 .PHONY : Particle/AMReX_ParticleUtil.cpp.i
 
 Particle/AMReX_ParticleUtil.s: Particle/AMReX_ParticleUtil.cpp.s
@@ -4060,7 +3844,7 @@ Particle/AMReX_ParticleUtil.s: Particle/AMReX_ParticleUtil.cpp.s
 
 # target to generate assembly for a file
 Particle/AMReX_ParticleUtil.cpp.s:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/Particle/AMReX_ParticleUtil.cpp.s
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/Particle/AMReX_ParticleUtil.cpp.s
 .PHONY : Particle/AMReX_ParticleUtil.cpp.s
 
 Particle/AMReX_TracerParticles.o: Particle/AMReX_TracerParticles.cpp.o
@@ -4068,7 +3852,7 @@ Particle/AMReX_TracerParticles.o: Particle/AMReX_TracerParticles.cpp.o
 
 # target to build an object file
 Particle/AMReX_TracerParticles.cpp.o:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/Particle/AMReX_TracerParticles.cpp.o
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/Particle/AMReX_TracerParticles.cpp.o
 .PHONY : Particle/AMReX_TracerParticles.cpp.o
 
 Particle/AMReX_TracerParticles.i: Particle/AMReX_TracerParticles.cpp.i
@@ -4076,7 +3860,7 @@ Particle/AMReX_TracerParticles.i: Particle/AMReX_TracerParticles.cpp.i
 
 # target to preprocess a source file
 Particle/AMReX_TracerParticles.cpp.i:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/Particle/AMReX_TracerParticles.cpp.i
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/Particle/AMReX_TracerParticles.cpp.i
 .PHONY : Particle/AMReX_TracerParticles.cpp.i
 
 Particle/AMReX_TracerParticles.s: Particle/AMReX_TracerParticles.cpp.s
@@ -4084,7 +3868,7 @@ Particle/AMReX_TracerParticles.s: Particle/AMReX_TracerParticles.cpp.s
 
 # target to generate assembly for a file
 Particle/AMReX_TracerParticles.cpp.s:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/Particle/AMReX_TracerParticles.cpp.s
+	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/Particle/AMReX_TracerParticles.cpp.s
 .PHONY : Particle/AMReX_TracerParticles.cpp.s
 
 # Help Target
@@ -4099,7 +3883,7 @@ help:
 	@echo "... install/strip"
 	@echo "... list_install_components"
 	@echo "... rebuild_cache"
-	@echo "... amrex_3d"
+	@echo "... amrex"
 	@echo "... Amr/AMReX_Amr.o"
 	@echo "... Amr/AMReX_Amr.i"
 	@echo "... Amr/AMReX_Amr.s"
@@ -4127,9 +3911,6 @@ help:
 	@echo "... AmrCore/AMReX_AmrMesh.o"
 	@echo "... AmrCore/AMReX_AmrMesh.i"
 	@echo "... AmrCore/AMReX_AmrMesh.s"
-	@echo "... AmrCore/AMReX_AmrMeshGridding.o"
-	@echo "... AmrCore/AMReX_AmrMeshGridding.i"
-	@echo "... AmrCore/AMReX_AmrMeshGridding.s"
 	@echo "... AmrCore/AMReX_Cluster.o"
 	@echo "... AmrCore/AMReX_Cluster.i"
 	@echo "... AmrCore/AMReX_Cluster.s"
@@ -4184,6 +3965,9 @@ help:
 	@echo "... Base/AMReX_BaseFab.o"
 	@echo "... Base/AMReX_BaseFab.i"
 	@echo "... Base/AMReX_BaseFab.s"
+	@echo "... Base/AMReX_BlockMutex.o"
+	@echo "... Base/AMReX_BlockMutex.i"
+	@echo "... Base/AMReX_BlockMutex.s"
 	@echo "... Base/AMReX_Box.o"
 	@echo "... Base/AMReX_Box.i"
 	@echo "... Base/AMReX_Box.s"
@@ -4193,6 +3977,9 @@ help:
 	@echo "... Base/AMReX_BoxDomain.o"
 	@echo "... Base/AMReX_BoxDomain.i"
 	@echo "... Base/AMReX_BoxDomain.s"
+	@echo "... Base/AMReX_BoxIterator.o"
+	@echo "... Base/AMReX_BoxIterator.i"
+	@echo "... Base/AMReX_BoxIterator.s"
 	@echo "... Base/AMReX_BoxList.o"
 	@echo "... Base/AMReX_BoxList.i"
 	@echo "... Base/AMReX_BoxList.s"
@@ -4202,9 +3989,6 @@ help:
 	@echo "... Base/AMReX_CoordSys.o"
 	@echo "... Base/AMReX_CoordSys.i"
 	@echo "... Base/AMReX_CoordSys.s"
-	@echo "... Base/AMReX_CrtReport.o"
-	@echo "... Base/AMReX_CrtReport.i"
-	@echo "... Base/AMReX_CrtReport.s"
 	@echo "... Base/AMReX_DistributionMapping.o"
 	@echo "... Base/AMReX_DistributionMapping.i"
 	@echo "... Base/AMReX_DistributionMapping.s"
@@ -4262,15 +4046,15 @@ help:
 	@echo "... Base/AMReX_IntConv.o"
 	@echo "... Base/AMReX_IntConv.i"
 	@echo "... Base/AMReX_IntConv.s"
+	@echo "... Base/AMReX_IntVect.o"
+	@echo "... Base/AMReX_IntVect.i"
+	@echo "... Base/AMReX_IntVect.s"
 	@echo "... Base/AMReX_MFCopyDescriptor.o"
 	@echo "... Base/AMReX_MFCopyDescriptor.i"
 	@echo "... Base/AMReX_MFCopyDescriptor.s"
 	@echo "... Base/AMReX_MFIter.o"
 	@echo "... Base/AMReX_MFIter.i"
 	@echo "... Base/AMReX_MFIter.s"
-	@echo "... Base/AMReX_MPMD.o"
-	@echo "... Base/AMReX_MPMD.i"
-	@echo "... Base/AMReX_MPMD.s"
 	@echo "... Base/AMReX_Machine.o"
 	@echo "... Base/AMReX_Machine.i"
 	@echo "... Base/AMReX_Machine.s"
@@ -4289,18 +4073,12 @@ help:
 	@echo "... Base/AMReX_NonLocalBC.o"
 	@echo "... Base/AMReX_NonLocalBC.i"
 	@echo "... Base/AMReX_NonLocalBC.s"
-	@echo "... Base/AMReX_OpenMP.o"
-	@echo "... Base/AMReX_OpenMP.i"
-	@echo "... Base/AMReX_OpenMP.s"
 	@echo "... Base/AMReX_Orientation.o"
 	@echo "... Base/AMReX_Orientation.i"
 	@echo "... Base/AMReX_Orientation.s"
 	@echo "... Base/AMReX_PArena.o"
 	@echo "... Base/AMReX_PArena.i"
 	@echo "... Base/AMReX_PArena.s"
-	@echo "... Base/AMReX_PODVector.o"
-	@echo "... Base/AMReX_PODVector.i"
-	@echo "... Base/AMReX_PODVector.s"
 	@echo "... Base/AMReX_ParallelContext.o"
 	@echo "... Base/AMReX_ParallelContext.i"
 	@echo "... Base/AMReX_ParallelContext.s"
@@ -4328,12 +4106,9 @@ help:
 	@echo "... Base/AMReX_RealBox.o"
 	@echo "... Base/AMReX_RealBox.i"
 	@echo "... Base/AMReX_RealBox.s"
-	@echo "... Base/AMReX_SArena.o"
-	@echo "... Base/AMReX_SArena.i"
-	@echo "... Base/AMReX_SArena.s"
-	@echo "... Base/AMReX_String.o"
-	@echo "... Base/AMReX_String.i"
-	@echo "... Base/AMReX_String.s"
+	@echo "... Base/AMReX_RealVect.o"
+	@echo "... Base/AMReX_RealVect.i"
+	@echo "... Base/AMReX_RealVect.s"
 	@echo "... Base/AMReX_Utility.o"
 	@echo "... Base/AMReX_Utility.i"
 	@echo "... Base/AMReX_Utility.s"
@@ -4388,18 +4163,33 @@ help:
 	@echo "... Base/Parser/amrex_parser.tab.o"
 	@echo "... Base/Parser/amrex_parser.tab.i"
 	@echo "... Base/Parser/amrex_parser.tab.s"
-	@echo "... Boundary/AMReX_EdgeFluxRegister.o"
-	@echo "... Boundary/AMReX_EdgeFluxRegister.i"
-	@echo "... Boundary/AMReX_EdgeFluxRegister.s"
+	@echo "... Boundary/AMReX_BndryData.o"
+	@echo "... Boundary/AMReX_BndryData.i"
+	@echo "... Boundary/AMReX_BndryData.s"
+	@echo "... Boundary/AMReX_BndryRegister.o"
+	@echo "... Boundary/AMReX_BndryRegister.i"
+	@echo "... Boundary/AMReX_BndryRegister.s"
+	@echo "... Boundary/AMReX_FabSet.o"
+	@echo "... Boundary/AMReX_FabSet.i"
+	@echo "... Boundary/AMReX_FabSet.s"
+	@echo "... Boundary/AMReX_InterpBndryData.o"
+	@echo "... Boundary/AMReX_InterpBndryData.i"
+	@echo "... Boundary/AMReX_InterpBndryData.s"
 	@echo "... Boundary/AMReX_LO_BCTYPES.o"
 	@echo "... Boundary/AMReX_LO_BCTYPES.i"
 	@echo "... Boundary/AMReX_LO_BCTYPES.s"
+	@echo "... Boundary/AMReX_MacBndry.o"
+	@echo "... Boundary/AMReX_MacBndry.i"
+	@echo "... Boundary/AMReX_MacBndry.s"
 	@echo "... Boundary/AMReX_Mask.o"
 	@echo "... Boundary/AMReX_Mask.i"
 	@echo "... Boundary/AMReX_Mask.s"
 	@echo "... Boundary/AMReX_MultiMask.o"
 	@echo "... Boundary/AMReX_MultiMask.i"
 	@echo "... Boundary/AMReX_MultiMask.s"
+	@echo "... Boundary/AMReX_YAFluxRegister.o"
+	@echo "... Boundary/AMReX_YAFluxRegister.i"
+	@echo "... Boundary/AMReX_YAFluxRegister.s"
 	@echo "... EB/AMReX_EB2.o"
 	@echo "... EB/AMReX_EB2.i"
 	@echo "... EB/AMReX_EB2.s"
@@ -4409,18 +4199,12 @@ help:
 	@echo "... EB/AMReX_EB2_IndexSpace_STL.o"
 	@echo "... EB/AMReX_EB2_IndexSpace_STL.i"
 	@echo "... EB/AMReX_EB2_IndexSpace_STL.s"
-	@echo "... EB/AMReX_EB2_IndexSpace_chkpt_file.o"
-	@echo "... EB/AMReX_EB2_IndexSpace_chkpt_file.i"
-	@echo "... EB/AMReX_EB2_IndexSpace_chkpt_file.s"
 	@echo "... EB/AMReX_EB2_Level.o"
 	@echo "... EB/AMReX_EB2_Level.i"
 	@echo "... EB/AMReX_EB2_Level.s"
 	@echo "... EB/AMReX_EB2_Level_STL.o"
 	@echo "... EB/AMReX_EB2_Level_STL.i"
 	@echo "... EB/AMReX_EB2_Level_STL.s"
-	@echo "... EB/AMReX_EB2_Level_chkpt_file.o"
-	@echo "... EB/AMReX_EB2_Level_chkpt_file.i"
-	@echo "... EB/AMReX_EB2_Level_chkpt_file.s"
 	@echo "... EB/AMReX_EB2_MultiGFab.o"
 	@echo "... EB/AMReX_EB2_MultiGFab.i"
 	@echo "... EB/AMReX_EB2_MultiGFab.s"
@@ -4457,36 +4241,12 @@ help:
 	@echo "... EB/AMReX_EBToPVD.o"
 	@echo "... EB/AMReX_EBToPVD.i"
 	@echo "... EB/AMReX_EBToPVD.s"
-	@echo "... EB/AMReX_EB_FluxRedistribute.o"
-	@echo "... EB/AMReX_EB_FluxRedistribute.i"
-	@echo "... EB/AMReX_EB_FluxRedistribute.s"
-	@echo "... EB/AMReX_EB_Redistribution.o"
-	@echo "... EB/AMReX_EB_Redistribution.i"
-	@echo "... EB/AMReX_EB_Redistribution.s"
-	@echo "... EB/AMReX_EB_RedistributionApply.o"
-	@echo "... EB/AMReX_EB_RedistributionApply.i"
-	@echo "... EB/AMReX_EB_RedistributionApply.s"
 	@echo "... EB/AMReX_EB_STL_utils.o"
 	@echo "... EB/AMReX_EB_STL_utils.i"
 	@echo "... EB/AMReX_EB_STL_utils.s"
-	@echo "... EB/AMReX_EB_StateRedistItracker.o"
-	@echo "... EB/AMReX_EB_StateRedistItracker.i"
-	@echo "... EB/AMReX_EB_StateRedistItracker.s"
-	@echo "... EB/AMReX_EB_StateRedistUtils.o"
-	@echo "... EB/AMReX_EB_StateRedistUtils.i"
-	@echo "... EB/AMReX_EB_StateRedistUtils.s"
-	@echo "... EB/AMReX_EB_StateRedistribute.o"
-	@echo "... EB/AMReX_EB_StateRedistribute.i"
-	@echo "... EB/AMReX_EB_StateRedistribute.s"
-	@echo "... EB/AMReX_EB_chkpt_file.o"
-	@echo "... EB/AMReX_EB_chkpt_file.i"
-	@echo "... EB/AMReX_EB_chkpt_file.s"
 	@echo "... EB/AMReX_EB_utils.o"
 	@echo "... EB/AMReX_EB_utils.i"
 	@echo "... EB/AMReX_EB_utils.s"
-	@echo "... EB/AMReX_MarchingCubes.o"
-	@echo "... EB/AMReX_MarchingCubes.i"
-	@echo "... EB/AMReX_MarchingCubes.s"
 	@echo "... EB/AMReX_MultiCutFab.o"
 	@echo "... EB/AMReX_MultiCutFab.i"
 	@echo "... EB/AMReX_MultiCutFab.s"
@@ -4499,18 +4259,21 @@ help:
 	@echo "... EB/AMReX_distFcnElement.o"
 	@echo "... EB/AMReX_distFcnElement.i"
 	@echo "... EB/AMReX_distFcnElement.s"
-	@echo "... LinearSolvers/AMReX_AlgPartition.o"
-	@echo "... LinearSolvers/AMReX_AlgPartition.i"
-	@echo "... LinearSolvers/AMReX_AlgPartition.s"
-	@echo "... LinearSolvers/AMReX_CrossProj.o"
-	@echo "... LinearSolvers/AMReX_CrossProj.i"
-	@echo "... LinearSolvers/AMReX_CrossProj.s"
-	@echo "... LinearSolvers/MLMG/AMReX_MLAlgMG.o"
-	@echo "... LinearSolvers/MLMG/AMReX_MLAlgMG.i"
-	@echo "... LinearSolvers/MLMG/AMReX_MLAlgMG.s"
-	@echo "... LinearSolvers/MLMG/AMReX_MLCurlCurl.o"
-	@echo "... LinearSolvers/MLMG/AMReX_MLCurlCurl.i"
-	@echo "... LinearSolvers/MLMG/AMReX_MLCurlCurl.s"
+	@echo "... LinearSolvers/MLMG/AMReX_MLABecLaplacian.o"
+	@echo "... LinearSolvers/MLMG/AMReX_MLABecLaplacian.i"
+	@echo "... LinearSolvers/MLMG/AMReX_MLABecLaplacian.s"
+	@echo "... LinearSolvers/MLMG/AMReX_MLALaplacian.o"
+	@echo "... LinearSolvers/MLMG/AMReX_MLALaplacian.i"
+	@echo "... LinearSolvers/MLMG/AMReX_MLALaplacian.s"
+	@echo "... LinearSolvers/MLMG/AMReX_MLCGSolver.o"
+	@echo "... LinearSolvers/MLMG/AMReX_MLCGSolver.i"
+	@echo "... LinearSolvers/MLMG/AMReX_MLCGSolver.s"
+	@echo "... LinearSolvers/MLMG/AMReX_MLCellABecLap.o"
+	@echo "... LinearSolvers/MLMG/AMReX_MLCellABecLap.i"
+	@echo "... LinearSolvers/MLMG/AMReX_MLCellABecLap.s"
+	@echo "... LinearSolvers/MLMG/AMReX_MLCellLinOp.o"
+	@echo "... LinearSolvers/MLMG/AMReX_MLCellLinOp.i"
+	@echo "... LinearSolvers/MLMG/AMReX_MLCellLinOp.s"
 	@echo "... LinearSolvers/MLMG/AMReX_MLEBABecLap.o"
 	@echo "... LinearSolvers/MLMG/AMReX_MLEBABecLap.i"
 	@echo "... LinearSolvers/MLMG/AMReX_MLEBABecLap.s"
@@ -4526,21 +4289,21 @@ help:
 	@echo "... LinearSolvers/MLMG/AMReX_MLEBTensorOp_bc.o"
 	@echo "... LinearSolvers/MLMG/AMReX_MLEBTensorOp_bc.i"
 	@echo "... LinearSolvers/MLMG/AMReX_MLEBTensorOp_bc.s"
+	@echo "... LinearSolvers/MLMG/AMReX_MLLinOp.o"
+	@echo "... LinearSolvers/MLMG/AMReX_MLLinOp.i"
+	@echo "... LinearSolvers/MLMG/AMReX_MLLinOp.s"
 	@echo "... LinearSolvers/MLMG/AMReX_MLMG.o"
 	@echo "... LinearSolvers/MLMG/AMReX_MLMG.i"
 	@echo "... LinearSolvers/MLMG/AMReX_MLMG.s"
-	@echo "... LinearSolvers/MLMG/AMReX_MLNodeABecLaplacian.o"
-	@echo "... LinearSolvers/MLMG/AMReX_MLNodeABecLaplacian.i"
-	@echo "... LinearSolvers/MLMG/AMReX_MLNodeABecLaplacian.s"
+	@echo "... LinearSolvers/MLMG/AMReX_MLMGBndry.o"
+	@echo "... LinearSolvers/MLMG/AMReX_MLMGBndry.i"
+	@echo "... LinearSolvers/MLMG/AMReX_MLMGBndry.s"
 	@echo "... LinearSolvers/MLMG/AMReX_MLNodeLaplacian.o"
 	@echo "... LinearSolvers/MLMG/AMReX_MLNodeLaplacian.i"
 	@echo "... LinearSolvers/MLMG/AMReX_MLNodeLaplacian.s"
 	@echo "... LinearSolvers/MLMG/AMReX_MLNodeLaplacian_eb.o"
 	@echo "... LinearSolvers/MLMG/AMReX_MLNodeLaplacian_eb.i"
 	@echo "... LinearSolvers/MLMG/AMReX_MLNodeLaplacian_eb.s"
-	@echo "... LinearSolvers/MLMG/AMReX_MLNodeLaplacian_matrix.o"
-	@echo "... LinearSolvers/MLMG/AMReX_MLNodeLaplacian_matrix.i"
-	@echo "... LinearSolvers/MLMG/AMReX_MLNodeLaplacian_matrix.s"
 	@echo "... LinearSolvers/MLMG/AMReX_MLNodeLaplacian_misc.o"
 	@echo "... LinearSolvers/MLMG/AMReX_MLNodeLaplacian_misc.i"
 	@echo "... LinearSolvers/MLMG/AMReX_MLNodeLaplacian_misc.s"
@@ -4556,18 +4319,15 @@ help:
 	@echo "... LinearSolvers/MLMG/AMReX_MLNodeTensorLaplacian.o"
 	@echo "... LinearSolvers/MLMG/AMReX_MLNodeTensorLaplacian.i"
 	@echo "... LinearSolvers/MLMG/AMReX_MLNodeTensorLaplacian.s"
+	@echo "... LinearSolvers/MLMG/AMReX_MLPoisson.o"
+	@echo "... LinearSolvers/MLMG/AMReX_MLPoisson.i"
+	@echo "... LinearSolvers/MLMG/AMReX_MLPoisson.s"
 	@echo "... LinearSolvers/MLMG/AMReX_MLTensorOp.o"
 	@echo "... LinearSolvers/MLMG/AMReX_MLTensorOp.i"
 	@echo "... LinearSolvers/MLMG/AMReX_MLTensorOp.s"
 	@echo "... LinearSolvers/MLMG/AMReX_MLTensorOp_grad.o"
 	@echo "... LinearSolvers/MLMG/AMReX_MLTensorOp_grad.i"
 	@echo "... LinearSolvers/MLMG/AMReX_MLTensorOp_grad.s"
-	@echo "... LinearSolvers/MLMG/AMReX_MLTerrainPoisson.o"
-	@echo "... LinearSolvers/MLMG/AMReX_MLTerrainPoisson.i"
-	@echo "... LinearSolvers/MLMG/AMReX_MLTerrainPoisson.s"
-	@echo "... LinearSolvers/OpenBC/AMReX_OpenBC.o"
-	@echo "... LinearSolvers/OpenBC/AMReX_OpenBC.i"
-	@echo "... LinearSolvers/OpenBC/AMReX_OpenBC.s"
 	@echo "... Particle/AMReX_ParticleBufferMap.o"
 	@echo "... Particle/AMReX_ParticleBufferMap.i"
 	@echo "... Particle/AMReX_ParticleBufferMap.s"
@@ -4577,9 +4337,6 @@ help:
 	@echo "... Particle/AMReX_ParticleContainerBase.o"
 	@echo "... Particle/AMReX_ParticleContainerBase.i"
 	@echo "... Particle/AMReX_ParticleContainerBase.s"
-	@echo "... Particle/AMReX_ParticleHeader.o"
-	@echo "... Particle/AMReX_ParticleHeader.i"
-	@echo "... Particle/AMReX_ParticleHeader.s"
 	@echo "... Particle/AMReX_ParticleMPIUtil.o"
 	@echo "... Particle/AMReX_ParticleMPIUtil.i"
 	@echo "... Particle/AMReX_ParticleMPIUtil.s"

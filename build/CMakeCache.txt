@@ -27,9 +27,6 @@ AMReX-PlotfileTools_IS_TOP_LEVEL:STATIC=OFF
 //Value Computed by CMake
 AMReX-PlotfileTools_SOURCE_DIR:STATIC=/Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/subprojects/amrex/Tools/Plotfile
 
-//Build data services
-AMReX_AMRDATA:BOOL=OFF
-
 //Build AmrLevel class
 AMReX_AMRLEVEL:BOOL=ON
 
@@ -60,6 +57,9 @@ AMReX_DIFFERENT_COMPILER:BOOL=OFF
 
 //The directory containing a CMake configuration file for AMReX.
 AMReX_DIR:PATH=AMReX_DIR-NOTFOUND
+
+//Build with Embedded Boundary support
+AMReX_EB:BOOL=ON
 
 //Enable CTest suite for AMReX
 AMReX_ENABLE_TESTS:BOOL=OFF
@@ -193,6 +193,9 @@ BMX_USE_LIBSBML:BOOL=OFF
 
 //Enable optional OR-Tools support for FBA
 BMX_USE_ORTOOLS:BOOL=OFF
+
+//Build AMReX shared library
+BUILD_SHARED_LIBS:BOOL=OFF
 
 //Path to a program.
 CCACHE_FOUND:FILEPATH=CCACHE_FOUND-NOTFOUND
@@ -460,6 +463,30 @@ MPI_CXX_LINK_FLAGS:STRING=
 //If true, the MPI-2 C++ bindings are disabled using definitions.
 MPI_CXX_SKIP_MPICXX:BOOL=OFF
 
+//MPI C additional include directories
+MPI_C_ADDITIONAL_INCLUDE_DIRS:STRING=
+
+//MPI compiler for C
+MPI_C_COMPILER:FILEPATH=/opt/homebrew/bin/mpicc
+
+//MPI C compiler wrapper include directories
+MPI_C_COMPILER_INCLUDE_DIRS:STRING=/opt/homebrew/Cellar/open-mpi/5.0.8/include
+
+//MPI C compilation definitions
+MPI_C_COMPILE_DEFINITIONS:STRING=
+
+//MPI C compilation options
+MPI_C_COMPILE_OPTIONS:STRING=
+
+//Path to a file.
+MPI_C_HEADER_DIR:PATH=/opt/homebrew/Cellar/open-mpi/5.0.8/include
+
+//MPI C libraries to link against
+MPI_C_LIB_NAMES:STRING=mpi
+
+//MPI C linker flags
+MPI_C_LINK_FLAGS:STRING=
+
 //Location of the mpi library for MPI
 MPI_mpi_LIBRARY:FILEPATH=/opt/homebrew/Cellar/open-mpi/5.0.8/lib/libmpi.dylib
 
@@ -488,21 +515,25 @@ AMREX_BUILDINFO_IFILE:INTERNAL=/Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/
 AMREX_CMAKE_MODULES_PATH:INTERNAL=/Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/subprojects/amrex/Tools/CMake
 //Path to AMReX' C_scripts dir
 AMREX_C_SCRIPTS_DIR:INTERNAL=/Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/subprojects/amrex/Tools/C_scripts
-AMREX_GIT_VERSION:INTERNAL=26.10
+AMREX_GIT_VERSION:INTERNAL=22.07
 //Minimum required AMReX version
 AMREX_MINIMUM_VERSION:INTERNAL=20.12.1
-AMREX_PKG_VERSION:INTERNAL=26.10
-AMREX_RELEASE_NUMBER:INTERNAL=261000
+AMREX_PKG_VERSION:INTERNAL=22.07
+AMREX_RELEASE_NUMBER:INTERNAL=220700
 //Path to AMReX source (submodule)
 AMREX_SRC_DIR:INTERNAL=/Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/subprojects/amrex
 //Top level AMReX directory
 AMREX_TOP_DIR:INTERNAL=/Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/subprojects/amrex
+//Build data services
+AMReX_AMRDATA:INTERNAL=OFF
 //STRINGS property for variable: AMReX_GPU_BACKEND
 AMReX_GPU_BACKEND-STRINGS:INTERNAL=NONE;SYCL;CUDA;HIP
 //STRINGS property for variable: AMReX_PARTICLES_PRECISION
 AMReX_PARTICLES_PRECISION-STRINGS:INTERNAL=SINGLE;DOUBLE
 //STRINGS property for variable: AMReX_PRECISION
 AMReX_PRECISION-STRINGS:INTERNAL=SINGLE;DOUBLE
+//STRINGS property for variable: AMReX_SPACEDIM
+AMReX_SPACEDIM-STRINGS:INTERNAL=1;2;3
 //STRINGS property for variable: AMReX_TEST_TYPE
 AMReX_TEST_TYPE-STRINGS:INTERNAL=All;Small
 //STRINGS property for variable: AMReX_TP_PROFILE
@@ -656,7 +687,9 @@ FEXTRACT:INTERNAL=/Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build/subproj
 //Details about finding Git
 FIND_PACKAGE_MESSAGE_DETAILS_Git:INTERNAL=[/usr/bin/git][v2.50.1 (Apple Git-155)()]
 //Details about finding MPI
-FIND_PACKAGE_MESSAGE_DETAILS_MPI:INTERNAL=[TRUE][found components: CXX ][v3.1()]
+FIND_PACKAGE_MESSAGE_DETAILS_MPI:INTERNAL=[TRUE][TRUE][found components: C CXX ][v3.1()]
+//Details about finding MPI_C
+FIND_PACKAGE_MESSAGE_DETAILS_MPI_C:INTERNAL=[/opt/homebrew/Cellar/open-mpi/5.0.8/lib/libmpi.dylib][mpi][/opt/homebrew/Cellar/open-mpi/5.0.8/include][TRUE][v3.1()]
 //Details about finding MPI_CXX
 FIND_PACKAGE_MESSAGE_DETAILS_MPI_CXX:INTERNAL=[/opt/homebrew/Cellar/open-mpi/5.0.8/lib/libmpi.dylib][mpi][/opt/homebrew/Cellar/open-mpi/5.0.8/include][TRUE][v3.1()]
 //Details about finding Threads
@@ -694,10 +727,28 @@ MPI_CXX_LIB_NAMES-ADVANCED:INTERNAL=1
 MPI_CXX_LINK_FLAGS-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: MPI_CXX_SKIP_MPICXX
 MPI_CXX_SKIP_MPICXX-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: MPI_C_ADDITIONAL_INCLUDE_DIRS
+MPI_C_ADDITIONAL_INCLUDE_DIRS-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: MPI_C_COMPILER
+MPI_C_COMPILER-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: MPI_C_COMPILER_INCLUDE_DIRS
+MPI_C_COMPILER_INCLUDE_DIRS-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: MPI_C_COMPILE_DEFINITIONS
+MPI_C_COMPILE_DEFINITIONS-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: MPI_C_COMPILE_OPTIONS
+MPI_C_COMPILE_OPTIONS-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: MPI_C_HEADER_DIR
+MPI_C_HEADER_DIR-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: MPI_C_LIB_NAMES
+MPI_C_LIB_NAMES-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: MPI_C_LINK_FLAGS
+MPI_C_LINK_FLAGS-ADVANCED:INTERNAL=1
 //Result of TRY_COMPILE
 MPI_RESULT_CXX_test_mpi_MPICXX:INTERNAL=TRUE
 //Result of TRY_COMPILE
 MPI_RESULT_CXX_test_mpi_normal:INTERNAL=TRUE
+//Result of TRY_COMPILE
+MPI_RESULT_C_test_mpi_normal:INTERNAL=TRUE
 //ADVANCED property for variable: MPI_mpi_LIBRARY
 MPI_mpi_LIBRARY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: PKG_CONFIG_ARGN

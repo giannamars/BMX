@@ -14,7 +14,7 @@ const char* buildInfoGetBuildDir() {
 
 const char* buildInfoGetBuildMachine() {
 
-  static const char BUILD_MACHINE[] = "macOS GLMarschmann-M29.local.vpn-dhcp.lbl.gov 26.3.1 25D771280a arm64";
+  static const char BUILD_MACHINE[] = "macOS GLMarschmann-M29.local 26.3.1 25D771280a arm64";
   return BUILD_MACHINE;
 }
 
@@ -64,7 +64,7 @@ const char* buildInfoGetFName() {
 
 const char* buildInfoGetCXXFlags() {
 
-  static const char CXX_flags[] = "-DAMREX_SPACEDIM=3 -I/Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/src -I/Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/src/interpolation -I/Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/src/deposition -I/Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/src/des -I/Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/src/diffusion -I/Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/src/leveldata -I/Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/src/setup -I/Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/src/util -I/Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/src/mods -I/Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/src/timestepping -I/Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/src/chemistry -I/Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/subprojects/amrex/Src/Base -I/Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/subprojects/amrex/Src/Base/Parser -I/Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/subprojects/amrex/Src/Boundary -I/Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/subprojects/amrex/Src/AmrCore -I/Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/subprojects/amrex/Src/Amr -I/Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/subprojects/amrex/Src/EB -I/Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/subprojects/amrex/Src/LinearSolvers -I/Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/subprojects/amrex/Src/LinearSolvers/MLMG -I/Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/subprojects/amrex/Src/LinearSolvers/OpenBC -I/Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/subprojects/amrex/Src/Particle -I/Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build/subprojects/amrex -O3 -DNDEBUG  -fno-math-errno";
+  static const char CXX_flags[] = "-I/Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/src -I/Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/src/interpolation -I/Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/src/deposition -I/Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/src/des -I/Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/src/diffusion -I/Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/src/leveldata -I/Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/src/setup -I/Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/src/util -I/Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/src/mods -I/Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/src/timestepping -I/Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/src/chemistry -I/Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/subprojects/amrex/Src/Base -I/Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/subprojects/amrex/Src/Base/Parser -I/Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/subprojects/amrex/Src/Boundary -I/Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/subprojects/amrex/Src/AmrCore -I/Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/subprojects/amrex/Src/Amr -I/Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/subprojects/amrex/Src/EB -I/Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/subprojects/amrex/Src/LinearSolvers/MLMG -I/Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/subprojects/amrex/Src/Particle -I/Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build/subprojects/amrex -O3 -DNDEBUG  -Wno-pass-failed";
   return CXX_flags;
 }
 
@@ -82,7 +82,7 @@ const char* buildInfoGetLinkFlags() {
 
 const char* buildInfoGetLibraries() {
 
-  static const char libraries[] = "Threads::Threads MPI::MPI_CXX";
+  static const char libraries[] = "Threads::Threads MPI::MPI_C MPI::MPI_CXX";
   return libraries;
 }
 
@@ -100,8 +100,8 @@ const char* buildInfoGetAux(int i) {
 }
 
 int buildInfoGetNumModules() {
-  // int const num_modules = X;
-  int const num_modules = 0;
+  // int num_modules = X;
+  int num_modules = 0;
   return num_modules;
 }
 
@@ -134,8 +134,8 @@ const char* buildInfoGetModuleVal(int i) {
 const char* buildInfoGetGitHash(int i) {
 
   //static const char HASH1[] = "${GIT[1]}";
-  static const char HASH1[] = "d373eacdd559-dirty";
-  static const char HASH2[] = "26.10";
+  static const char HASH1[] = "31ca33a75570-dirty";
+  static const char HASH2[] = "22.07";
   static const char EMPT[] = "";
 
   switch(i)

@@ -1,8 +1,8 @@
 file(REMOVE_RECURSE
   "CMakeFiles/fvarnames.dir/fvarnames.cpp.o"
   "CMakeFiles/fvarnames.dir/fvarnames.cpp.o.d"
-  "amrex_fvarnames"
-  "amrex_fvarnames.pdb"
+  "fvarnames"
+  "fvarnames.pdb"
 )
 
 # Per-language clean rules from dependency scanning.

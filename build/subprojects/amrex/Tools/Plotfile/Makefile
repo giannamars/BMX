@@ -190,20 +190,6 @@ fcompare/fast:
 .PHONY : fcompare/fast
 
 # Convenience name for target.
-subprojects/amrex/Tools/Plotfile/CMakeFiles/fconvert.dir/rule:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 subprojects/amrex/Tools/Plotfile/CMakeFiles/fconvert.dir/rule
-.PHONY : subprojects/amrex/Tools/Plotfile/CMakeFiles/fconvert.dir/rule
-
-# Convenience name for target.
-fconvert: subprojects/amrex/Tools/Plotfile/CMakeFiles/fconvert.dir/rule
-.PHONY : fconvert
-
-# fast build rule for target.
-fconvert/fast:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Tools/Plotfile/CMakeFiles/fconvert.dir/build.make subprojects/amrex/Tools/Plotfile/CMakeFiles/fconvert.dir/build
-.PHONY : fconvert/fast
-
-# Convenience name for target.
 subprojects/amrex/Tools/Plotfile/CMakeFiles/fextract.dir/rule:
 	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 subprojects/amrex/Tools/Plotfile/CMakeFiles/fextract.dir/rule
 .PHONY : subprojects/amrex/Tools/Plotfile/CMakeFiles/fextract.dir/rule
@@ -230,20 +216,6 @@ fextrema: subprojects/amrex/Tools/Plotfile/CMakeFiles/fextrema.dir/rule
 fextrema/fast:
 	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Tools/Plotfile/CMakeFiles/fextrema.dir/build.make subprojects/amrex/Tools/Plotfile/CMakeFiles/fextrema.dir/build
 .PHONY : fextrema/fast
-
-# Convenience name for target.
-subprojects/amrex/Tools/Plotfile/CMakeFiles/fgradient.dir/rule:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 subprojects/amrex/Tools/Plotfile/CMakeFiles/fgradient.dir/rule
-.PHONY : subprojects/amrex/Tools/Plotfile/CMakeFiles/fgradient.dir/rule
-
-# Convenience name for target.
-fgradient: subprojects/amrex/Tools/Plotfile/CMakeFiles/fgradient.dir/rule
-.PHONY : fgradient
-
-# fast build rule for target.
-fgradient/fast:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Tools/Plotfile/CMakeFiles/fgradient.dir/build.make subprojects/amrex/Tools/Plotfile/CMakeFiles/fgradient.dir/build
-.PHONY : fgradient/fast
 
 # Convenience name for target.
 subprojects/amrex/Tools/Plotfile/CMakeFiles/fnan.dir/rule:
@@ -387,30 +359,6 @@ fcompare.cpp.s:
 	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Tools/Plotfile/CMakeFiles/fcompare.dir/build.make subprojects/amrex/Tools/Plotfile/CMakeFiles/fcompare.dir/fcompare.cpp.s
 .PHONY : fcompare.cpp.s
 
-fconvert.o: fconvert.cpp.o
-.PHONY : fconvert.o
-
-# target to build an object file
-fconvert.cpp.o:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Tools/Plotfile/CMakeFiles/fconvert.dir/build.make subprojects/amrex/Tools/Plotfile/CMakeFiles/fconvert.dir/fconvert.cpp.o
-.PHONY : fconvert.cpp.o
-
-fconvert.i: fconvert.cpp.i
-.PHONY : fconvert.i
-
-# target to preprocess a source file
-fconvert.cpp.i:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Tools/Plotfile/CMakeFiles/fconvert.dir/build.make subprojects/amrex/Tools/Plotfile/CMakeFiles/fconvert.dir/fconvert.cpp.i
-.PHONY : fconvert.cpp.i
-
-fconvert.s: fconvert.cpp.s
-.PHONY : fconvert.s
-
-# target to generate assembly for a file
-fconvert.cpp.s:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Tools/Plotfile/CMakeFiles/fconvert.dir/build.make subprojects/amrex/Tools/Plotfile/CMakeFiles/fconvert.dir/fconvert.cpp.s
-.PHONY : fconvert.cpp.s
-
 fextract.o: fextract.cpp.o
 .PHONY : fextract.o
 
@@ -458,30 +406,6 @@ fextrema.s: fextrema.cpp.s
 fextrema.cpp.s:
 	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Tools/Plotfile/CMakeFiles/fextrema.dir/build.make subprojects/amrex/Tools/Plotfile/CMakeFiles/fextrema.dir/fextrema.cpp.s
 .PHONY : fextrema.cpp.s
-
-fgradient.o: fgradient.cpp.o
-.PHONY : fgradient.o
-
-# target to build an object file
-fgradient.cpp.o:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Tools/Plotfile/CMakeFiles/fgradient.dir/build.make subprojects/amrex/Tools/Plotfile/CMakeFiles/fgradient.dir/fgradient.cpp.o
-.PHONY : fgradient.cpp.o
-
-fgradient.i: fgradient.cpp.i
-.PHONY : fgradient.i
-
-# target to preprocess a source file
-fgradient.cpp.i:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Tools/Plotfile/CMakeFiles/fgradient.dir/build.make subprojects/amrex/Tools/Plotfile/CMakeFiles/fgradient.dir/fgradient.cpp.i
-.PHONY : fgradient.cpp.i
-
-fgradient.s: fgradient.cpp.s
-.PHONY : fgradient.s
-
-# target to generate assembly for a file
-fgradient.cpp.s:
-	cd /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build && $(MAKE) $(MAKESILENT) -f subprojects/amrex/Tools/Plotfile/CMakeFiles/fgradient.dir/build.make subprojects/amrex/Tools/Plotfile/CMakeFiles/fgradient.dir/fgradient.cpp.s
-.PHONY : fgradient.cpp.s
 
 fnan.o: fnan.cpp.o
 .PHONY : fnan.o
@@ -617,10 +541,8 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... fboxinfo"
 	@echo "... fcompare"
-	@echo "... fconvert"
 	@echo "... fextract"
 	@echo "... fextrema"
-	@echo "... fgradient"
 	@echo "... fnan"
 	@echo "... fsnapshot"
 	@echo "... ftime"
@@ -635,18 +557,12 @@ help:
 	@echo "... fcompare.o"
 	@echo "... fcompare.i"
 	@echo "... fcompare.s"
-	@echo "... fconvert.o"
-	@echo "... fconvert.i"
-	@echo "... fconvert.s"
 	@echo "... fextract.o"
 	@echo "... fextract.i"
 	@echo "... fextract.s"
 	@echo "... fextrema.o"
 	@echo "... fextrema.i"
 	@echo "... fextrema.s"
-	@echo "... fgradient.o"
-	@echo "... fgradient.i"
-	@echo "... fgradient.s"
 	@echo "... fnan.o"
 	@echo "... fnan.i"
 	@echo "... fnan.s"

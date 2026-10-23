@@ -556,3 +556,114 @@ events:
         
       exitCode: 0
 ...
+
+---
+events:
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/FindMPI.cmake:1286 (try_compile)"
+      - "/opt/homebrew/share/cmake/Modules/FindMPI.cmake:1330 (_MPI_try_staged_settings)"
+      - "/opt/homebrew/share/cmake/Modules/FindMPI.cmake:1653 (_MPI_check_lang_works)"
+      - "subprojects/amrex/Tools/CMake/AMReXParallelBackends.cmake:21 (find_package)"
+      - "subprojects/amrex/Src/CMakeLists.txt:14 (include)"
+    description: "The MPI test test_mpi for C in mode normal"
+    directories:
+      source: "/Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build/CMakeFiles/CMakeScratch/TryCompile-7urmBZ"
+      binary: "/Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build/CMakeFiles/CMakeScratch/TryCompile-7urmBZ"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/subprojects/amrex/Tools/CMake"
+      CMAKE_OSX_ARCHITECTURES: ""
+      CMAKE_OSX_DEPLOYMENT_TARGET: ""
+      CMAKE_OSX_SYSROOT: ""
+      CMAKE_WARN_DEPRECATED: "OFF"
+    buildResult:
+      variable: "MPI_RESULT_C_test_mpi_normal"
+      cached: true
+      stdout: |
+        Change Dir: '/Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build/CMakeFiles/CMakeScratch/TryCompile-7urmBZ'
+        
+        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_69704/fast
+        /Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_69704.dir/build.make CMakeFiles/cmTC_69704.dir/build
+        Building C object CMakeFiles/cmTC_69704.dir/test_mpi.c.o
+        /usr/bin/cc  -isystem /opt/homebrew/Cellar/open-mpi/5.0.8/include  -MD -MT CMakeFiles/cmTC_69704.dir/test_mpi.c.o -MF CMakeFiles/cmTC_69704.dir/test_mpi.c.o.d -o CMakeFiles/cmTC_69704.dir/test_mpi.c.o -c /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build/CMakeFiles/CMakeScratch/TryCompile-7urmBZ/test_mpi.c
+        Linking C executable cmTC_69704
+        /opt/homebrew/bin/cmake -E cmake_link_script CMakeFiles/cmTC_69704.dir/link.txt --verbose=1
+        /usr/bin/cc -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_69704.dir/test_mpi.c.o -o cmTC_69704  /opt/homebrew/Cellar/open-mpi/5.0.8/lib/libmpi.dylib
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/FindMPI.cmake:1286 (try_compile)"
+      - "/opt/homebrew/share/cmake/Modules/FindMPI.cmake:1330 (_MPI_try_staged_settings)"
+      - "/opt/homebrew/share/cmake/Modules/FindMPI.cmake:1653 (_MPI_check_lang_works)"
+      - "subprojects/amrex/Tools/CMake/AMReXParallelBackends.cmake:21 (find_package)"
+      - "subprojects/amrex/Src/CMakeLists.txt:14 (include)"
+    description: "The MPI test test_mpi for CXX in mode normal"
+    directories:
+      source: "/Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build/CMakeFiles/CMakeScratch/TryCompile-OkoZDa"
+      binary: "/Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build/CMakeFiles/CMakeScratch/TryCompile-OkoZDa"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: " -w"
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/subprojects/amrex/Tools/CMake"
+      CMAKE_OSX_ARCHITECTURES: ""
+      CMAKE_OSX_DEPLOYMENT_TARGET: ""
+      CMAKE_OSX_SYSROOT: ""
+      CMAKE_WARN_DEPRECATED: "OFF"
+    buildResult:
+      variable: "MPI_RESULT_CXX_test_mpi_normal"
+      cached: true
+      stdout: |
+        Change Dir: '/Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build/CMakeFiles/CMakeScratch/TryCompile-OkoZDa'
+        
+        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_cd2e5/fast
+        /Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_cd2e5.dir/build.make CMakeFiles/cmTC_cd2e5.dir/build
+        Building CXX object CMakeFiles/cmTC_cd2e5.dir/test_mpi.cpp.o
+        /usr/bin/c++  -isystem /opt/homebrew/Cellar/open-mpi/5.0.8/include -w  -MD -MT CMakeFiles/cmTC_cd2e5.dir/test_mpi.cpp.o -MF CMakeFiles/cmTC_cd2e5.dir/test_mpi.cpp.o.d -o CMakeFiles/cmTC_cd2e5.dir/test_mpi.cpp.o -c /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build/CMakeFiles/CMakeScratch/TryCompile-OkoZDa/test_mpi.cpp
+        Linking CXX executable cmTC_cd2e5
+        /opt/homebrew/bin/cmake -E cmake_link_script CMakeFiles/cmTC_cd2e5.dir/link.txt --verbose=1
+        /usr/bin/c++  -w  -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_cd2e5.dir/test_mpi.cpp.o -o cmTC_cd2e5  /opt/homebrew/Cellar/open-mpi/5.0.8/lib/libmpi.dylib
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/FindMPI.cmake:1286 (try_compile)"
+      - "/opt/homebrew/share/cmake/Modules/FindMPI.cmake:1680 (_MPI_try_staged_settings)"
+      - "subprojects/amrex/Tools/CMake/AMReXParallelBackends.cmake:21 (find_package)"
+      - "subprojects/amrex/Src/CMakeLists.txt:14 (include)"
+    description: "The MPI test test_mpi for CXX in mode MPICXX"
+    directories:
+      source: "/Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build/CMakeFiles/CMakeScratch/TryCompile-e8vmd6"
+      binary: "/Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build/CMakeFiles/CMakeScratch/TryCompile-e8vmd6"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: " -w"
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/subprojects/amrex/Tools/CMake"
+      CMAKE_OSX_ARCHITECTURES: ""
+      CMAKE_OSX_DEPLOYMENT_TARGET: ""
+      CMAKE_OSX_SYSROOT: ""
+      CMAKE_WARN_DEPRECATED: "OFF"
+    buildResult:
+      variable: "MPI_RESULT_CXX_test_mpi_MPICXX"
+      cached: true
+      stdout: |
+        Change Dir: '/Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build/CMakeFiles/CMakeScratch/TryCompile-e8vmd6'
+        
+        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_2c00c/fast
+        /Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_2c00c.dir/build.make CMakeFiles/cmTC_2c00c.dir/build
+        Building CXX object CMakeFiles/cmTC_2c00c.dir/test_mpi.cpp.o
+        /usr/bin/c++  -isystem /opt/homebrew/Cellar/open-mpi/5.0.8/include -w  -MD -MT CMakeFiles/cmTC_2c00c.dir/test_mpi.cpp.o -MF CMakeFiles/cmTC_2c00c.dir/test_mpi.cpp.o.d -o CMakeFiles/cmTC_2c00c.dir/test_mpi.cpp.o -c /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build/CMakeFiles/CMakeScratch/TryCompile-e8vmd6/test_mpi.cpp
+        Linking CXX executable cmTC_2c00c
+        /opt/homebrew/bin/cmake -E cmake_link_script CMakeFiles/cmTC_2c00c.dir/link.txt --verbose=1
+        /usr/bin/c++  -w  -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_2c00c.dir/test_mpi.cpp.o -o cmTC_2c00c  /opt/homebrew/Cellar/open-mpi/5.0.8/lib/libmpi.dylib
+        
+      exitCode: 0
+...

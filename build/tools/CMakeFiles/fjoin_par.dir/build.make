@@ -95,7 +95,7 @@ fjoin_par_EXTERNAL_OBJECTS =
 
 tools/fjoin_par: tools/CMakeFiles/fjoin_par.dir/C++/fjoin_par.cpp.o
 tools/fjoin_par: tools/CMakeFiles/fjoin_par.dir/build.make
-tools/fjoin_par: subprojects/amrex/Src/libamrex_3d.a
+tools/fjoin_par: subprojects/amrex/Src/libamrex.a
 tools/fjoin_par: /opt/homebrew/Cellar/open-mpi/5.0.8/lib/libmpi.dylib
 tools/fjoin_par: tools/CMakeFiles/fjoin_par.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable fjoin_par"

@@ -574,7 +574,7 @@ subprojects/amrex/clean: subprojects/amrex/Tools/Plotfile/clean
 # Directory level rules for directory subprojects/amrex/Src
 
 # Recursive "all" directory target.
-subprojects/amrex/Src/all: subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/all
+subprojects/amrex/Src/all: subprojects/amrex/Src/CMakeFiles/amrex.dir/all
 subprojects/amrex/Src/all: subprojects/amrex/Src/Base/all
 subprojects/amrex/Src/all: subprojects/amrex/Src/Boundary/all
 subprojects/amrex/Src/all: subprojects/amrex/Src/AmrCore/all
@@ -585,7 +585,7 @@ subprojects/amrex/Src/all: subprojects/amrex/Src/Particle/all
 .PHONY : subprojects/amrex/Src/all
 
 # Recursive "codegen" directory target.
-subprojects/amrex/Src/codegen: subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/codegen
+subprojects/amrex/Src/codegen: subprojects/amrex/Src/CMakeFiles/amrex.dir/codegen
 subprojects/amrex/Src/codegen: subprojects/amrex/Src/Base/codegen
 subprojects/amrex/Src/codegen: subprojects/amrex/Src/Boundary/codegen
 subprojects/amrex/Src/codegen: subprojects/amrex/Src/AmrCore/codegen
@@ -606,7 +606,7 @@ subprojects/amrex/Src/preinstall: subprojects/amrex/Src/Particle/preinstall
 .PHONY : subprojects/amrex/Src/preinstall
 
 # Recursive "clean" directory target.
-subprojects/amrex/Src/clean: subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/clean
+subprojects/amrex/Src/clean: subprojects/amrex/Src/CMakeFiles/amrex.dir/clean
 subprojects/amrex/Src/clean: subprojects/amrex/Src/Base/clean
 subprojects/amrex/Src/clean: subprojects/amrex/Src/Boundary/clean
 subprojects/amrex/Src/clean: subprojects/amrex/Src/AmrCore/clean
@@ -755,10 +755,8 @@ subprojects/amrex/Src/Particle/clean:
 # Recursive "all" directory target.
 subprojects/amrex/Tools/Plotfile/all: subprojects/amrex/Tools/Plotfile/CMakeFiles/fboxinfo.dir/all
 subprojects/amrex/Tools/Plotfile/all: subprojects/amrex/Tools/Plotfile/CMakeFiles/fcompare.dir/all
-subprojects/amrex/Tools/Plotfile/all: subprojects/amrex/Tools/Plotfile/CMakeFiles/fconvert.dir/all
 subprojects/amrex/Tools/Plotfile/all: subprojects/amrex/Tools/Plotfile/CMakeFiles/fextract.dir/all
 subprojects/amrex/Tools/Plotfile/all: subprojects/amrex/Tools/Plotfile/CMakeFiles/fextrema.dir/all
-subprojects/amrex/Tools/Plotfile/all: subprojects/amrex/Tools/Plotfile/CMakeFiles/fgradient.dir/all
 subprojects/amrex/Tools/Plotfile/all: subprojects/amrex/Tools/Plotfile/CMakeFiles/fnan.dir/all
 subprojects/amrex/Tools/Plotfile/all: subprojects/amrex/Tools/Plotfile/CMakeFiles/fsnapshot.dir/all
 subprojects/amrex/Tools/Plotfile/all: subprojects/amrex/Tools/Plotfile/CMakeFiles/ftime.dir/all
@@ -769,10 +767,8 @@ subprojects/amrex/Tools/Plotfile/all: subprojects/amrex/Tools/Plotfile/CMakeFile
 # Recursive "codegen" directory target.
 subprojects/amrex/Tools/Plotfile/codegen: subprojects/amrex/Tools/Plotfile/CMakeFiles/fboxinfo.dir/codegen
 subprojects/amrex/Tools/Plotfile/codegen: subprojects/amrex/Tools/Plotfile/CMakeFiles/fcompare.dir/codegen
-subprojects/amrex/Tools/Plotfile/codegen: subprojects/amrex/Tools/Plotfile/CMakeFiles/fconvert.dir/codegen
 subprojects/amrex/Tools/Plotfile/codegen: subprojects/amrex/Tools/Plotfile/CMakeFiles/fextract.dir/codegen
 subprojects/amrex/Tools/Plotfile/codegen: subprojects/amrex/Tools/Plotfile/CMakeFiles/fextrema.dir/codegen
-subprojects/amrex/Tools/Plotfile/codegen: subprojects/amrex/Tools/Plotfile/CMakeFiles/fgradient.dir/codegen
 subprojects/amrex/Tools/Plotfile/codegen: subprojects/amrex/Tools/Plotfile/CMakeFiles/fnan.dir/codegen
 subprojects/amrex/Tools/Plotfile/codegen: subprojects/amrex/Tools/Plotfile/CMakeFiles/fsnapshot.dir/codegen
 subprojects/amrex/Tools/Plotfile/codegen: subprojects/amrex/Tools/Plotfile/CMakeFiles/ftime.dir/codegen
@@ -787,10 +783,8 @@ subprojects/amrex/Tools/Plotfile/preinstall:
 # Recursive "clean" directory target.
 subprojects/amrex/Tools/Plotfile/clean: subprojects/amrex/Tools/Plotfile/CMakeFiles/fboxinfo.dir/clean
 subprojects/amrex/Tools/Plotfile/clean: subprojects/amrex/Tools/Plotfile/CMakeFiles/fcompare.dir/clean
-subprojects/amrex/Tools/Plotfile/clean: subprojects/amrex/Tools/Plotfile/CMakeFiles/fconvert.dir/clean
 subprojects/amrex/Tools/Plotfile/clean: subprojects/amrex/Tools/Plotfile/CMakeFiles/fextract.dir/clean
 subprojects/amrex/Tools/Plotfile/clean: subprojects/amrex/Tools/Plotfile/CMakeFiles/fextrema.dir/clean
-subprojects/amrex/Tools/Plotfile/clean: subprojects/amrex/Tools/Plotfile/CMakeFiles/fgradient.dir/clean
 subprojects/amrex/Tools/Plotfile/clean: subprojects/amrex/Tools/Plotfile/CMakeFiles/fnan.dir/clean
 subprojects/amrex/Tools/Plotfile/clean: subprojects/amrex/Tools/Plotfile/CMakeFiles/fsnapshot.dir/clean
 subprojects/amrex/Tools/Plotfile/clean: subprojects/amrex/Tools/Plotfile/CMakeFiles/ftime.dir/clean
@@ -821,7 +815,7 @@ tools/clean: tools/CMakeFiles/fjoin_par.dir/clean
 # Target rules for target CMakeFiles/bmx.dir
 
 # All Build rule for target.
-CMakeFiles/bmx.dir/all: subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/all
+CMakeFiles/bmx.dir/all: subprojects/amrex/Src/CMakeFiles/amrex.dir/all
 CMakeFiles/bmx.dir/all: src/CMakeFiles/bmxcore.dir/all
 CMakeFiles/bmx.dir/all: src/CMakeFiles/buildInfobmxcore.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/bmx.dir/build.make CMakeFiles/bmx.dir/depend
@@ -831,7 +825,7 @@ CMakeFiles/bmx.dir/all: src/CMakeFiles/buildInfobmxcore.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/bmx.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build/CMakeFiles 88
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build/CMakeFiles 89
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/bmx.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build/CMakeFiles 0
 .PHONY : CMakeFiles/bmx.dir/rule
@@ -922,7 +916,7 @@ CMakeFiles/ctags.dir/clean:
 CMakeFiles/etags.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/etags.dir/build.make CMakeFiles/etags.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/etags.dir/build.make CMakeFiles/etags.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build/CMakeFiles --progress-num=89 "Built target etags"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build/CMakeFiles --progress-num=90 "Built target etags"
 .PHONY : CMakeFiles/etags.dir/all
 
 # Build rule for subdir invocation for target.
@@ -939,7 +933,7 @@ etags: CMakeFiles/etags.dir/rule
 # codegen rule for target.
 CMakeFiles/etags.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/etags.dir/build.make CMakeFiles/etags.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build/CMakeFiles --progress-num=89 "Finished codegen for target etags"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build/CMakeFiles --progress-num=90 "Finished codegen for target etags"
 .PHONY : CMakeFiles/etags.dir/codegen
 
 # clean rule for target.
@@ -980,50 +974,50 @@ subprojects/amrex/CMakeFiles/test_install.dir/clean:
 .PHONY : subprojects/amrex/CMakeFiles/test_install.dir/clean
 
 #=============================================================================
-# Target rules for target subprojects/amrex/Src/CMakeFiles/amrex_3d.dir
+# Target rules for target subprojects/amrex/Src/CMakeFiles/amrex.dir
 
 # All Build rule for target.
-subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/all:
-	$(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/depend
-	$(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build/CMakeFiles --progress-num=1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68 "Built target amrex_3d"
-.PHONY : subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/all
+subprojects/amrex/Src/CMakeFiles/amrex.dir/all:
+	$(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/depend
+	$(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build/CMakeFiles --progress-num=1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68 "Built target amrex"
+.PHONY : subprojects/amrex/Src/CMakeFiles/amrex.dir/all
 
 # Build rule for subdir invocation for target.
-subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/rule: cmake_check_build_system
+subprojects/amrex/Src/CMakeFiles/amrex.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build/CMakeFiles 68
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/all
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 subprojects/amrex/Src/CMakeFiles/amrex.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build/CMakeFiles 0
-.PHONY : subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/rule
+.PHONY : subprojects/amrex/Src/CMakeFiles/amrex.dir/rule
 
 # Convenience name for target.
-amrex_3d: subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/rule
-.PHONY : amrex_3d
+amrex: subprojects/amrex/Src/CMakeFiles/amrex.dir/rule
+.PHONY : amrex
 
 # codegen rule for target.
-subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/codegen:
-	$(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build/CMakeFiles --progress-num=1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68 "Finished codegen for target amrex_3d"
-.PHONY : subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/codegen
+subprojects/amrex/Src/CMakeFiles/amrex.dir/codegen:
+	$(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/codegen
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build/CMakeFiles --progress-num=1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68 "Finished codegen for target amrex"
+.PHONY : subprojects/amrex/Src/CMakeFiles/amrex.dir/codegen
 
 # clean rule for target.
-subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/clean:
-	$(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/clean
-.PHONY : subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/clean
+subprojects/amrex/Src/CMakeFiles/amrex.dir/clean:
+	$(MAKE) $(MAKESILENT) -f subprojects/amrex/Src/CMakeFiles/amrex.dir/build.make subprojects/amrex/Src/CMakeFiles/amrex.dir/clean
+.PHONY : subprojects/amrex/Src/CMakeFiles/amrex.dir/clean
 
 #=============================================================================
 # Target rules for target subprojects/amrex/Tools/Plotfile/CMakeFiles/fboxinfo.dir
 
 # All Build rule for target.
-subprojects/amrex/Tools/Plotfile/CMakeFiles/fboxinfo.dir/all: subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/all
+subprojects/amrex/Tools/Plotfile/CMakeFiles/fboxinfo.dir/all: subprojects/amrex/Src/CMakeFiles/amrex.dir/all
 	$(MAKE) $(MAKESILENT) -f subprojects/amrex/Tools/Plotfile/CMakeFiles/fboxinfo.dir/build.make subprojects/amrex/Tools/Plotfile/CMakeFiles/fboxinfo.dir/depend
 	$(MAKE) $(MAKESILENT) -f subprojects/amrex/Tools/Plotfile/CMakeFiles/fboxinfo.dir/build.make subprojects/amrex/Tools/Plotfile/CMakeFiles/fboxinfo.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build/CMakeFiles --progress-num= "Built target fboxinfo"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build/CMakeFiles --progress-num=91 "Built target fboxinfo"
 .PHONY : subprojects/amrex/Tools/Plotfile/CMakeFiles/fboxinfo.dir/all
 
 # Build rule for subdir invocation for target.
 subprojects/amrex/Tools/Plotfile/CMakeFiles/fboxinfo.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build/CMakeFiles 68
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build/CMakeFiles 69
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 subprojects/amrex/Tools/Plotfile/CMakeFiles/fboxinfo.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build/CMakeFiles 0
 .PHONY : subprojects/amrex/Tools/Plotfile/CMakeFiles/fboxinfo.dir/rule
@@ -1035,7 +1029,7 @@ fboxinfo: subprojects/amrex/Tools/Plotfile/CMakeFiles/fboxinfo.dir/rule
 # codegen rule for target.
 subprojects/amrex/Tools/Plotfile/CMakeFiles/fboxinfo.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f subprojects/amrex/Tools/Plotfile/CMakeFiles/fboxinfo.dir/build.make subprojects/amrex/Tools/Plotfile/CMakeFiles/fboxinfo.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build/CMakeFiles --progress-num= "Finished codegen for target fboxinfo"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build/CMakeFiles --progress-num=91 "Finished codegen for target fboxinfo"
 .PHONY : subprojects/amrex/Tools/Plotfile/CMakeFiles/fboxinfo.dir/codegen
 
 # clean rule for target.
@@ -1047,10 +1041,10 @@ subprojects/amrex/Tools/Plotfile/CMakeFiles/fboxinfo.dir/clean:
 # Target rules for target subprojects/amrex/Tools/Plotfile/CMakeFiles/fcompare.dir
 
 # All Build rule for target.
-subprojects/amrex/Tools/Plotfile/CMakeFiles/fcompare.dir/all: subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/all
+subprojects/amrex/Tools/Plotfile/CMakeFiles/fcompare.dir/all: subprojects/amrex/Src/CMakeFiles/amrex.dir/all
 	$(MAKE) $(MAKESILENT) -f subprojects/amrex/Tools/Plotfile/CMakeFiles/fcompare.dir/build.make subprojects/amrex/Tools/Plotfile/CMakeFiles/fcompare.dir/depend
 	$(MAKE) $(MAKESILENT) -f subprojects/amrex/Tools/Plotfile/CMakeFiles/fcompare.dir/build.make subprojects/amrex/Tools/Plotfile/CMakeFiles/fcompare.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build/CMakeFiles --progress-num=90 "Built target fcompare"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build/CMakeFiles --progress-num=92 "Built target fcompare"
 .PHONY : subprojects/amrex/Tools/Plotfile/CMakeFiles/fcompare.dir/all
 
 # Build rule for subdir invocation for target.
@@ -1067,7 +1061,7 @@ fcompare: subprojects/amrex/Tools/Plotfile/CMakeFiles/fcompare.dir/rule
 # codegen rule for target.
 subprojects/amrex/Tools/Plotfile/CMakeFiles/fcompare.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f subprojects/amrex/Tools/Plotfile/CMakeFiles/fcompare.dir/build.make subprojects/amrex/Tools/Plotfile/CMakeFiles/fcompare.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build/CMakeFiles --progress-num=90 "Finished codegen for target fcompare"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build/CMakeFiles --progress-num=92 "Finished codegen for target fcompare"
 .PHONY : subprojects/amrex/Tools/Plotfile/CMakeFiles/fcompare.dir/codegen
 
 # clean rule for target.
@@ -1076,50 +1070,18 @@ subprojects/amrex/Tools/Plotfile/CMakeFiles/fcompare.dir/clean:
 .PHONY : subprojects/amrex/Tools/Plotfile/CMakeFiles/fcompare.dir/clean
 
 #=============================================================================
-# Target rules for target subprojects/amrex/Tools/Plotfile/CMakeFiles/fconvert.dir
-
-# All Build rule for target.
-subprojects/amrex/Tools/Plotfile/CMakeFiles/fconvert.dir/all: subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/all
-	$(MAKE) $(MAKESILENT) -f subprojects/amrex/Tools/Plotfile/CMakeFiles/fconvert.dir/build.make subprojects/amrex/Tools/Plotfile/CMakeFiles/fconvert.dir/depend
-	$(MAKE) $(MAKESILENT) -f subprojects/amrex/Tools/Plotfile/CMakeFiles/fconvert.dir/build.make subprojects/amrex/Tools/Plotfile/CMakeFiles/fconvert.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build/CMakeFiles --progress-num=91 "Built target fconvert"
-.PHONY : subprojects/amrex/Tools/Plotfile/CMakeFiles/fconvert.dir/all
-
-# Build rule for subdir invocation for target.
-subprojects/amrex/Tools/Plotfile/CMakeFiles/fconvert.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build/CMakeFiles 69
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 subprojects/amrex/Tools/Plotfile/CMakeFiles/fconvert.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build/CMakeFiles 0
-.PHONY : subprojects/amrex/Tools/Plotfile/CMakeFiles/fconvert.dir/rule
-
-# Convenience name for target.
-fconvert: subprojects/amrex/Tools/Plotfile/CMakeFiles/fconvert.dir/rule
-.PHONY : fconvert
-
-# codegen rule for target.
-subprojects/amrex/Tools/Plotfile/CMakeFiles/fconvert.dir/codegen:
-	$(MAKE) $(MAKESILENT) -f subprojects/amrex/Tools/Plotfile/CMakeFiles/fconvert.dir/build.make subprojects/amrex/Tools/Plotfile/CMakeFiles/fconvert.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build/CMakeFiles --progress-num=91 "Finished codegen for target fconvert"
-.PHONY : subprojects/amrex/Tools/Plotfile/CMakeFiles/fconvert.dir/codegen
-
-# clean rule for target.
-subprojects/amrex/Tools/Plotfile/CMakeFiles/fconvert.dir/clean:
-	$(MAKE) $(MAKESILENT) -f subprojects/amrex/Tools/Plotfile/CMakeFiles/fconvert.dir/build.make subprojects/amrex/Tools/Plotfile/CMakeFiles/fconvert.dir/clean
-.PHONY : subprojects/amrex/Tools/Plotfile/CMakeFiles/fconvert.dir/clean
-
-#=============================================================================
 # Target rules for target subprojects/amrex/Tools/Plotfile/CMakeFiles/fextract.dir
 
 # All Build rule for target.
-subprojects/amrex/Tools/Plotfile/CMakeFiles/fextract.dir/all: subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/all
+subprojects/amrex/Tools/Plotfile/CMakeFiles/fextract.dir/all: subprojects/amrex/Src/CMakeFiles/amrex.dir/all
 	$(MAKE) $(MAKESILENT) -f subprojects/amrex/Tools/Plotfile/CMakeFiles/fextract.dir/build.make subprojects/amrex/Tools/Plotfile/CMakeFiles/fextract.dir/depend
 	$(MAKE) $(MAKESILENT) -f subprojects/amrex/Tools/Plotfile/CMakeFiles/fextract.dir/build.make subprojects/amrex/Tools/Plotfile/CMakeFiles/fextract.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build/CMakeFiles --progress-num=92 "Built target fextract"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build/CMakeFiles --progress-num= "Built target fextract"
 .PHONY : subprojects/amrex/Tools/Plotfile/CMakeFiles/fextract.dir/all
 
 # Build rule for subdir invocation for target.
 subprojects/amrex/Tools/Plotfile/CMakeFiles/fextract.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build/CMakeFiles 69
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build/CMakeFiles 68
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 subprojects/amrex/Tools/Plotfile/CMakeFiles/fextract.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build/CMakeFiles 0
 .PHONY : subprojects/amrex/Tools/Plotfile/CMakeFiles/fextract.dir/rule
@@ -1131,7 +1093,7 @@ fextract: subprojects/amrex/Tools/Plotfile/CMakeFiles/fextract.dir/rule
 # codegen rule for target.
 subprojects/amrex/Tools/Plotfile/CMakeFiles/fextract.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f subprojects/amrex/Tools/Plotfile/CMakeFiles/fextract.dir/build.make subprojects/amrex/Tools/Plotfile/CMakeFiles/fextract.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build/CMakeFiles --progress-num=92 "Finished codegen for target fextract"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build/CMakeFiles --progress-num= "Finished codegen for target fextract"
 .PHONY : subprojects/amrex/Tools/Plotfile/CMakeFiles/fextract.dir/codegen
 
 # clean rule for target.
@@ -1143,7 +1105,7 @@ subprojects/amrex/Tools/Plotfile/CMakeFiles/fextract.dir/clean:
 # Target rules for target subprojects/amrex/Tools/Plotfile/CMakeFiles/fextrema.dir
 
 # All Build rule for target.
-subprojects/amrex/Tools/Plotfile/CMakeFiles/fextrema.dir/all: subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/all
+subprojects/amrex/Tools/Plotfile/CMakeFiles/fextrema.dir/all: subprojects/amrex/Src/CMakeFiles/amrex.dir/all
 	$(MAKE) $(MAKESILENT) -f subprojects/amrex/Tools/Plotfile/CMakeFiles/fextrema.dir/build.make subprojects/amrex/Tools/Plotfile/CMakeFiles/fextrema.dir/depend
 	$(MAKE) $(MAKESILENT) -f subprojects/amrex/Tools/Plotfile/CMakeFiles/fextrema.dir/build.make subprojects/amrex/Tools/Plotfile/CMakeFiles/fextrema.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build/CMakeFiles --progress-num=93 "Built target fextrema"
@@ -1172,42 +1134,10 @@ subprojects/amrex/Tools/Plotfile/CMakeFiles/fextrema.dir/clean:
 .PHONY : subprojects/amrex/Tools/Plotfile/CMakeFiles/fextrema.dir/clean
 
 #=============================================================================
-# Target rules for target subprojects/amrex/Tools/Plotfile/CMakeFiles/fgradient.dir
-
-# All Build rule for target.
-subprojects/amrex/Tools/Plotfile/CMakeFiles/fgradient.dir/all: subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/all
-	$(MAKE) $(MAKESILENT) -f subprojects/amrex/Tools/Plotfile/CMakeFiles/fgradient.dir/build.make subprojects/amrex/Tools/Plotfile/CMakeFiles/fgradient.dir/depend
-	$(MAKE) $(MAKESILENT) -f subprojects/amrex/Tools/Plotfile/CMakeFiles/fgradient.dir/build.make subprojects/amrex/Tools/Plotfile/CMakeFiles/fgradient.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build/CMakeFiles --progress-num=94 "Built target fgradient"
-.PHONY : subprojects/amrex/Tools/Plotfile/CMakeFiles/fgradient.dir/all
-
-# Build rule for subdir invocation for target.
-subprojects/amrex/Tools/Plotfile/CMakeFiles/fgradient.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build/CMakeFiles 69
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 subprojects/amrex/Tools/Plotfile/CMakeFiles/fgradient.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build/CMakeFiles 0
-.PHONY : subprojects/amrex/Tools/Plotfile/CMakeFiles/fgradient.dir/rule
-
-# Convenience name for target.
-fgradient: subprojects/amrex/Tools/Plotfile/CMakeFiles/fgradient.dir/rule
-.PHONY : fgradient
-
-# codegen rule for target.
-subprojects/amrex/Tools/Plotfile/CMakeFiles/fgradient.dir/codegen:
-	$(MAKE) $(MAKESILENT) -f subprojects/amrex/Tools/Plotfile/CMakeFiles/fgradient.dir/build.make subprojects/amrex/Tools/Plotfile/CMakeFiles/fgradient.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build/CMakeFiles --progress-num=94 "Finished codegen for target fgradient"
-.PHONY : subprojects/amrex/Tools/Plotfile/CMakeFiles/fgradient.dir/codegen
-
-# clean rule for target.
-subprojects/amrex/Tools/Plotfile/CMakeFiles/fgradient.dir/clean:
-	$(MAKE) $(MAKESILENT) -f subprojects/amrex/Tools/Plotfile/CMakeFiles/fgradient.dir/build.make subprojects/amrex/Tools/Plotfile/CMakeFiles/fgradient.dir/clean
-.PHONY : subprojects/amrex/Tools/Plotfile/CMakeFiles/fgradient.dir/clean
-
-#=============================================================================
 # Target rules for target subprojects/amrex/Tools/Plotfile/CMakeFiles/fnan.dir
 
 # All Build rule for target.
-subprojects/amrex/Tools/Plotfile/CMakeFiles/fnan.dir/all: subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/all
+subprojects/amrex/Tools/Plotfile/CMakeFiles/fnan.dir/all: subprojects/amrex/Src/CMakeFiles/amrex.dir/all
 	$(MAKE) $(MAKESILENT) -f subprojects/amrex/Tools/Plotfile/CMakeFiles/fnan.dir/build.make subprojects/amrex/Tools/Plotfile/CMakeFiles/fnan.dir/depend
 	$(MAKE) $(MAKESILENT) -f subprojects/amrex/Tools/Plotfile/CMakeFiles/fnan.dir/build.make subprojects/amrex/Tools/Plotfile/CMakeFiles/fnan.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build/CMakeFiles --progress-num=95 "Built target fnan"
@@ -1239,15 +1169,15 @@ subprojects/amrex/Tools/Plotfile/CMakeFiles/fnan.dir/clean:
 # Target rules for target subprojects/amrex/Tools/Plotfile/CMakeFiles/fsnapshot.dir
 
 # All Build rule for target.
-subprojects/amrex/Tools/Plotfile/CMakeFiles/fsnapshot.dir/all: subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/all
+subprojects/amrex/Tools/Plotfile/CMakeFiles/fsnapshot.dir/all: subprojects/amrex/Src/CMakeFiles/amrex.dir/all
 	$(MAKE) $(MAKESILENT) -f subprojects/amrex/Tools/Plotfile/CMakeFiles/fsnapshot.dir/build.make subprojects/amrex/Tools/Plotfile/CMakeFiles/fsnapshot.dir/depend
 	$(MAKE) $(MAKESILENT) -f subprojects/amrex/Tools/Plotfile/CMakeFiles/fsnapshot.dir/build.make subprojects/amrex/Tools/Plotfile/CMakeFiles/fsnapshot.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build/CMakeFiles --progress-num=96,97 "Built target fsnapshot"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build/CMakeFiles --progress-num=96 "Built target fsnapshot"
 .PHONY : subprojects/amrex/Tools/Plotfile/CMakeFiles/fsnapshot.dir/all
 
 # Build rule for subdir invocation for target.
 subprojects/amrex/Tools/Plotfile/CMakeFiles/fsnapshot.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build/CMakeFiles 70
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build/CMakeFiles 69
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 subprojects/amrex/Tools/Plotfile/CMakeFiles/fsnapshot.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build/CMakeFiles 0
 .PHONY : subprojects/amrex/Tools/Plotfile/CMakeFiles/fsnapshot.dir/rule
@@ -1259,7 +1189,7 @@ fsnapshot: subprojects/amrex/Tools/Plotfile/CMakeFiles/fsnapshot.dir/rule
 # codegen rule for target.
 subprojects/amrex/Tools/Plotfile/CMakeFiles/fsnapshot.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f subprojects/amrex/Tools/Plotfile/CMakeFiles/fsnapshot.dir/build.make subprojects/amrex/Tools/Plotfile/CMakeFiles/fsnapshot.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build/CMakeFiles --progress-num=96,97 "Finished codegen for target fsnapshot"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build/CMakeFiles --progress-num=96 "Finished codegen for target fsnapshot"
 .PHONY : subprojects/amrex/Tools/Plotfile/CMakeFiles/fsnapshot.dir/codegen
 
 # clean rule for target.
@@ -1271,15 +1201,15 @@ subprojects/amrex/Tools/Plotfile/CMakeFiles/fsnapshot.dir/clean:
 # Target rules for target subprojects/amrex/Tools/Plotfile/CMakeFiles/ftime.dir
 
 # All Build rule for target.
-subprojects/amrex/Tools/Plotfile/CMakeFiles/ftime.dir/all: subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/all
+subprojects/amrex/Tools/Plotfile/CMakeFiles/ftime.dir/all: subprojects/amrex/Src/CMakeFiles/amrex.dir/all
 	$(MAKE) $(MAKESILENT) -f subprojects/amrex/Tools/Plotfile/CMakeFiles/ftime.dir/build.make subprojects/amrex/Tools/Plotfile/CMakeFiles/ftime.dir/depend
 	$(MAKE) $(MAKESILENT) -f subprojects/amrex/Tools/Plotfile/CMakeFiles/ftime.dir/build.make subprojects/amrex/Tools/Plotfile/CMakeFiles/ftime.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build/CMakeFiles --progress-num= "Built target ftime"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build/CMakeFiles --progress-num=97 "Built target ftime"
 .PHONY : subprojects/amrex/Tools/Plotfile/CMakeFiles/ftime.dir/all
 
 # Build rule for subdir invocation for target.
 subprojects/amrex/Tools/Plotfile/CMakeFiles/ftime.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build/CMakeFiles 68
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build/CMakeFiles 69
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 subprojects/amrex/Tools/Plotfile/CMakeFiles/ftime.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build/CMakeFiles 0
 .PHONY : subprojects/amrex/Tools/Plotfile/CMakeFiles/ftime.dir/rule
@@ -1291,7 +1221,7 @@ ftime: subprojects/amrex/Tools/Plotfile/CMakeFiles/ftime.dir/rule
 # codegen rule for target.
 subprojects/amrex/Tools/Plotfile/CMakeFiles/ftime.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f subprojects/amrex/Tools/Plotfile/CMakeFiles/ftime.dir/build.make subprojects/amrex/Tools/Plotfile/CMakeFiles/ftime.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build/CMakeFiles --progress-num= "Finished codegen for target ftime"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build/CMakeFiles --progress-num=97 "Finished codegen for target ftime"
 .PHONY : subprojects/amrex/Tools/Plotfile/CMakeFiles/ftime.dir/codegen
 
 # clean rule for target.
@@ -1303,7 +1233,7 @@ subprojects/amrex/Tools/Plotfile/CMakeFiles/ftime.dir/clean:
 # Target rules for target subprojects/amrex/Tools/Plotfile/CMakeFiles/fvarnames.dir
 
 # All Build rule for target.
-subprojects/amrex/Tools/Plotfile/CMakeFiles/fvarnames.dir/all: subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/all
+subprojects/amrex/Tools/Plotfile/CMakeFiles/fvarnames.dir/all: subprojects/amrex/Src/CMakeFiles/amrex.dir/all
 	$(MAKE) $(MAKESILENT) -f subprojects/amrex/Tools/Plotfile/CMakeFiles/fvarnames.dir/build.make subprojects/amrex/Tools/Plotfile/CMakeFiles/fvarnames.dir/depend
 	$(MAKE) $(MAKESILENT) -f subprojects/amrex/Tools/Plotfile/CMakeFiles/fvarnames.dir/build.make subprojects/amrex/Tools/Plotfile/CMakeFiles/fvarnames.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build/CMakeFiles --progress-num=98 "Built target fvarnames"
@@ -1335,7 +1265,7 @@ subprojects/amrex/Tools/Plotfile/CMakeFiles/fvarnames.dir/clean:
 # Target rules for target subprojects/amrex/Tools/Plotfile/CMakeFiles/fvolumesum.dir
 
 # All Build rule for target.
-subprojects/amrex/Tools/Plotfile/CMakeFiles/fvolumesum.dir/all: subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/all
+subprojects/amrex/Tools/Plotfile/CMakeFiles/fvolumesum.dir/all: subprojects/amrex/Src/CMakeFiles/amrex.dir/all
 	$(MAKE) $(MAKESILENT) -f subprojects/amrex/Tools/Plotfile/CMakeFiles/fvolumesum.dir/build.make subprojects/amrex/Tools/Plotfile/CMakeFiles/fvolumesum.dir/depend
 	$(MAKE) $(MAKESILENT) -f subprojects/amrex/Tools/Plotfile/CMakeFiles/fvolumesum.dir/build.make subprojects/amrex/Tools/Plotfile/CMakeFiles/fvolumesum.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build/CMakeFiles --progress-num=99 "Built target fvolumesum"
@@ -1367,16 +1297,16 @@ subprojects/amrex/Tools/Plotfile/CMakeFiles/fvolumesum.dir/clean:
 # Target rules for target src/CMakeFiles/bmxcore.dir
 
 # All Build rule for target.
-src/CMakeFiles/bmxcore.dir/all: subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/all
+src/CMakeFiles/bmxcore.dir/all: subprojects/amrex/Src/CMakeFiles/amrex.dir/all
 src/CMakeFiles/bmxcore.dir/all: src/CMakeFiles/buildInfobmxcore.dir/all
 	$(MAKE) $(MAKESILENT) -f src/CMakeFiles/bmxcore.dir/build.make src/CMakeFiles/bmxcore.dir/depend
 	$(MAKE) $(MAKESILENT) -f src/CMakeFiles/bmxcore.dir/build.make src/CMakeFiles/bmxcore.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build/CMakeFiles --progress-num=70,71,72,73,74,75,76,77,78,79,80,81,82,83,84,85,86,87 "Built target bmxcore"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build/CMakeFiles --progress-num=70,71,72,73,74,75,76,77,78,79,80,81,82,83,84,85,86,87,88 "Built target bmxcore"
 .PHONY : src/CMakeFiles/bmxcore.dir/all
 
 # Build rule for subdir invocation for target.
 src/CMakeFiles/bmxcore.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build/CMakeFiles 87
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build/CMakeFiles 88
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/CMakeFiles/bmxcore.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build/CMakeFiles 0
 .PHONY : src/CMakeFiles/bmxcore.dir/rule
@@ -1388,7 +1318,7 @@ bmxcore: src/CMakeFiles/bmxcore.dir/rule
 # codegen rule for target.
 src/CMakeFiles/bmxcore.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f src/CMakeFiles/bmxcore.dir/build.make src/CMakeFiles/bmxcore.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build/CMakeFiles --progress-num=70,71,72,73,74,75,76,77,78,79,80,81,82,83,84,85,86,87 "Finished codegen for target bmxcore"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build/CMakeFiles --progress-num=70,71,72,73,74,75,76,77,78,79,80,81,82,83,84,85,86,87,88 "Finished codegen for target bmxcore"
 .PHONY : src/CMakeFiles/bmxcore.dir/codegen
 
 # clean rule for target.
@@ -1403,7 +1333,7 @@ src/CMakeFiles/bmxcore.dir/clean:
 src/CMakeFiles/buildInfobmxcore.dir/all:
 	$(MAKE) $(MAKESILENT) -f src/CMakeFiles/buildInfobmxcore.dir/build.make src/CMakeFiles/buildInfobmxcore.dir/depend
 	$(MAKE) $(MAKESILENT) -f src/CMakeFiles/buildInfobmxcore.dir/build.make src/CMakeFiles/buildInfobmxcore.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build/CMakeFiles --progress-num=88 "Built target buildInfobmxcore"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build/CMakeFiles --progress-num=89 "Built target buildInfobmxcore"
 .PHONY : src/CMakeFiles/buildInfobmxcore.dir/all
 
 # Build rule for subdir invocation for target.
@@ -1420,7 +1350,7 @@ buildInfobmxcore: src/CMakeFiles/buildInfobmxcore.dir/rule
 # codegen rule for target.
 src/CMakeFiles/buildInfobmxcore.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f src/CMakeFiles/buildInfobmxcore.dir/build.make src/CMakeFiles/buildInfobmxcore.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build/CMakeFiles --progress-num=88 "Finished codegen for target buildInfobmxcore"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build/CMakeFiles --progress-num=89 "Finished codegen for target buildInfobmxcore"
 .PHONY : src/CMakeFiles/buildInfobmxcore.dir/codegen
 
 # clean rule for target.
@@ -1432,15 +1362,15 @@ src/CMakeFiles/buildInfobmxcore.dir/clean:
 # Target rules for target tools/CMakeFiles/fjoin_par.dir
 
 # All Build rule for target.
-tools/CMakeFiles/fjoin_par.dir/all: subprojects/amrex/Src/CMakeFiles/amrex_3d.dir/all
+tools/CMakeFiles/fjoin_par.dir/all: subprojects/amrex/Src/CMakeFiles/amrex.dir/all
 	$(MAKE) $(MAKESILENT) -f tools/CMakeFiles/fjoin_par.dir/build.make tools/CMakeFiles/fjoin_par.dir/depend
 	$(MAKE) $(MAKESILENT) -f tools/CMakeFiles/fjoin_par.dir/build.make tools/CMakeFiles/fjoin_par.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build/CMakeFiles --progress-num= "Built target fjoin_par"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build/CMakeFiles --progress-num=94 "Built target fjoin_par"
 .PHONY : tools/CMakeFiles/fjoin_par.dir/all
 
 # Build rule for subdir invocation for target.
 tools/CMakeFiles/fjoin_par.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build/CMakeFiles 68
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build/CMakeFiles 69
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tools/CMakeFiles/fjoin_par.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build/CMakeFiles 0
 .PHONY : tools/CMakeFiles/fjoin_par.dir/rule
@@ -1452,7 +1382,7 @@ fjoin_par: tools/CMakeFiles/fjoin_par.dir/rule
 # codegen rule for target.
 tools/CMakeFiles/fjoin_par.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f tools/CMakeFiles/fjoin_par.dir/build.make tools/CMakeFiles/fjoin_par.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build/CMakeFiles --progress-num= "Finished codegen for target fjoin_par"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build/CMakeFiles --progress-num=94 "Finished codegen for target fjoin_par"
 .PHONY : tools/CMakeFiles/fjoin_par.dir/codegen
 
 # clean rule for target.

@@ -73,10 +73,6 @@ if(NOT CMAKE_INSTALL_LOCAL_ONLY)
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include" TYPE FILE FILES "/Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build/subprojects/amrex/AMReX_Config_3D.H")
-endif()
-
-if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include" TYPE FILE FILES "/Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build/subprojects/amrex/AMReX_Config.H")
 endif()
 

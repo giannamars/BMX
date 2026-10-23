@@ -19,7 +19,7 @@ set(CMAKE_IMPORT_FILE_VERSION 1)
 set(_cmake_targets_defined "")
 set(_cmake_targets_not_defined "")
 set(_cmake_expected_targets "")
-foreach(_cmake_expected_target IN ITEMS AMReX::amrex_3d AMReX::Flags_CXX AMReX::Flags_INLINE AMReX::Flags_Fortran AMReX::Flags_FASTMATH AMReX::Flags_NO_MATH_ERRNO AMReX::Flags_FPE AMReX::fboxinfo AMReX::fcompare AMReX::fconvert AMReX::fextract AMReX::fextrema AMReX::fgradient AMReX::fnan AMReX::fsnapshot AMReX::ftime AMReX::fvarnames AMReX::fvolumesum)
+foreach(_cmake_expected_target IN ITEMS AMReX::amrex AMReX::Flags_CXX AMReX::Flags_Fortran AMReX::Flags_FPE AMReX::fboxinfo AMReX::fcompare AMReX::fextract AMReX::fextrema AMReX::fnan AMReX::fsnapshot AMReX::ftime AMReX::fvarnames AMReX::fvolumesum)
   list(APPEND _cmake_expected_targets "${_cmake_expected_target}")
   if(TARGET "${_cmake_expected_target}")
     list(APPEND _cmake_targets_defined "${_cmake_expected_target}")
@@ -46,53 +46,35 @@ unset(_cmake_targets_not_defined)
 unset(_cmake_expected_targets)
 
 
-# Create imported target AMReX::amrex_3d
-add_library(AMReX::amrex_3d STATIC IMPORTED)
+# Create imported target AMReX::amrex
+add_library(AMReX::amrex STATIC IMPORTED)
 
-set_target_properties(AMReX::amrex_3d PROPERTIES
-  INTERFACE_COMPILE_DEFINITIONS "AMREX_SPACEDIM=3"
-  INTERFACE_COMPILE_FEATURES "cxx_std_20"
+set_target_properties(AMReX::amrex PROPERTIES
+  INTERFACE_COMPILE_FEATURES "\$<IF:\$<STREQUAL:\$<PLATFORM_ID>,Windows>,cxx_std_17,cxx_std_14>"
   INTERFACE_COMPILE_OPTIONS "\$<\$<CXX_COMPILER_ID:Cray>:-h;noomp>;\$<\$<AND:\$<COMPILE_LANGUAGE:CXX>,\$<CXX_COMPILER_ID:MSVC>>:\$<IF:\$<VERSION_LESS:\$<CXX_COMPILER_VERSION>,19.26>,/experimental:preprocessor,/Zc:preprocessor>>;\$<\$<AND:\$<COMPILE_LANGUAGE:CXX>,\$<CXX_COMPILER_ID:MSVC>>:\$<\$<VERSION_GREATER_EQUAL:\$<CXX_COMPILER_VERSION>,19.14>:/Zc:__cplusplus>>;\$<\$<CXX_COMPILER_ID:Cray>:-h;noomp>"
-  INTERFACE_INCLUDE_DIRECTORIES "/Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/subprojects/amrex/Src/Base;/Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/subprojects/amrex/Src/Base/Parser;/Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/subprojects/amrex/Src/Boundary;/Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/subprojects/amrex/Src/AmrCore;/Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/subprojects/amrex/Src/Amr;/Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/subprojects/amrex/Src/EB;/Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/subprojects/amrex/Src/LinearSolvers;/Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/subprojects/amrex/Src/LinearSolvers/MLMG;/Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/subprojects/amrex/Src/LinearSolvers/OpenBC;/Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/subprojects/amrex/Src/Particle;/Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build/subprojects/amrex"
-  INTERFACE_LINK_LIBRARIES "Threads::Threads;MPI::MPI_CXX;AMReX::Flags_NO_MATH_ERRNO"
+  INTERFACE_INCLUDE_DIRECTORIES "/Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/subprojects/amrex/Src/Base;/Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/subprojects/amrex/Src/Base/Parser;/Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/subprojects/amrex/Src/Boundary;/Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/subprojects/amrex/Src/AmrCore;/Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/subprojects/amrex/Src/Amr;/Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/subprojects/amrex/Src/EB;/Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/subprojects/amrex/Src/LinearSolvers/MLMG;/Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/subprojects/amrex/Src/Particle;/Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build/subprojects/amrex"
+  INTERFACE_LINK_LIBRARIES "Threads::Threads;MPI::MPI_C;MPI::MPI_CXX"
 )
 
 # Create imported target AMReX::Flags_CXX
 add_library(AMReX::Flags_CXX INTERFACE IMPORTED)
 
 set_target_properties(AMReX::Flags_CXX PROPERTIES
-  INTERFACE_COMPILE_OPTIONS "\$<\$<AND:\$<COMPILE_LANG_AND_ID:CXX,GNU>,\$<CONFIG:Debug>>:-O0;-ggdb;-Wall;-Wno-sign-compare;-Wno-unused-but-set-variable;-Werror=return-type>;\$<\$<AND:\$<COMPILE_LANG_AND_ID:CXX,GNU>,\$<CONFIG:RelWithDebInfo>>:-Werror=return-type>;\$<\$<AND:\$<COMPILE_LANG_AND_ID:CXX,GNU>,\$<CONFIG:Release>>:-Werror=return-type>;\$<\$<AND:\$<COMPILE_LANG_AND_ID:CXX,Intel>,\$<CONFIG:Debug>>:-O0;-traceback;-Wcheck>;\$<\$<AND:\$<COMPILE_LANG_AND_ID:CXX,Intel>,\$<CONFIG:RelWithDebInfo>>:-ip;-qopt-report=5;-qopt-report-phase=vec>;\$<\$<AND:\$<COMPILE_LANG_AND_ID:CXX,Intel>,\$<CONFIG:Release>>:-ip;-qopt-report=5;-qopt-report-phase=vec>;\$<\$<AND:\$<COMPILE_LANG_AND_ID:CXX,PGI>,\$<CONFIG:Debug>>:-O0;-Mbounds>;\$<\$<AND:\$<COMPILE_LANG_AND_ID:CXX,PGI>,\$<CONFIG:RelWithDebInfo>>:-gopt;-fast>;\$<\$<AND:\$<COMPILE_LANG_AND_ID:CXX,PGI>,\$<CONFIG:Release>>:-gopt;-fast>;\$<\$<AND:\$<COMPILE_LANG_AND_ID:CXX,Cray>,\$<CONFIG:Debug>>:-O0>;\$<\$<AND:\$<COMPILE_LANG_AND_ID:CXX,Cray>,\$<CONFIG:RelWithDebInfo>>:>;\$<\$<AND:\$<COMPILE_LANG_AND_ID:CXX,Cray>,\$<CONFIG:Release>>:>;\$<\$<AND:\$<COMPILE_LANG_AND_ID:CXX,Clang>,\$<CONFIG:Debug>>:-O0;-Wall;-Wextra;-Wno-sign-compare;-Wno-unused-parameter;-Wno-unused-variable>;\$<\$<AND:\$<COMPILE_LANG_AND_ID:CXX,Clang>,\$<CONFIG:RelWithDebInfo>>:>;\$<\$<AND:\$<COMPILE_LANG_AND_ID:CXX,Clang>,\$<CONFIG:Release>>:>;\$<\$<AND:\$<COMPILE_LANG_AND_ID:CXX,AppleClang>,\$<CONFIG:Debug>>:-O0;-Wall;-Wextra;-Wno-sign-compare;-Wno-unused-parameter;-Wno-unused-variable>;\$<\$<AND:\$<COMPILE_LANG_AND_ID:CXX,AppleClang>,\$<CONFIG:RelWithDebInfo>>:>;\$<\$<AND:\$<COMPILE_LANG_AND_ID:CXX,AppleClang>,\$<CONFIG:Release>>:>;\$<\$<AND:\$<COMPILE_LANG_AND_ID:CXX,IntelLLVM>,\$<CONFIG:Debug>>:-O0;-Wall;-Wextra;-Wno-sign-compare;-Wno-unused-parameter;-Wno-unused-variable>;\$<\$<AND:\$<COMPILE_LANG_AND_ID:CXX,IntelLLVM>,\$<CONFIG:RelWithDebInfo>>:-Xarch_host;-gline-tables-only;-Xarch_host;-fdebug-info-for-profiling>;\$<\$<AND:\$<COMPILE_LANG_AND_ID:CXX,IntelLLVM>,\$<CONFIG:Release>>:>"
+  INTERFACE_COMPILE_OPTIONS "\$<\$<AND:\$<COMPILE_LANG_AND_ID:CXX,GNU>,\$<CONFIG:Debug>>:-O0;-ggdb;-Wall;-Wno-sign-compare;-Wno-unused-but-set-variable;-Werror=return-type>;\$<\$<AND:\$<COMPILE_LANG_AND_ID:CXX,GNU>,\$<CONFIG:RelWithDebInfo>>:-Werror=return-type>;\$<\$<AND:\$<COMPILE_LANG_AND_ID:CXX,GNU>,\$<CONFIG:Release>>:-Werror=return-type>;\$<\$<AND:\$<COMPILE_LANG_AND_ID:CXX,Intel>,\$<CONFIG:Debug>>:-O0;-traceback;-Wcheck>;\$<\$<AND:\$<COMPILE_LANG_AND_ID:CXX,Intel>,\$<CONFIG:RelWithDebInfo>>:-ip;-qopt-report=5;-qopt-report-phase=vec>;\$<\$<AND:\$<COMPILE_LANG_AND_ID:CXX,Intel>,\$<CONFIG:Release>>:-ip;-qopt-report=5;-qopt-report-phase=vec>;\$<\$<AND:\$<COMPILE_LANG_AND_ID:CXX,PGI>,\$<CONFIG:Debug>>:-O0;-Mbounds>;\$<\$<AND:\$<COMPILE_LANG_AND_ID:CXX,PGI>,\$<CONFIG:RelWithDebInfo>>:-gopt;-fast>;\$<\$<AND:\$<COMPILE_LANG_AND_ID:CXX,PGI>,\$<CONFIG:Release>>:-gopt;-fast>;\$<\$<AND:\$<COMPILE_LANG_AND_ID:CXX,Cray>,\$<CONFIG:Debug>>:-O0>;\$<\$<AND:\$<COMPILE_LANG_AND_ID:CXX,Cray>,\$<CONFIG:RelWithDebInfo>>:>;\$<\$<AND:\$<COMPILE_LANG_AND_ID:CXX,Cray>,\$<CONFIG:Release>>:>;\$<\$<AND:\$<COMPILE_LANG_AND_ID:CXX,Clang>,\$<CONFIG:Debug>>:-O0;-Wall;-Wextra;-Wno-sign-compare;-Wno-unused-parameter;-Wno-unused-variable;-Wno-pass-failed>;\$<\$<AND:\$<COMPILE_LANG_AND_ID:CXX,Clang>,\$<CONFIG:RelWithDebInfo>>:-Wno-pass-failed>;\$<\$<AND:\$<COMPILE_LANG_AND_ID:CXX,Clang>,\$<CONFIG:Release>>:-Wno-pass-failed>;\$<\$<AND:\$<COMPILE_LANG_AND_ID:CXX,AppleClang>,\$<CONFIG:Debug>>:-O0;-Wall;-Wextra;-Wno-sign-compare;-Wno-unused-parameter;-Wno-unused-variable;-Wno-pass-failed>;\$<\$<AND:\$<COMPILE_LANG_AND_ID:CXX,AppleClang>,\$<CONFIG:RelWithDebInfo>>:-Wno-pass-failed>;\$<\$<AND:\$<COMPILE_LANG_AND_ID:CXX,AppleClang>,\$<CONFIG:Release>>:-Wno-pass-failed>;\$<\$<AND:\$<COMPILE_LANG_AND_ID:CXX,IntelLLVM>,\$<CONFIG:Debug>>:-O0;-Wall;-Wextra;-Wno-sign-compare;-Wno-unused-parameter;-Wno-unused-variable;-Wno-pass-failed>;\$<\$<AND:\$<COMPILE_LANG_AND_ID:CXX,IntelLLVM>,\$<CONFIG:RelWithDebInfo>>:-Wno-pass-failed>;\$<\$<AND:\$<COMPILE_LANG_AND_ID:CXX,IntelLLVM>,\$<CONFIG:Release>>:-Wno-pass-failed>"
 )
-
-# Create imported target AMReX::Flags_INLINE
-add_library(AMReX::Flags_INLINE INTERFACE IMPORTED)
 
 # Create imported target AMReX::Flags_Fortran
 add_library(AMReX::Flags_Fortran INTERFACE IMPORTED)
 
 set_target_properties(AMReX::Flags_Fortran PROPERTIES
-  INTERFACE_COMPILE_OPTIONS "\$<\$<AND:\$<COMPILE_LANG_AND_ID:Fortran,GNU>,\$<CONFIG:Debug>>:-O0;-ggdb;-fcheck=bounds;-fbacktrace;-Wuninitialized;-Wunused;-finit-real=snan;-finit-integer=2147483647;-fimplicit-none>;\$<\$<AND:\$<COMPILE_LANG_AND_ID:Fortran,GNU>,\$<CONFIG:Release>>:-fimplicit-none>;\$<\$<AND:\$<COMPILE_LANG_AND_ID:Fortran,Intel>,\$<CONFIG:Debug>>:-O0;-traceback;-check;bounds,uninit,pointers;-implicitnone>;\$<\$<AND:\$<COMPILE_LANG_AND_ID:Fortran,Intel>,\$<CONFIG:Release>>:-ip;-qopt-report=5;-qopt-report-phase=vec;-implicitnone>;\$<\$<AND:\$<COMPILE_LANG_AND_ID:Fortran,PGI>,\$<CONFIG:Debug>>:-O0;-Mbounds>;\$<\$<AND:\$<COMPILE_LANG_AND_ID:Fortran,PGI>,\$<CONFIG:Release>>:-gopt;-fast>;\$<\$<AND:\$<COMPILE_LANG_AND_ID:Fortran,Cray>,\$<CONFIG:Debug>>:-O0;-e;i>;\$<\$<AND:\$<COMPILE_LANG_AND_ID:Fortran,Cray>,\$<CONFIG:Release>>:>;\$<\$<AND:\$<COMPILE_LANG_AND_ID:Fortran,LLVMFlang>,\$<CONFIG:Debug>>:-fimplicit-none>;\$<\$<AND:\$<COMPILE_LANG_AND_ID:Fortran,LLVMFlang>,\$<CONFIG:Release>>:-fimplicit-none>"
-)
-
-# Create imported target AMReX::Flags_FASTMATH
-add_library(AMReX::Flags_FASTMATH INTERFACE IMPORTED)
-
-set_target_properties(AMReX::Flags_FASTMATH PROPERTIES
-  INTERFACE_COMPILE_OPTIONS "\$<\$<COMPILE_LANG_AND_ID:CUDA,NVIDIA>:--use_fast_math>;\$<\$<COMPILE_LANG_AND_ID:CUDA,NVHPC>:-fast>;\$<\$<COMPILE_LANG_AND_ID:Fortran,GNU>:-ffast-math>;\$<\$<COMPILE_LANG_AND_ID:CXX,GNU>:-ffast-math>;\$<\$<COMPILE_LANG_AND_ID:Fortran,Intel>:-ffast-math>;\$<\$<COMPILE_LANG_AND_ID:CXX,Intel>:-ffast-math>;\$<\$<COMPILE_LANG_AND_ID:Fortran,PGI>:-ffast-math>;\$<\$<COMPILE_LANG_AND_ID:CXX,PGI>:-ffast-math>;\$<\$<COMPILE_LANG_AND_ID:Fortran,Cray>:-ffast-math>;\$<\$<COMPILE_LANG_AND_ID:CXX,Cray>:-ffast-math>;\$<\$<COMPILE_LANG_AND_ID:Fortran,LLVMFlang>:-ffast-math>;\$<\$<COMPILE_LANG_AND_ID:CXX,Clang>:-ffast-math>;\$<\$<COMPILE_LANG_AND_ID:CXX,AppleClang>:-ffast-math>;\$<\$<COMPILE_LANG_AND_ID:CXX,CrayClang>:-ffast-math>;\$<\$<COMPILE_LANG_AND_ID:CXX,IBMClang>:-ffast-math>;\$<\$<COMPILE_LANG_AND_ID:CXX,IntelLLVM>:-ffast-math>;\$<\$<COMPILE_LANG_AND_ID:CXX,XLClang>:-ffast-math>;\$<\$<COMPILE_LANG_AND_ID:CXX,MSVC>:/fp:fast>"
-)
-
-# Create imported target AMReX::Flags_NO_MATH_ERRNO
-add_library(AMReX::Flags_NO_MATH_ERRNO INTERFACE IMPORTED)
-
-set_target_properties(AMReX::Flags_NO_MATH_ERRNO PROPERTIES
-  INTERFACE_COMPILE_OPTIONS "\$<\$<AND:\$<COMPILE_LANG_AND_ID:CXX,GNU,Clang,AppleClang,IBMClang,IntelLLVM,ARMClang,CrayClang>,\$<NOT:\$<CONFIG:Debug>>>:-fno-math-errno>;\$<\$<AND:\$<COMPILE_LANG_AND_ID:CUDA,NVIDIA>,\$<CXX_COMPILER_ID:GNU,Clang,IBMClang,IntelLLVM,ARMClang,CrayClang>,\$<NOT:\$<CONFIG:Debug>>>:-Xcompiler=-fno-math-errno>;\$<\$<AND:\$<COMPILE_LANG_AND_ID:CUDA,Clang>,\$<NOT:\$<CONFIG:Debug>>>:-fno-math-errno>"
+  INTERFACE_COMPILE_OPTIONS "\$<\$<AND:\$<COMPILE_LANG_AND_ID:Fortran,GNU>,\$<CONFIG:Debug>>:-O0;-ggdb;-fcheck=bounds;-fbacktrace;-Wuninitialized;-Wunused;-finit-real=snan;-finit-integer=2147483647;-fimplicit-none>;\$<\$<AND:\$<COMPILE_LANG_AND_ID:Fortran,GNU>,\$<CONFIG:Release>>:-fimplicit-none>;\$<\$<AND:\$<COMPILE_LANG_AND_ID:Fortran,Intel>,\$<CONFIG:Debug>>:-O0;-traceback;-check;bounds,uninit,pointers;-implicitnone>;\$<\$<AND:\$<COMPILE_LANG_AND_ID:Fortran,Intel>,\$<CONFIG:Release>>:-ip;-qopt-report=5;-qopt-report-phase=vec;-implicitnone>;\$<\$<AND:\$<COMPILE_LANG_AND_ID:Fortran,PGI>,\$<CONFIG:Debug>>:-O0;-Mbounds>;\$<\$<AND:\$<COMPILE_LANG_AND_ID:Fortran,PGI>,\$<CONFIG:Release>>:-gopt;-fast>;\$<\$<AND:\$<COMPILE_LANG_AND_ID:Fortran,Cray>,\$<CONFIG:Debug>>:-O0;-e;i>;\$<\$<AND:\$<COMPILE_LANG_AND_ID:Fortran,Cray>,\$<CONFIG:Release>>:>"
 )
 
 # Create imported target AMReX::Flags_FPE
 add_library(AMReX::Flags_FPE INTERFACE IMPORTED)
 
 set_target_properties(AMReX::Flags_FPE PROPERTIES
-  INTERFACE_COMPILE_OPTIONS "\$<\$<COMPILE_LANG_AND_ID:Fortran,GNU>:-ffpe-trap=invalid,zero;-ftrapv>;\$<\$<COMPILE_LANG_AND_ID:CXX,GNU>:-ftrapv>;\$<\$<COMPILE_LANG_AND_ID:Fortran,Intel>:-fpe3>;\$<\$<COMPILE_LANG_AND_ID:CXX,Intel>:-fpe3>;\$<\$<COMPILE_LANG_AND_ID:Fortran,PGI>:-Ktrap=divz,inv>;\$<\$<COMPILE_LANG_AND_ID:CXX,PGI>:>;\$<\$<COMPILE_LANG_AND_ID:Fortran,Cray>:-K;trap=fp>;\$<\$<COMPILE_LANG_AND_ID:CXX,Cray>:-K;trap=fp>;\$<\$<COMPILE_LANG_AND_ID:Fortran,LLVMFlang>:>;\$<\$<COMPILE_LANG_AND_ID:CXX,Clang>:-ftrapv>;\$<\$<COMPILE_LANG_AND_ID:CXX,AppleClang>:-ftrapv>"
+  INTERFACE_COMPILE_OPTIONS "\$<\$<COMPILE_LANG_AND_ID:Fortran,GNU>:-ffpe-trap=invalid,zero;-ftrapv>;\$<\$<COMPILE_LANG_AND_ID:CXX,GNU>:-ftrapv>;\$<\$<COMPILE_LANG_AND_ID:Fortran,Intel>:-fpe3>;\$<\$<COMPILE_LANG_AND_ID:CXX,Intel>:-fpe3>;\$<\$<COMPILE_LANG_AND_ID:Fortran,PGI>:-Ktrap=divz,inv>;\$<\$<COMPILE_LANG_AND_ID:CXX,PGI>:>;\$<\$<COMPILE_LANG_AND_ID:Fortran,Cray>:-K;trap=fp>;\$<\$<COMPILE_LANG_AND_ID:CXX,Cray>:-K;trap=fp>;\$<\$<COMPILE_LANG_AND_ID:Fortran,Clang>:>;\$<\$<COMPILE_LANG_AND_ID:CXX,Clang>:-ftrapv>"
 )
 
 # Create imported target AMReX::fboxinfo
@@ -101,17 +83,11 @@ add_executable(AMReX::fboxinfo IMPORTED)
 # Create imported target AMReX::fcompare
 add_executable(AMReX::fcompare IMPORTED)
 
-# Create imported target AMReX::fconvert
-add_executable(AMReX::fconvert IMPORTED)
-
 # Create imported target AMReX::fextract
 add_executable(AMReX::fextract IMPORTED)
 
 # Create imported target AMReX::fextrema
 add_executable(AMReX::fextrema IMPORTED)
-
-# Create imported target AMReX::fgradient
-add_executable(AMReX::fgradient IMPORTED)
 
 # Create imported target AMReX::fnan
 add_executable(AMReX::fnan IMPORTED)
@@ -128,77 +104,65 @@ add_executable(AMReX::fvarnames IMPORTED)
 # Create imported target AMReX::fvolumesum
 add_executable(AMReX::fvolumesum IMPORTED)
 
-# Import target "AMReX::amrex_3d" for configuration "Release"
-set_property(TARGET AMReX::amrex_3d APPEND PROPERTY IMPORTED_CONFIGURATIONS RELEASE)
-set_target_properties(AMReX::amrex_3d PROPERTIES
+# Import target "AMReX::amrex" for configuration "Release"
+set_property(TARGET AMReX::amrex APPEND PROPERTY IMPORTED_CONFIGURATIONS RELEASE)
+set_target_properties(AMReX::amrex PROPERTIES
   IMPORTED_LINK_INTERFACE_LANGUAGES_RELEASE "CXX"
-  IMPORTED_LOCATION_RELEASE "/Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build/subprojects/amrex/Src/libamrex_3d.a"
+  IMPORTED_LOCATION_RELEASE "/Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build/subprojects/amrex/Src/libamrex.a"
   )
 
 # Import target "AMReX::fboxinfo" for configuration "Release"
 set_property(TARGET AMReX::fboxinfo APPEND PROPERTY IMPORTED_CONFIGURATIONS RELEASE)
 set_target_properties(AMReX::fboxinfo PROPERTIES
-  IMPORTED_LOCATION_RELEASE "/Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build/subprojects/amrex/Tools/Plotfile/amrex_fboxinfo"
+  IMPORTED_LOCATION_RELEASE "/Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build/subprojects/amrex/Tools/Plotfile/fboxinfo"
   )
 
 # Import target "AMReX::fcompare" for configuration "Release"
 set_property(TARGET AMReX::fcompare APPEND PROPERTY IMPORTED_CONFIGURATIONS RELEASE)
 set_target_properties(AMReX::fcompare PROPERTIES
-  IMPORTED_LOCATION_RELEASE "/Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build/subprojects/amrex/Tools/Plotfile/amrex_fcompare"
-  )
-
-# Import target "AMReX::fconvert" for configuration "Release"
-set_property(TARGET AMReX::fconvert APPEND PROPERTY IMPORTED_CONFIGURATIONS RELEASE)
-set_target_properties(AMReX::fconvert PROPERTIES
-  IMPORTED_LOCATION_RELEASE "/Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build/subprojects/amrex/Tools/Plotfile/amrex_fconvert"
+  IMPORTED_LOCATION_RELEASE "/Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build/subprojects/amrex/Tools/Plotfile/fcompare"
   )
 
 # Import target "AMReX::fextract" for configuration "Release"
 set_property(TARGET AMReX::fextract APPEND PROPERTY IMPORTED_CONFIGURATIONS RELEASE)
 set_target_properties(AMReX::fextract PROPERTIES
-  IMPORTED_LOCATION_RELEASE "/Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build/subprojects/amrex/Tools/Plotfile/amrex_fextract"
+  IMPORTED_LOCATION_RELEASE "/Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build/subprojects/amrex/Tools/Plotfile/fextract"
   )
 
 # Import target "AMReX::fextrema" for configuration "Release"
 set_property(TARGET AMReX::fextrema APPEND PROPERTY IMPORTED_CONFIGURATIONS RELEASE)
 set_target_properties(AMReX::fextrema PROPERTIES
-  IMPORTED_LOCATION_RELEASE "/Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build/subprojects/amrex/Tools/Plotfile/amrex_fextrema"
-  )
-
-# Import target "AMReX::fgradient" for configuration "Release"
-set_property(TARGET AMReX::fgradient APPEND PROPERTY IMPORTED_CONFIGURATIONS RELEASE)
-set_target_properties(AMReX::fgradient PROPERTIES
-  IMPORTED_LOCATION_RELEASE "/Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build/subprojects/amrex/Tools/Plotfile/amrex_fgradient"
+  IMPORTED_LOCATION_RELEASE "/Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build/subprojects/amrex/Tools/Plotfile/fextrema"
   )
 
 # Import target "AMReX::fnan" for configuration "Release"
 set_property(TARGET AMReX::fnan APPEND PROPERTY IMPORTED_CONFIGURATIONS RELEASE)
 set_target_properties(AMReX::fnan PROPERTIES
-  IMPORTED_LOCATION_RELEASE "/Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build/subprojects/amrex/Tools/Plotfile/amrex_fnan"
+  IMPORTED_LOCATION_RELEASE "/Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build/subprojects/amrex/Tools/Plotfile/fnan"
   )
 
 # Import target "AMReX::fsnapshot" for configuration "Release"
 set_property(TARGET AMReX::fsnapshot APPEND PROPERTY IMPORTED_CONFIGURATIONS RELEASE)
 set_target_properties(AMReX::fsnapshot PROPERTIES
-  IMPORTED_LOCATION_RELEASE "/Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build/subprojects/amrex/Tools/Plotfile/amrex_fsnapshot"
+  IMPORTED_LOCATION_RELEASE "/Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build/subprojects/amrex/Tools/Plotfile/fsnapshot"
   )
 
 # Import target "AMReX::ftime" for configuration "Release"
 set_property(TARGET AMReX::ftime APPEND PROPERTY IMPORTED_CONFIGURATIONS RELEASE)
 set_target_properties(AMReX::ftime PROPERTIES
-  IMPORTED_LOCATION_RELEASE "/Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build/subprojects/amrex/Tools/Plotfile/amrex_ftime"
+  IMPORTED_LOCATION_RELEASE "/Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build/subprojects/amrex/Tools/Plotfile/ftime"
   )
 
 # Import target "AMReX::fvarnames" for configuration "Release"
 set_property(TARGET AMReX::fvarnames APPEND PROPERTY IMPORTED_CONFIGURATIONS RELEASE)
 set_target_properties(AMReX::fvarnames PROPERTIES
-  IMPORTED_LOCATION_RELEASE "/Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build/subprojects/amrex/Tools/Plotfile/amrex_fvarnames"
+  IMPORTED_LOCATION_RELEASE "/Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build/subprojects/amrex/Tools/Plotfile/fvarnames"
   )
 
 # Import target "AMReX::fvolumesum" for configuration "Release"
 set_property(TARGET AMReX::fvolumesum APPEND PROPERTY IMPORTED_CONFIGURATIONS RELEASE)
 set_target_properties(AMReX::fvolumesum PROPERTIES
-  IMPORTED_LOCATION_RELEASE "/Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build/subprojects/amrex/Tools/Plotfile/amrex_fvolumesum"
+  IMPORTED_LOCATION_RELEASE "/Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build/subprojects/amrex/Tools/Plotfile/fvolumesum"
   )
 
 # This file does not depend on other imported targets which have
