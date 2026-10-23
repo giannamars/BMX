@@ -122,11 +122,15 @@ bmx.substeps = 4
 #_______________________________________________________________________
 # Cell force parameters
 #
-cell_force.stiffness = 1.0e6
-cell_force.wall_stiffness = 1.0e5
+cell_force.fungi_stiffness = 1.0e6
+cell_force.fungi_wall_stiffness = 1.0e5
+cell_force.cell_stiffness = 1.0e6
+cell_force.cell_wall_stiffness = 1.0e6
 
-cell_force.boundary_width = 1.0e-4
-cell_force.wall_boundary_width = 1.0e-04
+cell_force.fungi_boundary_width = 1.0e-4
+cell_force.fungi_wall_boundary_width = 1.0e-04
+cell_force.cell_boundary_width = 1.0e-5
+cell_force.cell_wall_boundary_width = 1.0e-04
 
 cell_force.neighbor_width = 6.25e-3
 
