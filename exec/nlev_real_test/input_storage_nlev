@@ -74,9 +74,9 @@ amr.check_file     ="chk"
 # Fluid model settings
 #
 fluid.solve = fluid
-fluid.chem_species      = A B C
-fluid.chem_species_diff = 6.0e-10 0.0 6.0e-10
-fluid.init_conc_species = 6.0e-5 0.0 2.0e-6
+fluid.chem_species      = A B C D F
+fluid.chem_species_diff = 6.0e-10 0.0 6.0e-10 0.0 0.0
+fluid.init_conc_species = 6.0e-5 0.0 2.0e-6 0.0 0.0
 fluid.surface_location = 0.00240
 
 #_______________________________________________________________________
