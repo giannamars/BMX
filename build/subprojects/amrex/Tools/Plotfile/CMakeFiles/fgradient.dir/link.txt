@@ -1,1 +1,0 @@
-/usr/bin/c++  -w -O3 -DNDEBUG -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/fgradient.dir/fgradient.cpp.o -o amrex_fgradient  ../../Src/libamrex_3d.a /opt/homebrew/Cellar/open-mpi/5.0.8/lib/libmpi.dylib
