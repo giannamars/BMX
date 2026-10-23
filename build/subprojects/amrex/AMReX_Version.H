@@ -1,0 +1,7 @@
+#ifndef AMREX_VERSION_H_
+#define AMREX_VERSION_H_
+
+#define AMREX_GIT_VERSION "26.10"
+#define AMREX_RELEASE_NUMBER 261000
+
+#endif // AMREX_VERSION_H_

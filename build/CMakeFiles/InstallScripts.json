@@ -1,0 +1,38 @@
+{
+	"InstallScripts" : 
+	[
+		"/Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build/cmake_install.cmake",
+		"/Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build/subprojects/amrex/cmake_install.cmake",
+		"/Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build/subprojects/amrex/Src/cmake_install.cmake",
+		"/Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build/subprojects/amrex/Src/Base/cmake_install.cmake",
+		"/Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build/subprojects/amrex/Src/Boundary/cmake_install.cmake",
+		"/Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build/subprojects/amrex/Src/AmrCore/cmake_install.cmake",
+		"/Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build/subprojects/amrex/Src/Amr/cmake_install.cmake",
+		"/Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build/subprojects/amrex/Src/EB/cmake_install.cmake",
+		"/Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build/subprojects/amrex/Src/LinearSolvers/cmake_install.cmake",
+		"/Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build/subprojects/amrex/Src/Particle/cmake_install.cmake",
+		"/Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build/subprojects/amrex/Tools/Plotfile/cmake_install.cmake",
+		"/Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build/src/cmake_install.cmake",
+		"/Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build/src/io/cmake_install.cmake",
+		"/Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build/src/interpolation/cmake_install.cmake",
+		"/Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build/src/deposition/cmake_install.cmake",
+		"/Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build/src/des/cmake_install.cmake",
+		"/Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build/src/diffusion/cmake_install.cmake",
+		"/Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build/src/leveldata/cmake_install.cmake",
+		"/Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build/src/setup/cmake_install.cmake",
+		"/Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build/src/util/cmake_install.cmake",
+		"/Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build/src/mods/cmake_install.cmake",
+		"/Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build/src/timestepping/cmake_install.cmake",
+		"/Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build/src/chemistry/cmake_install.cmake",
+		"/Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build/tools/cmake_install.cmake",
+		"/Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build/exec/cmake_install.cmake",
+		"/Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build/exec/nlev_large_test/cmake_install.cmake",
+		"/Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build/exec/nlev_real_test/cmake_install.cmake",
+		"/Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build/exec/nlev_dla_test/cmake_install.cmake",
+		"/Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build/exec/fungi/cmake_install.cmake",
+		"/Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build/exec/fungi_fba/cmake_install.cmake",
+		"/Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build/exec/bacteria_fungi/cmake_install.cmake",
+		"/Users/GLMarschmann/Projects/2024-LDRD-Fungi/BMX/build/exec/wall_test/cmake_install.cmake"
+	],
+	"Parallel" : false
+}

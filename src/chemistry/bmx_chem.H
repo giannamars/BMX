@@ -249,7 +249,7 @@ class BMXChemistry
 
   private:
 
-  // Hardwired variables for ABC model
+  // Hardwired variables for the ABC + storage model
   static Real k1, kr1;   // rate coefficients for species A into and out of fungi
   static Real k2, kr2;   // rate coefficients for converting A into B and C inside fungi
   static Real k3, kr3;   // rate coefficients for species C into and out of fungi
@@ -260,6 +260,11 @@ class BMXChemistry
 
   static Real kg, kv;        // fungi growth coefficients
   static Real kb, kbv;       // bacterium growth coefficients
+  static Real storage_yB;    // carbon yield into B
+  static Real storage_yC;    // carbon yield into C
+  static Real storage_yP;    // carbon yield into P
+  static Real storage_km;    // mobilization rate for P
+  static bool use_storage_model;
 
   static Real bacteria_radius_max;  // maximum value of radius for bacterium
   static Real radius_max;  // maximum value of cylinder radius for fungi segment

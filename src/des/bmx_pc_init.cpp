@@ -24,6 +24,7 @@ void BMXParticleContainer::InitParticlesAscii (const std::string& file)
 
 #ifdef NEW_CHEM
     BMXChemistry *bmxchem = BMXChemistry::instance();
+    const int nchem = bmxchem->getIntData(intIdx::num_reals);
 #endif
 
     if (!ifs.good())
@@ -84,13 +85,18 @@ void BMXParticleContainer::InitParticlesAscii (const std::string& file)
       ifs >> host_particles[i].rdata(realIdx::dadt);       // 25
       ifs >> host_particles[i].rdata(realIdx::dvdt);
       ifs >> host_particles[i].idata(intIdx::cell_type);   // 27
-      for (int c=0; c<FLUID::nchem_species; c++) 
+#ifdef NEW_CHEM
+      for (int c = 0; c < nchem; ++c) {
+        host_particles[i].rdata(realIdx::first_data + c) = 0.0;
+      }
+      for (int c = 0; c < FLUID::nchem_species; c++)
       {
-       host_particles[i].rdata(realIdx::first_data+c) = init_conc[c];
+       host_particles[i].rdata(realIdx::first_data + c) = init_conc[c];
         //host_particles[i].rdata(realIdx::first_data+c) = tmp[c];
       }
       host_particles[i].rdata(realIdx::fba_mu) = 0.0;
       bmxchem->setIntegers(&host_particles[i].idata(0));
+#endif
       host_particles[i].rdata(realIdx::bond_scale) = 1.0;
       host_particles[i].idata(intIdx::fuse_tip) = 0;
       

@@ -28,6 +28,11 @@ amrex::Real BMXChemistry::kg = 0.0;
 amrex::Real BMXChemistry::kv = 0.0;
 amrex::Real BMXChemistry::kb = 0.0;
 amrex::Real BMXChemistry::kbv = 0.0;
+amrex::Real BMXChemistry::storage_yB = 1.0;
+amrex::Real BMXChemistry::storage_yC = 0.0;
+amrex::Real BMXChemistry::storage_yP = 0.0;
+amrex::Real BMXChemistry::storage_km = 0.0;
+bool BMXChemistry::use_storage_model = false;
 amrex::Real BMXChemistry::mtA = 0.0;
 amrex::Real BMXChemistry::mtB = 0.0;
 amrex::Real BMXChemistry::mtC = 0.0;
@@ -122,6 +127,16 @@ void BMXChemistry::setParams(const char* /*file*/)
   pp.get("kv",kv);
   pp.get("kb",kb);
   pp.get("kbv",kbv);
+  storage_yB = 1.0;
+  storage_yC = 0.0;
+  storage_yP = 0.0;
+  storage_km = 0.0;
+  use_storage_model = false;
+  pp.query("storage_yB",storage_yB);
+  pp.query("storage_yC",storage_yC);
+  pp.query("storage_yP",storage_yP);
+  pp.query("storage_km",storage_km);
+  pp.query("use_storage_model",use_storage_model);
   pp.query("use_fba_growth",use_fba_growth);
   pp.query("fba_debug",fba_debug);
   std::string fba_sbml_file;
@@ -215,9 +230,11 @@ void BMXChemistry::printCellConcentrations(int id, Real *p_vals, Real *p_par)
       printf("        Concentration D: %18.6e\n",p_vals[3]);
     }
     if (p_vals[4] < 0) {
-      printf(" XXXX   Concentration E: %18.6e\n",p_vals[4]);
+      printf(" XXXX   Concentration %s: %18.6e\n",
+          use_storage_model ? "P" : "E", p_vals[4]);
     } else {
-      printf("        Concentration E: %18.6e\n",p_vals[4]);
+      printf("        Concentration %s: %18.6e\n",
+          use_storage_model ? "P" : "E", p_vals[4]);
     }
    // printf("        Concentration B: %18.6e\n",p_vals[1]);
    // printf("        Concentration C: %18.6e\n",p_vals[2]);
@@ -267,6 +284,11 @@ void BMXChemistry::getChemParams(amrex::Gpu::DeviceVector<Real> &chempar)
   chempar.push_back(bacteria_radius_max);
   chempar.push_back(radius_max);          // 20
   chempar.push_back(length_max);          // 21
+  chempar.push_back(storage_yB);          // 22
+  chempar.push_back(storage_yC);          // 23
+  chempar.push_back(storage_yP);          // 24
+  chempar.push_back(storage_km);          // 25
+  chempar.push_back(use_storage_model ? 1.0 : 0.0); // 26
 }
 
 /** Returen a vector containing exchange parameters

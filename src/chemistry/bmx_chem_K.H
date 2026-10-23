@@ -1448,6 +1448,8 @@ void xferMeshToParticleAndUpdateChem(Real grid_vol, Real npart,
 {
   Real k1, k2, k3, kr1, kr2, kr3, kg, kv;
   Real k4, k5, k6, k7, kr4, kr5, kr6, kr7, kb, kbv;
+  Real storage_yB, storage_yC, storage_yP, storage_km;
+  bool use_storage_model = (chempar[25] > 0.5);
   Real fluid_vol = grid_vol/npart;
   int cell_type =  cell_ipar[intIdx::cell_type];
   bool is_tip = (cell_ipar[intIdx::position] == siteLocation::TIP);
@@ -1474,6 +1476,10 @@ void xferMeshToParticleAndUpdateChem(Real grid_vol, Real npart,
   bacteria_radius_max = chempar[18];
   radius_max = chempar[19];
   length_max = chempar[20];
+  storage_yB = chempar[21];
+  storage_yC = chempar[22];
+  storage_yP = chempar[23];
+  storage_km = chempar[24];
   // check to see if particle can grow. Set growth rates to zero
   // if it cannot
 #if 0
@@ -1821,6 +1827,12 @@ void xferMeshToParticleAndUpdateChem(Real grid_vol, Real npart,
       rC =  k2*cA - kr2*cB*cC;
       rD = 0.0;
       rE = 0.0;
+    } else if (use_storage_model) {
+      rA = -k2*cA + storage_km*cE;
+      rB = storage_yB*k2*cA;
+      rC = storage_yC*k2*cA;
+      rD = 0.0;
+      rE = storage_yP*k2*cA - storage_km*cE;
     } else {
       rA = k5*cC*cD - kr5*cE*cA;
       rB = 0.0;
@@ -1870,6 +1882,45 @@ void xferMeshToParticleAndUpdateChem(Real grid_vol, Real npart,
         cB += dB3;
         cC += dC3;
       }
+    } else if (use_storage_model) {
+      if (cA < 0.0) {
+        cA -= dA3;
+        dA3 = -cA;
+        dB3 = storage_yB*dA3;
+        dC3 = storage_yC*dA3;
+        dD3 = 0.0;
+        dE3 = storage_yP*dA3;
+        cA += dA3;
+        cB += dB3;
+        cC += dC3;
+        cE += dE3;
+      }
+      if (cB < 0.0) {
+        cB -= dB3;
+        dB3 = -cB;
+        cB += dB3;
+      }
+      if (cC < 0.0) {
+        cC -= dC3;
+        dC3 = -cC;
+        dA3 = -dC3;
+        dB3 = 0.0;
+        dD3 = 0.0;
+        dE3 = 0.0;
+        cA += dA3;
+        cC += dC3;
+      }
+      if (cE < 0.0) {
+        cE -= dE3;
+        dE3 = -cE;
+        dA3 = dE3;
+        dB3 = 0.0;
+        dC3 = 0.0;
+        dD3 = 0.0;
+        cA += dA3;
+        cE += dE3;
+      }
+      cD = 0.0;
     } else {
       if (cA < 0.0) {
         cA -= dA3;
@@ -1918,8 +1969,7 @@ void xferMeshToParticleAndUpdateChem(Real grid_vol, Real npart,
     }
 
     // ********************************************************************
-    // Increment B again to account for first order reaction. Handle this
-    // reaction separately since it does not conserve A and B
+    // Increment volume.
     // ********************************************************************
     Real dV;
     if (cell_type == cellType::FUNGI) {
@@ -1946,6 +1996,9 @@ void xferMeshToParticleAndUpdateChem(Real grid_vol, Real npart,
         dV = ttmp*rV;
         cB = 0.0;
       }
+    } else if (use_storage_model) {
+      rV = kg*rB*orig_cell_vol;
+      dV = dtp*rV;
     } else {
       rV =  kbv*cE*orig_cell_vol;
       rE = -kb*cE;
