@@ -24,6 +24,8 @@ BMXParticleContainer::split_particles (Real /*time*/)
   Real l_overlap  = BMXChemistry::p_overlap;
   int l_num_reals = BMXChemistry::p_num_reals;
   int l_num_ints  = BMXChemistry::p_num_ints;
+  bool l_use_storage_model = BMXChemistry::use_storage_model;
+  int l_storage_partition_mode = BMXChemistry::storage_partition_mode;
 
   for (int lev = 0; lev <= finest_level; lev++) {
 
@@ -113,7 +115,9 @@ BMXParticleContainer::split_particles (Real /*time*/)
                 if (ipar_orig[intIdx::cell_type] == cellType::YEAST) {
                   setNewCell(pos_orig, pos_new, par_orig,
                              par_new, ipar_orig, ipar_new,
-                             l_overlap, l_num_reals, l_num_ints, engine);
+                             l_overlap, l_num_reals, l_num_ints,
+                             l_use_storage_model,
+                             l_storage_partition_mode, engine);
                 } else {
                   setNewSegment(pos_orig, pos_new, par_orig,
                                 par_new, ipar_orig, ipar_new,

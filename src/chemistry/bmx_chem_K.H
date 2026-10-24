@@ -397,6 +397,8 @@ copyChildParameters(Real *p_real_orig, int *p_int_orig,
  * @param ipar_orig, ipar_new integer parameter values of original and new particles
  * @param overlap degree of overlap of new and old cell
  * @param num_reals, num_ints number of real and integer parameters
+ * @param use_storage_model true if P is the storage compound
+ * @param storage_partition_mode 0 symmetric P partition, nonzero asymmetric
  * @param engine object for implementing random number generator
  */
 AMREX_GPU_HOST_DEVICE AMREX_INLINE
@@ -404,11 +406,30 @@ void
 setNewCell(Real *pos_orig, Real *pos_new, Real *par_orig,
            Real *par_new, int *ipar_orig, int *ipar_new,
            Real overlap, int num_reals, int num_ints,
+           bool use_storage_model,
+           int storage_partition_mode,
            amrex::RandomEngine const& engine)
 {
   // Copy values from original particle to child
   copyChildParameters(par_orig, ipar_orig, par_new, ipar_new,
       num_reals, num_ints);
+
+  if (use_storage_model && storage_partition_mode != 0) {
+    Real *p_orig = &par_orig[realIdx::first_data];
+    Real *p_new = &par_new[realIdx::first_data];
+    constexpr int storage_idx = 4;
+    Real storage_p = p_orig[storage_idx];
+    if (storage_p > 0.0) {
+      bool orig_gets_storage = (amrex::Random(engine) < 0.5);
+      if (orig_gets_storage) {
+        p_orig[storage_idx] = 2.0*storage_p;
+        p_new[storage_idx] = 0.0;
+      } else {
+        p_orig[storage_idx] = 0.0;
+        p_new[storage_idx] = 2.0*storage_p;
+      }
+    }
+  }
 
   if (ipar_orig[intIdx::cell_type] == cellType::YEAST) {
     Real x,y,z;

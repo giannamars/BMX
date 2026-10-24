@@ -264,6 +264,7 @@ class BMXChemistry
   static Real storage_yC;    // carbon yield into C
   static Real storage_yP;    // carbon yield into P
   static Real storage_km;    // mobilization rate for P
+  static int storage_partition_mode; // 0 symmetric, 1 asymmetric P partition
   static bool use_storage_model;
 
   static Real bacteria_radius_max;  // maximum value of radius for bacterium
