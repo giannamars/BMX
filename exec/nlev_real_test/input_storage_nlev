@@ -19,7 +19,7 @@ bmx.cell_snapshot_int = 2
 
 bmx.fixed_dt = 1.0
 
-bmx.max_step = 3
+bmx.max_step = 12
 
 dem.solve = bacteria
 bmx.particle_init_type = "AsciiFile"

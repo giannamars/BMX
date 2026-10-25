@@ -37,6 +37,9 @@ namespace
     bool initialized = false;
     std::ofstream stream;
     std::ofstream snapshot_stream;
+    amrex::Real last_time = 0.0;
+    amrex::Real cumulative_low_a_cell_time = 0.0;
+    amrex::Real cumulative_low_a_exposure = 0.0;
   };
 
   DivisionLogState& division_log_state()
@@ -113,6 +116,58 @@ namespace
     return std::max(run_seed + 1, data_rows + 1);
   }
 
+  void resume_colony_log_from_file(const std::string& filename)
+  {
+    auto& colony_state = colony_log_state();
+    auto& division_state = division_log_state();
+
+    std::ifstream in(filename);
+    if (!in.good()) {
+      return;
+    }
+
+    std::string header;
+    if (!std::getline(in, header)) {
+      return;
+    }
+
+    std::string line;
+    std::string last_nonempty;
+    while (std::getline(in, line)) {
+      if (!line.empty()) {
+        last_nonempty = line;
+      }
+    }
+
+    if (last_nonempty.empty()) {
+      return;
+    }
+
+    std::vector<std::string> fields;
+    std::istringstream row(last_nonempty);
+    std::string field;
+    while (std::getline(row, field, ',')) {
+      fields.push_back(field);
+    }
+
+    if (fields.size() > 8) {
+      try {
+        division_state.cumulative_divisions = std::stoi(fields[5]);
+        division_state.cumulative_low_a_divisions = std::stoi(fields[8]);
+      } catch (...) {
+      }
+    }
+
+    if (fields.size() > 12) {
+      try {
+        colony_state.last_time = std::stod(fields[2]);
+        colony_state.cumulative_low_a_cell_time = std::stod(fields[11]);
+        colony_state.cumulative_low_a_exposure = std::stod(fields[12]);
+      } catch (...) {
+      }
+    }
+  }
+
   amrex::Real sample_local_A_out(const amrex::MultiFab& xk, const amrex::Geometry& geom,
                                  const amrex::RealVect& pos)
   {
@@ -182,6 +237,8 @@ namespace
     std::ostringstream filename;
     filename << "colony_metrics_seed" << run_seed << "_rank" << rank << ".csv";
 
+    resume_colony_log_from_file(filename.str());
+
     std::ifstream check(filename.str());
     check.seekg(0, std::ios::end);
     const bool write_header = !(check.good() && check.tellg() > 0);
@@ -193,6 +250,7 @@ namespace
       state.stream
         << "run_seed,rank,time,step,total_cells,cumulative_divisions,"
         << "divisions_this_step,low_a_divisions_this_step,low_a_divisions_cumulative,"
+        << "low_a_cells,low_a_fraction,low_a_cell_time_cumulative,low_a_exposure_cumulative,"
         << "extracellular_A_remaining,total_storage_P,storage_mean,storage_std,"
         << "storage_min,storage_p25,storage_median,storage_p75,storage_max,"
         << "division_volume_threshold,division_volume_units,low_a_threshold,low_a_units,low_a_basis,"
@@ -576,15 +634,22 @@ BMXParticleContainer::LogColonyMetrics (Real time, int nstep, Real extracellular
   const bool do_snapshot = (snapshot_interval > 0 && (nstep % snapshot_interval) == 0);
   const Real division_vol_threshold = SPECIES::max_vol;
   const Real low_a_threshold = division_state.low_a_threshold;
+  auto& colony_state = colony_log_state();
+  const Real time_delta = (colony_state.last_time > 0.0) ? std::max(Real(0.0), time - colony_state.last_time) : 0.0;
 
   std::vector<Real> storage_amounts;
   int total_cells = 0;
+  int low_a_cells = 0;
+  Real low_a_exposure_delta = 0.0;
 
   for (int lev = 0; lev <= finest_level; ++lev) {
     int n_at_lev = this->NumberOfParticlesAtLevel(lev);
     if (n_at_lev == 0) {
       continue;
     }
+
+    const MultiFab* xk_level = (X_k.size() > static_cast<std::size_t>(lev)) ? X_k[lev] : nullptr;
+    const auto& geom = Geom(lev);
 
     for (BMXParIter pti(*this, lev); pti.isValid(); ++pti) {
       auto& particle_tile = this->GetParticles(lev)[std::make_pair(pti.index(), pti.LocalTileIndex())];
@@ -601,6 +666,13 @@ BMXParticleContainer::LogColonyMetrics (Real time, int nstep, Real extracellular
         }
 
         const Real stored_amount = particle.rdata(realIdx::first_data + 4) * particle.rdata(realIdx::vol);
+        const Real a_out_local = (xk_level != nullptr)
+          ? sample_local_A_out(*xk_level, geom, particle.pos())
+          : 0.0;
+        if (a_out_local <= low_a_threshold) {
+          low_a_cells += 1;
+          low_a_exposure_delta += (low_a_threshold - a_out_local);
+        }
         storage_amounts.push_back(stored_amount);
         total_cells += 1;
       }
@@ -627,6 +699,12 @@ BMXParticleContainer::LogColonyMetrics (Real time, int nstep, Real extracellular
   const Real storage_p25 = interpolate_quantile(storage_amounts, 0.25);
   const Real storage_median = interpolate_quantile(storage_amounts, 0.50);
   const Real storage_p75 = interpolate_quantile(storage_amounts, 0.75);
+  const Real low_a_fraction = (total_cells > 0) ? static_cast<Real>(low_a_cells) / static_cast<Real>(total_cells) : 0.0;
+  const Real low_a_cell_time_delta = static_cast<Real>(low_a_cells) * time_delta;
+
+  colony_state.last_time = time;
+  colony_state.cumulative_low_a_cell_time += low_a_cell_time_delta;
+  colony_state.cumulative_low_a_exposure += low_a_exposure_delta * time_delta;
 
   auto& state = colony_log_state();
   state.stream << BMXChemistry::instance()->getDivisionEventRunSeed() << ','
@@ -638,6 +716,10 @@ BMXParticleContainer::LogColonyMetrics (Real time, int nstep, Real extracellular
                << division_state.step_divisions << ','
                << division_state.step_low_a_divisions << ','
                << division_state.cumulative_low_a_divisions << ','
+               << low_a_cells << ','
+               << low_a_fraction << ','
+               << colony_state.cumulative_low_a_cell_time << ','
+               << colony_state.cumulative_low_a_exposure << ','
                << extracellular_A_remaining << ','
                << storage_sum << ','
                << storage_mean << ','
