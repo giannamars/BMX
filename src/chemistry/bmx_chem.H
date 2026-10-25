@@ -213,6 +213,16 @@ class BMXChemistry
    */
   void getChemParams(amrex::Gpu::DeviceVector<Real> &chempar);
 
+  /**
+   * Return storage partition mode for daughter P concentration
+   */
+  int getStoragePartitionMode();
+
+  /**
+   * Return whether the storage chemistry model is active
+   */
+  bool getUseStorageModel();
+
   /** Return a vector containing exchange parameters
    * @return vector of exchange parameters
    */

@@ -24,8 +24,9 @@ BMXParticleContainer::split_particles (Real /*time*/)
   Real l_overlap  = BMXChemistry::p_overlap;
   int l_num_reals = BMXChemistry::p_num_reals;
   int l_num_ints  = BMXChemistry::p_num_ints;
-  bool l_use_storage_model = BMXChemistry::use_storage_model;
-  int l_storage_partition_mode = BMXChemistry::storage_partition_mode;
+  BMXChemistry *bmxchem = BMXChemistry::instance();
+  bool l_use_storage_model = bmxchem->getUseStorageModel();
+  int l_storage_partition_mode = bmxchem->getStoragePartitionMode();
 
   for (int lev = 0; lev <= finest_level; lev++) {
 

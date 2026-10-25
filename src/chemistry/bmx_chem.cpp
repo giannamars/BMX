@@ -294,6 +294,16 @@ void BMXChemistry::getChemParams(amrex::Gpu::DeviceVector<Real> &chempar)
   chempar.push_back(use_storage_model ? 1.0 : 0.0); // 26
 }
 
+int BMXChemistry::getStoragePartitionMode()
+{
+  return storage_partition_mode;
+}
+
+bool BMXChemistry::getUseStorageModel()
+{
+  return use_storage_model;
+}
+
 /** Returen a vector containing exchange parameters
  * @return vector of exchange parameters
  */
