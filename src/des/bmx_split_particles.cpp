@@ -156,7 +156,7 @@ namespace
     state.low_a_threshold = BMXChemistry::instance()->getLowAThreshold();
     if (write_header) {
       state.stream
-        << "division_event_id,run_seed,rank,time,parent_id,daughter1_id,daughter2_id,"
+        << "division_event_id,run_seed,rank,time,parent_id,parent_birth_division_event_id,daughter1_id,daughter2_id,"
         << "parent_volume_pre,daughter1_volume,daughter2_volume,"
         << "daughter1_x,daughter1_y,daughter1_z,"
         << "daughter2_x,daughter2_y,daughter2_z,"
@@ -209,7 +209,7 @@ namespace
     state.snapshot_stream << std::setprecision(16);
     if (snap_write_header) {
       state.snapshot_stream
-        << "run_seed,rank,time,step,cell_id,birth_division_event_id,x,y,z,volume,distance_to_Vcrit,"
+        << "run_seed,rank,time,step,cell_id,birth_division_event_id,parent_birth_division_event_id,x,y,z,volume,distance_to_Vcrit,"
         << "A_out_local,A_in_amount,P_amount,low_a_flag,low_a_threshold,low_a_units,low_a_basis\n";
     }
   }
@@ -391,6 +391,7 @@ BMXParticleContainer::split_particles (Real time, const amrex::Vector<amrex::Mul
                 ipar_new[intIdx::id] = p.id();
                 ipar_new[intIdx::cpu] = p.cpu();
                 ipar_new[intIdx::birth_division_event_id] = split_event_ids[pid];
+                ipar_new[intIdx::parent_birth_division_event_id] = ipar_orig[intIdx::birth_division_event_id];
             } else if (do_split_p[pid] == 2) {
 
                 ParticleType& p1 = pstruct[np+poffsets[pid]];
@@ -420,6 +421,8 @@ BMXParticleContainer::split_particles (Real time, const amrex::Vector<amrex::Mul
                                p1.id(), p1.cpu(), p2.id(), p2.cpu(), engine);
                 ipar_new1[intIdx::birth_division_event_id] = split_event_ids[pid];
                 ipar_new2[intIdx::birth_division_event_id] = split_event_ids[pid];
+                ipar_new1[intIdx::parent_birth_division_event_id] = ipar_orig[intIdx::birth_division_event_id];
+                ipar_new2[intIdx::parent_birth_division_event_id] = ipar_orig[intIdx::birth_division_event_id];
 
             } // if test
         }); // pid
@@ -503,6 +506,7 @@ BMXParticleContainer::split_particles (Real time, const amrex::Vector<amrex::Mul
                 << amrex::ParallelDescriptor::MyProc() << ','
                 << time << ','
                 << pre_parent.id() << ','
+                << pre_parent.idata(intIdx::birth_division_event_id) << ','
                 << daughter1.id() << ','
                 << daughter2.id() << ','
                 << parent_volume_pre << ','
@@ -676,6 +680,7 @@ BMXParticleContainer::LogColonyMetrics (Real time, int nstep, Real extracellular
                                 << nstep << ','
                                 << particle.id() << ','
                                 << particle.idata(intIdx::birth_division_event_id) << ','
+                                << particle.idata(intIdx::parent_birth_division_event_id) << ','
                                 << particle.pos(0) << ','
                                 << particle.pos(1) << ','
                                 << particle.pos(2) << ','

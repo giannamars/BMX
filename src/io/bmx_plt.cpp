@@ -286,6 +286,7 @@ bmx::WritePlotFile (std::string& plot_file, int nstep, Real time )
         int_comp_names.push_back("unique_id");
         int_comp_names.push_back("home_cpu");
         int_comp_names.push_back("birth_division_event_id");
+        int_comp_names.push_back("parent_birth_division_event_id");
         for (i=intIdx::count-1; i<MAX_CHEM_INT_VAR; i++) {
           char c[2];
           c[1] = '\0';
