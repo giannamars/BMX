@@ -16,6 +16,7 @@
 #include <limits>
 #include <sstream>
 #include <vector>
+#include <string>
 
 using PinnedTile = typename BMXParticleContainer::ContainerLike<amrex::PinnedArenaAllocator>::ParticleTileType;
 
@@ -67,6 +68,51 @@ namespace
     return values[lo] + frac * (values[hi] - values[lo]);
   }
 
+  int next_division_event_id_from_file(const std::string& filename, int run_seed)
+  {
+    std::ifstream in(filename);
+    if (!in.good()) {
+      return 1;
+    }
+
+    std::string header;
+    if (!std::getline(in, header)) {
+      return 1;
+    }
+
+    const bool has_event_id = (header.find("division_event_id") != std::string::npos);
+
+    std::string line;
+    int max_event_id = 0;
+    int data_rows = 0;
+    while (std::getline(in, line)) {
+      if (line.empty()) {
+        continue;
+      }
+      ++data_rows;
+      std::istringstream row(line);
+      std::string first_field;
+      if (!std::getline(row, first_field, ',')) {
+        continue;
+      }
+
+      try {
+        const int parsed = std::stoi(first_field);
+        if (parsed > max_event_id) {
+          max_event_id = parsed;
+        }
+      } catch (...) {
+        continue;
+      }
+    }
+
+    if (has_event_id) {
+      return std::max(1, max_event_id + 1);
+    }
+
+    return std::max(run_seed + 1, data_rows + 1);
+  }
+
   amrex::Real sample_local_A_out(const amrex::MultiFab& xk, const amrex::Geometry& geom,
                                  const amrex::RealVect& pos)
   {
@@ -106,6 +152,7 @@ namespace
 
     state.stream.open(filename.str(), std::ios::out | std::ios::app);
     state.stream << std::setprecision(16);
+    state.next_event_id = next_division_event_id_from_file(filename.str(), run_seed);
     state.low_a_threshold = BMXChemistry::instance()->getLowAThreshold();
     if (write_header) {
       state.stream
@@ -162,7 +209,7 @@ namespace
     state.snapshot_stream << std::setprecision(16);
     if (snap_write_header) {
       state.snapshot_stream
-        << "run_seed,rank,time,step,cell_id,x,y,z,volume,distance_to_Vcrit,"
+        << "run_seed,rank,time,step,cell_id,birth_division_event_id,x,y,z,volume,distance_to_Vcrit,"
         << "A_out_local,A_in_amount,P_amount,low_a_flag,low_a_threshold,low_a_units,low_a_basis\n";
     }
   }
@@ -195,6 +242,12 @@ BMXParticleContainer::split_particles (Real time, const amrex::Vector<amrex::Mul
 
   if (l_log_divisions) {
     init_division_log(l_run_seed);
+  } else if (l_log_colony) {
+    auto& division_state = division_log_state();
+    const int rank = amrex::ParallelDescriptor::MyProc();
+    std::ostringstream filename;
+    filename << "division_events_seed" << l_run_seed << "_rank" << rank << ".csv";
+    division_state.next_event_id = next_division_event_id_from_file(filename.str(), l_run_seed);
   }
 
   for (int lev = 0; lev <= finest_level; lev++) {
@@ -256,6 +309,27 @@ BMXParticleContainer::split_particles (Real time, const amrex::Vector<amrex::Mul
         std::memcpy(offsets_h.dataPtr(), offsets.dataPtr(), (np+1)*sizeof(unsigned int));
 #endif
 
+        Vector<int> split_event_ids_h(np, 0);
+        {
+          auto& division_state = division_log_state();
+          int next_event_id = division_state.next_event_id;
+          for (int pid = 0; pid < np; ++pid) {
+            if (do_split_h[pid] > 0) {
+              split_event_ids_h[pid] = next_event_id++;
+            }
+          }
+          division_state.next_event_id = next_event_id;
+        }
+
+        Gpu::DeviceVector<int> split_event_ids_d(np);
+#ifdef AMREX_USE_GPU
+        Gpu::copyAsync(Gpu::hostToDevice, split_event_ids_h.begin(), split_event_ids_h.end(),
+                       split_event_ids_d.begin());
+#else
+        std::memcpy(split_event_ids_d.dataPtr(), split_event_ids_h.dataPtr(), np * sizeof(int));
+#endif
+        Gpu::synchronize();
+
         // make room for new particles - invalidates iterators, so get the ptr again
         particle_tile.resize(np+num_split);
         particle_tile.setNumNeighbors(0);
@@ -275,6 +349,7 @@ BMXParticleContainer::split_particles (Real time, const amrex::Vector<amrex::Mul
         // Fill new particle data. If particle pid is split, the new particle
         // is at index np + poffsets[pid];
         auto poffsets = offsets.data();
+        auto split_event_ids = split_event_ids_d.data();
         int my_proc = amrex::ParallelDescriptor::MyProc();
         amrex::ParallelForRNG( np, [=] AMREX_GPU_DEVICE (int pid, amrex::RandomEngine const& engine) noexcept
         {
@@ -315,6 +390,7 @@ BMXParticleContainer::split_particles (Real time, const amrex::Vector<amrex::Mul
                 }
                 ipar_new[intIdx::id] = p.id();
                 ipar_new[intIdx::cpu] = p.cpu();
+                ipar_new[intIdx::birth_division_event_id] = split_event_ids[pid];
             } else if (do_split_p[pid] == 2) {
 
                 ParticleType& p1 = pstruct[np+poffsets[pid]];
@@ -342,6 +418,8 @@ BMXParticleContainer::split_particles (Real time, const amrex::Vector<amrex::Mul
                                ipar_orig, ipar_new1, ipar_new2,
                                l_num_reals, l_num_ints, split_len,
                                p1.id(), p1.cpu(), p2.id(), p2.cpu(), engine);
+                ipar_new1[intIdx::birth_division_event_id] = split_event_ids[pid];
+                ipar_new2[intIdx::birth_division_event_id] = split_event_ids[pid];
 
             } // if test
         }); // pid
@@ -418,7 +496,7 @@ BMXParticleContainer::split_particles (Real time, const amrex::Vector<amrex::Mul
           auto& division_state = division_log_state();
 
           if (l_log_divisions) {
-            const int division_event_id = division_state.next_event_id++;
+            const int division_event_id = split_event_ids_h[pid];
             auto& log = division_state.stream;
             log << division_event_id << ','
                 << l_run_seed << ','
@@ -597,6 +675,7 @@ BMXParticleContainer::LogColonyMetrics (Real time, int nstep, Real extracellular
                                 << time << ','
                                 << nstep << ','
                                 << particle.id() << ','
+                                << particle.idata(intIdx::birth_division_event_id) << ','
                                 << particle.pos(0) << ','
                                 << particle.pos(1) << ','
                                 << particle.pos(2) << ','

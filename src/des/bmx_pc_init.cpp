@@ -108,6 +108,7 @@ void BMXParticleContainer::InitParticlesAscii (const std::string& file)
       host_particles[i].idata(intIdx::position) = siteLocation::TIP;
       host_particles[i].idata(intIdx::n_bnds) = 0;
       host_particles[i].idata(intIdx::fuse_flag) = 0;
+      host_particles[i].idata(intIdx::birth_division_event_id) = 0;
 
       if (!ifs.good())
           amrex::Abort("Error initializing particles from Ascii file. \n");

@@ -15,7 +15,7 @@
  * variables in the undefined blocks */
 #define NUM_CHEM_COMPONENTS 5
 #define MAX_CHEM_REAL_VAR 28 + 3*NUM_CHEM_COMPONENTS
-#define MAX_CHEM_INT_VAR 35
+#define MAX_CHEM_INT_VAR 36
 
 using amrex::Real;
 
@@ -121,6 +121,7 @@ struct intIdx
     fix_site,       // parameter to make sure that bonds fixed correctly
     id,             // unique identifier of segment
     cpu,            // original process of segment                               35
+    birth_division_event_id,
     first_data,     // index of first value of uncharacterized block
     count           // total number of elements in this enumeration
   };
