@@ -157,6 +157,7 @@ namespace
     if (write_header) {
       state.stream
         << "division_event_id,run_seed,rank,time,parent_id,parent_birth_division_event_id,daughter1_id,daughter2_id,"
+        << "daughter1_birth_division_event_id,daughter2_birth_division_event_id,"
         << "parent_volume_pre,daughter1_volume,daughter2_volume,"
         << "daughter1_x,daughter1_y,daughter1_z,"
         << "daughter2_x,daughter2_y,daughter2_z,"
@@ -354,6 +355,7 @@ BMXParticleContainer::split_particles (Real time, const amrex::Vector<amrex::Mul
         amrex::ParallelForRNG( np, [=] AMREX_GPU_DEVICE (int pid, amrex::RandomEngine const& engine) noexcept
         {
             BMXParticleContainer::ParticleType& p_orig = pstruct[pid];
+            int parent_birth_event_id = p_orig.idata(intIdx::birth_division_event_id);
 
             // Check to see if particle satisfies some criteria for splitting
             // into two new particles
@@ -390,8 +392,10 @@ BMXParticleContainer::split_particles (Real time, const amrex::Vector<amrex::Mul
                 }
                 ipar_new[intIdx::id] = p.id();
                 ipar_new[intIdx::cpu] = p.cpu();
+                ipar_orig[intIdx::birth_division_event_id] = split_event_ids[pid];
+                ipar_orig[intIdx::parent_birth_division_event_id] = parent_birth_event_id;
                 ipar_new[intIdx::birth_division_event_id] = split_event_ids[pid];
-                ipar_new[intIdx::parent_birth_division_event_id] = ipar_orig[intIdx::birth_division_event_id];
+                ipar_new[intIdx::parent_birth_division_event_id] = parent_birth_event_id;
             } else if (do_split_p[pid] == 2) {
 
                 ParticleType& p1 = pstruct[np+poffsets[pid]];
@@ -419,10 +423,12 @@ BMXParticleContainer::split_particles (Real time, const amrex::Vector<amrex::Mul
                                ipar_orig, ipar_new1, ipar_new2,
                                l_num_reals, l_num_ints, split_len,
                                p1.id(), p1.cpu(), p2.id(), p2.cpu(), engine);
+                ipar_orig[intIdx::birth_division_event_id] = split_event_ids[pid];
+                ipar_orig[intIdx::parent_birth_division_event_id] = parent_birth_event_id;
                 ipar_new1[intIdx::birth_division_event_id] = split_event_ids[pid];
                 ipar_new2[intIdx::birth_division_event_id] = split_event_ids[pid];
-                ipar_new1[intIdx::parent_birth_division_event_id] = ipar_orig[intIdx::birth_division_event_id];
-                ipar_new2[intIdx::parent_birth_division_event_id] = ipar_orig[intIdx::birth_division_event_id];
+                ipar_new1[intIdx::parent_birth_division_event_id] = parent_birth_event_id;
+                ipar_new2[intIdx::parent_birth_division_event_id] = parent_birth_event_id;
 
             } // if test
         }); // pid
@@ -509,6 +515,8 @@ BMXParticleContainer::split_particles (Real time, const amrex::Vector<amrex::Mul
                 << pre_parent.idata(intIdx::birth_division_event_id) << ','
                 << daughter1.id() << ','
                 << daughter2.id() << ','
+                << daughter1.idata(intIdx::birth_division_event_id) << ','
+                << daughter2.idata(intIdx::birth_division_event_id) << ','
                 << parent_volume_pre << ','
                 << daughter1_vol << ','
                 << daughter2_vol << ','
