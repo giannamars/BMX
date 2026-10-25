@@ -15,7 +15,7 @@ bmx.verbose = 1
 
 bmx.fixed_dt = 1.0
 
-bmx.max_step = 5
+bmx.max_step = 3
 
 dem.solve = bacteria
 bmx.particle_init_type = "AsciiFile"
@@ -83,7 +83,7 @@ fluid.surface_location = 0.00240
 #_______________________________________________________________________
 # Reaction model parameters
 #
-chem_species.max_vol = 1.0e-12
+chem_species.max_vol = 5.0e-13
 chem_species.k1 = 2.0e-5
 chem_species.kr1 = 2.0e-5
 chem_species.k2 = 0.4
@@ -107,7 +107,7 @@ chem_species.storage_yB = 0.5
 chem_species.storage_yC = 0.25
 chem_species.storage_yP = 0.25
 chem_species.storage_km = 0.2
-chem_species.storage_partition_mode = 0   # 0 symmetric, 1 asymmetric P partition
+chem_species.storage_partition_mode = 1   # 0 symmetric, 1 asymmetric P partition
 chem_species.use_fba_growth = 0
 
 chem_species.mass_transfer_A = 2.0e-5
