@@ -15,6 +15,8 @@
 #include <cmath>
 #include <sstream>
 
+using PinnedTile = typename BMXParticleContainer::ContainerLike<amrex::PinnedArenaAllocator>::ParticleTileType;
+
 namespace
 {
   struct DivisionLogState {
@@ -297,7 +299,8 @@ BMXParticleContainer::split_particles (Real time, const amrex::Vector<amrex::Mul
             const Real daughter2_P_amount = daughter2.rdata(realIdx::first_data + 4) * daughter2_vol;
             const Real p_mass_sum = daughter1_P_amount + daughter2_P_amount;
             const Real p_mass_diff = parent_p_pre - p_mass_sum;
-            const Real p_mass_tol = std::max(1.0e-14, 1.0e-10 * std::max(1.0, std::abs(parent_p_pre)));
+            const Real parent_p_abs = amrex::Math::abs(parent_p_pre);
+            const Real p_mass_tol = std::max(Real(1.0e-14), Real(1.0e-10) * std::max(Real(1.0), parent_p_abs));
 
             int partition_mode = l_storage_partition_mode;
             int p_receiver = 0;
