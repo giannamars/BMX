@@ -390,7 +390,7 @@ BMXParticleContainer::split_particles (Real time, const amrex::Vector<amrex::Mul
           const Real parent_p_abs = amrex::Math::abs(parent_p_pre);
           const Real p_mass_tol = std::max(Real(1.0e-14), Real(1.0e-10) * std::max(Real(1.0), parent_p_abs));
           const Real division_vol_threshold = SPECIES::max_vol;
-          const Real low_a_threshold = division_state.low_a_threshold;
+          const Real low_a_threshold = bmxchem->getLowAThreshold();
 
           int partition_mode = l_storage_partition_mode;
           int p_receiver = 0;
