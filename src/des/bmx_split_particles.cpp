@@ -9,16 +9,88 @@
 #include <bmx_des_K.H>
 #include <bmx_chem_species_parms.H>
 
+#include <fstream>
+#include <iomanip>
+#include <algorithm>
+#include <cmath>
+#include <sstream>
+
+namespace
+{
+  struct DivisionLogState {
+    bool initialized = false;
+    std::ofstream stream;
+  };
+
+  DivisionLogState& division_log_state()
+  {
+    static DivisionLogState state;
+    return state;
+  }
+
+  amrex::Real sample_local_A_out(const amrex::MultiFab& xk, const amrex::Geometry& geom,
+                                 const amrex::RealVect& pos)
+  {
+    const auto plo = geom.ProbLoArray();
+    const auto dxi = geom.InvCellSizeArray();
+    const int i = static_cast<int>(amrex::Math::floor((pos[0] - plo[0]) * dxi[0]));
+    const int j = static_cast<int>(amrex::Math::floor((pos[1] - plo[1]) * dxi[1]));
+    const int k = static_cast<int>(amrex::Math::floor((pos[2] - plo[2]) * dxi[2]));
+    const amrex::IntVect iv(i, j, k);
+
+    for (amrex::MFIter mfi(xk, amrex::TilingIfNotGPU()); mfi.isValid(); ++mfi) {
+      if (mfi.validbox().contains(iv)) {
+        return xk.const_array(mfi)(i, j, k, 0);
+      }
+    }
+
+    return 0.0;
+  }
+
+  void init_division_log(int run_seed)
+  {
+    auto& state = division_log_state();
+    if (state.initialized) {
+      return;
+    }
+
+    const int rank = amrex::ParallelDescriptor::MyProc();
+    std::ostringstream filename;
+    filename << "division_events_seed" << run_seed << "_rank" << rank << ".csv";
+
+    std::ifstream check(filename.str());
+    check.seekg(0, std::ios::end);
+    const bool write_header = !(check.good() && check.tellg() > 0);
+    check.close();
+
+    state.stream.open(filename.str(), std::ios::out | std::ios::app);
+    state.stream << std::setprecision(16);
+    if (write_header) {
+      state.stream
+        << "run_seed,rank,time,parent_id,daughter1_id,daughter2_id,"
+        << "parent_volume_pre,daughter1_volume,daughter2_volume,"
+        << "daughter1_x,daughter1_y,daughter1_z,"
+        << "daughter2_x,daughter2_y,daughter2_z,"
+        << "A_out_local,"
+        << "daughter1_A_amount,daughter2_A_amount,"
+        << "daughter1_P_amount,daughter2_P_amount,"
+        << "parent_P_amount_pre,partition_mode,p_receiver,p_mass_diff,p_mass_tol\n";
+    }
+    state.initialized = true;
+  }
+}
+
 /**
  * @brief this function splits particles if some criterion is met
  * @param time current time at which split occurs
+ * @param X_k fluid concentration fields used to sample local A_out for logging
  */
 void
-BMXParticleContainer::split_particles (Real /*time*/)
+BMXParticleContainer::split_particles (Real time, const amrex::Vector<amrex::MultiFab*>& X_k)
 {
-  Real l_max_vol  = SPECIES::max_vol; 
-  Real l_max_len  = SPECIES::max_len; 
-  Real l_max_rad  = SPECIES::max_rad; 
+  Real l_max_vol  = SPECIES::max_vol;
+  Real l_max_len  = SPECIES::max_len;
+  Real l_max_rad  = SPECIES::max_rad;
   Real l_brnch_prob = SPECIES::brnch_prob;
   Real l_split_prob = SPECIES::split_prob;
   Real l_overlap  = BMXChemistry::p_overlap;
@@ -27,8 +99,16 @@ BMXParticleContainer::split_particles (Real /*time*/)
   BMXChemistry *bmxchem = BMXChemistry::instance();
   bool l_use_storage_model = bmxchem->getUseStorageModel();
   int l_storage_partition_mode = bmxchem->getStoragePartitionMode();
+  const bool l_log_divisions = bmxchem->getDivisionEventLogging();
+  const int l_run_seed = bmxchem->getDivisionEventRunSeed();
+
+  if (l_log_divisions) {
+    init_division_log(l_run_seed);
+  }
 
   for (int lev = 0; lev <= finest_level; lev++) {
+
+      MultiFab* xk_ptr = (X_k.size() > static_cast<std::size_t>(lev)) ? X_k[lev] : nullptr;
 
       for (BMXParIter pti(*this, lev); pti.isValid(); ++pti)
       {
@@ -40,6 +120,13 @@ BMXParticleContainer::split_particles (Real /*time*/)
         auto& particle_tile = this->GetParticles(lev)[std::make_pair(grid,tile)];
 
         const int np = particles.size();
+
+        PinnedTile pre_tile;
+        if (l_log_divisions) {
+          pre_tile.define(NumRuntimeRealComps(), NumRuntimeIntComps());
+          pre_tile.resize(np);
+          amrex::copyParticles(pre_tile, particles, 0, 0, np);
+        }
 
         // whether each particle will be split
         Gpu::DeviceVector<unsigned int> do_split(np+1, 0);
@@ -66,6 +153,16 @@ BMXParticleContainer::split_particles (Real /*time*/)
         Gpu::dtoh_memcpy(&num_split,offsets.dataPtr()+np,sizeof(unsigned int));
 #else
         std::memcpy(&num_split,offsets.dataPtr()+np,sizeof(unsigned int));
+#endif
+
+        Vector<unsigned int> do_split_h(np);
+        Vector<unsigned int> offsets_h(np+1);
+#ifdef AMREX_USE_GPU
+        Gpu::dtoh_memcpy(do_split_h.dataPtr(), do_split.dataPtr(), np*sizeof(unsigned int));
+        Gpu::dtoh_memcpy(offsets_h.dataPtr(), offsets.dataPtr(), (np+1)*sizeof(unsigned int));
+#else
+        std::memcpy(do_split_h.dataPtr(), do_split.dataPtr(), np*sizeof(unsigned int));
+        std::memcpy(offsets_h.dataPtr(), offsets.dataPtr(), (np+1)*sizeof(unsigned int));
 #endif
 
         // make room for new particles - invalidates iterators, so get the ptr again
@@ -127,12 +224,6 @@ BMXParticleContainer::split_particles (Real /*time*/)
                 }
                 ipar_new[intIdx::id] = p.id();
                 ipar_new[intIdx::cpu] = p.cpu();
-                // printf("NEW segment id: %d cpu: %d site1: %d id1: %d cpu1: %d\n",
-                //     ipar_new[intIdx::id],ipar_new[intIdx::cpu],ipar_new[intIdx::site1],
-                //     ipar_new[intIdx::seg1_id1],ipar_new[intIdx::seg1_id2]);
-
-                //                std::printf("OLD VOLUME OUT = %f \n", par_orig[realIdx::vol]);
-                //                std::printf("NEW VOLUME OUT = %f \n", par_new[realIdx::vol]);
             } else if (do_split_p[pid] == 2) {
 
                 ParticleType& p1 = pstruct[np+poffsets[pid]];
@@ -163,6 +254,97 @@ BMXParticleContainer::split_particles (Real /*time*/)
 
             } // if test
         }); // pid
+
+        if (l_log_divisions) {
+          Gpu::Device::synchronize();
+
+          PinnedTile post_tile;
+          post_tile.define(NumRuntimeRealComps(), NumRuntimeIntComps());
+          post_tile.resize(np + num_split);
+          amrex::copyParticles(post_tile, particles, 0, 0, np + num_split);
+
+          const auto& pre_particles = pre_tile.GetArrayOfStructs();
+          const auto& post_particles = post_tile.GetArrayOfStructs();
+          const auto& geom = Geom(lev);
+          const MultiFab* xk_level = xk_ptr;
+
+          for (int pid = 0; pid < np; ++pid) {
+            if (do_split_h[pid] == 0) {
+              continue;
+            }
+
+            const auto& pre_parent = pre_particles[pid];
+            const Real parent_volume_pre = pre_parent.rdata(realIdx::vol);
+            const Real parent_p_pre = pre_parent.rdata(realIdx::first_data + 4) * parent_volume_pre;
+            const Real a_out_local = (xk_level != nullptr)
+              ? sample_local_A_out(*xk_level, geom, pre_parent.pos())
+              : 0.0;
+
+            int daughter1_index = pid;
+            int daughter2_index = np + offsets_h[pid];
+            if (do_split_h[pid] == 2) {
+              daughter1_index = np + offsets_h[pid];
+              daughter2_index = np + offsets_h[pid] + 1;
+            }
+            const auto& daughter1 = post_particles[daughter1_index];
+            const auto& daughter2 = post_particles[daughter2_index];
+
+            const Real daughter1_vol = daughter1.rdata(realIdx::vol);
+            const Real daughter2_vol = daughter2.rdata(realIdx::vol);
+            const Real daughter1_A_amount = daughter1.rdata(realIdx::first_data + 0) * daughter1_vol;
+            const Real daughter2_A_amount = daughter2.rdata(realIdx::first_data + 0) * daughter2_vol;
+            const Real daughter1_P_amount = daughter1.rdata(realIdx::first_data + 4) * daughter1_vol;
+            const Real daughter2_P_amount = daughter2.rdata(realIdx::first_data + 4) * daughter2_vol;
+            const Real p_mass_sum = daughter1_P_amount + daughter2_P_amount;
+            const Real p_mass_diff = parent_p_pre - p_mass_sum;
+            const Real p_mass_tol = std::max(1.0e-14, 1.0e-10 * std::max(1.0, std::abs(parent_p_pre)));
+
+            int partition_mode = l_storage_partition_mode;
+            int p_receiver = 0;
+            if (l_use_storage_model && do_split_h[pid] == 1 &&
+                pre_parent.idata(intIdx::cell_type) == cellType::YEAST) {
+              if (daughter1_P_amount > daughter2_P_amount) {
+                p_receiver = 1;
+              } else if (daughter2_P_amount > daughter1_P_amount) {
+                p_receiver = 2;
+              }
+            } else {
+              partition_mode = -1;
+              p_receiver = 0;
+            }
+
+            if (std::abs(p_mass_diff) > p_mass_tol) {
+              std::ostringstream msg;
+              msg << "P mass not conserved during division: parent=" << parent_p_pre
+                  << " daughters=" << p_mass_sum << " diff=" << p_mass_diff
+                  << " tol=" << p_mass_tol << " pid=" << pre_parent.id()
+                  << " time=" << time;
+              amrex::Abort(msg.str().c_str());
+            }
+
+            auto& log = division_log_state().stream;
+            log << l_run_seed << ','
+                << amrex::ParallelDescriptor::MyProc() << ','
+                << time << ','
+                << pre_parent.id() << ','
+                << daughter1.id() << ','
+                << daughter2.id() << ','
+                << parent_volume_pre << ','
+                << daughter1_vol << ','
+                << daughter2_vol << ','
+                << daughter1.pos(0) << ',' << daughter1.pos(1) << ',' << daughter1.pos(2) << ','
+                << daughter2.pos(0) << ',' << daughter2.pos(1) << ',' << daughter2.pos(2) << ','
+                << a_out_local << ','
+                << daughter1_A_amount << ',' << daughter2_A_amount << ','
+                << daughter1_P_amount << ',' << daughter2_P_amount << ','
+                << parent_p_pre << ','
+                << partition_mode << ','
+                << p_receiver << ','
+                << p_mass_diff << ','
+                << p_mass_tol << '\n';
+          }
+          division_log_state().stream.flush();
+        }
       } // pti
   } // lev
 

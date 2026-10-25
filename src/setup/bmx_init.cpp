@@ -70,6 +70,10 @@ bmx::InitParams ()
     pp.query("seed", seed);
     amrex::ResetRandomSeed(seed+ParallelDescriptor::MyProc()+1);
 
+    int log_division_events = 0;
+    pp.query("log_division_events", log_division_events);
+    BMXChemistry::instance()->setDivisionEventLogging(log_division_events != 0, seed);
+
     // The default type is "AsciiFile" but we can over-write that in the inputs
     // file with "Random"
     pp.query("particle_init_type", particle_init_type);

@@ -95,7 +95,7 @@ bmx::Evolve (int nstep, Real & dt, Real & prev_dt, Real time, Real stop_time)
         if (time == 0.0) pc->InitBonds(particle_cost, knapsack_weight_type);
 //        if (time == 118401.0) pc->PrintConnectivity(particle_cost,knapsack_weight_type);
         pc->EvolveParticles(dt, particle_cost, knapsack_weight_type, nsubsteps);
-        pc->split_particles(time);
+        pc->split_particles(time, get_X_k());
         pc->ParticleExchange(dt, particle_cost, knapsack_weight_type, nsubsteps);
         if (pc->EvaluateTipFusion(particle_cost,knapsack_weight_type)) {
           amrex::Print()<<"Completing FUSION step"<<std::endl;

@@ -286,7 +286,7 @@ public:
     ///
     void writeAllAtLevel (int lev = 0);
 
-    void split_particles (Real time);
+    void split_particles (Real time, const amrex::Vector<amrex::MultiFab*>& X_k);
 
   private:
     int nlev;

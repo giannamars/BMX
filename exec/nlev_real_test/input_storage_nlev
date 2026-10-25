@@ -4,6 +4,7 @@
 # Random number seed
 bmx.seed = 21893
 bmx.verbose = 1
+bmx.log_division_events = 1
 
 #_______________________________________________________________________
 # Solver settings

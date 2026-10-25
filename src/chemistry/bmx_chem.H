@@ -223,6 +223,21 @@ class BMXChemistry
    */
   bool getUseStorageModel();
 
+  /**
+   * Configure division-event logging
+   */
+  void setDivisionEventLogging(bool enabled, int run_seed);
+
+  /**
+   * Return whether division-event logging is active
+   */
+  bool getDivisionEventLogging();
+
+  /**
+   * Return the run seed used as division-event run id
+   */
+  int getDivisionEventRunSeed();
+
   /** Return a vector containing exchange parameters
    * @return vector of exchange parameters
    */
@@ -276,6 +291,8 @@ class BMXChemistry
   static Real storage_km;    // mobilization rate for P
   static int storage_partition_mode; // 0 symmetric, 1 asymmetric P partition
   static bool use_storage_model;
+  static bool log_division_events;
+  static int division_event_run_seed;
 
   static Real bacteria_radius_max;  // maximum value of radius for bacterium
   static Real radius_max;  // maximum value of cylinder radius for fungi segment

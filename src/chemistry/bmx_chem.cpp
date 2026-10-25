@@ -34,6 +34,8 @@ amrex::Real BMXChemistry::storage_yP = 0.0;
 amrex::Real BMXChemistry::storage_km = 0.0;
 int BMXChemistry::storage_partition_mode = 0;
 bool BMXChemistry::use_storage_model = false;
+bool BMXChemistry::log_division_events = false;
+int BMXChemistry::division_event_run_seed = 0;
 amrex::Real BMXChemistry::mtA = 0.0;
 amrex::Real BMXChemistry::mtB = 0.0;
 amrex::Real BMXChemistry::mtC = 0.0;
@@ -302,6 +304,22 @@ int BMXChemistry::getStoragePartitionMode()
 bool BMXChemistry::getUseStorageModel()
 {
   return use_storage_model;
+}
+
+void BMXChemistry::setDivisionEventLogging(bool enabled, int run_seed)
+{
+  log_division_events = enabled;
+  division_event_run_seed = run_seed;
+}
+
+bool BMXChemistry::getDivisionEventLogging()
+{
+  return log_division_events;
+}
+
+int BMXChemistry::getDivisionEventRunSeed()
+{
+  return division_event_run_seed;
 }
 
 /** Returen a vector containing exchange parameters
