@@ -38,6 +38,7 @@ bool BMXChemistry::log_division_events = false;
 bool BMXChemistry::log_colony_metrics = false;
 int BMXChemistry::division_event_run_seed = 0;
 amrex::Real BMXChemistry::low_a_threshold = 0.0;
+int BMXChemistry::cell_snapshot_int = 0;
 amrex::Real BMXChemistry::mtA = 0.0;
 amrex::Real BMXChemistry::mtB = 0.0;
 amrex::Real BMXChemistry::mtC = 0.0;
@@ -334,6 +335,11 @@ bool BMXChemistry::getColonyMetricsLogging()
   return log_colony_metrics;
 }
 
+int BMXChemistry::getCellSnapshotInterval()
+{
+  return cell_snapshot_int;
+}
+
 void BMXChemistry::setColonyMetricsLogging(bool enabled)
 {
   log_colony_metrics = enabled;
@@ -342,6 +348,11 @@ void BMXChemistry::setColonyMetricsLogging(bool enabled)
 void BMXChemistry::setLowAThreshold(Real threshold)
 {
   low_a_threshold = threshold;
+}
+
+void BMXChemistry::setCellSnapshotInterval(int interval)
+{
+  cell_snapshot_int = interval;
 }
 
 /** Returen a vector containing exchange parameters

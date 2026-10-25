@@ -82,6 +82,10 @@ bmx::InitParams ()
     pp.query("low_a_threshold", low_a_threshold);
     BMXChemistry::instance()->setLowAThreshold(low_a_threshold);
 
+    int cell_snapshot_int = 0;
+    pp.query("cell_snapshot_int", cell_snapshot_int);
+    BMXChemistry::instance()->setCellSnapshotInterval(cell_snapshot_int);
+
     // The default type is "AsciiFile" but we can over-write that in the inputs
     // file with "Random"
     pp.query("particle_init_type", particle_init_type);

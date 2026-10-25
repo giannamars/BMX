@@ -258,6 +258,16 @@ class BMXChemistry
    */
   void setLowAThreshold(Real threshold);
 
+  /**
+   * Return the interval, in steps, for periodic cell snapshots
+   */
+  int getCellSnapshotInterval();
+
+  /**
+   * Configure the interval, in steps, for periodic cell snapshots
+   */
+  void setCellSnapshotInterval(int interval);
+
   /** Return a vector containing exchange parameters
    * @return vector of exchange parameters
    */
@@ -315,6 +325,7 @@ class BMXChemistry
   static bool log_colony_metrics;
   static int division_event_run_seed;
   static Real low_a_threshold;
+  static int cell_snapshot_int;
 
   static Real bacteria_radius_max;  // maximum value of radius for bacterium
   static Real radius_max;  // maximum value of cylinder radius for fungi segment

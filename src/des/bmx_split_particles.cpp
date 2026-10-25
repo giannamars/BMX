@@ -24,6 +24,7 @@ namespace
   struct DivisionLogState {
     bool initialized = false;
     std::ofstream stream;
+    int next_event_id = 1;
     int cumulative_divisions = 0;
     int cumulative_low_a_divisions = 0;
     int step_divisions = 0;
@@ -34,6 +35,7 @@ namespace
   struct ColonyLogState {
     bool initialized = false;
     std::ofstream stream;
+    std::ofstream snapshot_stream;
   };
 
   DivisionLogState& division_log_state()
@@ -107,14 +109,15 @@ namespace
     state.low_a_threshold = BMXChemistry::instance()->getLowAThreshold();
     if (write_header) {
       state.stream
-        << "run_seed,rank,time,parent_id,daughter1_id,daughter2_id,"
+        << "division_event_id,run_seed,rank,time,parent_id,daughter1_id,daughter2_id,"
         << "parent_volume_pre,daughter1_volume,daughter2_volume,"
         << "daughter1_x,daughter1_y,daughter1_z,"
         << "daughter2_x,daughter2_y,daughter2_z,"
         << "A_out_local,"
         << "daughter1_A_amount,daughter2_A_amount,"
         << "daughter1_P_amount,daughter2_P_amount,"
-        << "parent_P_amount_pre,partition_mode,p_receiver,p_mass_diff,p_mass_tol\n";
+        << "parent_P_amount_pre,partition_mode,p_receiver,p_mass_diff,p_mass_tol,"
+        << "division_volume_threshold,division_volume_units,low_a_threshold,low_a_units,low_a_basis\n";
     }
     state.initialized = true;
   }
@@ -142,9 +145,26 @@ namespace
         << "run_seed,rank,time,step,total_cells,cumulative_divisions,"
         << "divisions_this_step,low_a_divisions_this_step,low_a_divisions_cumulative,"
         << "extracellular_A_remaining,total_storage_P,storage_mean,storage_std,"
-        << "storage_min,storage_p25,storage_median,storage_p75,storage_max\n";
+        << "storage_min,storage_p25,storage_median,storage_p75,storage_max,"
+        << "division_volume_threshold,division_volume_units,low_a_threshold,low_a_units,low_a_basis,"
+        << "snapshot_interval,snapshot_basis\n";
     }
     state.initialized = true;
+
+    std::ostringstream snap_filename;
+    snap_filename << "cell_snapshots_seed" << run_seed << "_rank" << rank << ".csv";
+    std::ifstream snap_check(snap_filename.str());
+    snap_check.seekg(0, std::ios::end);
+    const bool snap_write_header = !(snap_check.good() && snap_check.tellg() > 0);
+    snap_check.close();
+
+    state.snapshot_stream.open(snap_filename.str(), std::ios::out | std::ios::app);
+    state.snapshot_stream << std::setprecision(16);
+    if (snap_write_header) {
+      state.snapshot_stream
+        << "run_seed,rank,time,step,cell_id,x,y,z,volume,distance_to_Vcrit,"
+        << "A_out_local,A_in_amount,P_amount,low_a_flag,low_a_threshold,low_a_units,low_a_basis\n";
+    }
   }
 }
 
@@ -369,6 +389,8 @@ BMXParticleContainer::split_particles (Real time, const amrex::Vector<amrex::Mul
           const Real p_mass_diff = parent_p_pre - p_mass_sum;
           const Real parent_p_abs = amrex::Math::abs(parent_p_pre);
           const Real p_mass_tol = std::max(Real(1.0e-14), Real(1.0e-10) * std::max(Real(1.0), parent_p_abs));
+          const Real division_vol_threshold = SPECIES::max_vol;
+          const Real low_a_threshold = division_state.low_a_threshold;
 
           int partition_mode = l_storage_partition_mode;
           int p_receiver = 0;
@@ -393,9 +415,13 @@ BMXParticleContainer::split_particles (Real time, const amrex::Vector<amrex::Mul
             amrex::Abort(msg.str().c_str());
           }
 
+          auto& division_state = division_log_state();
+
           if (l_log_divisions) {
-            auto& log = division_log_state().stream;
-            log << l_run_seed << ','
+            const int division_event_id = division_state.next_event_id++;
+            auto& log = division_state.stream;
+            log << division_event_id << ','
+                << l_run_seed << ','
                 << amrex::ParallelDescriptor::MyProc() << ','
                 << time << ','
                 << pre_parent.id() << ','
@@ -413,10 +439,14 @@ BMXParticleContainer::split_particles (Real time, const amrex::Vector<amrex::Mul
                 << partition_mode << ','
                 << p_receiver << ','
                 << p_mass_diff << ','
-                << p_mass_tol << '\n';
+                << p_mass_tol << ','
+                << division_vol_threshold << ','
+                << "cm^3" << ','
+                << low_a_threshold << ','
+                << "concentration" << ','
+                << "pre_exchange_A_out_local" << '\n';
           }
 
-          auto& division_state = division_log_state();
           if (l_log_divisions || l_log_colony) {
             division_state.cumulative_divisions += 1;
             division_state.step_divisions += 1;
@@ -437,7 +467,8 @@ BMXParticleContainer::split_particles (Real time, const amrex::Vector<amrex::Mul
 }
 
 void
-BMXParticleContainer::LogColonyMetrics (Real time, int nstep, Real extracellular_A_remaining)
+BMXParticleContainer::LogColonyMetrics (Real time, int nstep, Real extracellular_A_remaining,
+                                        const amrex::Vector<const amrex::MultiFab*>& X_k)
 {
   auto& division_state = division_log_state();
   const bool log_colony = BMXChemistry::instance()->getColonyMetricsLogging();
@@ -446,6 +477,10 @@ BMXParticleContainer::LogColonyMetrics (Real time, int nstep, Real extracellular
   }
 
   init_colony_log(BMXChemistry::instance()->getDivisionEventRunSeed());
+  const int snapshot_interval = BMXChemistry::instance()->getCellSnapshotInterval();
+  const bool do_snapshot = (snapshot_interval > 0 && (nstep % snapshot_interval) == 0);
+  const Real division_vol_threshold = SPECIES::max_vol;
+  const Real low_a_threshold = division_state.low_a_threshold;
 
   std::vector<Real> storage_amounts;
   int total_cells = 0;
@@ -516,8 +551,69 @@ BMXParticleContainer::LogColonyMetrics (Real time, int nstep, Real extracellular
                << storage_p25 << ','
                << storage_median << ','
                << storage_p75 << ','
-               << storage_max << '\n';
+               << storage_max << ','
+               << division_vol_threshold << ','
+               << "cm^3" << ','
+               << low_a_threshold << ','
+               << "concentration" << ','
+               << "pre_exchange_A_out_local" << ','
+               << snapshot_interval << ','
+               << "per-cell snapshots" << '\n';
   state.stream.flush();
+
+  if (do_snapshot) {
+    for (int lev = 0; lev <= finest_level; ++lev) {
+      int n_at_lev = this->NumberOfParticlesAtLevel(lev);
+      if (n_at_lev == 0) {
+        continue;
+      }
+
+      const MultiFab* xk_level = (X_k.size() > static_cast<std::size_t>(lev)) ? X_k[lev] : nullptr;
+      const auto& geom = Geom(lev);
+
+      for (BMXParIter pti(*this, lev); pti.isValid(); ++pti) {
+        auto& particle_tile = this->GetParticles(lev)[std::make_pair(pti.index(), pti.LocalTileIndex())];
+        PinnedTile host_tile;
+        host_tile.define(NumRuntimeRealComps(), NumRuntimeIntComps());
+        host_tile.resize(particle_tile.numParticles());
+        amrex::copyParticles(host_tile, particle_tile, 0, 0, particle_tile.numParticles());
+
+        const auto& host_particles = host_tile.GetArrayOfStructs();
+        for (int i = 0; i < host_particles.numParticles(); ++i) {
+          const auto& particle = host_particles[i];
+          if (particle.idata(intIdx::cell_type) == cellType::FUNGI) {
+            continue;
+          }
+
+          const Real volume = particle.rdata(realIdx::vol);
+          const Real a_in_amount = particle.rdata(realIdx::first_data + 0) * volume;
+          const Real p_amount = particle.rdata(realIdx::first_data + 4) * volume;
+          const Real a_out_local = (xk_level != nullptr)
+            ? sample_local_A_out(*xk_level, geom, particle.pos())
+            : 0.0;
+
+          state.snapshot_stream << BMXChemistry::instance()->getDivisionEventRunSeed() << ','
+                                << amrex::ParallelDescriptor::MyProc() << ','
+                                << time << ','
+                                << nstep << ','
+                                << particle.id() << ','
+                                << particle.pos(0) << ','
+                                << particle.pos(1) << ','
+                                << particle.pos(2) << ','
+                                << volume << ','
+                                << (division_vol_threshold - volume) << ','
+                                << a_out_local << ','
+                                << a_in_amount << ','
+                                << p_amount << ','
+                                << (a_out_local <= low_a_threshold ? 1 : 0) << ','
+                                << low_a_threshold << ','
+                                << "concentration" << ','
+                                << "pre_exchange_A_out_local" << '\n';
+        }
+      }
+    }
+    state.snapshot_stream.flush();
+  }
 
   division_state.step_divisions = 0;
   division_state.step_low_a_divisions = 0;

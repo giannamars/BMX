@@ -288,7 +288,8 @@ public:
 
     void split_particles (Real time, const amrex::Vector<amrex::MultiFab*>& X_k);
 
-    void LogColonyMetrics (Real time, int nstep, Real extracellular_A_remaining);
+    void LogColonyMetrics (Real time, int nstep, Real extracellular_A_remaining,
+                           const amrex::Vector<const amrex::MultiFab*>& X_k);
 
   private:
     int nlev;

@@ -123,7 +123,7 @@ bmx::Evolve (int nstep, Real & dt, Real & prev_dt, Real time, Real stop_time)
 
     if (BMXChemistry::instance()->getColonyMetricsLogging()) {
       Real extracellular_A_remaining = volWgtSum(get_X_k_const(), 0);
-      pc->LogColonyMetrics(time + dt, nstep, extracellular_A_remaining);
+      pc->LogColonyMetrics(time + dt, nstep, extracellular_A_remaining, get_X_k_const());
     }
 
     ComputeAndPrintSums();
