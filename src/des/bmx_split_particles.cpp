@@ -127,7 +127,7 @@ BMXParticleContainer::split_particles (Real time, const amrex::Vector<amrex::Mul
         if (l_log_divisions) {
           pre_tile.define(NumRuntimeRealComps(), NumRuntimeIntComps());
           pre_tile.resize(np);
-          amrex::copyParticles(pre_tile, particles, 0, 0, np);
+          amrex::copyParticles(pre_tile, particle_tile, 0, 0, np);
         }
 
         // whether each particle will be split
@@ -263,7 +263,7 @@ BMXParticleContainer::split_particles (Real time, const amrex::Vector<amrex::Mul
           PinnedTile post_tile;
           post_tile.define(NumRuntimeRealComps(), NumRuntimeIntComps());
           post_tile.resize(np + num_split);
-          amrex::copyParticles(post_tile, particles, 0, 0, np + num_split);
+          amrex::copyParticles(post_tile, particle_tile, 0, 0, np + num_split);
 
           const auto& pre_particles = pre_tile.GetArrayOfStructs();
           const auto& post_particles = post_tile.GetArrayOfStructs();
