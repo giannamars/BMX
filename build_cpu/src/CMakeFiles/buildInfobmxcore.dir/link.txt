@@ -1,0 +1,2 @@
+/usr/bin/ar qc libbuildInfobmxcore.a CMakeFiles/buildInfobmxcore.dir/__/bmxcore/AMReX_buildInfo.cpp.o
+/usr/bin/ranlib libbuildInfobmxcore.a

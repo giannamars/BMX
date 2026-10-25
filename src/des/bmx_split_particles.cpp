@@ -165,6 +165,7 @@ namespace
         << "daughter1_A_amount,daughter2_A_amount,"
         << "daughter1_P_amount,daughter2_P_amount,"
         << "parent_P_amount_pre,partition_mode,p_receiver,p_mass_diff,p_mass_tol,"
+        << "p_mass_abs_tol,p_mass_rel_tol,"
         << "division_volume_threshold,division_volume_units,low_a_threshold,low_a_units,low_a_basis\n";
     }
     state.initialized = true;
@@ -475,7 +476,9 @@ BMXParticleContainer::split_particles (Real time, const amrex::Vector<amrex::Mul
           const Real p_mass_sum = daughter1_P_amount + daughter2_P_amount;
           const Real p_mass_diff = parent_p_pre - p_mass_sum;
           const Real parent_p_abs = amrex::Math::abs(parent_p_pre);
-          const Real p_mass_tol = std::max(Real(1.0e-14), Real(1.0e-10) * std::max(Real(1.0), parent_p_abs));
+          const Real p_mass_abs_tol = Real(1.0e-20);
+          const Real p_mass_rel_tol = Real(1.0e-12);
+          const Real p_mass_tol = p_mass_abs_tol + p_mass_rel_tol * parent_p_abs;
           const Real division_vol_threshold = SPECIES::max_vol;
           const Real low_a_threshold = bmxchem->getLowAThreshold();
 
@@ -530,6 +533,8 @@ BMXParticleContainer::split_particles (Real time, const amrex::Vector<amrex::Mul
                 << p_receiver << ','
                 << p_mass_diff << ','
                 << p_mass_tol << ','
+                << p_mass_abs_tol << ','
+                << p_mass_rel_tol << ','
                 << division_vol_threshold << ','
                 << "cm^3" << ','
                 << low_a_threshold << ','
