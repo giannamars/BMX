@@ -40,10 +40,12 @@ namespace
     const int k = static_cast<int>(amrex::Math::floor((pos[2] - plo[2]) * dxi[2]));
     const amrex::IntVect iv(i, j, k);
 
-    for (amrex::MFIter mfi(xk, amrex::TilingIfNotGPU()); mfi.isValid(); ++mfi) {
-      if (mfi.validbox().contains(iv)) {
-        return xk.const_array(mfi)(i, j, k, 0);
-      }
+    const amrex::Box cell_box(iv, iv);
+    const auto hits = xk.boxArray().intersections(cell_box);
+    if (!hits.empty()) {
+      const int fab_index = hits.front().first;
+      const auto& fab = *xk.fabPtr(fab_index);
+      return fab.const_array()(i, j, k, 0);
     }
 
     return 0.0;
