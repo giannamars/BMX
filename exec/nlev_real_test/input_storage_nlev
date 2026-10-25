@@ -5,6 +5,8 @@
 bmx.seed = 21893
 bmx.verbose = 1
 bmx.log_division_events = 1
+bmx.log_colony_metrics = 1
+bmx.low_a_threshold = 5.0e-6
 
 #_______________________________________________________________________
 # Solver settings

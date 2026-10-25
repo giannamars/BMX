@@ -238,6 +238,26 @@ class BMXChemistry
    */
   int getDivisionEventRunSeed();
 
+  /**
+   * Return the threshold used to classify a division as low-A
+   */
+  Real getLowAThreshold();
+
+  /**
+   * Return whether colony-level metrics are being logged
+   */
+  bool getColonyMetricsLogging();
+
+  /**
+   * Configure colony-level metric logging
+   */
+  void setColonyMetricsLogging(bool enabled);
+
+  /**
+   * Configure the low-A threshold used for division classification
+   */
+  void setLowAThreshold(Real threshold);
+
   /** Return a vector containing exchange parameters
    * @return vector of exchange parameters
    */
@@ -292,7 +312,9 @@ class BMXChemistry
   static int storage_partition_mode; // 0 symmetric, 1 asymmetric P partition
   static bool use_storage_model;
   static bool log_division_events;
+  static bool log_colony_metrics;
   static int division_event_run_seed;
+  static Real low_a_threshold;
 
   static Real bacteria_radius_max;  // maximum value of radius for bacterium
   static Real radius_max;  // maximum value of cylinder radius for fungi segment

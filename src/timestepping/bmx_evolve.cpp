@@ -121,6 +121,11 @@ bmx::Evolve (int nstep, Real & dt, Real & prev_dt, Real time, Real stop_time)
     Real end_particles = ParallelDescriptor::second() - start_particles;
     ParallelDescriptor::ReduceRealMax(end_particles, ParallelDescriptor::IOProcessorNumber());
 
+    if (BMXChemistry::instance()->getColonyMetricsLogging()) {
+      Real extracellular_A_remaining = volWgtSum(get_X_k_const(), 0);
+      pc->LogColonyMetrics(time + dt, nstep, extracellular_A_remaining);
+    }
+
     ComputeAndPrintSums();
 
     if (ParallelDescriptor::IOProcessor()) {

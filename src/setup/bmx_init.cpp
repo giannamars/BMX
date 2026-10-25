@@ -74,6 +74,14 @@ bmx::InitParams ()
     pp.query("log_division_events", log_division_events);
     BMXChemistry::instance()->setDivisionEventLogging(log_division_events != 0, seed);
 
+    int log_colony_metrics = 0;
+    pp.query("log_colony_metrics", log_colony_metrics);
+    BMXChemistry::instance()->setColonyMetricsLogging(log_colony_metrics != 0);
+
+    Real low_a_threshold = 0.0;
+    pp.query("low_a_threshold", low_a_threshold);
+    BMXChemistry::instance()->setLowAThreshold(low_a_threshold);
+
     // The default type is "AsciiFile" but we can over-write that in the inputs
     // file with "Random"
     pp.query("particle_init_type", particle_init_type);

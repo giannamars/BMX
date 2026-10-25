@@ -13,7 +13,9 @@
 #include <iomanip>
 #include <algorithm>
 #include <cmath>
+#include <limits>
 #include <sstream>
+#include <vector>
 
 using PinnedTile = typename BMXParticleContainer::ContainerLike<amrex::PinnedArenaAllocator>::ParticleTileType;
 
@@ -22,12 +24,45 @@ namespace
   struct DivisionLogState {
     bool initialized = false;
     std::ofstream stream;
+    int cumulative_divisions = 0;
+    int cumulative_low_a_divisions = 0;
+    int step_divisions = 0;
+    int step_low_a_divisions = 0;
+    amrex::Real low_a_threshold = 0.0;
+  };
+
+  struct ColonyLogState {
+    bool initialized = false;
+    std::ofstream stream;
   };
 
   DivisionLogState& division_log_state()
   {
     static DivisionLogState state;
     return state;
+  }
+
+  ColonyLogState& colony_log_state()
+  {
+    static ColonyLogState state;
+    return state;
+  }
+
+  amrex::Real interpolate_quantile(const std::vector<amrex::Real>& values, amrex::Real q)
+  {
+    if (values.empty()) {
+      return 0.0;
+    }
+    if (values.size() == 1) {
+      return values.front();
+    }
+
+    const amrex::Real clamped_q = std::min<amrex::Real>(1.0, std::max<amrex::Real>(0.0, q));
+    const amrex::Real pos = clamped_q * static_cast<amrex::Real>(values.size() - 1);
+    const std::size_t lo = static_cast<std::size_t>(std::floor(pos));
+    const std::size_t hi = std::min<std::size_t>(lo + 1, values.size() - 1);
+    const amrex::Real frac = pos - static_cast<amrex::Real>(lo);
+    return values[lo] + frac * (values[hi] - values[lo]);
   }
 
   amrex::Real sample_local_A_out(const amrex::MultiFab& xk, const amrex::Geometry& geom,
@@ -69,6 +104,7 @@ namespace
 
     state.stream.open(filename.str(), std::ios::out | std::ios::app);
     state.stream << std::setprecision(16);
+    state.low_a_threshold = BMXChemistry::instance()->getLowAThreshold();
     if (write_header) {
       state.stream
         << "run_seed,rank,time,parent_id,daughter1_id,daughter2_id,"
@@ -79,6 +115,34 @@ namespace
         << "daughter1_A_amount,daughter2_A_amount,"
         << "daughter1_P_amount,daughter2_P_amount,"
         << "parent_P_amount_pre,partition_mode,p_receiver,p_mass_diff,p_mass_tol\n";
+    }
+    state.initialized = true;
+  }
+
+  void init_colony_log(int run_seed)
+  {
+    auto& state = colony_log_state();
+    if (state.initialized) {
+      return;
+    }
+
+    const int rank = amrex::ParallelDescriptor::MyProc();
+    std::ostringstream filename;
+    filename << "colony_metrics_seed" << run_seed << "_rank" << rank << ".csv";
+
+    std::ifstream check(filename.str());
+    check.seekg(0, std::ios::end);
+    const bool write_header = !(check.good() && check.tellg() > 0);
+    check.close();
+
+    state.stream.open(filename.str(), std::ios::out | std::ios::app);
+    state.stream << std::setprecision(16);
+    if (write_header) {
+      state.stream
+        << "run_seed,rank,time,step,total_cells,cumulative_divisions,"
+        << "divisions_this_step,low_a_divisions_this_step,low_a_divisions_cumulative,"
+        << "extracellular_A_remaining,total_storage_P,storage_mean,storage_std,"
+        << "storage_min,storage_p25,storage_median,storage_p75,storage_max\n";
     }
     state.initialized = true;
   }
@@ -104,7 +168,10 @@ BMXParticleContainer::split_particles (Real time, const amrex::Vector<amrex::Mul
   bool l_use_storage_model = bmxchem->getUseStorageModel();
   int l_storage_partition_mode = bmxchem->getStoragePartitionMode();
   const bool l_log_divisions = bmxchem->getDivisionEventLogging();
+  const bool l_log_colony = bmxchem->getColonyMetricsLogging();
   const int l_run_seed = bmxchem->getDivisionEventRunSeed();
+
+  division_log_state().low_a_threshold = bmxchem->getLowAThreshold();
 
   if (l_log_divisions) {
     init_division_log(l_run_seed);
@@ -259,74 +326,74 @@ BMXParticleContainer::split_particles (Real time, const amrex::Vector<amrex::Mul
             } // if test
         }); // pid
 
-        if (l_log_divisions) {
-          Gpu::Device::synchronize();
+        Gpu::Device::synchronize();
 
-          PinnedTile post_tile;
-          post_tile.define(NumRuntimeRealComps(), NumRuntimeIntComps());
-          post_tile.resize(np + num_split);
-          amrex::copyParticles(post_tile, particle_tile, 0, 0, np + num_split);
+        PinnedTile post_tile;
+        post_tile.define(NumRuntimeRealComps(), NumRuntimeIntComps());
+        post_tile.resize(np + num_split);
+        amrex::copyParticles(post_tile, particle_tile, 0, 0, np + num_split);
 
-          const auto& pre_particles = pre_tile.GetArrayOfStructs();
-          const auto& post_particles = post_tile.GetArrayOfStructs();
-          const auto& geom = Geom(lev);
-          const MultiFab* xk_level = xk_ptr;
+        const auto& pre_particles = pre_tile.GetArrayOfStructs();
+        const auto& post_particles = post_tile.GetArrayOfStructs();
+        const auto& geom = Geom(lev);
+        const MultiFab* xk_level = xk_ptr;
 
-          for (int pid = 0; pid < np; ++pid) {
-            if (do_split_h[pid] == 0) {
-              continue;
+        for (int pid = 0; pid < np; ++pid) {
+          if (do_split_h[pid] == 0) {
+            continue;
+          }
+
+          const auto& pre_parent = pre_particles[pid];
+          const Real parent_volume_pre = pre_parent.rdata(realIdx::vol);
+          const Real parent_p_pre = pre_parent.rdata(realIdx::first_data + 4) * parent_volume_pre;
+          const Real a_out_local = (xk_level != nullptr)
+            ? sample_local_A_out(*xk_level, geom, pre_parent.pos())
+            : 0.0;
+
+          int daughter1_index = pid;
+          int daughter2_index = np + offsets_h[pid];
+          if (do_split_h[pid] == 2) {
+            daughter1_index = np + offsets_h[pid];
+            daughter2_index = np + offsets_h[pid] + 1;
+          }
+          const auto& daughter1 = post_particles[daughter1_index];
+          const auto& daughter2 = post_particles[daughter2_index];
+
+          const Real daughter1_vol = daughter1.rdata(realIdx::vol);
+          const Real daughter2_vol = daughter2.rdata(realIdx::vol);
+          const Real daughter1_A_amount = daughter1.rdata(realIdx::first_data + 0) * daughter1_vol;
+          const Real daughter2_A_amount = daughter2.rdata(realIdx::first_data + 0) * daughter2_vol;
+          const Real daughter1_P_amount = daughter1.rdata(realIdx::first_data + 4) * daughter1_vol;
+          const Real daughter2_P_amount = daughter2.rdata(realIdx::first_data + 4) * daughter2_vol;
+          const Real p_mass_sum = daughter1_P_amount + daughter2_P_amount;
+          const Real p_mass_diff = parent_p_pre - p_mass_sum;
+          const Real parent_p_abs = amrex::Math::abs(parent_p_pre);
+          const Real p_mass_tol = std::max(Real(1.0e-14), Real(1.0e-10) * std::max(Real(1.0), parent_p_abs));
+
+          int partition_mode = l_storage_partition_mode;
+          int p_receiver = 0;
+          if (l_use_storage_model && do_split_h[pid] == 1 &&
+              pre_parent.idata(intIdx::cell_type) == cellType::YEAST) {
+            if (daughter1_P_amount > daughter2_P_amount) {
+              p_receiver = 1;
+            } else if (daughter2_P_amount > daughter1_P_amount) {
+              p_receiver = 2;
             }
+          } else {
+            partition_mode = -1;
+            p_receiver = 0;
+          }
 
-            const auto& pre_parent = pre_particles[pid];
-            const Real parent_volume_pre = pre_parent.rdata(realIdx::vol);
-            const Real parent_p_pre = pre_parent.rdata(realIdx::first_data + 4) * parent_volume_pre;
-            const Real a_out_local = (xk_level != nullptr)
-              ? sample_local_A_out(*xk_level, geom, pre_parent.pos())
-              : 0.0;
+          if (std::abs(p_mass_diff) > p_mass_tol) {
+            std::ostringstream msg;
+            msg << "P mass not conserved during division: parent=" << parent_p_pre
+                << " daughters=" << p_mass_sum << " diff=" << p_mass_diff
+                << " tol=" << p_mass_tol << " pid=" << pre_parent.id()
+                << " time=" << time;
+            amrex::Abort(msg.str().c_str());
+          }
 
-            int daughter1_index = pid;
-            int daughter2_index = np + offsets_h[pid];
-            if (do_split_h[pid] == 2) {
-              daughter1_index = np + offsets_h[pid];
-              daughter2_index = np + offsets_h[pid] + 1;
-            }
-            const auto& daughter1 = post_particles[daughter1_index];
-            const auto& daughter2 = post_particles[daughter2_index];
-
-            const Real daughter1_vol = daughter1.rdata(realIdx::vol);
-            const Real daughter2_vol = daughter2.rdata(realIdx::vol);
-            const Real daughter1_A_amount = daughter1.rdata(realIdx::first_data + 0) * daughter1_vol;
-            const Real daughter2_A_amount = daughter2.rdata(realIdx::first_data + 0) * daughter2_vol;
-            const Real daughter1_P_amount = daughter1.rdata(realIdx::first_data + 4) * daughter1_vol;
-            const Real daughter2_P_amount = daughter2.rdata(realIdx::first_data + 4) * daughter2_vol;
-            const Real p_mass_sum = daughter1_P_amount + daughter2_P_amount;
-            const Real p_mass_diff = parent_p_pre - p_mass_sum;
-            const Real parent_p_abs = amrex::Math::abs(parent_p_pre);
-            const Real p_mass_tol = std::max(Real(1.0e-14), Real(1.0e-10) * std::max(Real(1.0), parent_p_abs));
-
-            int partition_mode = l_storage_partition_mode;
-            int p_receiver = 0;
-            if (l_use_storage_model && do_split_h[pid] == 1 &&
-                pre_parent.idata(intIdx::cell_type) == cellType::YEAST) {
-              if (daughter1_P_amount > daughter2_P_amount) {
-                p_receiver = 1;
-              } else if (daughter2_P_amount > daughter1_P_amount) {
-                p_receiver = 2;
-              }
-            } else {
-              partition_mode = -1;
-              p_receiver = 0;
-            }
-
-            if (std::abs(p_mass_diff) > p_mass_tol) {
-              std::ostringstream msg;
-              msg << "P mass not conserved during division: parent=" << parent_p_pre
-                  << " daughters=" << p_mass_sum << " diff=" << p_mass_diff
-                  << " tol=" << p_mass_tol << " pid=" << pre_parent.id()
-                  << " time=" << time;
-              amrex::Abort(msg.str().c_str());
-            }
-
+          if (l_log_divisions) {
             auto& log = division_log_state().stream;
             log << l_run_seed << ','
                 << amrex::ParallelDescriptor::MyProc() << ','
@@ -348,6 +415,18 @@ BMXParticleContainer::split_particles (Real time, const amrex::Vector<amrex::Mul
                 << p_mass_diff << ','
                 << p_mass_tol << '\n';
           }
+
+          auto& division_state = division_log_state();
+          if (l_log_divisions || l_log_colony) {
+            division_state.cumulative_divisions += 1;
+            division_state.step_divisions += 1;
+            if (a_out_local <= division_state.low_a_threshold) {
+              division_state.cumulative_low_a_divisions += 1;
+              division_state.step_low_a_divisions += 1;
+            }
+          }
+        }
+        if (l_log_divisions) {
           division_log_state().stream.flush();
         }
       } // pti
@@ -355,4 +434,91 @@ BMXParticleContainer::split_particles (Real time, const amrex::Vector<amrex::Mul
 
   // Redistribute the particles so the new particles end up on the right processor
   Redistribute();
+}
+
+void
+BMXParticleContainer::LogColonyMetrics (Real time, int nstep, Real extracellular_A_remaining)
+{
+  auto& division_state = division_log_state();
+  const bool log_colony = BMXChemistry::instance()->getColonyMetricsLogging();
+  if (!log_colony) {
+    return;
+  }
+
+  init_colony_log(BMXChemistry::instance()->getDivisionEventRunSeed());
+
+  std::vector<Real> storage_amounts;
+  int total_cells = 0;
+
+  for (int lev = 0; lev <= finest_level; ++lev) {
+    int n_at_lev = this->NumberOfParticlesAtLevel(lev);
+    if (n_at_lev == 0) {
+      continue;
+    }
+
+    for (BMXParIter pti(*this, lev); pti.isValid(); ++pti) {
+      auto& particle_tile = this->GetParticles(lev)[std::make_pair(pti.index(), pti.LocalTileIndex())];
+      PinnedTile host_tile;
+      host_tile.define(NumRuntimeRealComps(), NumRuntimeIntComps());
+      host_tile.resize(particle_tile.numParticles());
+      amrex::copyParticles(host_tile, particle_tile, 0, 0, particle_tile.numParticles());
+
+      const auto& host_particles = host_tile.GetArrayOfStructs();
+      for (int i = 0; i < host_particles.numParticles(); ++i) {
+        const auto& particle = host_particles[i];
+        if (particle.idata(intIdx::cell_type) == cellType::FUNGI) {
+          continue;
+        }
+
+        const Real stored_amount = particle.rdata(realIdx::first_data + 4) * particle.rdata(realIdx::vol);
+        storage_amounts.push_back(stored_amount);
+        total_cells += 1;
+      }
+    }
+  }
+
+  std::sort(storage_amounts.begin(), storage_amounts.end());
+
+  Real storage_sum = 0.0;
+  Real storage_sum_sq = 0.0;
+  for (const Real amount : storage_amounts) {
+    storage_sum += amount;
+    storage_sum_sq += amount * amount;
+  }
+
+  const int n = static_cast<int>(storage_amounts.size());
+  const Real storage_mean = (n > 0) ? storage_sum / static_cast<Real>(n) : 0.0;
+  const Real storage_var = (n > 1)
+    ? std::max(Real(0.0), storage_sum_sq / static_cast<Real>(n) - storage_mean * storage_mean)
+    : 0.0;
+  const Real storage_std = std::sqrt(storage_var);
+  const Real storage_min = (n > 0) ? storage_amounts.front() : 0.0;
+  const Real storage_max = (n > 0) ? storage_amounts.back() : 0.0;
+  const Real storage_p25 = interpolate_quantile(storage_amounts, 0.25);
+  const Real storage_median = interpolate_quantile(storage_amounts, 0.50);
+  const Real storage_p75 = interpolate_quantile(storage_amounts, 0.75);
+
+  auto& state = colony_log_state();
+  state.stream << BMXChemistry::instance()->getDivisionEventRunSeed() << ','
+               << amrex::ParallelDescriptor::MyProc() << ','
+               << time << ','
+               << nstep << ','
+               << total_cells << ','
+               << division_state.cumulative_divisions << ','
+               << division_state.step_divisions << ','
+               << division_state.step_low_a_divisions << ','
+               << division_state.cumulative_low_a_divisions << ','
+               << extracellular_A_remaining << ','
+               << storage_sum << ','
+               << storage_mean << ','
+               << storage_std << ','
+               << storage_min << ','
+               << storage_p25 << ','
+               << storage_median << ','
+               << storage_p75 << ','
+               << storage_max << '\n';
+  state.stream.flush();
+
+  division_state.step_divisions = 0;
+  division_state.step_low_a_divisions = 0;
 }

@@ -35,7 +35,9 @@ amrex::Real BMXChemistry::storage_km = 0.0;
 int BMXChemistry::storage_partition_mode = 0;
 bool BMXChemistry::use_storage_model = false;
 bool BMXChemistry::log_division_events = false;
+bool BMXChemistry::log_colony_metrics = false;
 int BMXChemistry::division_event_run_seed = 0;
+amrex::Real BMXChemistry::low_a_threshold = 0.0;
 amrex::Real BMXChemistry::mtA = 0.0;
 amrex::Real BMXChemistry::mtB = 0.0;
 amrex::Real BMXChemistry::mtC = 0.0;
@@ -320,6 +322,26 @@ bool BMXChemistry::getDivisionEventLogging()
 int BMXChemistry::getDivisionEventRunSeed()
 {
   return division_event_run_seed;
+}
+
+amrex::Real BMXChemistry::getLowAThreshold()
+{
+  return low_a_threshold;
+}
+
+bool BMXChemistry::getColonyMetricsLogging()
+{
+  return log_colony_metrics;
+}
+
+void BMXChemistry::setColonyMetricsLogging(bool enabled)
+{
+  log_colony_metrics = enabled;
+}
+
+void BMXChemistry::setLowAThreshold(Real threshold)
+{
+  low_a_threshold = threshold;
 }
 
 /** Returen a vector containing exchange parameters
