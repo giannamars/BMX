@@ -274,6 +274,7 @@ void BMXParticleContainer::WriteParticlesToAscii (const std::string& vtk_filenam
   }
 
   long total_number_of_vertices  = NPC * nsegments;
+  const char* storage_label = BMXChemistry::instance()->getUseStorageModel() ? "P" : "E";
     
   // First write all the header information just once (from the I/O procesor)
   if (ParallelDescriptor::IOProcessor())
@@ -414,7 +415,7 @@ void BMXParticleContainer::WriteParticlesToAscii (const std::string& vtk_filenam
         }
         File     << std::endl;
 
-        File << "SCALARS "      << "conc_E "   << "float"                         << std::endl;
+        File << "SCALARS "      << "conc_" << storage_label << " " << "float"    << std::endl;
         File << "LOOKUP_TABLE " << "default"                                  << std::endl;
 
         File.flush();

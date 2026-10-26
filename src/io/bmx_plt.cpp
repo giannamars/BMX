@@ -205,6 +205,7 @@ bmx::WritePlotFile (std::string& plot_file, int nstep, Real time )
 
     if ( DEM::solve )
     {
+        const bool use_storage_model = BMXChemistry::instance()->getUseStorageModel();
         Vector<std::string> real_comp_names;
         Vector<std::string>  int_comp_names;
 
@@ -242,6 +243,8 @@ bmx::WritePlotFile (std::string& plot_file, int nstep, Real time )
         for (i=realIdx::count-1; i<MAX_CHEM_REAL_VAR; i++) {
           if (i == realIdx::fba_mu) {
             real_comp_names.push_back("fba_mu");
+          } else if (use_storage_model && i == realIdx::first_data + 4) {
+            real_comp_names.push_back("storage_P");
           } else {
             char c[2];
             c[1] = '\0';
