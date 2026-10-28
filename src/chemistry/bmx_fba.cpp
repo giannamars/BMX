@@ -58,6 +58,7 @@ namespace
   std::string xml_attribute(const std::string& line, const std::string& attribute);
   void parse_sbml_metadata(const std::string& path);
   void load_cache_from_model(const Model* model);
+  void print_exchange_bounds();
   Real run_ortools_smoke_test();
 
 #ifdef BMX_USE_LIBSBML
@@ -275,15 +276,32 @@ namespace
   void
   print_exchange_bounds()
   {
-    amrex::Print() << "FBA exchange bounds:" << std::endl;
-    for (const auto& reaction : cache.reactions) {
-      if (reaction.id.rfind("R_Ex_", 0) != 0 && reaction.id.rfind("EX_", 0) != 0) {
+    const std::vector<std::string> selected_ids = {
+      "R_Ex_C00031",
+      "R_Ex_C00007",
+      "R_Ex_C01342",
+      "R_Ex_C00009",
+      "R_Ex_C00001",
+      "R_Ex_C00059",
+      "R_Ex_CHEBI29033"
+    };
+
+    amrex::Print() << "FBA exchange bounds (selected IDs):" << std::endl;
+    for (const auto& reaction_id : selected_ids) {
+      const auto it = std::find_if(
+        cache.reactions.begin(), cache.reactions.end(),
+        [&reaction_id](const ReactionData& reaction) {
+          return reaction.id == reaction_id;
+        });
+
+      if (it == cache.reactions.end()) {
+        amrex::Print() << "  " << reaction_id << " missing" << std::endl;
         continue;
       }
 
-      amrex::Print() << "  " << reaction.id
-                     << " lower=" << reaction.lower_bound
-                     << " upper=" << reaction.upper_bound
+      amrex::Print() << "  " << it->id
+                     << " lower=" << it->lower_bound
+                     << " upper=" << it->upper_bound
                      << std::endl;
     }
   }
