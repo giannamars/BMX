@@ -55,6 +55,11 @@ namespace
 
   FbaCache cache;
 
+  std::string xml_attribute(const std::string& line, const std::string& attribute);
+  void parse_sbml_metadata(const std::string& path);
+  void load_cache_from_model(const Model* model);
+  Real run_ortools_smoke_test();
+
 #ifdef BMX_USE_LIBSBML
   std::string
   xml_attribute(const std::string& line, const std::string& attribute)
@@ -266,6 +271,22 @@ namespace
 
     cache.ready = true;
   }
+
+  void
+  print_exchange_bounds()
+  {
+    amrex::Print() << "FBA exchange bounds:" << std::endl;
+    for (const auto& reaction : cache.reactions) {
+      if (reaction.id.rfind("R_Ex_", 0) != 0 && reaction.id.rfind("EX_", 0) != 0) {
+        continue;
+      }
+
+      amrex::Print() << "  " << reaction.id
+                     << " lower=" << reaction.lower_bound
+                     << " upper=" << reaction.upper_bound
+                     << std::endl;
+    }
+  }
 #endif
 
 #ifdef BMX_USE_ORTOOLS
@@ -355,6 +376,7 @@ initialize_from_sbml(const std::string& sbml_file)
   }
 
   load_cache_from_model(document->getModel());
+  print_exchange_bounds();
 
 #ifdef BMX_USE_ORTOOLS
   (void)run_ortools_smoke_test();
