@@ -5,6 +5,7 @@
 
 #include <algorithm>
 #include <cmath>
+#include <fstream>
 #include <limits>
 #include <string>
 #include <unordered_map>
@@ -19,10 +20,6 @@
 #include <sbml/Species.h>
 #include <sbml/SpeciesReference.h>
 #include <sbml/Parameter.h>
-#include <sbml/packages/fbc/extension/FbcExtension.h>
-#include <sbml/packages/fbc/extension/FbcExtensionTypes.h>
-#include <sbml/packages/fbc/extension/FbcModelPlugin.h>
-#include <sbml/packages/fbc/extension/FbcReactionPlugin.h>
 #endif
 
 #ifdef BMX_USE_ORTOOLS
@@ -52,7 +49,10 @@ namespace
     std::vector<std::string> metabolite_ids;
     std::unordered_map<std::string, int> metabolite_index;
     std::vector<ReactionData> reactions;
-    std::vector<double> objective_coefficients;
+    std::unordered_map<std::string, std::string> lower_bound_ids;
+    std::unordered_map<std::string, std::string> upper_bound_ids;
+    std::unordered_map<std::string, double> parameter_values;
+    std::unordered_map<std::string, double> objective_coefficients;
     bool objective_is_maximize = true;
     bool ready = false;
   };
@@ -60,40 +60,76 @@ namespace
   FbaCache cache;
 
 #ifdef BMX_USE_LIBSBML
-  double
-  parameter_value_or_default(const Model* model, const std::string& id, double fallback)
+  std::string
+  xml_attribute(const std::string& line, const std::string& attribute)
   {
-    if (!model || id.empty()) {
-      return fallback;
+    const std::string key = attribute + "=\"";
+    const std::size_t begin = line.find(key);
+    if (begin == std::string::npos) {
+      return {};
     }
 
-    const Parameter* parameter = model->getParameter(id);
-    if (!parameter) {
-      return fallback;
+    const std::size_t value_begin = begin + key.size();
+    const std::size_t value_end = line.find('"', value_begin);
+    if (value_end == std::string::npos) {
+      return {};
     }
 
-    if (parameter->isSetValue()) {
-      return parameter->getValue();
-    }
-
-    return fallback;
+    return line.substr(value_begin, value_end - value_begin);
   }
 
-  double
-  flux_bound_value(const Model* model, const FbcReactionPlugin* reaction_plugin,
-                   bool lower_bound, double fallback)
+  void
+  parse_sbml_metadata(const std::string& path)
   {
-    if (!model || !reaction_plugin) {
-      return fallback;
+    cache.lower_bound_ids.clear();
+    cache.upper_bound_ids.clear();
+    cache.parameter_values.clear();
+    cache.objective_coefficients.clear();
+    cache.objective_is_maximize = true;
+
+    std::ifstream input(path);
+    if (!input) {
+      amrex::Abort("Failed to open SBML file for metadata parsing: " + path);
     }
 
-    const std::string bound_id = lower_bound ? reaction_plugin->getLowerFluxBound()
-                                             : reaction_plugin->getUpperFluxBound();
-    if (bound_id.empty()) {
-      return fallback;
-    }
+    std::string line;
+    while (std::getline(input, line)) {
+      if (line.find("<parameter") != std::string::npos) {
+        const std::string parameter_id = xml_attribute(line, "id");
+        const std::string parameter_value = xml_attribute(line, "value");
+        if (!parameter_id.empty() && !parameter_value.empty()) {
+          cache.parameter_values[parameter_id] = std::stod(parameter_value);
+        }
+      }
 
-    return parameter_value_or_default(model, bound_id, fallback);
+      if (line.find("<reaction") != std::string::npos) {
+        const std::string reaction_id = xml_attribute(line, "id");
+        if (!reaction_id.empty()) {
+          const std::string lower_id = xml_attribute(line, "fbc:lowerFluxBound");
+          const std::string upper_id = xml_attribute(line, "fbc:upperFluxBound");
+          if (!lower_id.empty()) {
+            cache.lower_bound_ids[reaction_id] = lower_id;
+          }
+          if (!upper_id.empty()) {
+            cache.upper_bound_ids[reaction_id] = upper_id;
+          }
+        }
+      }
+
+      if (line.find("<fbc:objective") != std::string::npos) {
+        const std::string type = xml_attribute(line, "fbc:type");
+        cache.objective_is_maximize = (type != "minimize");
+      }
+
+      if (line.find("<fbc:fluxObjective") != std::string::npos) {
+        const std::string reaction_id = xml_attribute(line, "fbc:reaction");
+        const std::string coefficient = xml_attribute(line, "fbc:coefficient");
+        if (!reaction_id.empty()) {
+          const double value = coefficient.empty() ? 1.0 : std::stod(coefficient);
+          cache.objective_coefficients[reaction_id] += value;
+        }
+      }
+    }
   }
 
   void
@@ -124,7 +160,6 @@ namespace
 
     const unsigned int num_reactions = model->getNumReactions();
     cache.reactions.reserve(num_reactions);
-    cache.objective_coefficients.assign(num_reactions, 0.0);
 
     for (unsigned int i = 0; i < num_reactions; ++i) {
       const Reaction* reaction = model->getReaction(i);
@@ -135,11 +170,23 @@ namespace
       ReactionData data;
       data.id = reaction->getId();
 
-      const auto* reaction_plugin = dynamic_cast<const FbcReactionPlugin*>(reaction->getPlugin("fbc"));
       const double default_lower = reaction->getReversible() ? -1000.0 : 0.0;
       const double default_upper = 1000.0;
-      data.lower_bound = flux_bound_value(model, reaction_plugin, true, default_lower);
-      data.upper_bound = flux_bound_value(model, reaction_plugin, false, default_upper);
+      const auto lower_id_iter = cache.lower_bound_ids.find(data.id);
+      if (lower_id_iter != cache.lower_bound_ids.end()) {
+        const auto value_iter = cache.parameter_values.find(lower_id_iter->second);
+        data.lower_bound = (value_iter != cache.parameter_values.end()) ? value_iter->second : default_lower;
+      } else {
+        data.lower_bound = default_lower;
+      }
+
+      const auto upper_id_iter = cache.upper_bound_ids.find(data.id);
+      if (upper_id_iter != cache.upper_bound_ids.end()) {
+        const auto value_iter = cache.parameter_values.find(upper_id_iter->second);
+        data.upper_bound = (value_iter != cache.parameter_values.end()) ? value_iter->second : default_upper;
+      } else {
+        data.upper_bound = default_upper;
+      }
 
       const unsigned int num_reactants = reaction->getNumReactants();
       for (unsigned int j = 0; j < num_reactants; ++j) {
@@ -174,6 +221,13 @@ namespace
       cache.reactions.push_back(std::move(data));
     }
 
+    for (auto& reaction : cache.reactions) {
+      const auto coefficient_iter = cache.objective_coefficients.find(reaction.id);
+      if (coefficient_iter != cache.objective_coefficients.end()) {
+        reaction.objective_coefficient = coefficient_iter->second;
+      }
+    }
+
     struct ExchangeOverride
     {
       const char* reaction_id;
@@ -204,52 +258,13 @@ namespace
       reaction_iter->lower_bound = std::max(reaction_iter->lower_bound, -override_entry.uptake_limit);
     }
 
-    const auto* model_plugin = dynamic_cast<const FbcModelPlugin*>(model->getPlugin("fbc"));
-    if (model_plugin) {
-      const Objective* objective = nullptr;
-      const std::string active_objective_id = model_plugin->getActiveObjective();
-      if (!active_objective_id.empty()) {
-        objective = model_plugin->getObjective(active_objective_id);
-      }
-      if (!objective && model_plugin->getNumObjectives() > 0) {
-        objective = model_plugin->getObjective(0);
-      }
-
-      if (objective) {
-        cache.objective_is_maximize = objective->getType() != OBJECTIVE_TYPE_MINIMIZE;
-        const unsigned int num_flux_objectives = objective->getNumFluxObjectives();
-        for (unsigned int i = 0; i < num_flux_objectives; ++i) {
-          const FluxObjective* flux_objective = objective->getFluxObjective(i);
-          if (!flux_objective) {
-            continue;
-          }
-
-          const std::string& reaction_id = flux_objective->getReaction();
-          const auto reaction_iter = std::find_if(
-            cache.reactions.begin(), cache.reactions.end(),
-            [&reaction_id](const ReactionData& reaction_data) { return reaction_data.id == reaction_id; });
-          if (reaction_iter == cache.reactions.end()) {
-            continue;
-          }
-
-          const double coefficient = flux_objective->isSetCoefficient()
-            ? flux_objective->getCoefficient()
-            : 1.0;
-          reaction_iter->objective_coefficient += coefficient;
-          cache.objective_coefficients[static_cast<std::size_t>(reaction_iter - cache.reactions.begin())] += coefficient;
-        }
-      }
-    }
-
-    if (std::all_of(cache.objective_coefficients.begin(), cache.objective_coefficients.end(),
-                    [](double value) { return value == 0.0; })) {
+    if (cache.objective_coefficients.empty()) {
       const std::string biomass_reaction_id = "R_treebiomasspseudoreaction";
-      const auto reaction_iter = std::find_if(
-        cache.reactions.begin(), cache.reactions.end(),
-        [&biomass_reaction_id](const ReactionData& reaction_data) { return reaction_data.id == biomass_reaction_id; });
-      if (reaction_iter != cache.reactions.end()) {
-        reaction_iter->objective_coefficient = 1.0;
-        cache.objective_coefficients[static_cast<std::size_t>(reaction_iter - cache.reactions.begin())] = 1.0;
+      cache.objective_coefficients[biomass_reaction_id] = 1.0;
+      for (auto& reaction : cache.reactions) {
+        if (reaction.id == biomass_reaction_id) {
+          reaction.objective_coefficient = 1.0;
+        }
       }
     }
 
@@ -316,6 +331,8 @@ initialize_from_sbml(const std::string& sbml_file)
   }
 
 #ifdef BMX_USE_LIBSBML
+  parse_sbml_metadata(cache.model_path);
+
   SBMLReader reader;
   SBMLDocument* document = reader.readSBMLFromFile(cache.model_path);
   if (!document) {
