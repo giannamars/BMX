@@ -30,10 +30,6 @@ namespace BMXFBA
 {
 namespace
 {
-#ifdef BMX_USE_LIBSBML
-  using namespace libsbml;
-#endif
-
   struct ReactionData
   {
     std::string id;
