@@ -20,10 +20,10 @@
 #include <sbml/SpeciesReference.h>
 #include <sbml/Parameter.h>
 #include <sbml/packages/fbc/extension/FbcExtension.h>
-#include <sbml/packages/fbc/sbml/FbcModelPlugin.h>
-#include <sbml/packages/fbc/sbml/FbcReactionPlugin.h>
-#include <sbml/packages/fbc/sbml/FluxObjective.h>
-#include <sbml/packages/fbc/sbml/Objective.h>
+#include <sbml/packages/fbc/extension/FbcModelPlugin.h>
+#include <sbml/packages/fbc/extension/FbcReactionPlugin.h>
+#include <sbml/packages/fbc/extension/FluxObjective.h>
+#include <sbml/packages/fbc/extension/Objective.h>
 #endif
 
 #ifdef BMX_USE_ORTOOLS
