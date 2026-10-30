@@ -82,7 +82,7 @@ namespace
     const double positive_area = std::max(cell_area_cm2, 0.0);
     const double positive_volume = std::max(cell_volume_cm3, std::numeric_limits<double>::min());
     const double cell_mass_gdw = positive_volume * gdw_density_g_per_cm3;
-    const double total_uptake_mol_per_s = BMXChemistry::k1 * positive_area * positive_concentration;
+    const double total_uptake_mol_per_s = BMXChemistry::instance()->getAExchangeRate() * positive_area * positive_concentration;
 
     return total_uptake_mol_per_s * seconds_per_hour * mmol_per_mol / cell_mass_gdw;
   }

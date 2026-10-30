@@ -8,6 +8,7 @@
 
 #include <AMReX.H>
 #include <AMReX_REAL.H>
+#include <AMReX_GpuContainers.H>
 
 /**
  * These two values need to be coordinated with the number of variables
@@ -205,6 +206,9 @@ class BMXChemistry
    * @return integer value at index location
    */
   int getIntData(int idx);
+
+  /** Return the A membrane exchange rate coefficient */
+  Real getAExchangeRate() const;
 
   /**
    * Return a vector containing all chemical paramters needed to integrate

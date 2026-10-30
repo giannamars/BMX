@@ -238,6 +238,12 @@ int BMXChemistry::getIntData(int idx)
   return p_int_vals[idx];
 }
 
+/** Return the A membrane exchange rate coefficient */
+amrex::Real BMXChemistry::getAExchangeRate() const
+{
+  return k1;
+}
+
 /**
  * Return a vector containing all chemical paramters needed to integrate
  * chemistry
