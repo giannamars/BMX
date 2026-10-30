@@ -12,6 +12,8 @@
 #include <utility>
 #include <vector>
 
+#include <bmx_chem.H>
+
 #ifdef BMX_USE_LIBSBML
 #include <sbml/SBMLDocument.h>
 #include <sbml/SBMLReader.h>
@@ -59,7 +61,45 @@ namespace
   void parse_sbml_metadata(const std::string& path);
   void load_cache_from_model(const Model* model);
   void print_exchange_bounds();
+  double specific_flux_cap_from_concentration(double concentration_mol_per_cm3,
+                                             double cell_area_cm2,
+                                             double cell_volume_cm3);
+  [[maybe_unused]] double concentration_source_from_flux(double flux_mmol_per_gdw_hr,
+                                                         double cell_mass_gdw,
+                                                         double grid_volume_cm3);
   Real run_ortools_smoke_test();
+
+  double
+  specific_flux_cap_from_concentration(double concentration_mol_per_cm3,
+                                       double cell_area_cm2,
+                                       double cell_volume_cm3)
+  {
+    constexpr double gdw_density_g_per_cm3 = 1.0;
+    constexpr double seconds_per_hour = 3600.0;
+    constexpr double mmol_per_mol = 1000.0;
+
+    const double positive_concentration = std::max(concentration_mol_per_cm3, 0.0);
+    const double positive_area = std::max(cell_area_cm2, 0.0);
+    const double positive_volume = std::max(cell_volume_cm3, std::numeric_limits<double>::min());
+    const double cell_mass_gdw = positive_volume * gdw_density_g_per_cm3;
+    const double total_uptake_mol_per_s = BMXChemistry::k1 * positive_area * positive_concentration;
+
+    return total_uptake_mol_per_s * seconds_per_hour * mmol_per_mol / cell_mass_gdw;
+  }
+
+  double
+  concentration_source_from_flux(double flux_mmol_per_gdw_hr,
+                                 double cell_mass_gdw,
+                                 double grid_volume_cm3)
+  {
+    constexpr double seconds_per_hour = 3600.0;
+    constexpr double cm3_per_mol = 1000.0;
+
+    const double positive_mass = std::max(cell_mass_gdw, std::numeric_limits<double>::min());
+    const double positive_grid_volume = std::max(grid_volume_cm3, std::numeric_limits<double>::min());
+    const double total_flux_mol_per_s = flux_mmol_per_gdw_hr / (seconds_per_hour * cm3_per_mol) * positive_mass;
+    return total_flux_mol_per_s / positive_grid_volume;
+  }
 
 #ifdef BMX_USE_LIBSBML
   std::string
@@ -414,8 +454,8 @@ sbml_model_path()
 }
 
 Real
-compute_fba_growth_rate_hr(const Real* /*cell_par*/, const Real* /*p_vals*/, const Real* /*fluid_vals*/,
-                           Real /*volume_fraction*/, Real /*particle_count*/, int /*cell_type*/)
+compute_fba_growth_rate_hr(const Real* cell_par, const Real* /*p_vals*/, const Real* fluid_vals,
+                           Real /*volume_fraction*/, Real /*particle_count*/, int cell_type)
 {
 #ifndef BMX_USE_LIBSBML
   return 0.0;
@@ -434,8 +474,25 @@ compute_fba_growth_rate_hr(const Real* /*cell_par*/, const Real* /*p_vals*/, con
   flux_variables.reserve(cache.reactions.size());
 
   for (const auto& reaction : cache.reactions) {
-    const double lower_bound = std::isfinite(reaction.lower_bound) ? reaction.lower_bound : -infinity;
+    double lower_bound = std::isfinite(reaction.lower_bound) ? reaction.lower_bound : -infinity;
     const double upper_bound = std::isfinite(reaction.upper_bound) ? reaction.upper_bound : infinity;
+
+    if (reaction.id == "R_Ex_C00031" && cell_type == cellType::FUNGI && cell_par != nullptr && fluid_vals != nullptr) {
+      const double aout = static_cast<double>(fluid_vals[0]);
+      const double cell_area = static_cast<double>(cell_par[realIdx::area]);
+      const double cell_volume = static_cast<double>(cell_par[realIdx::vol]);
+      const double glucose_cap = specific_flux_cap_from_concentration(aout, cell_area, cell_volume);
+      lower_bound = std::max(lower_bound, -glucose_cap);
+
+      if (BMXChemistry::fba_debug) {
+        amrex::Print() << "FBA glucose uptake cap from Aout=" << aout
+                       << " area=" << cell_area
+                       << " vol=" << cell_volume
+                       << " cap=" << glucose_cap
+                       << std::endl;
+      }
+    }
+
     flux_variables.push_back(solver.MakeNumVar(lower_bound, upper_bound, reaction.id));
   }
 
