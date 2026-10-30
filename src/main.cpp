@@ -39,6 +39,9 @@ int par_ascii_int = -1;
 int last_par_ascii  = -1;
 std::string par_ascii_file {"par"};
 
+void ReadParameters ();
+void writeNow (int nstep, Real time, Real dt, bmx& bmx);
+
 void set_ptr_to_bmx (bmx& bmx);
 
 void writeBuildInfo ();

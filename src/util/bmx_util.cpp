@@ -14,7 +14,7 @@ bmx::volSum ()
     Real sum_across_levels(0.);
     Real sum_on_level;
 
-    MultiFab* mask;
+    MultiFab* mask = nullptr;
     if (finest_level > 0)
         mask = build_fine_mask();
 
@@ -69,7 +69,7 @@ bmx::volWgtSum (Vector<const MultiFab*> const& mfs, int comp )
     Real sum_across_levels(0.);
     Real sum_on_level;
 
-    MultiFab* mask;
+    MultiFab* mask = nullptr;
     if (finest_level > 0)
         mask = build_fine_mask();
 
