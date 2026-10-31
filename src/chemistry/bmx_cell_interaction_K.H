@@ -339,8 +339,6 @@ evaluateForce(const Real *r12, Real *par1, Real *par2, int *ipar1, int *ipar2,
     rx /= rn;
     ry /= rn;
     rz /= rn;
-    int ii, jj, kk;
-
     if (ipar1[intIdx::cell_type] == cellType::YEAST &&
               ipar2[intIdx::cell_type] == cellType::FUNGI) {
       part1_seg2 = true;
@@ -649,7 +647,6 @@ evaluateForce(const Real *r12, Real *par1, Real *par2, int *ipar1, int *ipar2,
     // Scale bond interaction in the case of a fusion event
     Real scale = par1[realIdx::bond_scale]*par2[realIdx::bond_scale];
     Real bond_strength = fpar[10];
-    Real bond_cutoff = fpar[11];
     Real visc = fpar[12];
     Real f1_s1[3];
     Real f1_s2[3];
@@ -736,18 +733,14 @@ evaluateForce(const Real *r12, Real *par1, Real *par2, int *ipar1, int *ipar2,
     // recognized the bond
     bool i_bonded_to_j = false;
     bool j_bonded_to_i = false;
-    int iidx = -1;
-    int jidx = -1;
     for (int ib = 0; ib<i_bnds; ib++) {
       if (i_id[ib] == jid && i_cpu[ib] == jcpu) {
-        iidx = ib;
         i_bonded_to_j = true;
         break;
       }
     }
     for (int jb = 0; jb<j_bnds; jb++) {
       if (j_id[jb] == iid && j_cpu[jb] == icpu) {
-        jidx = jb;
         j_bonded_to_i = true;
         break;
       }

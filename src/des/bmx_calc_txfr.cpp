@@ -288,7 +288,7 @@ bmx::bmx_calc_txfr_particle (Real time, Real dt)
         
         /* Add interp_garray for gradients */
 
-        int l_cnc_deposition_scheme;
+        int l_cnc_deposition_scheme = 0;
         if (bmx::m_cnc_deposition_scheme == DepositionScheme::one_to_one) 
              l_cnc_deposition_scheme = 0;
         else if (bmx::m_cnc_deposition_scheme == DepositionScheme::trilinear) 
@@ -296,7 +296,7 @@ bmx::bmx_calc_txfr_particle (Real time, Real dt)
         else 
            amrex::Abort("Dont know this deposition scheme in calc_txfr_particle");
 
-        int l_vf_deposition_scheme;
+        int l_vf_deposition_scheme = 0;
         if (bmx::m_vf_deposition_scheme == DepositionScheme::one_to_one) 
              l_vf_deposition_scheme = 0;
         else if (bmx::m_vf_deposition_scheme == DepositionScheme::trilinear) 
