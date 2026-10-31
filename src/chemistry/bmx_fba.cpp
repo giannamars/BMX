@@ -454,7 +454,7 @@ sbml_model_path()
 }
 
 Real
-compute_fba_growth_rate_hr(const Real* cell_par, const Real* /*p_vals*/, const Real* fluid_vals,
+compute_fba_growth_rate_hr(const Real* cell_par, const Real* p_vals, const Real* fluid_vals,
                            Real /*volume_fraction*/, Real /*particle_count*/, int cell_type)
 {
 #ifndef BMX_USE_LIBSBML
@@ -479,13 +479,15 @@ compute_fba_growth_rate_hr(const Real* cell_par, const Real* /*p_vals*/, const R
 
     if (reaction.id == "R_Ex_C00031" && cell_type == cellType::FUNGI && cell_par != nullptr && fluid_vals != nullptr) {
       const double aout = static_cast<double>(fluid_vals[0]);
+      const double ain = (p_vals != nullptr) ? static_cast<double>(p_vals[0]) : 0.0;
       const double cell_area = static_cast<double>(cell_par[realIdx::area]);
       const double cell_volume = static_cast<double>(cell_par[realIdx::vol]);
       const double glucose_cap = specific_flux_cap_from_concentration(aout, cell_area, cell_volume);
       lower_bound = std::max(lower_bound, -glucose_cap);
 
       if (BMXChemistry::fba_debug) {
-        amrex::Print() << "FBA glucose uptake cap from Aout=" << aout
+        amrex::Print() << "FBA A/C check A_in=" << ain
+                       << " A_out=" << aout
                        << " area=" << cell_area
                        << " vol=" << cell_volume
                        << " cap=" << glucose_cap
@@ -529,6 +531,9 @@ compute_fba_growth_rate_hr(const Real* cell_par, const Real* /*p_vals*/, const R
   }
 
   const double objective_value = objective->Value();
+  if (BMXChemistry::fba_debug) {
+    amrex::Print() << "FBA objective value=" << objective_value << std::endl;
+  }
   return static_cast<Real>(objective_value);
 #else
   amrex::Abort("BMX was built without OR-Tools support but use_fba_growth is enabled");
