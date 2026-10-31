@@ -533,6 +533,28 @@ compute_fba_growth_rate_hr(const Real* cell_par, const Real* p_vals, const Real*
   const double objective_value = objective->Value();
   if (BMXChemistry::fba_debug) {
     amrex::Print() << "FBA objective value=" << objective_value << std::endl;
+    amrex::Print() << "FBA exchange flux summary:";
+    bool printed_any_flux = false;
+    for (std::size_t reaction_index = 0; reaction_index < cache.reactions.size(); ++reaction_index) {
+      const auto& reaction = cache.reactions[reaction_index];
+      if (reaction.id.rfind("R_Ex_", 0) != 0 && reaction.id.rfind("EX_", 0) != 0) {
+        continue;
+      }
+
+      const double flux_value = flux_variables[reaction_index]->solution_value();
+      if (std::abs(flux_value) < 1.0e-12) {
+        continue;
+      }
+
+      if (!printed_any_flux) {
+        amrex::Print() << std::endl;
+        printed_any_flux = true;
+      }
+      amrex::Print() << "  " << reaction.id << "=" << flux_value << std::endl;
+    }
+    if (!printed_any_flux) {
+      amrex::Print() << " none" << std::endl;
+    }
   }
   return static_cast<Real>(objective_value);
 #else
