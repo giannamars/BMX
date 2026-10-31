@@ -1326,7 +1326,7 @@ void cleanupFusionBond(int *ipar , int *jpar, int me)
   }
 #endif
 
-  int isite[4], iid[4], icpu[4];
+  int iid[4], icpu[4];
   iid[0] = ipar[intIdx::seg1_id1];
   iid[1] = ipar[intIdx::seg2_id1];
   iid[2] = ipar[intIdx::seg3_id1];
@@ -1336,11 +1336,6 @@ void cleanupFusionBond(int *ipar , int *jpar, int me)
   icpu[1] = ipar[intIdx::seg2_id2];
   icpu[2] = ipar[intIdx::seg3_id2];
   icpu[3] = ipar[intIdx::seg4_id2];
-
-  isite[0] = ipar[intIdx::site1];
-  isite[1] = ipar[intIdx::site2];
-  isite[2] = ipar[intIdx::site3];
-  isite[3] = ipar[intIdx::site4];
 
   int j_id, j_cpu;
   j_id = jpar[intIdx::id];
