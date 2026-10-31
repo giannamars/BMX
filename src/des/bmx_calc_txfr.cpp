@@ -332,7 +332,8 @@ bmx::bmx_calc_txfr_particle (Real time, Real dt)
             Real *cell_par = &p.rdata(0);
             cell_par[realIdx::fba_mu] = BMXFBA::compute_fba_growth_rate_hr(
                 cell_par, &p.rdata(realIdx::first_data), &interp_loc[0],
-                interp_vloc[0], interp_nloc[0], p.idata(intIdx::cell_type));
+                interp_vloc[0], interp_nloc[0], p.idata(intIdx::cell_type),
+                time, p.idata(intIdx::id));
 
             if (BMXChemistry::fba_debug) {
               amrex::Print() << "FBA mu particle " << (int)p.id()

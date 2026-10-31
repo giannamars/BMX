@@ -16,7 +16,9 @@ namespace BMXFBA
                                   const Real* fluid_vals,
                                   Real volume_fraction,
                                   Real particle_count,
-                                  int cell_type);
+                                  int cell_type,
+                                  Real time,
+                                  int particle_id);
 }
 
 #endif

@@ -6,6 +6,7 @@
 #include <algorithm>
 #include <cmath>
 #include <fstream>
+#include <iomanip>
 #include <limits>
 #include <string>
 #include <unordered_map>
@@ -67,6 +68,15 @@ namespace
   [[maybe_unused]] double concentration_source_from_flux(double flux_mmol_per_gdw_hr,
                                                          double cell_mass_gdw,
                                                          double grid_volume_cm3);
+  void append_fba_debug_row(Real time,
+                            int particle_id,
+                            int cell_type,
+                            double a_in,
+                            double a_out,
+                            double glucose_cap,
+                            double mu_hr,
+                            double objective_value,
+                            const std::unordered_map<std::string, double>& flux_by_id);
   Real run_ortools_smoke_test();
 
   double
@@ -99,6 +109,60 @@ namespace
     const double positive_grid_volume = std::max(grid_volume_cm3, std::numeric_limits<double>::min());
     const double total_flux_mol_per_s = flux_mmol_per_gdw_hr / (seconds_per_hour * cm3_per_mol) * positive_mass;
     return total_flux_mol_per_s / positive_grid_volume;
+  }
+
+  void
+  append_fba_debug_row(Real time,
+                       int particle_id,
+                       int cell_type,
+                       double a_in,
+                       double a_out,
+                       double glucose_cap,
+                       double mu_hr,
+                       double objective_value,
+                       const std::unordered_map<std::string, double>& flux_by_id)
+  {
+    static bool header_written = false;
+    static std::ofstream out;
+
+    if (!out.is_open()) {
+      out.open("fba_tracking.csv", std::ios::out | std::ios::trunc);
+    }
+
+    if (!out.is_open()) {
+      return;
+    }
+
+    if (!header_written) {
+      out << "time,particle_id,cell_type,a_in,a_out,glucose_cap,mu_hr,objective_value"
+          << ",R_Ex_C00031,R_Ex_C00001,R_Ex_C00007,R_Ex_C00009,R_Ex_C00059,R_Ex_C01342,R_Ex_CHEBI29033"
+          << '\n';
+      header_written = true;
+    }
+
+    const auto flux_value = [&flux_by_id](const std::string& reaction_id) {
+      const auto it = flux_by_id.find(reaction_id);
+      return it == flux_by_id.end() ? 0.0 : it->second;
+    };
+
+    out << std::setprecision(17)
+        << time << ','
+        << particle_id << ','
+        << cell_type << ','
+        << a_in << ','
+        << a_out << ','
+        << glucose_cap << ','
+        << mu_hr << ','
+        << objective_value << ','
+        << flux_value("R_Ex_C00031") << ','
+        << flux_value("R_Ex_C00001") << ','
+        << flux_value("R_Ex_C00007") << ','
+        << flux_value("R_Ex_C00009") << ','
+        << flux_value("R_Ex_C00059") << ','
+        << flux_value("R_Ex_C01342") << ','
+        << flux_value("R_Ex_CHEBI29033")
+        << '\n';
+    out.flush();
   }
 
 #ifdef BMX_USE_LIBSBML
@@ -455,7 +519,8 @@ sbml_model_path()
 
 Real
 compute_fba_growth_rate_hr(const Real* cell_par, const Real* p_vals, const Real* fluid_vals,
-                           Real /*volume_fraction*/, Real /*particle_count*/, int cell_type)
+                           Real /*volume_fraction*/, Real /*particle_count*/, int cell_type,
+                           Real time, int particle_id)
 {
 #ifndef BMX_USE_LIBSBML
   return 0.0;
@@ -531,6 +596,11 @@ compute_fba_growth_rate_hr(const Real* cell_par, const Real* p_vals, const Real*
   }
 
   const double objective_value = objective->Value();
+  std::unordered_map<std::string, double> flux_by_id;
+  flux_by_id.reserve(cache.reactions.size());
+  for (std::size_t reaction_index = 0; reaction_index < cache.reactions.size(); ++reaction_index) {
+    flux_by_id.emplace(cache.reactions[reaction_index].id, flux_variables[reaction_index]->solution_value());
+  }
   if (BMXChemistry::fba_debug) {
     amrex::Print() << "FBA objective value=" << objective_value << std::endl;
     amrex::Print() << "FBA exchange flux summary:";
@@ -556,6 +626,17 @@ compute_fba_growth_rate_hr(const Real* cell_par, const Real* p_vals, const Real*
       amrex::Print() << " none" << std::endl;
     }
   }
+
+  if (cell_par != nullptr) {
+    const double a_in = (p_vals != nullptr) ? static_cast<double>(p_vals[0]) : 0.0;
+    const double a_out = (fluid_vals != nullptr) ? static_cast<double>(fluid_vals[0]) : 0.0;
+    const double cell_area = static_cast<double>(cell_par[realIdx::area]);
+    const double cell_volume = static_cast<double>(cell_par[realIdx::vol]);
+    const double glucose_cap = specific_flux_cap_from_concentration(a_out, cell_area, cell_volume);
+    append_fba_debug_row(time, particle_id, cell_type, a_in, a_out, glucose_cap,
+                         objective_value, objective_value, flux_by_id);
+  }
+
   return static_cast<Real>(objective_value);
 #else
   amrex::Abort("BMX was built without OR-Tools support but use_fba_growth is enabled");
